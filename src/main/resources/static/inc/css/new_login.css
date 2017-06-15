@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.jumin_input {display:inline-block; width:100%;}
+.jumin_input .jumin_first {float:left; width:53%;}
+.jumin_input .jumin_first .dash_area {position:relative; padding-right:12px;}
+.jumin_input .jumin_first .dash_area .text_dash {position:absolute; top:7px; right:5px; color:#212121;}
+.jumin_input .jumin_last {float:left; width:47%;}
+
+.check_btn {position:relative; height:29px; margin-top:9px; padding-right:75px;}
+.check_btn .check {position:relative;}
+.check_btn .check label {padding:7px 0 6px 23px; font-size:13px;}
+.check_btn .btn {position:absolute; top:1px; right:0;}
+
+.trem_view_box {display:none; padding:6px 10px 8px; border:1px solid #d2c8c5; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; background-color:#ece8e6; line-height:17px; color:#3f3337; letter-spacing:-1px;}
+.trem_view_box .dot_list {padding-top:3px;}
+.trem_view_box .dot_list li {margin-top:1px; padding-left:8px; background:url(/images/ico/bl_three_title.png) no-repeat 0 6px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5) {.trem_view_box .dot_list li {background-image:url(/images/ico/bl_three_title_480.png); background-size:4px 4px;}}
+@media screen and (-webkit-min-device-pixel-ratio:2) {.trem_view_box .dot_list li {background-image:url(/images/ico/bl_three_title_300dpi.png); background-size:4px 4px;}}
+.trem_check_view {display:block;}
+
+/*보안문자 인증*/
+.security_letter {padding:3px 0 3px; border:1px solid #d2c8c5; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; background-color:#ece8e6; font-size:20px; line-height:28px; color:#ec4909; text-align:center; text-shadow:0 1px 0 #fff;}
+.font_star {font-size:13px; color:#787676; letter-spacing:-1px;}
+.security_input_box {margin-top:10px; padding:10px 0; border-top:1px solid #bebfbb; border-bottom:1px solid #bebfbb;}
+
+.three_copy {padding-left:7px;}

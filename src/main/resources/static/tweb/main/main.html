@@ -1,0 +1,2424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="format-detection" content="telephone=no">
+	<meta id="viewport" name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width">
+	<title>Home | T world</title>
+	<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+	<link rel="stylesheet" type="text/css" href="/inc/css/new_main.css">
+	<link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css" />
+	<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.swipe.css">
+	<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>	
+	<script type="text/javascript" src="/inc/js/common.js"></script>		
+	<script type="text/javascript" src="/inc/js/mytworld.js"></script>
+	<script type="text/javascript" src="/inc/js/recommend/xtvid.js"></script>	
+	<script type="text/javascript" src="/inc/js/suggest_js_main.js"></script>
+	<script type="text/javascript" src="/inc/js/iscroll.comp.js"></script>
+	<script type="text/javascript" src="/inc/js/mtworld.swipe_banners_tweb.js"></script>
+	<script type="text/javascript" src="/inc/js/jquery-barcode.js"></script>	
+	<script type="text/javascript">
+		// 2016-10-31 GA추가_01 [s]
+	    setCategory = "MTA_main";
+	</script>
+</head>
+
+<body id="main">
+	
+<!-- 2017-03-03 추가_01 [s] --><!-- 접근성 개선 -->
+	<div class="floating_banner_dim" style="display:none">
+		<div class="floating_banner_wrapper" id="floating_banner">
+			<div class="floating_icon floating_show_icon"><img src="/img/new_main/btn_floating_offer.png" alt="추천보기" tabindex=0></div>
+			<div class="floating_close"><img src="/img/new_main/floating_close.png" alt="닫기"></div>
+			<div class="floating_txt_wrapper">
+			</div>
+			<div class="sub_floating_list">
+				<ul>
+				</ul>
+			</div>
+			<div class="floating_icon floating_close_icon"><img src="/img/new_main/btn_floating_offer_close.png" alt="추천보기닫기"></div>
+		</div>
+	</div>
+<!-- 2017-03-03 추가_01 [e] --><!-- 접근성 개선 -->
+
+<header id="main_header">
+
+	<h1><img src="/img/new_main/h1_logo.png" alt="mobile T world" width="30" tabindex="1" /></h1>
+	
+	<div class="m_search">
+	   	<form id="search" name="search" action="/jsp/search/search.jsp?domainVer=m2" method="POST">
+   			<input type="text" name="query" id="query" title="검색어" autocomplete="off" value="" onkeypress="if(event.keyCode == 13) { doSearch(); return false;}" />
+		</form>
+		<!-- 2016-12-19 GA추가_01 [s] -->
+		<button  id="b_search" class="main_search ico_comm">검색</button>
+		
+		<div class="search_auto_text" id="ac_body_" onmouseover="set_mouseon_(2);" onmouseout="set_mouseoff_(2);" style="display: block;">
+			<ul  id="scrol_" >
+			</ul>
+		</div>
+	
+	</div>
+	
+	
+	<!-- 검색어 자동 완성 script -->
+	<script language="JavaScript" type="text/JavaScript">	
+			
+		function getBrws()
+		{
+			var ua = navigator.userAgent;
+		 	var safari	= ua.indexOf("Safari")!=-1;
+		 	var opera	= ua.indexOf("Opera")!=-1;
+		 	var konqueror = ua.indexOf("Konqueror")!=-1;
+		 	var mozes	 = ((a=navigator.userAgent.split("Gecko/")[1] )
+		 			?a.split(" ")[0]:0) >= 20011128 ;
+		 	
+		 	if(window.opera || safari || mozes || opera)
+		 		return "NI";
+		 	else
+		 		return "IE";						 	
+		}
+					
+
+		var query_obj = document.getElementById("query");
+
+		if(getBrws() == "IE")
+			setDefaultAutoComplete_ (query_obj, 30,383,10);
+		else
+			setDefaultAutoComplete_ (query_obj, 30,273,10);
+
+		document.onmousedown=setTextBox_;
+		document.onkeydown=setTextBox_; 
+
+		 if ((t_==1||t_==2) && c_==1) {
+			wd_ ();
+			setTimeout ("wi_ ()", wi_int_);
+		}
+		ac_body_id = document.getElementById("ac_body_");
+		ac_body_id.style.display = "none" ;
+		
+		
+	</script>
+	<!-- 2016-10-31 GA추가_02 [s] -->
+	<button id="all_menu" ga:ca="MTA_main" ga:ac="최 상단" ga:la="전체메뉴" class="all_menu_btn ico_comm">전체메뉴보기</button>
+	
+</header>
+
+	<span id="single3"></span>
+	<!-- 2016-12-19 GA추가_03 [s] -->
+	<script id="single_normal3" type="text/x-handlebars-template">
+	{{#if tNotiInfoVDTO}}
+		<div class="benner_talert" style="display:none;">
+		<span class="tal_b ico_comm"></span>
+		<a href="{{tNotiInfoVDTO.target_url}}"  title="{{tNotiInfoVDTO.main_img_desc}}" ga:ca="MTA_main" ga:ac="T알림 커튼 베너"><img src="{{tNotiInfoVDTO.main_saved_path}}" alt="{{tNotiInfoVDTO.main_img_desc}}" ga:ca="MTA_main" ga:ac="T알림 커튼 베너" /></a>
+		<button id ="closeTA" class="tal_c ico_comm" ga:ca="MTA_main" ga:ac="T알림 커튼 베너" ga:la="커튼 베너 닫기">닫기</button>
+		</div>
+	{{/if}}
+	</script>
+
+    <div class="floatingBnnr" style="display:none">
+        <div class="floatingWrap">
+			<a class="floatingImg" id="fBImage">
+				<!-- 2016-10-31 GA추가_03 [s] -->  
+				<img ga:ca="MTA_main" ga:ac="플로팅 배너" src="/img/new_main/main_floating_bnr02.png" alt="선물확인">
+			</a>
+			<!-- 2016-10-31 GA추가_04 [s] -->
+			<a href="javascript:;" onclick="" ga:ca="MTA_main" ga:ac="플로팅 배너" ga:la="오늘 하루 닫기" class="todayExp"><!-- <span class="irwa">오늘 하루 닫기</span> --></a>
+		</div>
+		<!-- 2016-10-31 GA추가_05 [s] -->
+		<button type="button" ga:ca="MTA_main" ga:ac="플로팅 배너" ga:la="플로팅닫기버튼" class="btnClose">닫기</button>
+	</div>	
+
+<section>
+
+
+	<!-- main_content -->
+	<div id="main_content">
+	
+		<!-- personal_info -->
+		<div id="single1"></div>
+		<!-- 2016-10-31 GA추가_06 [s] -->
+		<script id="single_normal1" type="text/x-handlebars-template">
+			{{#if isRegularUser}}
+				<span>
+					<span class='strong'>{{custNm}}</span>
+
+					{{#unless isSimpleLogin}} 
+						<button id="b_sms" class="ico_comm" onclick="javascript:freeSms()">무료문자</button>
+					{{/unless}}
+				</span>
+
+				{{#if isMultiPhone}}
+					<span class="img_span">
+						<form method="post" name="frmMultiNumSelect" action="/tweb/main/main.html?APP_VER={{this.appVer}}&OS_TYPE={{this.osType}}">
+						{{#each multiLines}}
+							{{#ifCond this.svcMgmtNum '==' ../svcMgmtNum}}
+								<a href="#" onclick="ga('send', 'event', 'MTA_main', '상단메뉴', '회선 선택')" id="sel_phone" >{{this.svcNum}}<button class="ico_comm" onclick="ga('send', 'event', 'MTA_main', '상단메뉴', '회선 선택')">다회선 팝업 열기</button></a>
+							{{/ifCond}}
+						{{/each}}
+
+						<input type='hidden' name='selMultiNum' id="selMultiNum" value=''>
+						<input type='hidden' name='svc_mgmt_num' id='svc_mgmt_num' value='{{../svcMgmtNum}}'>
+						</form>
+					</span>
+				{{else}}
+					<span>{{svcNum}}</span>
+				{{/if}}
+
+				<span id="p_Charge"></span>
+
+			{{else}}
+				<span class="only_name">{{custNm}}</span>
+			{{/if}}
+		</script>		
+		
+	
+	<!-- 멤버십카드 / 잔여기본통화 / 실시간요금 메인 처음 진입시 Binding되면 DOM 요소 삭제-->
+	<div class="main_sub" id="main_sub1">
+		<div class="main_tab">
+			<ul>
+				<li id="mem_sector">
+					<!-- 2016-04-04 추가_01 [s] --><!-- 메인 멤버십 신규 UI -->
+					<!-- 2016-10-31 GA추가_07 [s] -->
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="멤버십" class="menu_button" id="meb11">멤버십</a> 
+					<div class="tab_con">
+							<div class="n_login" style="display:block"><div class='table_b'><p class='txt'>잠시만 기다려 주세요.<br>멤버십을 조회하는 중입니다.</p></div></div>
+						</div>
+					<!-- 2016-04-04 추가_01 [e] --><!-- 메인 멤버십 신규 UI -->
+				</li>
+				
+				<li id="rem_sector">
+					<!-- 2016-10-31 GA추가_08 [s] -->
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="잔여기본통화" class="menu_button on" title="현재 탭" id="meb22">잔여기본통화</a> 
+					<div class="tab_con" style='display:block;'>
+						<div class="n_login" style="display:block"><div class='table_b'><p class='txt'>잠시만 기다려 주세요.<br>잔여기본통화를 조회하는 중입니다.</p></div></div>
+					</div>
+				</li>
+				<li id="time_sector">
+					<!-- 2016-10-31 GA추가_09 [s] -->
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="실시간 요금" class="menu_button" id="meb33">실시간 요금</a>
+					<div class="tab_con">
+						<div class="n_login"></div>
+					</div>     
+				</li>
+			</ul>
+		</div>	
+	</div>
+	
+			
+	<!-- 멤버십카드 / 잔여기본통화 / 실시간요금 진입 이후 Binding 완료되면 block-->
+	<div class="main_sub" id="main_sub2" style="display:none">
+		<!-- 2017-03-07 추가_01 [s] -->
+		<div class="delayAlertWrap">
+			<h3>나의 잔여기본통화 지연반영 안내</h3>
+			<strong>일시 : 3/12(일) 00:00 ~ 24:00</strong>
+			<p>시스템 점검 작업을 잔여기본통화 조회 시 당일 사용량이 지연 반영되오니, 단순 참고용으로 활용하시기 바랍니다.</p>
+			<div>
+				<input type="checkbox" id="id_expire" class="check"><b class="check_label">오늘 하루 보지 않기</b>
+				<a href="javascript:delayAlertClose();">닫기</a> 
+			</div>
+		</div>
+		<!-- 2017-03-07 추가_01 [e] -->
+		
+		<!-- main_tab -->
+		<div class="main_tab">
+			<ul>
+				<li id="mem_sector">
+					<!-- 2016-04-04 추가_01 [s] --><!-- 메인 멤버십 신규 UI -->
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="멤버십" class="menu_button" id="meb1">멤버십</a>
+					<div class="tab_con">
+							<a href="#none"  id="zoom" class="mem_con" title="멤버십 바코드 확대하기">
+								<div class="left">
+									<span class="txt_desc">잔여 할인한도</span>
+									<span class="money_desc" id="meb_sub_limit"></span>
+									<ul class="user_box">
+										<li>등급 <strong id="meb_sub_gr"></strong></li>
+										<li>카드 <strong id="meb_sub_type"></strong></li>
+									</ul>
+								</div>
+								<div class="right">
+									<div class="barcode" id="meb_sub_con" style="background-color:black"></div>
+										<span class="num" id="meb_sub_num"></span>
+								</div>
+								<button class="mag_btn ico_comm" id="zoom" onClick="ga('send','event','MTA_main','상단탭','멤버십 더보기');" title="멤버십 바코드 확대하기">확대하기</button>
+							</a>
+							<div class="n_login" style="display:block"><div class='table_b'><p class='txt'>잠시만 기다려 주세요.<br>멤버십을 조회하는 중입니다.</p></div></div>
+						</div>
+					<!-- 2016-04-04 추가_01 [e] --><!-- 메인 멤버십 신규 UI -->
+				</li>
+				
+				<li id="rem_sector">
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="잔여기본통화" class="menu_button on" title="현재 탭" id="meb2">잔여기본통화</a>
+					<div class="tab_con"> 
+						
+						<div id="rem_con" class="rem_con">
+							<iframe src="" frameborder="0"  id="remIframe" width="100%"  scrolling="no"></iframe>   
+							<button class="mag_btn ico_comm" style="display:none" onClick="ga('send','event','MTA_main','상단탭','잔여기본통화 더보기');$.goURL('/normal.do?serviceId=S_BILL0070&viewId=V_CENT0261&domainVer=m2&menuId=2,2&mainMenu=Y');" title="잔여기본통화 바로가기">바로가기</button>
+						</div>
+						<div class="n_login" style="display:block"><div class='table_b'><p class='txt'>잠시만 기다려 주세요.<br>잔여기본통화를 조회하는 중입니다.</p></div></div>
+					</div>
+				</li>
+				<li id="time_sector">
+					<a href="#none" ga:ca="MTA_main" ga:ac="상단탭" ga:la="실시간요금" class="menu_button" id="meb3">실시간 요금</a>
+					<div class="tab_con">
+						<a href="/normal.do?serviceId=S_BILL0025&viewId=V_CENT0119&domainVer=m2&menuId=2,1&mainMenu=Y" class="time_con" id="time_con" title="실시간 요금 바로가기">
+							<p class="year" id="searchTermDate"></p>
+							<p class="charge">사용하신 요금은 <strong><span class="one" id="totOpenBal2"></span><span class="two">원</span></strong>입니다.</p>
+							<button class="mag_btn ico_comm" onClick="ga('send','event','MTA_main','상단탭','실시간요금 더보기');$.goURL('/normal.do?serviceId=S_BILL0025&viewId=V_CENT0119&domainVer=m2&menuId=2,1&mainMenu=Y')" title="실시간 요금 바로가기">바로가기</button>
+						</a>
+						<div class="n_login"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //main_tab -->
+	</div>
+	
+	<!-- 띠 배너 어드민화-->
+   <div class="banner_line_banner">
+   </div>
+  <!-- 띠 배너 어드민화-->
+	
+	<div class="main_menu">
+		<ul>
+			<!-- 2016-10-31 GA추가_10 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/joininfo/join_info.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu01_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="my T"></a></li>
+			<!-- 2016-10-31 GA추가_11 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/main/sub_charge.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu02_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="요금조회/납부"></a></li>
+			<!-- 2016-10-31 GA추가_12 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/main/sub_gift_refill.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu03_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="충전/선물/리필"></a></li>
+			<!-- 2016-10-31 GA추가_13 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/main/sub_product.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu04_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="요금제/T Apps/부가서비스"></a></li>
+			<!-- 2016-10-31 GA추가_14 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/main/sub_membership.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu05_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="멤버십"></a></li>
+			<!-- 2016-10-31 GA추가_15 [s] -->
+			<li><a href="javascript:$.goURL('/tweb/main/sub_roaming.html?allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu06_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="T로밍"></a></li>
+			<!-- 2016-10-31 GA추가_16 [s] -->			
+			<li><a href="javascript:$.goURL('/normal.do?serviceId=SDUMMY0001&viewId=V_MAIN0006&allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu07_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="혜택안내"></a></li>
+			<!-- 2016-10-31 GA추가_17 [s] -->
+			<li><a href="javascript:$.goURL('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT1100&allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu08_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="이용안내"></a></li>
+			<!-- 2016-10-31 GA추가_18 [s] -->
+			<li><a href="javascript:$.goURL('/wire.do?viewId=V_WIRE0000&serviceId=S_MAIN0001&allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/main_menu09_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="인터넷/전화/TV"></a></li>
+			<!-- 2016-10-31 GA추가_19 [s] -->
+			<li><a href="javascript:$.goURL('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT4007&allMenu=Y&mainMenu=Y&domainVer=m2');" ga:ca="MTA_main" ga:ac="업무메뉴"><img src="/img/new_main/menu_tDirect_off.png" ga:ca="MTA_main" ga:ac="업무메뉴" alt="T 다이렉트, 휴대폰 구매 상담, 1대1 전화상담으로 휴대폰을 빠르고 간편하게 구매하세요."></a></li>
+		</ul>
+	</div>
+	<!-- //main_menu -->
+
+	<div id="swiper_banner" class="swiper-container">
+        <div id="swiper_banners" class="swiper-wrapper"></div>
+        <div class="swiper-guide-wrapper">
+	        <button class="swiper-button-prev"><span class="ico_comm">다음 배너보기</span></button>
+       		<div class="swiper-pagination"><ul></ul><button class="bplay_btn ">배너이미지 일시정지</button></div>
+       		<button class="swiper-button-next"><span class="ico_comm">이전 배너보기</span></button>
+        </div>
+    </div>
+
+		<!-- 2016-01-04 [s] 수정 -->
+		<!-- h_and_n_box -->
+		<div class="h_and_n_box">
+			<h2 class="mtlth2">Hot & New <span class="txt">가장 핫하고 새로운 서비스</span></h2>
+			<div class="bt_box">
+				<div class="left">
+					<p class="l_box" id="hotNew_l">
+					</p>
+				</div>
+				<div class="right">
+					<p class="r_box" id="hotNew_r">
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- //h_and_n_box -->
+		<!-- t_direct_box -->
+		<div class="t_direct_box">
+		<!-- 2016-12-19 GA추가_06 [s] -->
+		<!-- 2017-03-23 TWD 유입파라미터 추가 [S] -->
+		<h2 class="mtlth2"><a href="javascript:onAfterBinding.goBanner('m.shop.tworld.co.kr/handler/Mobile-MobileMain?category_id=20010001&utm_source=tworldapp&utm_medium=referral&utm_campaign=home_motwd&utm_content=mobtwdhome&fSiteCd=1010', 'N', 'OUT', 'main_twd_d');" ga:ca="MTA_main" ga:ac="TWD 전용 베너" ga:la="TWD 바로가기" title="새창"><img src="/img/new_main/tlt_t_direct.png" width="99" alt="T world Direct" ga:ca="MTA_main" ga:ac="TWD 전용 베너" ga:la="TWD 바로가기"> <span class="txt" ga:ca="MTA_main" ga:ac="TWD 전용 베너" ga:la="TWD 바로가기">신규가입/기기 변경 공식 온라인 쇼핑몰<span class="ico_comm"></span></span></a></h2>
+		<!-- 2017-03-23 TWD 유입파라미터 추가 [E] -->		
+			<div class="img_box">
+				<div class="left">
+					<p id="tdirect_l" class="l_box">																	
+					</p>
+				</div>
+				<div class="right">
+					<p id="tdirect_r" class="r_box">																	
+					</p>					
+				</div>
+			</div>
+		</div>
+		<!-- //t_direct_box -->
+		<!-- situation_box -->
+		<!-- 2015-12-18 [s] 수정 -->
+		<div class="situation_box">
+			<!-- 2016-10-31 GA추가_22 [s] -->
+			<h2 class="mtlth2"><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0121&viewId=V_CMIS1090&domainVer=m2&PMAIN=7" ga:ca="MTA_main" ga:ac="상황별 대처법" title="이럴땐 이렇게 하세요 바로가기">상황별 대처법 <span ga:ca="MTA_main" ga:ac="상황별 대처법" ga:la="상황별 대처법 이럴땐 이렇게 하세요" class="txt">이럴땐 이렇게 하세요<span class="ico_comm"></span></span></a></h2>
+			<ul class="like_this_type">
+			
+			<span id="single4"></span>		
+			<script id="single_normal4" type="text/x-handlebars-template">
+			{{#if cntsListVdto}}
+				{{#each cntsListVdto}}
+					<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0122&viewId=V_CMIS1091&cntsId={{cntsId}}&mainMenu=Y" ga:ca="MTA_main" ga:ac="상황별 대처법" title="{{cntsNm}}">{{cntsNm}}</a></li>
+				{{/each}}		
+			{{/if}}
+			</script>
+							
+			</ul>
+		</div>
+		<!-- 2015-12-18 [e] 수정 -->
+		<!-- //situation_box -->
+		
+		<div class="m_one_banner box_section">
+				<script>
+					var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+					var eventer = window[eventMethod];
+					var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+		
+					// Listen to message from child window
+					eventer(messageEvent,function(e) {
+					  /* if(e.data > 0){ */
+						$("#iframe_banner").css("height", e.data);
+						 $(".m_one_banner").css("height", e.data);
+					   if(e.data <= 0){
+						   $(".m_one_banner ").hide();
+					   }
+
+					},false);
+				</script>
+				<iframe src="/normal.do?viewId=V_COMM0038&serviceId=S_CMIS0040" id="iframe_banner" width="100%" frameborder="0" scrolling="no"  height=0></iframe>
+		</div>		
+
+		<!-- floor_btn -->
+		<div class="floor_btn">
+				<!-- 2016-10-31 GA추가_55 [s] -->
+				<p class="left"><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0031&viewId=V_CENT0105&domainVer=m2&menuId=7,1&mainMenu=Y" ga:ca="MTA_main" ga:ac="바로가기배너" title="T world 매장 찾기 바로가기"><img src="/img/new_main/img_floorBtn01.png" alt="티월드 매장찾기"></a></p>
+				<!-- 2016-10-31 GA추가_56 [s] -->
+				<p class="right"><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0006&viewId=V_CENT0103&domainVer=m2&menuId=7,3&mainMenu=Y" ga:ca="MTA_main" ga:ac="바로가기배너" title="자주 찾는 문의 바로가기"><img src="/img/new_main/img_floorBtn02.png" alt="자주찾는문의"></a></p>
+		</div>
+		<!-- //floor_btn -->
+		<!-- notice -->
+		<div id="notice" class="notice">
+			<h2>
+				<a href="/normal.do?serviceId=S_ETC_0021&viewId=V_CMN_0004&domainVer=m2&menuId=8,1&osType=A" >공지사항</a>
+			</h2>
+	
+			<ul>
+			</ul>
+			<button class="go_top ico_comm" onclick="gotop();">맨위로</button>
+		</div>
+		<!-- //notice -->
+	</div>
+	<!-- //main_content -->
+</section>
+<!-- //section -->
+<!-- main_footer -->
+<footer id="main_footer">
+		<ul class="f_menu">
+			<!-- 2016-10-31 GA추가_57 [s] -->
+			<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_ETC_0021&viewId=V_CMN_0004&domainVer=m2&menuId=8,2&mainMenu=Y" ga:ca="MTA_main" ga:ac="푸터" title="이용약관 바로가기">이용약관</a></li>
+			<!-- 2016-10-31 GA추가_58 [s] -->
+			<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0033&viewId=V_CMIS0002&mainMenu=Y" class="nolink" ga:ca="MTA_main" ga:ac="푸터" title="이용자 피해예방 센터 바로가기">이용자 피해예방 센터</a></li>
+			<!-- 2016-10-31 GA추가_59 [s] -->
+			<li><a href="https://www.skt-id.co.kr/member/terms/termsInfo.do?chnlId=TWDT&client_type=ANDROID&stplTypCd=02" ga:ca="MTA_main" ga:ac="푸터" title="개인정보 취급방침 바로가기">개인정보 처리방침</a></li>
+		</ul>
+		<ul class="f_menu">
+			<!-- 2016-10-31 GA추가_60 [s] -->
+			<li><a href="javascript:$.goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_CMIS0002&amp;viewId=V_CENT1061&amp;mainMenu=Y');" class="nolink" ga:ca="MTA_main" ga:ac="푸터" title="고객센터 이메일 문의 바로가기">고객센터 이메일 문의</a></li>
+			<!-- 2016-10-31 GA추가_61 [s] -->
+			<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_CENT2061" ga:ca="MTA_main" ga:ac="푸터" title="통화품질 개선문의 바로가기">통화품질 개선문의</a></li>
+			<!-- 2016-10-31 GA추가_62 [s] -->
+			<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_CENT1070&mainMenu=Y" ga:ca="MTA_main" ga:ac="푸터" title="칭찬합니다 바로가기">칭찬합니다</a></li>
+		</ul>
+
+	<!--  2016-02-22 추가_01 [e] -->
+	<!-- 2016-10-31 GA추가_63 [s] -->	
+	<a href="#none" class="conp_c" id="conp_c0" style="display:block;"><img src="/img/new_main/btn_inpor_on.png" ga:ca="MTA_main" ga:ac="푸터" width="53" alt="정보보기"></a>
+	<!-- 2016-10-31 GA추가_64 [s] -->
+	<a href="#none" class="conp_c" id="conp_c1" style="display:none"><img src="/img/new_main/btn_inpor_off.png" ga:ca="MTA_main" ga:ac="푸터" width="53" alt="정보닫기"></a>
+	
+	<script language="JavaScript" type="text/JavaScript">	
+		function golink2(link, billyn, inout){
+					
+			if( "Y" == billyn ){
+				if(confirm("3G/LTE망 사용 시 데이터 요금이 발생됩니다.")){				
+					if (MobileUA.IOS){   // OS 체크
+						if(inout == "OUT") { location.href = "toapp:webbrowserouter:" + link; }
+						else { alert('로그인 후 이용 가능합니다.'); }
+					}else{
+						if(inout == "OUT") { toapp.webbrowserouter(link); }
+						else { alert('로그인 후 이용 가능합니다.'); }
+					}
+				}
+			}else{
+				if (MobileUA.IOS) {   // OS 체크
+					if(inout == "OUT") { location.href = "toapp:webbrowserouter:" + link; }
+					else { alert('로그인 후 이용 가능합니다.'); }
+				}else{
+					if(inout == "OUT") { toapp.webbrowserouter(link); }
+					else { alert('로그인 후 이용 가능합니다.'); }
+				}
+			}
+		}
+		</script>
+		
+		
+	<!-- floor_con -->
+	<div class="floor_con">
+		<ul class="fc_desc">
+			<li><span class="bar">서울특별시 중구 을지로 65(을지로 2가)</span> 대표이사/사장 : 박정호</li>
+			<li><span class="bar">사업자 등록번호 : 104-81-37225</span> 판매허가번호 : 중구 - 02923호</li>
+			<li>이동전화 고객센터 : 휴대폰 국번없이 T.114(무료)</li>
+			<li>인터넷/(유선)전화/인터넷전화 고객센터 : T.080-816-2000(무료)</li>
+		</ul>
+		<div class="footbtn">
+			<!-- 2017-01-16 GA추가 [s] -->			
+			<a href="javascript:golink2('www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2004301010030201122&area1=&area2=&currpage=1&searchKey=01&searchVal=%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%85%94%EB%A0%88%EC%BD%A4&stdate=&enddate=', 'Y', 'OUT')" class="batalink" ga:ca="MTA_main" ga:ac="푸터" title="사업자 정보 확인 바로가기">사업자 정보 확인</a>
+			<!-- 2017-01-16 GA추가 [s] -->
+			<a href="http://m2.tworld.co.kr/html/main/main_licence.html" class="batalink" ga:ca="MTA_main" ga:ac="푸터" title="오픈소스 라이선스 바로가기">오픈소스 라이선스</a>			
+		</div>
+	</div>
+	<!-- //floor_con -->
+	<p class="copylight">&copy; BY SK TELECOM Co., LTD ALL RIGHTS RESERVED</p>
+	<div class="certify_box">
+		<ul>
+			<li><img src="/img/new_main/img_certify01.png" width="100%" alt="2016년 국가고객만족도 19년 연속 1위"></li>
+			<li><img src="/img/new_main/img_certify02.png" width="100%" alt="2016년 한국산업의 고객만족도 19년 연속 1위"></li>
+			<li><img src="/img/new_main/img_certify03.png" width="100%" alt="한국서비스품질지수 17년 연속 1위"></li>
+			<li><img src="/img/new_main/img_certify04.png" width="100%" alt="Mobile Accessibility 모바일 접근성인증"></li>			
+		</ul>
+	</div>
+</footer>
+<!-- //main_footer -->
+<!-- popup -->
+<div class="select_shadow">
+	<div class="select_phone" id="phone_num">
+		<!-- 2016-12-09 수정_01 [s] -->
+		<div class="head">	
+			<button class="layer_close cancel">layer close</button>
+			<h4>다회선 설정</h4>
+		</div>
+		<!-- 2016-12-09 수정_01 [e] -->
+	   <div id="sel_wrap">
+	   	  <ul id="single2"></ul>
+	   	  
+		<script id="single_normal2" type="text/x-handlebars-template">
+			{{#if isMultiPhone}}
+				{{#each multiLines}}
+					<li><a href='javascript:void(0);' rel='{{this.svcMgmtNum}}' {{#ifCond this.svcMgmtNum '==' ../svcMgmtNum}} class="checked" {{/ifCond}}>
+						 {{#if this.nickNm}}[{{this.nickNm}}]{{/if}} {{this.svcNum}}</a>
+					</li>
+				{{/each}}
+			{{else}}
+				<span>{{svcNum}}</span>
+			{{/if}}
+		</script>	   	  
+	   	  	   
+	   </div>
+	   <!-- 2016-12-09 수정_02 [s] -->
+		<div class="btnbox">
+			<button type="button" class="" id="ok">확인</button>
+			<button type="button" class="cancel">취소</button>
+		</div>
+		<!-- 2016-12-09 수정_02 [e] -->
+	</div>
+</div>
+<!-- //popup -->
+</body>
+</html>
+<iframe id="otpFrame" name="otpFrame" style="display:none;"></iframe>
+<form name="otpForm" method="post">
+	<input type="hidden" name="cryptVal">
+	<input type="hidden" name="version">
+	<input type="hidden" name="appDate">
+</form>
+<iframe id="mdnFrame" name="mdnFrame" style="display:none;"></iframe>
+	<form name="mdnForm" method="post">
+	<input type="hidden" name="cryptVal">
+</form>
+
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/util/handlebars_string.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript">
+
+	//tweb 환경설정
+	var tweb_env = {
+		logView : "Y"
+	};
+		
+	//tweb backend별 설정
+	var tweb_backend = {
+		/**
+		singleb : {
+			onAfterBinding : "no"
+		},
+		singlec : {
+			onAfterBinding : "no"
+		}, 
+		**/			 	
+		single3 : {
+			loading : "no" 
+		}		
+	};
+	
+	var tPhoneYn = "N";
+			
+	// os 구분 
+	var MobileUA = ( function () {
+		var ua = navigator.userAgent.toLowerCase();
+		var mua = {
+			IOS: /ipod|iphone|ipad/.test(ua),                                //iOS
+			IPHONE: /iphone/.test(ua),                                        //iPhone
+			IPAD: /ipad/.test(ua),                                            //iPad
+			ANDROID: /android/.test(ua),                                    //Android Device
+			WINDOWS: /windows/.test(ua),                                    //Windows Device
+			TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua),    //Touch Device
+			MOBILE: /mobile/.test(ua),                                        //Mobile Device (iPad)
+			ANDROID_TABLET: false,                                            //Android Tablet
+			WINDOWS_TABLET: false,                                            //Windows Tablet
+			TABLET: false,                                                    //Tablet (iPad, Android, Windows)
+			SMART_PHONE: false                                                //Smart Phone (iPhone, Android)
+		};
+		
+		mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+		mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+		mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+		mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+		return mua;
+	
+	}());
+	
+	var mobileOsType ="A";
+	if(MobileUA.ANDROID){
+		mobileOsType ="A";
+	}else{
+		mobileOsType="I";
+	}
+		
+	// 아이폰 toapp:syncsession: 호출후 콜백
+	function synccallback() {
+		onAfterBinding.synccallback();
+	}
+	
+	function checkConfirmDate(type, totalTime){
+		var returnValue = toapp.checkConfirmDate(type ,totalTime+"");
+		return returnValue;
+	}		
+	
+	$(window).load(function(){
+		//메인 menu버튼
+		$('.main_menu ul li').on({
+			'touchstart' : function () {
+				$(this).addClass('on');
+				$(this).find('>a>img').attr('src',$(this).find('>a>img').attr('src').replace('_off.png', '_on.png'));
+				$(this).siblings().each(function(){
+					$(this).find('>a>img').attr('src',$(this).find('>a>img').attr('src').replace('_on.png','_off.png'));
+					$(this).removeClass('on');
+				})
+			},
+			'touchend' : function () {
+				$(this).removeClass('on');
+				$(this).find('>a>img').attr('src',$(this).find('>a>img').attr('src').replace('_on.png','_off.png'));
+			},
+			'touchcancel' : function () {
+				$(this).removeClass('on');
+				$(this).find('>a>img').attr('src',$(this).find('>a>img').attr('src').replace('_on.png','_off.png'));
+			}
+		});
+		
+		//화면 마지막의  정보보기
+		$('#conp_c0').click(function(){
+			var mainmenuoffset = $("#main_footer" ).offset().top;
+			$( "html, body" ).animate({
+				scrollTop: mainmenuoffset
+			}, 50);
+			$('#conp_c0').hide();
+			$('#conp_c1').show();
+			
+			$('.floor_con').show();
+			$('#main_footer .copylight').css('margin-top','15px');
+			$('#conp_c1').focus();
+		});
+		
+		//화면 마지막의  정보닫기
+		$('#conp_c1').click(function(){
+			var mainmenuoffset = $("#main_footer" ).offset().top;
+			$( "html, body" ).animate({
+				scrollTop: mainmenuoffset
+			}, 50);
+			$('#conp_c0').show();
+			$('#conp_c1').hide();
+			$('.floor_con').hide();
+			$('#main_footer .copylight').css('margin-top','5px');
+			$('#conp_c0').focus();
+		});
+		
+			
+		// banner right button
+		$('#banner .arw_r').click(function(){
+				
+			var $this = $(this);
+			var box_id = $this.parent();
+			var c_page_index =  $('#banner li.c_page').index();		
+			var li_num = $('#banner li').length;
+			
+			box_id.find('ul li').removeClass('c_page');
+			box_id.find('.b_paging span').removeClass('on'); 
+			box_id.find('.b_paging span').removeAttr("title");
+			if (c_page_index == li_num - 1){
+				 c_page_index = 0;
+			}else {c_page_index = c_page_index + 1;}
+				
+			box_id.find('ul li').eq(c_page_index).addClass('c_page');
+			box_id.find('.b_paging span').eq(c_page_index).addClass('on'); //2013-11-19 웹접근성 수정
+			box_id.find('.b_paging span').eq(c_page_index).attr("title","현재 배너");
+				
+			if ($('.b_paging .b_page:first-of-type').hasClass('on')){
+				$('.arw_l .ico_comm').removeClass('ov')
+				$('.arw_r .ico_comm').addClass('ov')
+			} else if ($('.b_paging .b_page:last-of-type').hasClass('on')){
+				$('.arw_l .ico_comm').addClass('ov')
+				$('.arw_r .ico_comm').removeClass('ov')
+			} else if (!$('.b_paging .b_page:first-of-type, .b_paging .b_page:last-of-type').hasClass('on')){
+				$('.arw_r .ico_comm, .arw_l .ico_comm').addClass('ov')
+			}		
+				
+			return false; 
+		});
+			
+		/**
+		* Format date as a string
+		* @param date - a date object (usually "new Date();")
+		* @param format - a string format, eg. "DD-MM-YYYY"
+		*/
+		$.fnDateFormat = function (date, format) {
+			// Calculate date parts and replace instances in format string accordingly
+			format = format.replace("DD", (date.getDate() < 10 ? '0' : '') + date.getDate()); // Pad with '0' if needed
+			format = format.replace("MM", (date.getMonth() < 9 ? '0' : '') + (date.getMonth() + 1)); // Months are zero-based
+			format = format.replace("YYYY", date.getFullYear());
+			return format;
+		}
+		
+		/**shindh
+		* 서브메뉴 링크 Call
+		* @param url link 주소
+		* @param 비회원로그인 구분자 "Y: 로그인 , N:로그인불가"
+		*/
+		$.goURL = function(url,nonmember_yn){
+			if( custGrade=='Z' && nonmember_yn=='N' ){
+				var go_login;
+				go_login = confirm("아이디/비밀번호 로그인 후 이용 가능합니다.\n로그인 하러 가시겠습니까?");
+				if(go_login == true){
+					location.href="toapp:login";
+				}
+	
+			}else{
+				location.href = url;
+			}
+		}		
+			
+		$("#all_menu").bind("click", function() {
+			location.href="toapp:allmenu";
+			return false; 
+		});		
+		
+		//  banner 불러오는 부분
+		$.post("/json/main_banner.json", function(data){
+				
+			var jsonData = JSON.parse(data);
+			var currentDate = new Date();
+			var nDate =  $.fnDateFormat(currentDate,"YYYYMMDD");
+			var banner = "";
+			var page   = "";
+			var count = 0;
+				
+			$.each(jsonData, function (index, value) {
+					    
+				var b_sdate = new Date(value.b_start_date.replace(/-/g, "/"));
+				var b_edate = new Date(value.b_end_date.replace(/-/g, "/"));
+				b_sdate = $.fnDateFormat(b_sdate,"YYYYMMDD");
+				b_edate = $.fnDateFormat(b_edate,"YYYYMMDD");
+				var b_os_typ_bltn_yn = value.b_os_typ_bltn_yn;
+				
+				if( mobileOsType == 'I' ){
+					if ( b_os_typ_bltn_yn == 'B' || b_os_typ_bltn_yn == '' || b_os_typ_bltn_yn == 'I'){
+						if ((b_edate >= nDate) && (b_sdate <= nDate) ){	
+							count++;
+							var t_link = value.b_link;
+							t_link = t_link.replace("http://","");
+							banner ="<li style=\"background:"+ value.b_banner_bg +"\" ><a href=\"javascript:onAfterBinding.goBanner('" + t_link + "', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" title='새창'><img src='"+ value.b_img +"' alt='"+ value.b_alt +"'/></a></li>";
+							page ="<span class='b_page'><img src='/img/blank.png' width='9px' height='9px' alt='"+count+"번째 배너보기' /></span> "; //2013-12-12 웹접근성 수정
+							$('#banner ul').append(banner);
+							$('#banner .bplay_btn').before(page); 
+						}
+					}
+				} else {
+					if ( b_os_typ_bltn_yn == 'B' || b_os_typ_bltn_yn == '' || b_os_typ_bltn_yn == 'A'){
+						if ((b_edate >= nDate) && (b_sdate <= nDate) ){	
+							count++;
+							var t_link = value.b_link;
+							t_link = t_link.replace("http://","");
+							banner ="<li style=\"background:"+ value.b_banner_bg +"\" ><a href=\"javascript:onAfterBinding.goBanner('" + t_link + "', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" title='새창'><img src='"+ value.b_img +"' alt='"+ value.b_alt +"'/></a></li>";
+							page ="<span class='b_page'><img src='/img/blank.png' width='9px' height='9px' alt='"+count+"번째 배너보기' /></span> "; //2013-12-12 웹접근성 수정
+							$('#banner ul').append(banner);
+							$('#banner .bplay_btn').before(page); 
+						}
+					}
+					
+				}
+			});
+				
+			$('#banner ul li:first').addClass('c_page');
+			$('span.b_page:first').addClass('on'); 
+		});
+			
+		//tdirect배너
+		$.post("/json/main_banner_tdirect_"+mobileOsType+".json",function(data){ 
+			var cnt = 0;
+			var jsonData = JSON.parse(data);			 
+			var tdirect_l = '';
+			var tdirect_r = '';
+			$.each(jsonData, function (index, value) {
+				var b_exps_seq = value.b_exps_seq;
+				var b_title_nm = value.b_title_nm.split('(br)');
+				var b_title_nm_f = b_title_nm[0];
+				var b_title_nm_s = b_title_nm[1];
+				var t_link = value.b_link;
+	            t_link = t_link.replace("http://","");
+	            t_link = t_link.replace("https://","");
+				if(cnt == 0){
+					tdirect_l += "<span><strong>"+b_title_nm_f+"</strong><br>"+b_title_nm_s+"</span>"
+					// 2017-01-16 GA추가 [s]
+				 	tdirect_l += "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" ga:ca='MTA_main' ga:ac='TWD 전용 배너' ga:la='"+value.b_alt+"' class='img' title='"+value.b_alt+"'><img ga:ca='MTA_main' ga:ac='TWD 전용 배너' ga:la='"+value.b_alt+"' src='"+ value.b_img +"'/></a>";
+				 }
+				 else if(cnt == 1) {
+				 	 tdirect_r += "<span><strong>"+b_title_nm_f+"</strong><br>"+b_title_nm_s+"</span>"
+				 	// 2017-01-16 GA추가 [s]
+				 	tdirect_r += "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" ga:ca='MTA_main' ga:ac='TWD 전용 배너' ga:la='"+value.b_alt+"' class='img' title='"+value.b_alt+"'><img ga:ca='MTA_main' ga:ac='TWD 전용 배너' ga:la='"+value.b_alt+"' src='"+ value.b_img +"'/></a>";
+				 }
+				 cnt++;
+			});
+			$('#tdirect_l').append(tdirect_l);
+			$('#tdirect_r').append(tdirect_r);
+			}).error(function (){//상용배포시에 기존 json 호출
+				 	$.post("/json/main_banner_tdirect.json",function(data){ 
+						 var jsonData = JSON.parse(data);			
+						 var cnt = 0;  
+					  	 var tdirect_l = '';
+					  	 var tdirect_r = '';
+						 $.each(jsonData, function (index, value) {
+						 	var b_exps_seq = value.b_exps_seq;
+						 	var b_title_nm = value.b_title_nm.split('(br)');
+						 	var b_title_nm_f = b_title_nm[0];
+						 	var b_title_nm_s = b_title_nm[1];
+						 	var t_link = value.b_link;
+			                t_link = t_link.replace("http://","");
+			                t_link = t_link.replace("https://","");
+						 	if(cnt == 0){
+						 	 	tdirect_l += "<span><strong>"+b_title_nm_f+"</strong><br>"+b_title_nm_s+"</span>"			 		
+						 		tdirect_l += "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" class='img' title='"+value.b_alt+"'><img src='"+ value.b_img +"'/></a>";
+						 	}
+						 	else if(cnt == 1) {
+						 	 	tdirect_r += "<span><strong>"+b_title_nm_f+"</strong><br>"+b_title_nm_s+"</span>"			 		
+						 		tdirect_r += "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" class='img' title='"+value.b_alt+"'><img src='"+ value.b_img +"'/></a>";
+						 	}
+						 	cnt++;
+						 })
+						 $('#tdirect_l').append(tdirect_l);
+					 	 $('#tdirect_r').append(tdirect_r);
+				 }); 
+			});
+			
+			//howNew배너 
+			$.post("/json/main_banner_hotnew_"+mobileOsType+".json",function(data){  
+				 var cnt = 0;
+				 var jsonData = JSON.parse(data);			 
+			  	 var hotNew_l = ''; 
+			  	 var hotNew_r = ''; 
+				 $.each(jsonData, function (index, value) {
+				 	var t_link = value.b_link;
+	                t_link = t_link.replace("http://","");
+	                t_link = t_link.replace("https://","");
+				 	if(cnt == 0){
+				 		// 2017-01-16 GA추가 [s]
+				 		hotNew_l = "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" ga:ca='MTA_main' ga:ac='HotnNew' ga:la='"+value.b_alt+"' class='img' title='"+value.b_alt+"'><img ga:ca='MTA_main' ga:ac='HotnNew' ga:la='"+value.b_alt+"' src='"+ value.b_img +"'/></a>";
+				 	}
+				 	else if(cnt == 1) {
+				 		// 2017-01-16 GA추가 [s]
+				 		hotNew_r = "<a href=\"javascript:onAfterBinding.goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\" ga:ca='MTA_main' ga:ac='HotnNew' ga:la='"+value.b_alt+"' class='img' title='"+value.b_alt+"'><img ga:ca='MTA_main' ga:ac='HotnNew' ga:la='"+value.b_alt+"' src='"+ value.b_img +"'/></a>";
+				 	}
+				 	cnt++;
+				 });
+				 $('#hotNew_l').empty();  
+				 $('#hotNew_l').append(hotNew_l);
+				 $('#hotNew_r').empty(); 
+				 $('#hotNew_r').append(hotNew_r);
+			});
+			
+					
+			// 공지사항   불러오는 부분 		
+			$.post("/json/notice.json",function(data){
+				var notice = '';  
+				var parsed_data = eval( data.replace(/^\s*/, "").replace(/\s*$/, "") );
+				var link = '';
+				
+				for (i in parsed_data){		  	  
+					if(parsed_data[i].notice_os == mobileOsType){
+						link = parsed_data[i].notice_link + "&osType="+ parsed_data[i].notice_os;
+						// 2016-12-19 GA추가_07 [s]
+						notice = "<li><a  style='font-weight:normal;' ga:ca='MTA_main' ga:ac='공지사항' href='" + link + "'>" + parsed_data[i].notice_txt + "</a></li>";
+					  	$('#notice ul').append(notice);
+					}else if( mobileOsType =='' && parsed_data[i].notice_os == 'A'){
+						link = parsed_data[i].notice_link + "&osType=A";
+						// 2016-12-19 GA추가_08 [s]
+				  	  	notice = "<li><a  style='font-weight:normal;' ga:ca='MTA_main' ga:ac='공지사항' href='" +link + "'>" + parsed_data[i].notice_txt + "</a></li>";
+					  	$('#notice ul').append(notice);
+					}			  
+				} 
+				//$('#notice ul li:first').addClass('current'); 2016-12-14
+			   var now = new Date();
+			   var td = now.getTime();
+			   var idx = td % $('#notice ul li').length;
+			   $($('#notice ul li')[idx]).addClass('current');
+
+
+			});
+		
+	});
+	
+	
+		
+	$(document).ready(function(){
+		gotop();
+		tPhoneYn = toapp.packageInstall("com.skt.prod.dialer", "0");	// T전화 앱 설치 여부 확인 (Y: 설치 / N : 미설치) //com.skt.prod.tphone //	
+		function freeSms(){//메인 무료문자 통계
+			ga("send", "event", "MTA_main", "상단메뉴", "무료 문자");
+			location.href= "/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0002&mainMenu=Y";
+		};
+		
+	});			
+	
+	
+	function randomList() { //랜덤 리스트 출력
+			var listItem = $(".situation_box .like_this_type li");
+			var arrItem = [], arrView = [];
+			var itemCount = listItem.length;
+			var viewCount = 3;
+			var idx = 0;
+			
+			for (var i = 0; i < itemCount; ++i) arrView.push(i);
+			while (arrItem.length < viewCount){
+				idx = Math.floor(Math.random() * arrView.length);
+				arrItem.push(arrView[idx]);
+				arrView.splice(idx, 1);
+			}
+			function sortNumber(a, b) {
+				return a - b;
+			}
+			arrItem.sort(sortNumber);
+			for (var i=0; i<arrItem.length; i++) {
+				listItem.eq(arrItem[i]).addClass("on");
+				if(i== arrItem.length-1) listItem.eq(arrItem[i]).css("border-bottom", "none");
+			}
+		}
+		
+	//위로바로가기
+	function gotop() {
+		window.scrollTo(0,0);
+		$('#main_header h1 img').focus();
+	}
+	
+	//MOTP로 이동한다.
+	function gotoMOTP(){
+		var frm = document.otpForm;
+			frm.cryptVal.value = cryptVal;
+			frm.version.value = version;
+			frm.appDate.value = appDate;
+			frm.target = "";
+			frm.action = "/motp.do";
+			frm.submit();
+	}
+							
+	var svcMgmtNum = "";
+	var appVer     = "";
+	var osType     = "";
+	var searchText = "";
+	var totalTime  = "";
+	var today      = "";
+	var tnoti_attr_id  = "";
+	var encMainUrl     = "";
+	var isCallFromIOSWidget     = "";
+	var isCallFromAndroidWidget = "";
+	var custGrade = "";
+	var cryptVal  = "";
+	var version   = "";
+	var appDate   = "";
+	var isOksusu_YN = 'N';
+	var isTpay_YN = 'N';
+	var isCake_YN = 'N';
+	var isTphone_YN = 'N';
+	var moveUrlSc = "";
+	var stat_ViewXtvidCdSc = "";
+	var stat_SelXtvidCdSc = "";	
+	var mainUrl = "";
+	var getXTVIDCookie;
+	var tParam = "";
+	//android, ios위젯에서 모T 접근시 멤버쉽카드을 디폴트로 보여준다. 
+	var showMemberCardToDefault = false; 
+	
+	var EVENT_TYPE_01 = 1;//멤버십 카드
+	var EVENT_TYPE_02 = 2;//잔여기본통화
+	var EVENT_TYPE_03 = 3;//실시간 요금
+	var EVENT_TYPE_04 = 4;//실시간 요금 2번째
+		    
+	var ONE_PASS_CALL = true;
+		    
+	var MESSAGE_TYPE_01 = "잠시만 기다려 주세요.<br/>멤버십 카드 정보를 조회하는 중입니다.";  
+	var MESSAGE_TYPE_02 = "잠시만 기다려 주세요.<br/>잔여기본 통화 정보를 조회하는 중입니다.";  
+	var MESSAGE_TYPE_03 = "잠시만 기다려 주세요.<br/>실시간 요금 정보를 조회하는 중입니다.";  
+	var MESSAGE_DONE_USE ="고객님의 SK텔레콤 서비스 회선을 <br/> 등록하신 후 이용하실 수 있습니다.";
+	var MESSAGE_HASNT_CARD ="발급된 멤버십 카드가 없습니다.<div class='n_btn'><a href='/normal.do?serviceId=S_MBRS0075&viewId=V_MBRS0050' class='btn2' title='멤버십 카드 신청 바로가기'>멤버십 카드 신청</a></div>";
+	var MSG_LOAD_TYPE_01 = "잠시만 기다려 주세요.<br>멤버십을 조회하는 중입니다.";
+	var MSG_LOAD_TYPE_02 = "잠시만 기다려 주세요.<br>잔여기본통화를 조회하는 중입니다.";
+	var MSG_LOAD_TYPE_03 = "잠시만 기다려 주세요.<br>실시간 요금을 조회하는 중입니다.";
+	var MSG_LOGIN_TYPE_01 = "지금 로그인 하시면<br> <strong>멤버십</strong>을 바로 조회하실 수 있습니다. <div class='n_btn'><a href='#none'>로그인</a><a href='#none' class='aos_btn'>간편로그인</a><a href='#none'>회원가입</a></div>";
+	var MSG_LOGIN_TYPE_02 = "지금 로그인 하시면<br> <strong>잔여기본통화</strong>을 바로 조회하실 수 있습니다. <div class='n_btn'><a href='#none'>로그인</a><a href='#none' class='aos_btn'>간편로그인</a><a href='#none'>회원가입</a></div>";
+	var MSG_LOGIN_TYPE_03 = "지금 로그인 하시면<br> <strong>실시간 요금</strong>을 바로 조회하실 수 있습니다. <div class='n_btn'><a href='#none'>로그인</a><a href='#none' class='aos_btn'>간편로그인</a><a href='#none'>회원가입</a></div>";
+	var MSG_REGIST = "고객님의 SK텔레콤 서비스 회선을<br>등록하신 후 이용하실 수 있습니다. <div class='n_btn'><a href='http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0002&viewId=V_MEMB1002&domainVer=m2&menuId=1,1' class='btn2' title='서비스 회선 등록 바로가기'>서비스 회선 등록</a></div>";
+	var MSG_FARE = "요금계산이 완료되지 않았으니 잠시 후 조회하세요.";		    
+			
+	//실시간 요금 Event를 사용자가 계속 반복요청을 막음
+	//요청후 응답이 있을때가지 Event발생을 차단함
+	var requested  = false; 
+	var param = '';
+	var loginPage = '/jsp/common/loginout/view/app_login_alert.jsp';
+		  
+	var requestType = null;
+	//핸들바 바인딩 완료 후에 실행
+	var dsc_notice_kids ="";
+	var dsc_notice ="";
+	var dsc_noticeYn ="";
+
+	var ta001 = false; 
+	var ta002 = false; 
+	var ta003 = false; 
+	var ta004 = false; 
+	var ta005 = false; 
+	var ta006 = false; 
+	var ta000 = false;
+	var free_pop_yn ="";
+	
+	var osTypeS ="";
+	var onAfterBinding = {
+
+		init : function(data){
+			
+			svcMgmtNum    = data.svcMgmtNum;
+			appVer        = data.RESULT.APP_VER;
+			osType        = data.RESULT.OS_TYPE;
+			searchText    = data.searchText;
+			totalTime     = data.totalTime;
+			today         = data.today;
+			encMainUrl    = data.encMainUrl;
+			custGrade     = data.custGrade;
+			cryptVal      = data.cryptVal;
+			version       = data.version;
+			appDate       = data.appDate;
+			isCallFromIOSWidget     = data.isCallFromIOSWidget;
+			isCallFromAndroidWidget = data.isCallFromAndroidWidget;
+					
+			isOksusu_YN   = data.isOksusu_YN;
+			isTpay_YN     = data.isTpay_YN;
+			isCake_YN     = data.isCake_YN;
+			isTphone_YN   = data.isTphone_YN;		
+			
+			tParam 		  = data.tParam;				
+			param		  = "&APP_VER="+appVer+"&OS_TYPE="+osType;
+			dsc_notice    = data.dsc_notice;
+			dsc_noticeYn  = data.dsc_noticeYn;
+			dsc_notice_kids = data.dsc_notice_kids;
+			free_pop_yn = data.free_pop_yn;
+			if("undefined" !== typeof(data.tNotiInfoVDTO)){
+				tnoti_attr_id = data.tNotiInfoVDTO.attr_id;
+			}
+			mainUrl = "/tweb/main/main.html?APP_VER="+appVer+"&OS_TYPE="+osType;
+			
+			//main_sub.jsp start
+			if("Y" == isCallFromIOSWidget|| "Y" == isCallFromAndroidWidget){
+				$("#meb2").removeClass("on");
+				$("#meb1").addClass("on"); // true on
+				$("#meb2").next().hide(); 
+				$("#meb1").next().show(); //true 
+				
+			}else{
+				$("#meb2").addClass("on");
+				$("#meb2").next().show(); 
+			}
+			$("#main_sub1").hide();
+			$("#main_sub2").show();
+			$("#main_sub1").remove();
+			//one pass call일경우 로직 차단.
+			if(ONE_PASS_CALL){
+				if(isCallFromIOSWidget == "Y" || isCallFromAndroidWidget == "Y"){
+					//멤버쉽
+					toggleMsg(EVENT_TYPE_01, MSG_LOAD_TYPE_01, 'Y');
+					var serverURL = '/normal.do?viewId=V_MBRS0020&serviceId=S_MBRS0068';
+					requestTaskAjax(EVENT_TYPE_01,serverURL,null);
+					removeMessage(true);	 		
+				} else {
+					//잔여기본 통화
+					 if(!("M" == custGrade || "N" == custGrade || "O" == custGrade || "P" ==custGrade)){
+					   	toggleMsg(EVENT_TYPE_02, MSG_LOAD_TYPE_02, 'Y');
+					   	var resultMap =getFreeCookis("freeBillData"+svcMgmtNum);
+						$("#remIframe").attr("src",location.protocol+"//mintr.tworld.co.kr/cdrs.do?menuCd=TWD_MAIN&tParam="+tParam+"&version="+appVer+"&isRefresh=&viewId=V_CENT1265&ResultMap="+resultMap);      
+					 } 
+				}	 
+			}
+			
+			/**
+			* 멤버십카드,잔여기본통화,실시간요금
+			* Tab Event 처리
+			*/
+			$.fnTabBar = function(type){	
+				$('.main_tab > ul > li > .menu_button').on('click', function(){
+					var nameId = $(this).text();
+					//비회원일경우 멤버십카드 event 차단처리함
+					if( custGrade =='Z' && "멤버십" == nameId){
+						return true;
+					}					
+					
+					$(this).addClass('on').attr("title","현재 탭").next('.tab_con').show().parent().siblings().find('.menu_button').removeClass('on').attr("title","").next('.tab_con').hide();
+				})				    	
+			    	
+			    if( "2" == type ){ //준회원인 경우
+					toggleMsg(EVENT_TYPE_02, MSG_REGIST, 'Y');			    	
+			    	
+			    	$('#main_tab > ul > li').click(function(){	
+						$.goURL(loginPage,'Y');
+						return false;
+					});
+														
+					$('#meb1').bind('click', function(){
+						toggleMsg(EVENT_TYPE_01, MSG_REGIST, 'Y');
+					});						
+					$('#meb2').bind('click', function(){
+						toggleMsg(EVENT_TYPE_02, MSG_REGIST, 'Y');
+					});						
+					$('#meb3').bind('click', function(){
+						toggleMsg(EVENT_TYPE_03, MSG_REGIST, 'Y');
+					});						
+				}			    									    
+			}
+			if("M" == custGrade || "N" == custGrade || "O" == custGrade || "P" == custGrade )//준회원 로그인
+				$.fnTabBar("2");
+			else{							//정회원 로그인
+				$.fnTabBar("3");
+				/**
+				 * 멤버십카드 요청 
+				 * skt_init.jsp -> skt_card_num_json.jsp
+				 * 응답은  CallBack처리로 요청함
+				 */
+				$('#meb1').bind('click', function(){
+					if( custGrade =='Z'){ 
+						alert('아이디/비밀번호 로그인 후 이용 가능합니다.');
+						return false;
+					}
+				
+					toggleMsg(EVENT_TYPE_01, MSG_LOAD_TYPE_01, 'Y');
+					var serverURL = '/normal.do?viewId=V_MBRS0038&serviceId=S_MBRS0077';
+					
+					requestTaskAjax(EVENT_TYPE_01,serverURL,null);
+					removeMessage(true);
+			    });
+			
+				//잔여기본통화 event
+				$("#meb2").bind("click", function() {
+				  var resultMap =getFreeCookis("freeBillData"+svcMgmtNum);
+				   removeMessage(true);
+			   	   toggleMsg(EVENT_TYPE_02, MSG_LOAD_TYPE_02, 'Y');
+			   	  $("#remIframe").attr("src",location.protocol+"//mintr.tworld.co.kr/cdrs.do?menuCd=TWD_MAIN&tParam="+tParam+"&version="+appVer+"&isRefresh=&viewId=V_CENT1265"+"&ResultMap="+resultMap);    
+				});
+				
+				//실시간 요금 event
+				$("#meb3").bind("click", function() {
+				  
+			   	   $.fnHideMore(false);
+				   toggleMsg(EVENT_TYPE_03, MSG_LOAD_TYPE_03, 'Y');
+				   
+				   if(requested){
+			   		  return true;
+			   	   }
+			   	   requested = true;    
+		   		   //실시간 요금
+		   		   var serverURL = '/normal.do?viewId=V_CENT1125&serviceId=S_BILL1025'+param;
+			   	   requestTaskAjax(EVENT_TYPE_03,serverURL,null);
+			   	   removeMessage(true);
+				});
+			}
+			
+			$.fnHideMore(false);
+			//main_sub.jsp end
+	
+			//멤버쉽|잔여기본통화|실시간요금조회 구성하기						
+			//MainSub.init(custGrade, appVer, osType, "Y", isCallFromIOSWidget, isCallFromAndroidWidget,tParam);		
+			getXTVIDCookie = function() {
+			    var aCookie = document.cookie.split("; ");
+			    for (var i=0; i < aCookie.length; i++)  {
+			        var cPos = aCookie[i].indexOf( "=" );
+			        var cName = aCookie[i].substring( 0, cPos );
+			        if ( cName == "XTVID" ) {
+			            return unescape( aCookie[i].substring( cPos + 1 ) );
+			        }
+			    }
+			    return "";
+			}
+			
+			/* 2017-03-07 추가_02 [s] */
+			 DelayAlert = {
+				 checkCookie : function(){
+						var isPopupShow = "Y";
+						if(osType =="A"){
+							isPopupShow = toapp.checkConfirmDate("com.skt.prod.delayAlert","8640000011111"); //두번째 파라미터는 서버에서 불러와 셋팅 해야 합니다.
+							if(isPopupShow == "Y"){
+								return true
+							} else {
+								return false
+							}
+						} else if(osType =="I"){
+							if (document.cookie.indexOf("delayAlert=done") < 0) {
+								return true
+				    		} else {
+				    			return false
+				    		}
+						}
+						
+					},
+					show : function(target){		
+						if(DelayAlert.checkCookie()){
+							$(".delayAlertWrap").show();
+							$(".delayAlertWrap div a").unbind('click').bind('click', function(){
+								if($("#id_expire").attr("checked") == 'checked'){
+									DelayAlert.setCookieClose()
+								 } else {
+									DelayAlert.close()
+								 }
+							})
+						}
+					},
+				    close : function(){
+				    	$(".delayAlertWrap").hide();
+				    },
+					setCookieClose : function(){
+						if(osType =="A"){
+							location.href = "toapp.settingpackageconfirmdate:com.skt.prod.delayAlert"; //하루동안 기준 시각.
+						} else if(osType =="I"){
+							var now = new Date();
+							var expDate = new Date();
+							var todayDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0)
+							expDate.setDate(todayDate.getDate() + 1); 
+							document.cookie = "delayAlert=done; path=/; expires=" + expDate.toGMTString() + ";"
+						}
+						DelayAlert.close();
+					}, 
+			 }
+			 /* 2017-03-07 추가_02 [e] */
+			if(free_pop_yn =="Y"){
+				/* 2017-03-07 추가_01 [s] */
+				DelayAlert.show();
+				/* 2017-03-07 추가_01 [e] */
+			}
+			
+			/*플로팅 배너 start*/
+			//dsc_notice ="RP2001";  
+			//dsc_notice ="RP3001";  
+			//dsc_notice ="RP3002";
+			//dsc_notice ="RP3003";
+			//dsc_notice ="RP3004";
+			//dsc_notice ="RP3005";        
+			
+			//dsc_notice ="RP2001,RP3001";        
+			//dsc_notice ="RP2001,RP3002";        
+			//dsc_notice ="RP2001,RP3003";        
+			//dsc_notice ="RP2001,RP3004";        
+			//dsc_notice ="RP2001,RP3005";        
+			
+			
+			//dsc_noticeYn ="Y";
+			
+			
+			//플로팅 배너 닫기 처리
+			FloatingBannerDim = {
+				show : function(){
+					var isFBannerDimShow = "Y";
+					if(MobileUA.ANDROID){
+						isFBannerDimShow = checkConfirmDate("com.skt.prod.fTappsBannerDim", totalTime); //두번째 파라미터는 서버에서 불러와 셋팅 해야 합니다.
+					} else if(MobileUA.IOS){
+						if ( document.cookie.indexOf("fTappsBannerDim=done") < 0 ) {
+							isFBannerDimShow = "Y";
+			    		} else {
+			    			isFBannerDimShow = "N";
+			    		}
+					}
+					if(isFBannerDimShow == "Y"){
+						offeringMain();
+						FloatingBannerDim.init();
+					} else {
+						FloatingBannerDim.close();
+					}
+				},
+				init : function(){
+					$(".floating_banner_dim .floating_close").click(function(){
+						offeringStatic_cd = "MA_"+osTypeS+"_close_fc"; //닫기버튼 노출
+						console.log("닫기버튼 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+						callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+						FloatingBannerDim.setCookieClose();
+					});
+				},
+				
+				setCookieClose : function(){
+					if(MobileUA.ANDROID){
+						location.href = "toapp.settingpackageconfirmdate:com.skt.prod.fTappsBannerDim"; //하루동안 기준 시각.
+					} else if(MobileUA.IOS){
+						FloatingBannerDim.setCookie( "fTappsBannerDim", "done" , 1 );
+					}
+					FloatingBannerDim.close();
+					/* 2017-03-03 추가_01 [s] */
+					$("#main_header h1 img").focus();
+					/* 2017-03-03 추가_01 [e] */
+				},
+				
+				close : function(){
+					$(".floating_banner_dim").hide();
+				},
+				
+				setCookie : function( name, value, expiredays ) {
+					var todayDate = new Date();   
+				    todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);  
+				    if ( todayDate > new Date() ) {  
+				    	expiredays = expiredays - 1;  
+				    }  
+				    todayDate.setDate( todayDate.getDate() + expiredays );   
+				    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+				}
+			}
+			
+			if( dsc_noticeYn == "Y" ){ 
+				FloatingBannerDim.show();
+			}
+			/*플로팅 배너 end*/
+			
+			//플로팅배너 링크,통계함수값 구하기	
+			function callStatXtvidCd() {
+				if(isTphone_YN=='Y' && osType == 'I'){
+					isTphone_YN='Y';
+				}else if(isTphone_YN=='Y' && osType == 'A') {
+					//var tPhoneYn = toapp.packageInstall("com.skt.prod.dialer", "0");	// T전화 앱 설치 여부 확인 (Y: 설치 / N : 미설치) //com.skt.prod.tphone //
+					//var tPhoneYn = "Y";
+					if(tPhoneYn == 'Y'){
+						isTphone_YN='Y';
+					}	
+				}
+				
+				/** 4개 조합 **/
+			    if(isOksusu_YN=='Y' && isTpay_YN=='Y' && isCake_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Tpay + Cake + Tphone
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tpay_tphone_oksusu_cake";
+			        stat_ViewXtvidCdSc = "m_tph_ck_tp_ok_fb ";
+			        stat_SelXtvidCdSc = "of_tph_ck_tp_ok_fb";
+			    }
+			    /** 3개 조합 **/
+			    else if(isOksusu_YN=='Y' && isTpay_YN=='Y' && isCake_YN=='Y'){	// Oksusu + Tpay + Cake
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&domainVer=m2&upCd=cake_tpay_oksusu";
+			        stat_ViewXtvidCdSc = "main_cake_ot_fbv";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'I' && isOksusu_YN=='Y' && isTpay_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Tpay + Tphone(아이폰)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=ios_tpay_tphone_oksusu";
+			        stat_ViewXtvidCdSc = "m_tph_ok_tp_ios_fb";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'A' && isOksusu_YN=='Y' && isTpay_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Tpay + Tphone(안드로이드)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tpay_tphone_oksusu";
+			        stat_ViewXtvidCdSc = "m_tph_ok_tp_fb";
+			        stat_SelXtvidCdSc = "of_tph_ok_tp_fb";
+			    }else if(isOksusu_YN=='Y' && isCake_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Cake + Tphone
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tphone_oksusu_cake";
+			        stat_ViewXtvidCdSc = "m_tph_ok_ck_fb ";
+			        stat_SelXtvidCdSc = "of_tph_ok_ck_fb";
+			    }else if(isTpay_YN=='Y' && isCake_YN=='Y' && isTphone_YN=='Y'){	// Tpay + Cake + Tphone
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tpay_tphone_cake";
+			        stat_ViewXtvidCdSc = "m_tph_tp_ck_fb";
+			        stat_SelXtvidCdSc = "of_tph_tp_ck_fb";
+			    }
+			    /** 2개 조합 **/
+			    else if(isOksusu_YN=='Y' && isTpay_YN=='Y'){	// Oksusu + Tpay
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=oksusu_tpay";
+			        stat_ViewXtvidCdSc = "main_oksusu_tpay_fbv";
+			        stat_SelXtvidCdSc = "main_oksusu_tpay_fbb";
+			    }else if(isOksusu_YN=='Y' && isCake_YN=='Y'){	// Oksusu + Cake
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&domainVer=m2&upCd=cake_oksusu";
+			        stat_ViewXtvidCdSc = "main_cake_ok_fbv";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'I' && isOksusu_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Tphone(아이폰)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=ios_tphone_oksusu";
+			        stat_ViewXtvidCdSc = "m_tph_ok_ios_fb";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'A' && isOksusu_YN=='Y' && isTphone_YN=='Y'){	// Oksusu + Tphone(안드로이드)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tphone_oksusu";
+			        stat_ViewXtvidCdSc = "m_tph_ok_fb";
+			        stat_SelXtvidCdSc = "of_tph_ok_fb";
+			    }else if(isTpay_YN=='Y' && isCake_YN=='Y'){	//  Tpay + Cake
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&domainVer=m2&upCd=cake_tpay";
+			        stat_ViewXtvidCdSc = "main_cake_tp_fbv";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'I' && isTpay_YN=='Y' && isTphone_YN=='Y'){	//  Tpay + Tphone(아이폰)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=ios_tpay_tphone";
+			        stat_ViewXtvidCdSc = "m_tph_tp_ios_fb";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'A' && isTpay_YN=='Y' && isTphone_YN=='Y'){	//  Tpay + Tphone(안드로이드)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tpay_tphone";
+			        stat_ViewXtvidCdSc = "m_tph_tp_fb";
+			        stat_SelXtvidCdSc = "of_tph_tp_fb";
+			    }else if(isCake_YN=='Y' && isTphone_YN=='Y'){	//  Cake + Tphone
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tphone_cake";
+			        stat_ViewXtvidCdSc = "m_tph_ck_fb";
+			        stat_SelXtvidCdSc = "of_tph_ck_fb";
+			    }
+			    /** 1개 조합(단독) **/
+			    else if(isOksusu_YN=='Y'){	//Oksusu
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=oksusu";
+			        stat_ViewXtvidCdSc = "main_oksusu_fb_view";
+			        stat_SelXtvidCdSc = "main_oksusu_fb_btn";
+			    }else if(isTpay_YN=='Y'){	//Tpay
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&domainVer=m2&upCd=tpay";
+			   		stat_ViewXtvidCdSc = "main_tpay_fb_view";
+			   		stat_SelXtvidCdSc = "main_tpay_fb_btn";
+			    }else if(isCake_YN=='Y'){	//Cake
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&domainVer=m2&upCd=cake";
+			        stat_ViewXtvidCdSc = "main_cake_fb_view";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'I' && isTphone_YN=='Y'){	//Tphone(아이폰)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=ios_tphone";
+			        stat_ViewXtvidCdSc = "m_tphone_ios_fb";
+			        stat_SelXtvidCdSc = "";
+			    }else if(osType == 'A' && isTphone_YN=='Y'){	//Tphone(안드로이드)
+			        moveUrlSc = "/normal.do?serviceId=SDUMMY0001&viewId=V_PROD1000&upCd=tphone";
+			        stat_ViewXtvidCdSc = "m_tphone_fb";
+			        stat_SelXtvidCdSc = "of_tphone_fb";
+			    }
+			}	
+			//띠배너
+			$.post("/json/main_banner_band_"+osType+".json",function(data){  
+			
+				 var jsonData = JSON.parse(data);			 
+			  	 var band_html = ''; 
+			  	 var currentDate = new Date();
+			  	 var nDate =  $.fnDateFormat(currentDate,"YYYYMMDD");
+				 $.each(jsonData, function (index, value) {
+				 	var b_sdate = new Date(value.b_start_date.replace(/-/g, "/"));
+					var b_edate = new Date(value.b_end_date.replace(/-/g, "/"));
+					b_sdate = $.fnDateFormat(b_sdate,"YYYYMMDD");
+					b_edate = $.fnDateFormat(b_edate,"YYYYMMDD");
+					if ((b_edate >= nDate) && (b_sdate <= nDate) ){	
+					 	var t_link = value.b_link;
+		                t_link = t_link.replace("http://","");
+		                t_link = t_link.replace("https://","");
+		                
+		                if(t_link == ""){//링크가 없을 경우
+		                	band_html="<a href=\"#none\"";    
+		                }else{
+		                	band_html="<a href=\"javascript:goBanner('"+t_link+"', '"+value.b_billyn+"', '"+value.b_inout+"', '"+value.b_static_cd+"')\"";
+		                }
+		                band_html += " ga:ca='MTA_main' ga:ac='띠 배너' ga:la='"+value.b_alt+"'><img ga:ca='MTA_main' ga:ac='띠 배너' ga:la='"+value.b_alt+"' alt='"+ value.b_alt +"' src='"+ value.b_img +"'/></a>";
+				 		$('.banner_line_banner').append(band_html).show();
+				 	}
+				 });
+				 
+			}).error(function (){//상용배포시에 기존 json 호출
+				var defaultHtml ="<a href=\"#none\" ga:ca=\"MTA_main\" ga:ac=\"띠 배너\">"; 
+					defaultHtml+="<img src=\"/img/new_main/line_banner_NCSI.png\" ga:ca=\"MTA_main\" ga:ac=\"띠 배너\" alt=\"3대 고객만족도 1위, 1등갑게 더 잘하라는 목소리에 귀 기울이겠습니다.\"></a>";
+					$('.banner_line_banner').append(defaultHtml).show(); 
+			});	
+			
+			//검색 입력폼 디폴트값 세팅
+		$("#query").attr("placeholder",searchText);			
+			
+		//검색 입력폼에서 엔터 눌렀을때
+		function doSearch() {
+			var fm = document.search;
+			
+			if(fm.query.value == ""){
+				fm.query.value = searchText;			
+			}
+			
+			var re_query = fm.query.value;
+				
+			re_query = encodeURIComponent(re_query);
+			var re_query2 = re_query.replace(/%EB%88%9D/gi,"%2345597");
+			var re_query3 = decodeURIComponent(re_query2);
+			fm.query.value = re_query3;
+
+			// 2017-01-16 GA추가_02 [s]
+			ga('send','event', 'MTA_main', '최 상단', fm.query.value);
+			
+			fm.submit();
+		}			
+			
+		//검색버튼 클릭시			
+		$("#b_search").bind("click", function() {
+			var fm = document.search;
+			if(fm.query.value == ""){
+				fm.query.value = searchText;			
+			}
+				
+			var re_query = fm.query.value;
+				
+			re_query = encodeURIComponent(re_query);
+			
+			var re_query2 = re_query.replace(/%EB%88%9D/gi,"%2345597");
+			var re_query3 = decodeURIComponent(re_query2);
+			fm.query.value = re_query3;
+
+			// 2017-01-16 GA추가_02 [s]
+			ga('send','event', 'MTA_main', '최 상단', fm.query.value);
+				
+			$("#search").submit();
+			return false; 
+		});	
+		
+			//플로팅배너 값 세팅
+			callStatXtvidCd();	
+			
+			//플로팅 배너 닫기 처리
+			FloatingBanner = {
+				show : function(){
+					var isFBannerShow = "Y";
+					if(MobileUA.ANDROID){
+						isFBannerShow = checkConfirmDate("com.skt.prod.fTappsBanner", totalTime); //두번째 파라미터는 서버에서 불러와 셋팅 해야 합니다.
+					} else if(MobileUA.IOS){
+						if ( document.cookie.indexOf("fTappsBanner=done") < 0 ) {
+							isFBannerShow = "Y";
+			    		} else {
+			    			isFBannerShow = "N";
+			    		}
+					}
+					if(isFBannerShow == "Y"){
+						callCSScript(getXTVIDCookie(), svcMgmtNum, stat_ViewXtvidCdSc, '', '');
+						$(".floatingBnnr").show();
+						FloatingBanner.init();
+					} else {
+						FloatingBanner.close();
+					}
+				},
+				init : function(){
+					$(".floatingBnnr .todayExp").click(function(){
+						FloatingBanner.setCookieClose();
+					});
+					$(".floatingBnnr .btnClose").click(function(){
+						FloatingBanner.close();
+					});
+				},
+				
+				setCookieClose : function(){
+					if(MobileUA.ANDROID){
+						location.href = "toapp.settingpackageconfirmdate:com.skt.prod.fTappsBanner"; //하루동안 기준 시각.
+					} else if(MobileUA.IOS){
+						FloatingBanner.setCookie( "fTappsBanner", "done" , 1 );
+					}
+					FloatingBanner.close();
+				},
+				
+				close : function(){
+					$(".floatingBnnr").hide();
+				},
+				
+				setCookie : function( name, value, expiredays ) {
+					var todayDate = new Date();   
+				    todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);  
+				    if ( todayDate > new Date() ) {  
+				    	expiredays = expiredays - 1;  
+				    }  
+				    todayDate.setDate( todayDate.getDate() + expiredays );   
+				    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+				}
+			}
+			
+			$("#b_sms").bind("click", function() {		
+				location.href="toapp:smspage"; 
+				return false; 
+			});	
+	
+	
+			//플로팅 배너 클릭시 이동
+			$("#fBImage").on("click", function(){
+				location.href = moveUrlSc;
+			});
+			
+			
+			//다회선 layer open / close -  2013-11-14 추가
+			/* 레이버 팝업 구조 변경에 따른 코드 수정 2016-12-09 [s] */
+			/* 2016-12-09 수정_01 [s] */
+			$('#sel_phone').click(function(){
+				$(this).attr('tabIndex', 0).focus();
+		    	$("body").addClass('showMultiLine').append("<div class=bgDimm></div>");
+		    	$(".select_shadow").css("display", "block").show(function(){
+		    		$("html,body").css("overflow","hidden");
+		    		$(".select_shadow").find("h4").focus();
+		    	});
+				return false;
+			});
+				
+			$('#phone_num .cancel').click(function(){
+				setTimeout(function(){
+					location.reload();
+				   },200);
+				$(".bgDimm").remove();
+				$(".select_shadow").hide();
+				$("html,body").css("overflow","auto");
+				$("body").removeClass("showMultiLine");
+				$("#sel_phone").focus();
+				return false;
+			});
+				 
+			$('#phone_num ul li ').click(function(event){		
+				var $this = $(this);
+				$this.siblings().children('a').removeClass('checked');
+				$this.children('a').addClass('checked');
+				$('#selMultiNum').val($this.children('a').attr('rel'));
+				return false;
+			});
+				
+			//다회선 선택
+			$('#ok').click(function(){
+				$(".bgDimm").remove();
+				$(".select_shadow").hide();
+				setTimeout(function(){
+					fnChgSelect();
+				},100);
+				$("body").removeClass("showMultiLine").css("overflow","auto");
+				$(".btnLayer").focus();
+				return false;
+			});
+			
+			randomList();	
+			/* 2016-12-09 수정_01 [s] */
+			/* 2016-12-09 삭제_01 [s] */
+	//		var iscroll = new iScroll('sel_wrap');
+			/* 2016-12-09 삭제_01 [e] */
+			 /* 레이버 팝업 구조 변경에 따른 코드 수정 2016-12-09 [e] */
+			
+			//T알림
+			$.fnBadgeResponse = function(){
+		        var url = "toapp:tnoti:"+tnoti_attr_id
+		        var ifr=$('<iframe />', {
+							              id    : 'badge'
+							            , src   : url
+							            , async : false
+							            , style : 'display:none'
+							            , load  : function(){}
+		        						});
+		        $('body').append(ifr);   
+			}
+			
+			if(tnoti_attr_id != ""){
+				$.fnBadgeResponse();
+			}
+			
+			//t알림배너
+			$('.benner_talert .tal_c').click(function(){
+				$('.benner_talert').hide(200, function(){
+					$(".all_menu_btn").focus()					
+				});
+			});		
+			
+			//T알림 close 
+			$('#closeTA').click(function(){
+				$('.benner_talert').animate({
+					height: '0'
+				}, 200)
+				$('#closeTA').hide();
+				
+				if (MobileUA.IOS) {   // 
+					localStorage.setItem("com.skt.prod.tbanner", today);
+				} else {
+					location.href = "toapp.settingpackageconfirmdate:com.skt.prod.tbanner";    
+				}
+				var url = "toapp:bannerclose"
+				var ifr=$('<iframe />', {
+					  id    : 'TNoticeClose'
+					, src   : url
+					, async : false
+					, style : 'display:none'
+					, load  : function(){}
+				});
+		
+				$('body').append(ifr);
+			})
+			
+			var HideTBanner = function(){
+				if (MobileUA.IOS) {   // OS 체크
+					if(localStorage.getItem("com.skt.prod.tbanner") != today){
+						//$('.benner_talert').css('display','block');
+						$('.benner_talert').slideDown('fast');
+							
+					}
+				}else {
+					var closeTbannerTime = checkConfirmDate("com.skt.prod.tbanner", totalTime);//현재시간 > (플로팅배너 닫은 시간 + totalTime) --> Y
+					if(closeTbannerTime == "Y"){
+						//$('.benner_talert').css('display','block');
+						$('.benner_talert').slideDown('fast');
+					}
+				}	
+			}
+		
+			function fnChgSelect() {
+		        var fm = document.frmMultiNumSelect;
+		        var svc_mgmt_num = fm.selMultiNum.value;
+		        var url = mainUrl;
+		        
+		        if(url.indexOf("?") > -1) {
+		        	url += "&";
+		        } else {
+		            url += "?";
+		        }
+		        url += "svc_mgmt_num=" + svc_mgmt_num + "&isRefresh=Y&returnPage="+encMainUrl;
+		        
+		        if(osType == "A") {
+		        	window.toapp.syncSession(svc_mgmt_num);
+		            location.replace(url);
+		        } else if(osType == "I") {
+		            location.href = "toapp:syncsession:" + svc_mgmt_num; // iOS공인인증서 호출
+		            return;
+		        } else {
+		            location.replace(url);
+		        }
+		    }
+		   
+			//MOTP 접근인지 확인한다.
+			var checkMOTPAccess = function(){
+				var frm = document.otpForm;
+			   	frm.cryptVal.value = cryptVal;
+			   	frm.version.value = version;
+			   	frm.appDate.value = appDate;
+			   	if(frm.cryptVal.value != "" && frm.version.value != ""){
+					frm.target = "otpFrame";
+					frm.action = "/jsp/main/otp_access_check.jsp";
+					frm.submit();
+				}
+			}
+		   
+			//mdn값을 session에 세팅한다.
+			var setMDN = function(){
+				var frm = document.mdnForm;
+			   	frm.cryptVal.value = cryptVal;
+			   	
+			   	if(frm.cryptVal.value != ""){
+					frm.target = "mdnFrame";
+					frm.action = "/jsp/main/mdn_session_reg.jsp";
+					frm.submit();
+				}
+			}	
+			
+			//if(isShowFBanner == true){
+				//FloatingBanner.show();
+	        //}
+
+			//플로팅배너 노출
+			if( isOksusu_YN=='Y' || isTpay_YN=='Y' || isCake_YN=='Y' || isTphone_YN=='Y' ){
+				FloatingBanner.show();
+			}
+	        
+			if (MobileUA.IOS) {   // OS를 체크한다. (오픈소스 라이센스 고지문 IOS는 비노출)
+				$("#main_footer .floor_con .footbtn a:last-child").hide();
+			}	        	
+	        
+			checkMOTPAccess();
+			Banners.getBannerData();
+			setMDN(); 
+			HideTBanner();
+			
+		},
+		
+		synccallback : function(){
+	        var beforeValue = svcMgmtNum;
+	        var fm = document.frmMultiNumSelect;
+	        var svc_mgmt_num = fm.selMultiNum.value;
+	        var url = mainUrl;
+	        if(url.indexOf("?") > -1) {
+	            url += "&";
+	        } else {
+	            url += "?";
+	        }
+	
+	        url += "svc_mgmt_num=" + svc_mgmt_num + "&isRefresh=Y&returnPage="+encMainUrl;
+	        fm.selMultiNum.value = beforeValue;     // 히스토리백할때 화면과 싱크가 안맞아서 추가
+	        location.href = url;		
+		},
+		
+	    goBanner : function(link, billyn, inout, static_cd){
+	    	console.log("이미지클릭 클릭  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+static_cd ); 
+			if( "Y" == billyn ){
+				if(confirm("3G/LTE망 사용 시 데이터 요금이 발생됩니다.")){
+					callCSScript(getXTVIDCookie(), svcMgmtNum, static_cd , '', '');
+					if(osType == "A") {   // OS 체크
+						if(inout == "OUT") toapp.webbrowserouter(link);
+						else location.href = "http://" + link;
+		 			}else if(osType == "I") {
+		 				if(inout == "OUT") location.href = "toapp:webbrowserouter:" + link;
+		 				else location.href = "http://" + link;
+		 			}
+		 		}
+	 		}else{
+	 			callCSScript(getXTVIDCookie(), svcMgmtNum, static_cd , '', '');
+				if(osType == "A") {   // OS 체크
+					if(inout == "OUT") toapp.webbrowserouter(link);
+					else location.href = "http://" + link;
+		 		}else if(osType == "I") {
+		 			if(inout == "OUT") location.href = "toapp:webbrowserouter:" + link;
+		 			else location.href = "http://" + link;
+		 		}
+	 		}
+		}		
+
+	};
+	
+	 //app에서 사용함
+	 function goBanner(link, billyn, inout, static_cd){
+			if( "Y" == billyn ){
+				if(confirm("3G/LTE망 사용 시 데이터 요금이 발생됩니다.")){
+					callCSScript(getXTVIDCookie(), svcMgmtNum, static_cd , '', '');
+					if(osType == "A") {   // OS 체크
+						if(inout == "OUT") toapp.webbrowserouter(link);
+						else location.href = "http://" + link;
+		 			}else if(osType == "I") {
+		 				if(inout == "OUT") location.href = "toapp:webbrowserouter:" + link;
+		 				else location.href = "http://" + link;
+		 			}
+		 		}
+	 		}else{
+	 			callCSScript(getXTVIDCookie(), svcMgmtNum, static_cd , '', '');
+				if(osType == "A") {   // OS 체크
+					if(inout == "OUT") toapp.webbrowserouter(link);
+					else location.href = "http://" + link;
+		 		}else if(osType == "I") {
+		 			if(inout == "OUT") location.href = "toapp:webbrowserouter:" + link;
+		 			else location.href = "http://" + link;
+		 		}
+	 		}
+		}
+		/*플로팅 배너 start*/
+		function offeringMain(){
+			var offeringStatic_cd="";
+			if(osType =="A"){
+				osTypeS ="and";
+			}else{
+				osTypeS ="ios";
+			}
+			offeringStatic_cd ="MA_"+osTypeS+"_go_fv"; 
+			console.log("메인노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+			callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			if(dsc_notice_kids == "TA001"){ //키즈폰대상
+				ta001 = true;
+			}
+			
+			if(dsc_notice == "TA002"){ //A
+				ta002 = true;
+				ta000 = true;
+			}
+			if(dsc_notice == "TA003"){ //B
+				ta003 = true;
+				ta000 = true;
+			}
+			if(dsc_notice == "TA004"){ //C
+				ta004 = true;
+				ta000 = true;
+			}
+			if(dsc_notice == "TA005"){ //D 
+				ta005 = true;
+				ta000 = true;
+			}
+			if(dsc_notice == "TA006"){ //기타 
+				ta006 = true;
+				ta000 = true;
+			}
+					
+			if(ta001 && ta000){ //키즈폰대상 +Upsell Type 
+				$(".floating_banner_dim").find(".floating_txt_wrapper").append("<p class=\"floating_txt\" role=\"txt\">맞춤정보가 <strong><em class=\"fcYel\">2</em>건</strong> 추가되었습니다!</p>"); 
+			}else{
+				if(ta001){
+					$(".floating_banner_dim").find(".floating_txt_wrapper").append("<p class=\"floating_txt\" role=\"txt\">1만원도 안되는 실속 단말 보기</p>"); 
+				}else if(ta002 || ta003 || ta004 || ta005 || ta006){
+					$(".floating_banner_dim").find(".floating_txt_wrapper").append("<p class=\"floating_txt\" role=\"txt\">나에게 딱 맞는 요금제 추천</p>"); 
+				}
+			}
+			
+			var rpHtml ="";
+			if(ta001){
+				offeringStatic_cd ="MA_"+osTypeS+"_kidp_bc";  
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m.shop.tworld.co.kr/handler/Plan-List?PLAN_ID=P00000186', 'N', 'OUT', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"키즈폰배너\">";
+				rpHtml+="<img src=\"/img/new_main/kidsPhone.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"키즈폰배너\" alt=\"일만원미만실속단말에 체크카드십만원캐쉬백까지 우리아이 첫스마트폰장만하세요 새창열기\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			rpHtml ="";
+			if(ta002){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_A_bc"; 
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m2.tworld.co.kr/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y', 'N', 'IN', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type A\">"; 
+				rpHtml+="<img src=\"/img/new_main/DSC01.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type A\" alt=\"데이터 리필은 귀찮고, 요금 폭탄은 두렵고. 고객님을 위한 요금제를 추천해 드립니다.\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			rpHtml ="";
+			if(ta003){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_B_bc";
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m2.tworld.co.kr/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y', 'N', 'IN', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type B\">"; 
+				rpHtml+="<img src=\"/img/new_main/DSC02.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type B\" alt=\"가족/친구에게 데이터 조르기 미안한데. 고객님을 위한 요금제를 추천해 드립니다.\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			rpHtml ="";
+			if(ta004){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_C_bc";
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m2.tworld.co.kr/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y', 'N', 'IN', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type C\">"; 
+				rpHtml+="<img src=\"/img/new_main/DSC03.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type C\" alt=\"왜 자꾸 핸드폰 요금이 더 나오는 거야? 고객님을 위한 요금제를 추천해 드립니다.\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			rpHtml ="";
+			if(ta005){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_D_bc";
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m2.tworld.co.kr/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y', 'N', 'IN', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type D\">"; 
+				rpHtml+="<img src=\"/img/new_main/DSC04.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type D\" alt=\"속도제한 때문에 정말 답답하시죠? 고객님을 위한 요금제를 추천해 드립니다.\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			rpHtml ="";
+			if(ta006){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_E_bc";
+				rpHtml+="<li>";
+				rpHtml+="<a href=\"javascript:onAfterBinding.goBanner('m2.tworld.co.kr/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y', 'N', 'IN', '"+offeringStatic_cd+"')\" class=\"sub_floating_icon\" ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type E\">"; 
+				rpHtml+="<img src=\"/img/new_main/DSC05.png\"  ga:ca=\"MTA_main\" ga:ac=\"DSC플로팅배너>DSC메뉴\" ga:la=\"Upsell Type E\" alt=\"정말로 나에게 딱맞는 요금제는 뭘까? 고객님을 위한 요금제를 추천해 드립니다.\">";
+				rpHtml+="</a>";
+				rpHtml+="</li>";
+				$(".sub_floating_list > ul").append(rpHtml);
+			}
+			$(".floating_banner_dim").show(); 
+			
+			/* 2017-03-03 수정_01 [s] */
+			setTimeout(function(){
+				$(".floating_txt_wrapper").animate({"width":250}, 500, function(){
+					setTimeout(function(){
+						//$(".floating_txt_wrapper").addClass('hide');
+						$(".floating_txt_wrapper").animate({"width":0}, 500, function(){
+							$(this).hide();
+							/* 2017-03-02 추가_01 [s] */
+							/* 2017-03-02 수정_01 [s] */
+							if(!$(".floating_banner_dim").hasClass("on")){
+								$("#floating_banner").addClass("ready");
+							}
+							/* 2017-03-02 수정_01 [e] */
+							/* 2017-03-02 추가_01 [e] */
+						});
+					}, 3000)
+				});
+			}, 1000);
+			/* 2017-03-03 수정_01 [e] */
+			
+			var sub_floating_list_height = ($(".sub_floating_list ul li:first-child .sub_floating_icon").height() + 10) * $(".sub_floating_list ul li .sub_floating_icon").length + 30;
+			
+			$(".floating_icon, .floating_txt_wrapper").click(flotingIconEvent);
+			
+		}
+		
+		
+		var mg = 5;
+		var speed = 300;
+		function fnSubFloatingBannerShow(){
+			/* 2017-03-02 추가_02 [s] */
+			$("#floating_banner").removeClass("ready");
+			/* 2017-03-02 추가_02 [e] */
+			$(".floating_banner_dim").height($(window).height()).addClass("on");
+			$(".sub_floating_list").show()
+			var subItems = $(".sub_floating_list a");
+			var h = $(".sub_floating_list li:first-child a").height();
+			var len = subItems.length;
+			for(var i=0; i<len; i++){
+				var iTop = -1 * ((h + mg) * (len - i));
+				/* 2017-03-03 수정_02 [s] */
+				$(subItems[i]).show().animate({
+					"top": iTop,
+					"opacity": 1}, speed, function(){
+						$(subItems[0]).focus();
+					});
+				/* 2017-03-03 수정_02 [e] */
+			}
+			$("body").css("overflow-y", "hidden");
+		}
+		var timeoutID = undefined;
+			
+		function fnSubFloatingBannerHide(){
+			$(".floating_icon").unbind('click', flotingIconEvent);
+			var subItems = $(".sub_floating_list a");
+			var h = $(".sub_floating_list li:first-child a").height();
+			var len = subItems.length;
+			for(var i=0; i<len; i++){
+				if(i< len - 1){
+					$(subItems[i]).animate({"top": 0,"opacity": 0}, speed, function(){$(this).hide()});	
+				} else {
+					$(subItems[i]).animate({"top": 0,"opacity": 0}, speed, function(){
+						$(this).hide();
+						$("body").css("overflow-y", "auto");
+						$(".sub_floating_list").hide();
+						$(".floating_banner_dim").addClass("off");//.removeClass("on").height(0).removeClass("off");
+							
+						if(timeoutID == undefined){
+							timeoutID = setTimeout(function(){
+								$(".floating_banner_dim").removeClass("on").height(0).removeClass("off");
+								$(".floating_icon").click(flotingIconEvent);
+								timeoutID = undefined
+								/* 2017-03-02 추가_03 [s] */
+								$("#floating_banner").addClass("ready");
+								/* 2017-03-02 추가_03 [e] */
+								/* 2017-03-03 추가_02 [s] */
+								$(".floating_icon .floating_show_icon").focus();
+								/* 2017-03-03 추가_02 [e] */
+								
+							}, 300)	
+						}
+							
+					});
+				}
+			}
+		}
+			
+		function flotingIconEvent(){
+			
+			$(".floating_txt_wrapper").hide();
+			event.stopPropagation();
+			if($(".floating_icon").hasClass("on")){//닫기
+				offeringStatic_cd = "MA_"+osTypeS+"_close_bc"; //닫기클릭
+				console.log("닫기버튼 클릭  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+				ga('send', 'event', 'MTA_main', 'DSC플로팅배너' ,'숨기기');
+				$(".floating_icon").removeClass("on");
+				/* 2017-03-03 추가_03 [s] */
+				$(".floating_icon.floating_show_icon").show();
+				$(".floating_icon.floating_close_icon").hide();
+				/* 2017-03-03 추가_03 [e] */
+				$(".floating_close").show();
+				fnSubFloatingBannerHide();
+			} else {//바로가기클릭
+				goOfferingStatic_cd();
+				ga('send', 'event', 'MTA_main', 'DSC플로팅배너' ,'보이기');
+				$(".floating_icon").addClass("on");
+				/* 2017-03-03 추가_04 [s] */
+				$(".floating_icon.floating_show_icon").hide();
+				$(".floating_icon.floating_close_icon").show();
+				/* 2017-03-03 추가_04 [e] */
+				$(".floating_close").hide();
+				fnSubFloatingBannerShow();
+			}
+		}
+		
+		function goOfferingStatic_cd(){   
+			var offeringStatic_cd="";
+			
+			offeringStatic_cd = "MA_"+osTypeS+"_go_fc"; //바로가기클릭
+			console.log("바로가기 클릭  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+			callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			
+			if(ta001){
+				offeringStatic_cd ="MA_"+osTypeS+"_kidp_bv";  
+				console.log("ta001 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			}
+			if(ta002){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_A_bv"; 
+				console.log("ta002 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			}
+			if(ta003){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_B_bv";
+				console.log("ta003 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			}
+			if(ta004){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_C_bv";
+				console.log("ta004 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			}
+			if(ta005){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_D_bv";
+				console.log("ta005 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', ''); 
+			}
+			if(ta006){
+				offeringStatic_cd ="MA_"+osTypeS+"_ups_E_bv";
+				console.log("ta006 노출  : 서비스번호 : "+svcMgmtNum+"  통계코드 : "+offeringStatic_cd ); 
+				callCSScript(getXTVIDCookie(), svcMgmtNum, offeringStatic_cd , '', '');
+			}
+		}
+		/* 2017-02-17 추가_01 [e] 메인 오퍼링 */  
+		//main_sub.jsp javascript start
+		
+		/**
+		* barcode 속성지정
+		*/
+		var settings = {
+	    	output     :"css",
+	  		bgColor    : "#FFFFFF",
+	        color      : "#000000",
+	        barWidth   : 1,
+	        barHeight  : 50,
+	        moduleSize : 2,
+	        posX       : 50,
+	        posY       : 20,
+	        addQuietZone: 1
+	   };
+        
+      	/**
+		* 더보기 [+] 이미지 숨기 
+		* false : 숨김
+		* true  : 보이기
+		*/
+		$.fnHideMore = function(view){
+			var $moreDiv = $('.main_tab > ul > li');
+		   	if(!view){
+		     	$moreDiv.find('.mag_btn').css('display','none');
+		     }else {
+		     	$moreDiv.find('.mag_btn').css('display','block');
+		     }
+		}
+			
+	   	var barcode;
+		/**
+		* 멤버십카드 요청 
+		* skt_init.jsp -> skt_card_num_json.jsp
+		* 응답 CallBack Method
+		*/
+		function processingComplete(xml)
+		{
+			barcode  = $(xml).find("mbrs").find("info").find("ebc_num").text();
+			dataCode = $(xml).find("dataCode").text();
+			memberType = $(xml).find("mbrs").find("info").find("membershipTypeNm").text();
+			memberGr = $(xml).find("mbrs").find("info").find("membershipGrNm").text();
+			memberLimit = $(xml).find("mbrs").find("info").find("membershipRemLimit").text();
+			/**
+			 * - 조회실패시  메세지 출력
+			 * - 세션종료시 로그인 페이지로 이동처리 
+			*/
+			if( sign(xml, EVENT_TYPE_01)){
+				return true;
+			}
+				
+			if( dataCode != 0 ){
+				dataMessage = $(xml).find("dataMessage").text();
+				if( dataCode == 9004 ){
+					dataMessage = MESSAGE_HASNT_CARD
+						
+				}
+				toggleMsg(EVENT_TYPE_01, MSG_LOAD_TYPE_01, 'N');
+				toggleMsg(EVENT_TYPE_01, dataMessage, 'Y');
+				return true;
+			}
+				
+		 	toggleMsg(EVENT_TYPE_01, MSG_LOAD_TYPE_01, 'N');
+			$("#meb_sub_con").barcode({code:barcode, crc:false}, "int25",settings);
+			$("#meb_sub_num").text(numberFormat(barcode));
+			$("#meb_sub_type").text(memberType);
+			$("#meb_sub_gr").text(memberGr);
+			$("#meb_sub_limit").text(memberLimit);
+		}
+			
+		//4자리마다 공백을 넣어준다.
+		function numberFormat(num){
+			var pattern = /(-?[0-9]+)([0-9]{4})/;
+			while(pattern.test(num)){
+				num = String(num).replace(pattern,"$1 $2");
+			}
+			return num;
+		}
+		    
+		function commCalled(MESSAGE_TYPE, callType){
+			ONE_PASS_CALL = false;
+		    removeMessage(true);
+		    	
+			switch(callType){
+			case EVENT_TYPE_01 : //멤버십 카드
+				toggleMsg(callType, MSG_LOAD_TYPE_01, 'Y');
+				break;
+			case EVENT_TYPE_02 : //잔여기본통화
+				toggleMsg(callType, MSG_LOAD_TYPE_02, 'Y');
+				break;
+			case EVENT_TYPE_03 : //실시간 요금
+				toggleMsg(callType, MSG_LOAD_TYPE_03, 'Y');
+				break;
+			}		    	
+		}
+		    
+		/**
+		 * 멤버십카드 요청 
+		 * Event 요청은 Native App(ONEPASS)에서 홈화면을 처음 실행할때 호출한다.
+		 * skt_init.jsp -> skt_card_num_json.jsp
+		 * 응답은  CallBack처리로 요청함
+		**/
+		function fnMemberShipCard(){
+			commCalled(MESSAGE_TYPE_01, EVENT_TYPE_01);
+		    $('#meb1').click();
+		}
+		    
+		/*
+		*1. 잔여기본통화 event
+		*   Event 요청은 Native App(ONEPASS)에서 호출을함
+		*/
+		function fnBaseCall(){
+			commCalled(MESSAGE_TYPE_02, EVENT_TYPE_02);
+			$('#meb2').click();
+		}
+				
+		//실시간 요금 event
+		//Event 요청은 Native App(ONEPASS)에서 호출을함
+		function fnRealTimeChage(){
+		  	commCalled(MESSAGE_TYPE_03, EVENT_TYPE_03);
+			$('#meb3').click();
+		}
+		    
+			
+		/**
+		 * 바코드 더보기 기능
+		*/
+		$('#zoom').click(function(){	
+			if(barcode == '' || barcode == null ){
+				return true;
+			}
+			location.href="toapp:memberbarcode:"+barcode;
+			return;
+		});
+			    
+	   var timeOut;
+	   //실시간 사용기간
+	   var searchTermDate ="";
+	   /**
+	    * Ajax request method
+	    *
+	    * @param callType Event Task
+	    * @param serverURL ajax 호출 URL
+	    * @param sub menu click id
+	    */
+	    function requestTaskAjax(callType,serverURL,id){
+	    	//시간설정
+	    	 requestType = callType;
+		 	 $.ajax({
+					  type    : 'get'
+					, async   : true
+					, dataType: 'xml'
+					, contentType: "text/xml;charset=utf-8"
+					, headers : { "cache-control": "no-cache" }
+					, cache   : false
+					, url     : serverURL
+					, success : function(xml) {
+					
+						if( callType== EVENT_TYPE_03){
+							
+					   	    var resultCode =  $(xml).find("resultCode").text();
+							/**
+						   	  * - 조회실패시  메세지 출력
+						   	  * - 세션종료시 로그인 페이지로 이동처리 
+						   	  */
+							if( resultCode != '0'  ){
+							
+								 clearTimeout(timeOut);
+								 requested = false;
+								 if( sign(xml, callType)){
+								 	return true;
+								 }
+				   	    	}
+				   	    	
+							serverURL = '/normal.do?viewId=V_CENT1126&serviceId=S_BILL1126'+param;
+						   	searchTermDate = $(xml).find("searchTermDate").text();
+							timeOut = setTimeout("requestTaskAjax("+EVENT_TYPE_04+",'"+serverURL+"',null)",4000);
+							return true;
+						}
+						
+					
+						switch(callType){
+						case EVENT_TYPE_01 : //멤버십 카드
+							$.fnHideMore(true);
+							processingComplete(xml);
+							break;
+						case EVENT_TYPE_04 : //실시간 요금 로직처리함
+							clearTimeout(timeOut);
+						    realTimeCharge(xml);
+						    $.fnHideMore(true);
+							break;
+
+						break;
+						}
+						
+					}
+					, error: function(x, e) {
+						removeMessage(true);
+						x.abort(); 
+					    //실시간 요금 event lock해제
+						requested = false;
+						var msg = "조회가 원활하지 않습니다. <br>잠시 후 다시 시도해 주세요." ;
+					    //로딩 메세지 출력창닫기
+					    toggleMsg(callType, msg, 'Y');
+						console.log("ERROR response ................");
+						console.log(e);
+						console.log("ERROR response ................");
+					    return;
+					}
+				});
+	    }	
+		
+		/**
+	   	  * - 조회실패시  메세지 출력
+	   	  * - 세션종료시 로그인 페이지로 이동처리 
+	   	  * - 미인증 회원 메세지 출력
+	   	  */
+		function sign(xml, callType){
+			 var resultCode =  $(xml).find("resultCode").text();
+			 console.log(" sign resultCode =["+resultCode+"]");
+		 	 if(resultCode != 0){
+		 	 
+		   	  	 if(resultCode == 999){
+		   	  	 	$.goURL(loginPage,'Y');
+		   	  	 	return true;
+		   	  	 }
+		   	  	 
+		   	  	 //미인증 회원 메세지 처리
+		   	  	 var resultMessage = $(xml).find("resultMessage").text();
+		   	  	 if(resultCode == 'A998'){
+		   	  	 	resultMessage = MESSAGE_DONE_USE;
+		   	  	 }
+		   	  	 
+				//멤버십카드 미발급
+		   	  	 if( resultCode == 9004 ){
+					resultMessage = MESSAGE_HASNT_CARD
+				}
+				
+				//잔여기본통화
+				if(callType == EVENT_TYPE_02){
+					resultMessage += "<div class='n_btn'><a href='/normal.do?serviceId=S_BILL0070&viewId=V_CENT0261&domainVer=m2&menuId=2,2&mainMenu=Y' class='btn2' title='자세히 보기 바로가기'>자세히 보기</a></div>";
+				}
+				
+		   	  	toggleMsg(callType, resultMessage, 'Y');
+		   	  	 
+		   	  	 return true;
+	   	  	}
+	   	  	return false;
+		}
+	  
+	   
+	    //실시간 요금 응답값 처리함
+	   function realTimeCharge(xml){
+	   
+	   	  if(sign(xml, EVENT_TYPE_03)){
+	   	  	return true;
+	   	  }
+		  
+	      var totOpenBal2 = $(xml).find("totOpenBal2").text();
+	      if( totOpenBal2 == null){
+	      	totOpenBal2 == ''
+	      }
+	      $("#searchTermDate").html(searchTermDate);
+		  $("#totOpenBal2").html(totOpenBal2);
+		  
+		  setTimeout(function(){
+		  	/**
+			 * 로딩 메세지 출력창닫기
+			 */
+			toggleMsg(EVENT_TYPE_03, MSG_LOAD_TYPE_03, 'N');
+		  	requested = false;
+		  },500);
+		  
+	   }
+	   
+	   /** 
+	    * 잔여기본통화 UI초기화 
+	    */
+	   function removeMessage(result){
+	   
+	      $("#v_msg").remove();
+	      $("#sms_msg").remove();
+	      $("#d_msg").remove();
+	      
+	   	  if(result){
+		      $("#v_con").show();
+		      $("#s_con").show();
+		      $("#d_con").show();
+	      }
+	   }
+
+	/**
+	 * 화면에서 메시지를 보여주거나 제거한다.
+	 */
+	function toggleMsg(sector, msg, isView){
+	
+		var contentElement;
+		var msgElement;
+		
+		switch(sector){
+			case EVENT_TYPE_01 : //멤버십 카드
+				contentElement = $('.mem_con');
+				msgElement = $('#mem_sector > div.tab_con > .n_login');	
+				break;
+				
+			case EVENT_TYPE_02 : //잔여기본통화
+				contentElement = $('.rem_con');
+				msgElement = $('#rem_sector > div.tab_con > .n_login');		
+				break;					
+
+			case EVENT_TYPE_03 : //실시간요금
+				contentElement = $('.time_con');
+				msgElement = $('#time_sector > div.tab_con > .n_login');		
+				break;		
+		}
+		
+		if(isView == 'Y'){
+			var editMsg = "<div class='table_b'><p class='txt'>" + msg + "</p></div>";
+			if(msg.indexOf("<div class='n_btn'>") > 0){
+				editMsg = "<div class='table_b pa'><p class='txt'>" + msg + "</p></div>";
+			}
+			msgElement.html(editMsg);
+			msgElement.css('display','block');
+			contentElement.css('display','none');
+			
+		}else{
+			msgElement.css('display','none');
+			contentElement.css('display','block');
+		}	
+	}
+	
+	function freeBillCookis( name, value ) {
+		console.log ("setCookis");
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + 20*60 + ";" 
+	}
+	
+	function getFreeCookis(name){
+		 name = name + '=';
+		 var cookieData = document.cookie;
+		 var start = cookieData.indexOf(name); 
+		 var cValue ="";
+		 if(start != -1){
+		 	start += name.length;
+		 	var end =cookieData.indexOf(';', start);
+		 	if(end == -1) end = cookieData.length;
+		 	cValue = cookieData.substring(start,end);
+		 }
+		 console.log ("getCookis"+unescape(cValue));
+		 return unescape(cValue);
+	}
+	
+	//main_sub.jsp javascript end
+
+</script>

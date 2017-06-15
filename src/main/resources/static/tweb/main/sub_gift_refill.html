@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no">
+<title>my 이동전화 &lt; my T | T world</title>
+<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/new_billsearch.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css" />
+</head>
+<body class="bg_white">
+
+<div class="my_menu">
+    <div id="header">
+        <div class="header_cont">
+			<div class="h1_wrap"><h1><span id="title"></span></h1></div>
+				<button onClick="javascript:goAppBack();" class="head_back_page" id="backBtn">뒤로가기</button> 
+			<p class="search_allmenu">
+                <button class="head_search" onClick="javascript:fnSearch();">검색</button>
+                <button class="head_allmenu" onClick="javascript:fnMenuAll();">전체메뉴보기</button> 
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<section>
+	<div id="content" class="info_main billsearch pocUI">
+		<!-- mini myT -->
+		<div class="mini_myT">
+         	<dl class="my_line_number line_number_border">
+                <dt>나의 회선번호</dt>
+                <dd class="" ></dd>
+            </dl>
+		</div>
+		<span class="ico_comm arrow"></span>
+		
+		<div class="box_section mg_t5">
+			<div class="cont_box1">
+				<div class="wrap_cont">
+					<!-- 2016-10-31 GA추가_02 [s] -->
+					<div class="tit_menu"><a href="http://m2.tworld.co.kr/normal.do?viewId=V_BILL0002&serviceId=S_BILL1156&domainVer=m2&PMAIN=3" ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="T끼리 데이터 선물하기" class="link_menu">T끼리 데이터 선물하기<span ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="T끼리 데이터 선물하기" class="ico_comm"></span></a></div>
+					
+					<dl class="addinfo">
+						<dt>잔여데이터</dt>
+						<dd class="fc_red" id = "singlea1"></dd>
+						<!-- 2016-10-31 GA추가_03 [s] -->
+						<script type="text/x-handlebars-template" id="singlea_normal1"><button ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="잔여데이터 조회" class="btn_check" onClick="javascript:goRequest();">조회하기<span ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="잔여데이터 조회" class="ico_comm"></span></button></script>
+						<script type="text/x-handlebars-template" id="singlea_block1">점검중</script>
+						<script type="text/x-handlebars-template" id="singlea_auth1">사용불가 서비스</script>
+						<script type="text/x-handlebars-template" id="singlea_result">{{DATA_REM_QTY}}<span class="unit">MB</span></script>
+						<script type="text/x-handlebars-template" id="singlea_default">-</script>
+					</dl>
+				</div>
+				<div class="wrap_info">
+					<p class="txt_info">※ 잔여 데이터량은 선물 가능 요금제의 기본 제공 데이터량 기준이며, 선물하기는 선물 후 500MB 이상 남아 있어야 이용 가능합니다.</p>
+				</div>
+				<div class="wrap_action">
+					<ul>
+						<!-- 2016-10-31 GA추가_04 [s] -->
+						<li><a href="/normal.do?viewId=V_BILL0006&serviceId=S_BILL1158&domainVer=m2" ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="선물내역">선물내역</a></li>
+						<!-- 2016-10-31 GA추가_05 [s] -->
+						<li><a href="/normal.do?viewId=V_BILL0011&serviceId=S_BILL1168&domainVer=m2" ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="자동 선물 신청">자동 선물 신청</a></li>
+						<!-- 2016-10-31 GA추가_06 [s] -->
+						<li><a href="/normal.do?viewId=V_BILL0008&serviceId=S_BILL1161&domainVer=m2" ga:ca="MTA_recharge" ga:ac="T끼리 데이터 선물하기" ga:la="선물 조르기">선물 조르기</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_section mg_t10 pd_b20">
+			<div class="cont_box1">
+				<div class="wrap_cont">
+					<!-- 2016-10-31 GA추가_07 [s] -->
+					<div class="tit_menu"><a href="http://m2.tworld.co.kr/normal.do?serviceId=S_ETC_0057&viewId=V_CENT5008&domainVer=m2&PMAIN=3" ga:ca="MTA_recharge" ga:ac="리필하기" ga:la="리필하기" class="link_menu">리필하기<span class="ico_comm"></span></a></div>
+					<dl class="addinfo">
+						<dt>사용가능 리필쿠폰</dt>
+						<dd id = "singleb1"></dd>
+						<script type="text/x-handlebars-template" id="singleb_normal1"><span>{{usableCouponCnt}}</span><span class="unit">장</span></script>
+						<script type="text/x-handlebars-template" id="singleb_block1">점검중</script>
+						<script type="text/x-handlebars-template" id="singleb_auth1">사용불가 서비스</script>
+						<script type="text/x-handlebars-template" id="singleb_error1">잠시후 이용해주세요.</script>
+						
+					</dl>
+				</div>
+			</div>
+			<div class="cont_addinfo">
+				<div class="column_type">
+					<!-- 2016-12-19 GA추가_01 [s] -->
+					<a href="/normal.do?serviceId=S_ETC_0059&viewId=V_CENT5011&domainVer=m2" ga:ca="MTA_recharge" ga:ac="리필하기" ga:la="리필하기 쿠폰 사용 내역" class="link_info">리필하기 쿠폰 사용 내역<span class="ico_comm"></span></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_section mg_t5 wrap_coupon">
+			<div class="coupon_item offer_area">
+				<img src="/img/new_billsearch/03_coupon_1_loading.gif"	id="loading_img"		alt="T 데이터 쿠폰 로딩 중"/><!-- loading -->
+				<img src="/img/new_billsearch/03_coupon_1_offer1.png"	id="offered_img"		alt="T 데이터 쿠폰, 데이터가 부족한 친구에게 데쿠 선물 어때요?"/><!-- offering 대상 일때 -->
+				<img src="/img/new_billsearch/03_coupon_1_offer2.png"	id="noneOffered_img"	alt="T 데이터 쿠폰, 국내에서 데이터 통화를 이용할 수 있는 선불 쿠폰"/><!-- offering 대상이 아닐때 -->
+			
+				<div id = "singlec1"></div>
+				<script type="text/x-handlebars-template" id="singlec_normal1">{{_objShowImg}}</script>
+				<script type="text/x-handlebars-template" id="singlec_block1">{{_objShowImg}}</script>
+				<script type="text/x-handlebars-template" id="singlec_auth1">{{_objShowImg}}</script>
+				<script type="text/x-handlebars-template" id="singlec_error1">{{_objShowImg}}</script>
+				
+				<ul class="coupon_links">
+					<!-- 2016-10-31 GA추가_08 [s] -->
+					<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_BILL5010&domainVer=m2" onclick="ga('send','event','MTA_recharge','T데이터 쿠폰','쿠폰구매');">쿠폰구매</a></li>
+					<!-- 2016-10-31 GA추가_09 [s] -->
+					<li><a href="http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_BILL5013&domainVer=m2" onclick="ga('send','event','MTA_recharge','T데이터 쿠폰','조르기');">조르기</a></li>
+					<!-- 2016-10-31 GA추가_10 [s] -->
+					<li><a href="javascript:$goGiftURL('/normal.do?serviceId=SDUMMY0001&viewId=V_BILL5011&domainVer=m2');" onclick="ga('send','event','MTA_recharge','T데이터 쿠폰','쿠폰등록');">쿠폰등록</a></li>
+				</ul>
+				<!-- offering 대상 일때 하단 show end-->
+				<div class="offering_popup" id="offered_alert">
+					<img src="/img/new_billsearch/03_decu.png" alt="데이터 쿠폰 줄여서 데쿠, 데이터는 데쿠!"/>
+					<a href="javascript:offerAlertClose(this);" title="닫기"></a>
+				</div>
+				<!-- offering 대상 일때 하단 show end-->
+			</div>
+			<div class="coupon_item">
+				<img src="/img/new_billsearch/03_coupon_2.png" alt="T 쿠폰, 음성,문자,영상,데이터 통화를 이용할 수 있는 선불 쿠폰"/>
+				<ul class="coupon_links">
+					<!-- 2016-10-31 GA추가_11 [s] -->
+					<li><a href="/normal.do?serviceId=SDUMMY0001&viewId=V_BILL6001&domainVer=m2&PMAIN=3" onclick="ga('send','event','MTA_recharge','T쿠폰','쿠폰구매');">쿠폰구매</a></li>
+					<!-- 2016-10-31 GA추가_12 [s] -->
+					<li><a href="/normal.do?serviceId=SDUMMY0001&viewId=V_BILL6002&domainVer=m2" onclick="ga('send','event','MTA_recharge','T쿠폰','쿠폰등록');">쿠폰등록</a></li>
+				</ul>
+			</div>
+			<div class="coupon_item">
+				<img src="/img/new_billsearch/03_coupon_3.png" alt="제주도 프리 쿠폰, 제주도에서 원하는 기간 동안 데이터를 걱정 없이 이용하는 쿠폰"/>
+				<ul class="coupon_links">
+					<!-- 2016-10-31 GA추가_13 [s] -->
+					<li><a href="/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0054&domainVer=m2&PMAIN=3" onclick="ga('send','event','MTA_recharge','제주도 프리 쿠폰','쿠폰구매');">쿠폰구매</a></li>
+					<!-- 2016-10-31 GA추가_14 [s] -->
+					<li><a href="/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0054&domainVer=m2&upCd=2" onclick="ga('send','event','MTA_recharge','제주도 프리 쿠폰','조르기');">조르기</a></li>
+					<!-- 2016-10-31 GA추가_15 [s] -->
+					<li><a href="/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0054&domainVer=m2&upCd=3#" onclick="ga('send','event','MTA_recharge','제주도 프리 쿠폰','쿠폰등록');">쿠폰등록</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="box_section">
+			<div class="cont_button">
+				<div class="column_type col3">
+					<a href="http://m2.tworld.co.kr/normal.do?viewId=V_CENT9102&serviceId=S_BILL1139&domainVer=m2&PMAIN=3" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅 요금제 충전선물/내역" class="button_type1 ta_c">
+						<!-- 2016-10-31 GA추가_16 [s] -->
+						<span class="inner" role="text" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅 요금제 충전선물/내역"><strong class="fw_b" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅 요금제 충전선물/내역">팅 요금제 충전선물/내역</strong></span>
+					</a>
+				</div>
+				<div class="column_type col3">
+					<a href="http://m2.tworld.co.kr/normal.do?viewId=V_CENT9108&serviceId=S_BILL1142&domainVer=m2&PMAIN=3" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅/쿠키즈 요금한도충전/내역" class="button_type1 ta_c">
+						<!-- 2016-10-31 GA추가_17 [s] -->
+						<span class="inner" role="text" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅/쿠키즈 요금한도충전/내역"><strong class="fw_b" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="팅/쿠키즈 요금한도충전/내역">팅/쿠키즈<br>요금한도충전/내역</strong></span>
+					</a>
+				</div>
+				<div class="column_type col3">
+					<a href="http://m2.tworld.co.kr/normal.do?viewId=V_CENT9111&serviceId=S_BILL1144&domainVer=m2&PMAIN=3" class="button_type1 ta_c">
+						<!-- 2016-10-31 GA추가_18 [s] -->
+						<span class="inner" role="text"><strong class="fw_b" ga:ca="MTA_recharge" ga:ac="하단 배너" ga:la="데이터 한도 요금제 충전/내역">데이터 한도 요금제<br>충전/내역</strong></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_banner">배너</div>
+	</div>
+</section>
+<!-- //CONTENT -->
+</body>
+</html>
+<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript" src="/inc/js/new_common.js"></script>
+<script type="text/javascript" src="/inc/js/new_tworld.js"></script>
+<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+<script type="text/javascript">
+	// 2016-10-31 GA추가_01 [s]
+	setCategory = "MTA_recharge";
+
+	var svcMgmtNum = "";
+	var localObjYn = "";
+	
+	var onAfterBinding = {
+
+		init : function(data){
+			svcMgmtNum    = data.svcMgmtNum;
+			localObjYn    = data.objYn;
+		}
+	}
+
+	getXTVIDCookie = function() {
+	    var aCookie = document.cookie.split("; ");
+	    for (var i=0; i < aCookie.length; i++)  {
+	        var cPos = aCookie[i].indexOf( "=" );
+	        var cName = aCookie[i].substring( 0, cPos );
+	        if ( cName == "XTVID" ) {
+	            return unescape( aCookie[i].substring( cPos + 1 ) );
+	        }
+	    }
+	    return "";
+	}
+	
+	var getXID = getXTVIDCookie();
+	
+	function offerAlertClose(obj){
+		callCSScript(getXID, svcMgmtNum, 'tdc_offer_x_btn', '', '');
+		$(".offering_popup").hide();
+	}
+
+	function msgAlert(msg1) {
+		alert(msg1);
+	}
+	
+	function goDataMarket() {
+		if(confirm("고객님께서는 월 2회 선물하기 횟수를 초과하여 선물하기가 불가합니다. \n T데이터 쿠폰 상품을 구입하시면 데이터를 선물하실 수 있습니다. \n구매하러 가시겠습니까?")){
+			location.href = "http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_BILL5010&domainVer=m2";
+		}
+	}
+	
+	$goGiftURL = function(url){
+		// 쿠폰등록 화면에서 통계처리
+		var tdcData = '';
+		if("Y" == localObjYn){
+			tdcData = '&tdc=tdc_offer_d_btn';
+		}else{
+			tdcData = '&tdc=tdc_normal_d_btn';
+		}
+		
+		location.href = url + tdcData;
+	}
+	
+	
+	function goRequest() {
+		
+		$.ajax({
+			type:"post",
+			url: "/twd.do?serviceId=S_MAIN0010&viewId=V_MAIN0013",
+			timeout: 0,
+			dataType:"json",
+			beforeSend: function(){
+				$("#singlea1").html("로딩중...");
+			},
+			async: true, 
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8", 
+			
+			success:function(result){
+			
+				var twdCmn = result.RESULT;
+				
+				switch(twdCmn.RTNCD){
+					
+					case '0000' :
+						if("undefined" !== typeof(result.GIFT_ERR_CD) && "X0003" == result.GIFT_ERR_CD){
+							goDataMarket();
+							break;
+						}else if("undefined" !== typeof(result.GIFT_ERR_NAME) && "" !== result.GIFT_ERR_NAME){
+							msgAlert(result.GIFT_ERR_NAME);
+							var source = $("#singlea_default").html();
+						}else{
+							var source = $("#singlea_result").html();
+						}
+							var template = Handlebars.compile(source);			
+							var html = template(result);
+							$("#singlea1").html(html);
+						break;
+					
+					default :
+						tweb.log("default");
+						var source = $("#singlea_default").html();
+						var template = Handlebars.compile(source);			
+						var html = template();
+						$("#singlea1").html(html);
+						break;
+				}
+			},
+		
+			error:function(a, b, c){
+			
+				console.error("ajax error("+b+")");
+				var source = $("#singlea_default").html();
+				var template = Handlebars.compile(source);			
+				var html = template();
+				$("#singlea1").html(html);
+														
+			}
+		});
+	}
+	
+	Handlebars.registerHelper('_objShowImg', function() {
+		
+		$("#loading_img").hide();
+		
+		if (this.objYn=="Y") 
+		{
+			callCSScript(getXID, this.svcMgmtNum, 'tdc_offer_view', '', '');
+			$("#offered_img").css("display", "block").animate({
+				"opacity" :  1	
+			}, 300, function(){
+				$("#offered_alert").css("display", "block");	
+			});
+		}
+		else
+		{
+			callCSScript(getXID, this.svcMgmtNum, 'tdc_normal_view', '', '');
+			$("#noneOffered_img").css("display", "block").animate({
+				"opacity" :  1	
+			}, 300);
+		}
+			
+	
+	}); 
+	
+	//tweb backend별 설정
+	var tweb_backend = {
+		singlea : {
+			timeout : 0,
+			error: "default", 
+			block: "singlea",
+			notAllow: "singlea",
+			onAfterBinding : "no"
+		}
+		, singleb : {
+			timeout : 0,
+			error: "singleb", 
+			block: "singleb",
+			notAllow: "singleb",
+			onAfterBinding : "no"
+		}  		
+		, singlec : {
+			timeout : 0,
+			error: "singlec", 
+			block: "singlec",
+			notAllow: "singlec"
+		} 
+		, singlec1 : {
+			loading : "no"
+		} 
+	};
+	
+	
+	$( function(){
+		MiniMyT.init("R", location.pathname);
+		Menu.init("", "충전/선물/리필", "", "", "", "", "", "");
+		Banner.init("04");
+	});
+	
+</script>
+

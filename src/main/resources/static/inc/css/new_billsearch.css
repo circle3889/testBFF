@@ -1,0 +1,1292 @@
+@charset "utf-8";
+.fw_b{font-weight:bold}
+.fw_n{font-weight:normal}
+
+.pd_none{padding:0px !important;}
+.mg_none{margin:0px !important;}
+.mg_t0{margin-top:0px}
+.mg_t5{margin-top:5px}
+.mg_t10{margin-top:10px}
+.mg_t15{margin-top:15px}
+.mg_t20{margin-top:20px}
+.mg_t25{margin-top:25px}
+.mg_t30{margin-top:30px}
+
+.txt_uline{text-decoration:underline}
+.fc_orange{color:#f65401}
+
+.selbox_comm{border:0 none;border-radius:0;-webkit-appearance:none;background-color:transparent}
+.ico_comm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+.billsearch .ico_comm{background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat 0 0;background-size:100px 100px}
+
+.column_type{float:left;width:100%;box-sizing:border-box}
+.column_type.col2{width:50%}
+.column_type.col3{width:33.33%}
+.column_type.col4{width:25%}
+.column_type.col5{width:20%}
+
+.bg_white{background-color:#fff}
+
+.button_type1{display:block;position:relative;height:38px;padding:0;border:1px solid #c8c8c8;border-radius:3px}
+.button_type1:after{content:'';display:inline-block;width:0;height:100%;vertical-align:middle}
+.button_type1 .inner{display:inline-block;font-size:13px;line-height:15px;color:#000;vertical-align:middle}
+
+.list_accordion li .list_tit .list_dep1{ display:block;background:url(/images/billsearch/tit_list1.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep2{display:block;background:url(/images/billsearch/tit_list2.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep3{display:block;background:url(/images/billsearch/tit_list3.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep4{display:block;background:url(/images/billsearch/tit_list4.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep5{display:block;background:url(/images/billsearch/tit_list5.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep6{display:block;background:url(/images/billsearch/tit_list6.png) no-repeat 9px 17px}
+.list_accordion li .list_tit .list_dep7{display:block;background:url(/images/billsearch/tit_list7.png) no-repeat 9px 17px}
+
+/* 실시간 요금조회 */
+.contbox_sky dl{overflow:hidden;padding:7px 10px;margin:8px -10px 0 -10px;border:solid 1px #d4dae0;border-radius:2px;background:#dce2e9;box-shadow:0 1px 1px #fff, 0 1px 3px #b9bdc0 inset;-webkit-box-shadow:0 1px 1px #fff, 0 1px 3px #b9bdc0 inset;-moz-box-shadow:0 1px 1px #fff, 0 1px 3px #b9bdc0 inset}
+.contbox_sky dt{float:right;width:48%;position:relative;margin-right:40px}
+.contbox_sky dt .sel_ok{position:absolute;top:0;right:-40px}
+.contbox_sky dt.child1{margin-right:0 !important}
+.contbox_sky dt.child1 .sel_ok{display:none}
+.contbox_sky dd{float:left}
+
+.contbox_sky ul{overflow:hidden;width:100%;padding-bottom:1px}
+.contbox_sky li{min-height:21px;padding-right:1px;font-size:13px;text-shadow:0 1px 1px #fff;line-height:1em;padding-top:7px;border-top:solid 1px #fff;border-bottom:solid 1px #ccd0da}
+.contbox_sky li.first_none{border-top:none}
+.contbox_sky li:last-child{border-bottom:none}
+.contbox_sky li.last_border{border-bottom:solid 1px #ccd0da;box-shadow:1px 1px 1px #fff;-webkit-box-shadow:1px 1px 1px #fff}
+.contbox_sky li span.tit{float:left;width:25%;color:#1e1f1f}
+.contbox_sky li span.con{float:right;width:75%;text-align:right;vertical-align:middle;color:#1e1f1f;letter-spacing:-1px}
+.b20px{font-size:20px;font-weight:bold;text-shadow:0 2px 1px #fff}
+.contbox_sky li span.con .b20px{font-size:16px}
+
+.select_wrap{overflow:hidden;padding:7px 0;border-bottom:solid 1px #ccd0da}
+.select_wrap .left{float:left;width:48%;margin-right:4%}
+.select_wrap .right{float:left;width:48%}
+
+.mgt_reset{margin:16px 0 11px !important}
+
+/* 리스트 테이블 */
+.col_blak{color:#1e1f1f}
+.list_board.col_blak table td, .list_board.col_blak table th{color:#1e1f1f}
+.list_board ul li{line-height:15px}
+.list_board ul li:first-child{color:#1e1f1f}
+.list_board .total{background-color:#f2f2f2}
+.total_row01{background-color:#f2f2f2;text-align:right;color:#EC4909 !important;border-top: 1px solid #BEBFBB}
+
+/* 전월요금조회 popup */
+.layer_cont .contbox_sky{margin:-15px -10px 0;border:1px solid #9da8b6;border-bottom:0}
+.layer_cont .contbox_white_wrap{margin:-15px -10px 0}
+.layer_cont .contbox_white_wrap .contbox_white{padding-bottom:0;border:1px solid #c8cbce;border-top:1px solid #9DA8B6;border-bottom:0;border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;background:-webkit-gradient(linear, left top, left bottom, color-stop(66%,#ffffff), color-stop(81%,#e6e8e9), color-stop(90%,#e6e8e9), color-stop(97%,#fafbfb));background:-moz-linear-gradient(top, #ffffff 66%, #e6e8e9 81%, #e6e8e9 90%, #fafbfb 97%)}
+
+/* 문자배경 */
+.sms_box{padding:8px;height:42px;border-radius:2px;background:#f5f5f5;box-shadow:0 1px 3px #b9bdc0 inset;-webkit-box-shadow:0 1px 3px #b9bdc0 inset;-moz-box-shadow:0 1px 3px #b9bdc0 inset}
+.sms_box textarea{width:100%;height:100%;border:0;background-color:transparent}
+
+/* 그래프 */
+.graph_area{margin:0 -9px;padding:14px 9px 11px;border-bottom:1px solid #ddd;background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,#ffffff), color-stop(100%,#e8e8e8));background: -moz-linear-gradient(top, #ffffff 42%, #e8e8e8 100%);font-size:13px;letter-spacing:-1px}
+.graph_area .graph_bar_box{position:relative;height:8px;margin-bottom:5px; border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:0 -1px 1px #a2a2a2, 0 1px 1px #fff;-webkit-box-shadow:0 -1px 1px #a2a2a2, 0 1px 1px #fff;-moz-box-shadow:0 -1px 1px #a2a2a2, 0 1px 1px #fff;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b6b6b6), color-stop(17%,#707070), color-stop(76%,#b6b6b6), color-stop(100%,#cfcfcf));background: -moz-linear-gradient(top, #b6b6b6 0%, #707070 17%, #b6b6b6 76%, #cfcfcf 100%);font-size:0;line-height:0;text-indent:-5000px}
+.graph_area .graph_bar_box .graph_default{height:8px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff892c), color-stop(12%,#ff892c), color-stop(28%,#faae83), color-stop(75%,#e02f00), color-stop(100%,#e02f00));background: -moz-linear-gradient(top, #ff892c 0%, #ff892c 12%, #faae83 28%, #e02f00 75%, #e02f00 100%)}
+.graph_area .graph_bar_box .graph_bar{display:block;height:8px;border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(21%,#f4f4f4), color-stop(66%,#c0c0c0), color-stop(82%,#c0c0c0), color-stop(100%,#e2e0de));background: -moz-linear-gradient(top, #d3d3d3 0%, #f4f4f4 21%, #c0c0c0 66%, #c0c0c0 82%, #e2e0de 100%)}
+.graph_area .graph_bar_box .graph_full{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px}
+.graph_area .no_total{margin-bottom:14px}
+.graph_area .no_total .graph_default{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2f2f), color-stop(12%,#ff2f2f), color-stop(28%,#fc8080), color-stop(75%,#e00015), color-stop(100%,#e00018));background: -moz-linear-gradient(top, #ff2f2f 0%, #ff2f2f 12%, #fc8080 28%, #e00015 75%, #e00018 100%)}
+.graph_area_first{margin-top:-8px;padding-top:0;border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0}
+.graph_area .graph_title{padding-bottom:7px}
+.graph_area .total_remanet{overflow:hidden;width:100%;font-size:12px}
+.graph_area .total_remanet .total{float:left}
+.graph_area .total_remanet .remanet{float:right;color:#d1410a}
+.contbox .graph_area_first{margin-top:0;padding-top:12px}
+
+.graph_title_box{margin:0 -9px;padding:5px 7px 6px;border-top:1px solid #5b5c6c;border-bottom:1px solid #5b5c6c;background-color:#89919c;font-size:12px;color:#fff;letter-spacing:-1px} /* 2013-11-15 : 웹접근성 #989daa 수정 */ /* 2013-11-21 : 웹접근성 수정 */
+
+/* no bl text list */
+.no_bl_text_list{padding-top:8px}
+.no_bl_text_list li{font-size:12px;line-height:17px;letter-spacing:-1px}
+
+/* 기간 선택 btn select */
+.term_area{margin-top:10px;padding:10px 0;border-top:1px solid #bebfbb;border-bottom:1px solid #bebfbb}
+.calendar_area{padding:10px 0;border-bottom:1px solid #bebfbb}
+
+/* 잔여기본통화 버튼 */
+.btn_remaining{margin:10px 0 37px 0;text-align:right;overflow:hidden}
+.btn_remaining button{width:120px}
+.btn_remaining button:last-child{display:inline-block;margin:5px 0 0 0}
+
+/* 잔여기본통화 조회대상 아닐때 */
+.no_bl_date_title{font-size:13px;line-height:18px;color:#1e1f1f}
+.date_title_copy{font-size:11px;line-height:16px;color:#787676}
+.phone_bl{min-height:35px;margin:3px 2px 0;padding:1px 0 4px 47px;background:url(/images/billsearch/bl_phone.png) no-repeat 0 0;font-size:12px;line-height:17px;color:#333;letter-spacing:-1px;text-align:left;text-shadow:none}
+
+.btn_detail_look{display:block;height:20px;padding-top: 4px;color:#7f7f7f;padding-right: 20px;background: url(/images/bg/bg_list_arrow_nosub.png) no-repeat 104% center;text-align: right}
+
+.select_paid_month{padding-top:35px;padding-bottom:35px}
+.select_paid_month .select_paid_left{margin-bottom:35px}
+.select_paid_month .select_paid_left .left{width:83%}
+.select_paid_month .select_paid_right .right{width:83%;margin-right:4%}
+
+.contbox_sky li.two_line{overflow:hidden;padding-bottom:5px}
+.contbox_sky li span.con .detail_view{color: #1e1f1f;text-decoration:underline;display:block;height:19px;padding:8px 30px 0 0;margin-right:-7px;background:url(/images/ico/bl_link_arrow.png) no-repeat right 70%}
+
+.graph_area .graph_bar_box .graph_default2{height:8px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(21%,#f4f4f4), color-stop(66%,#c0c0c0), color-stop(82%,#c0c0c0), color-stop(100%,#e2e0de));
+	background: -moz-linear-gradient(top, #d3d3d3 0%, #f4f4f4 21%, #c0c0c0 66%, #c0c0c0 82%, #e2e0de 100%);
+}
+.graph_area .graph_bar_box .graph_bar2{display:block;height:8px;border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff892c), color-stop(12%,#ff892c), color-stop(28%,#faae83), color-stop(75%,#e02f00), color-stop(100%,#e02f00));
+	background: -moz-linear-gradient(top, #ff892c 0%, #ff892c 12%, #faae83 28%, #e02f00 75%, #e02f00 100%);
+}
+
+.valueLabels{font-size:100%;color:#ff2954}
+div.valueLabelLight{position:absolute;border:none;background:#fff;opacity:0.5}
+div.valueLabel{position:absolute;border:none}
+.pg_cen div.valueLabelLight{position:absolute;border:none;background:#fff;opacity:0}
+.pg_cen div.valueLabel{position:absolute;border:none;margin-left:2px}
+
+#pattern_graph1 #valueLabelsundefined1.valueLabels{color:#1e1f1f}
+#pattern_graph1 #valueLabelsundefined2.valueLabels{color:#f65401}
+#pattern_graph2 .valueLabels{color:#ff2954}
+#pattern_graph3 .valueLabels{color:#18c4df}
+#pattern_graph4 .valueLabels{color:#ff7a00}
+
+.pattern_graph_wrap{position:relative;box-sizing:border-box;min-width:276px;height:200px;margin:15px auto 0 auto;padding:20px 0 7px 0;background:#fff}
+.pattern_graph_wrap.pgw_line{border-bottom:1px solid #ededee}
+.pattern_graph_wrap.donut_hole{overflow:hidden;width:100%;height:auto;margin:0;padding:0;border:none}
+.pattern_graph_wrap.donut_hole .box_graph{overflow:hidden;position:relative;width:180px;height:180px;margin:13px auto 25px;padding:30px}
+.pattern_graph_wrap.donut_hole .bg_graph{overflow:hidden;position:relative;width:180px;height:180px;background:url(/img/new_billsearch/bg_donutgraph.png) no-repeat 0 0;background-size:360px 360px}
+.pattern_graph_wrap.donut_hole .bg_graph.sector1{background-position:0 0}
+.pattern_graph_wrap.donut_hole .bg_graph.sector2{background-position:-180px 0}
+.pattern_graph_wrap.donut_hole .bg_graph.sector3{background-position:0 -180px}
+.pattern_graph_wrap.donut_hole .bg_graph.sector4{background-position:-180px -180px}
+.pattern_graph_wrap.donut_hole li{position:absolute;width:30px;font-weight:bold;font-size:13px;line-height:16px;color:#1e1f1f;white-space:nowrap;text-align:center}
+.pattern_graph_wrap.donut_hole li:nth-child(4n-3){top:36px;right:36px}
+.pattern_graph_wrap.donut_hole li:nth-child(4n-2){bottom:36px;right:36px}
+.pattern_graph_wrap.donut_hole li:nth-child(4n-1){bottom:36px;left:36px}
+.pattern_graph_wrap.donut_hole li:nth-child(4n){top:36px;left:36px}
+.pattern_graph_wrap.donut_hole .bg_graph.sector1 li:nth-child(4n-3){top:34px;right:34px;width:36px;font-size:16px;line-height:18px;color:#fff}
+.pattern_graph_wrap.donut_hole .bg_graph.sector2 li:nth-child(4n-2){bottom:34px;right:34px;width:36px;font-size:16px;line-height:18px;color:#fff}
+.pattern_graph_wrap.donut_hole .bg_graph.sector3 li:nth-child(4n-1){bottom:34px;left:34px;width:36px;font-size:16px;line-height:18px;color:#fff}
+.pattern_graph_wrap.donut_hole .bg_graph.sector4 li:nth-child(4n){top:34px;left:34px;width:36px;font-size:16px;line-height:18px;color:#fff}
+.pattern_graph_wrap.donut_hole .time{position:absolute;width:24px;font-size:13px;line-height:1.85;color:#1e1f1f;text-align:center;white-space:nowrap;letter-spacing:-1px}
+.pattern_graph_wrap.donut_hole .hour1{top:5px;left:50%;margin-left:-12px}
+.pattern_graph_wrap.donut_hole .hour2{top:50%;right:0;margin-top:-12px}
+.pattern_graph_wrap.donut_hole .hour3{bottom:3px;left:50%;;margin-left:-12px}
+.pattern_graph_wrap.donut_hole .hour4{top:50%;left:0;margin-top:-12px}
+
+.pg5_desc{font-size:13px}
+
+.pattern_graph_wrap .unit{position:absolute;top:-20px;right:10px;color:#7d7d7d;font-size:12px}
+.db_box{padding:0 6px 10px;border-bottom:solid 1px #ededee}
+.db_box .detail_btn{width:100%;overflow:hidden}
+.db_box .detail_btn li{float:left;text-align:center}
+.db_box .detail_btn li:nth-child(1){width:33%}
+.db_box .detail_btn li:nth-child(2){width:34%}
+.db_box .detail_btn li:nth-child(3){width:33%}
+.db_box .detail_btn li .year{display:inline-block;margin-bottom:5px}
+.db_box .detail_btn li a{display:inline-block;font-size:12px;color:#f65401;text-decoration:underline}
+
+.pattern_graph{width:100%;height:100%}
+.pattern_graph .legend div,
+.pattern_graph .legend table{top:-25px !important;left:10px !important;color:#7d7d7d !important;font-size:12px !important;font-family:'Malgun Gothic', '맑은 고딕',sans-serif !important}
+.pattern_graph .legend table td{padding:0;font-size:12px;border:none}
+.pattern_graph .legend table td.legendColorBox{width:20px}
+.pattern_graph .legend table td.legendColorBox div div{width:0 !important}
+.pattern_graph .legend table td.legendLabel:nth-child(2){padding:0 10px 0 0}
+.pattern_graph .flot-text .flot-tick-label{color:#1e1f1f;font-size:12px;font-family:'Malgun Gothic','맑은 고딕',sans-serif !important}
+
+#pattern_graph5 .pieLabel{display:block}
+#pattern_graph5 .pieLabel div{display:inline-block;color:#1e1f1f !important;font-size:18px !important;font-weight:bold !important}
+#pattern_graph5 .pieLabel span.compare{display:inline-block;width:10px;height:10px;background:#ff7a00;vertical-align:middle}
+
+.select_wrap.use_pattern{position:relative;padding:20px 40px 10px 0;border:0 none}
+.select_wrap.use_pattern .left{width:65%}
+.select_wrap.use_pattern .select_type1{width:100%}
+.select_wrap.use_pattern .sel_ok{position:absolute;top:20px;right:0}
+.title_three_dept_ul .call_all{color:#777}
+.title_three_dept_ul .call_all span{display:inline-block;width:10px;height:10px;background:#a9a9a9;vertical-align:middle}
+.title_three_dept_ul .call_compare{color:#777;letter-spacing:-1px}
+.title_three_dept_ul .call_compare span{display:inline-block;width:10px;height:10px;background:#ff7a00;vertical-align:middle}
+.title_three_dept_ul .call_compare em{color:#000;text-decoration:underline;letter-spacing:-1px}
+
+#pattern_graph3 .flot-y-axis,
+#pattern_graph4 .flot-y-axis{display:none !important}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5){
+	.list_accordion li .list_tit .list_dep1{background-image:url(/images/billsearch/tit_list1_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep2{background-image:url(/images/billsearch/tit_list2_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep3{background-image:url(/images/billsearch/tit_list3_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep4{background-image:url(/images/billsearch/tit_list4_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep5{background-image:url(/images/billsearch/tit_list5_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep6{background-image:url(/images/billsearch/tit_list6_480.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep7{background-image:url(/images/billsearch/tit_list7_480.png);background-size:auto 17px}
+	.phone_bl{background-image:url(/images/billsearch/bl_phone_480.png);background-size:38px 38px}
+	.contbox_sky li span.con .detail_view{background-image:url(/images/ico/bl_link_arrow_480.png);background-size:25px 19px}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+	.list_accordion li .list_tit .list_dep1{background-image:url(/images/billsearch/tit_list1_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep2{background-image:url(/images/billsearch/tit_list2_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep3{background-image:url(/images/billsearch/tit_list3_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep4{background-image:url(/images/billsearch/tit_list4_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep5{background-image:url(/images/billsearch/tit_list5_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep6{background-image:url(/images/billsearch/tit_list6_300dpi.png);background-size:auto 17px}
+	.list_accordion li .list_tit .list_dep7{background-image:url(/images/billsearch/tit_list7_300dpi.png);background-size:auto 17px}
+	.phone_bl{background-image:url(/images/billsearch/bl_phone_300dpi.png);background-size:38px 38px}
+	.contbox_sky li span.con .detail_view{background-image:url(/images/ico/bl_link_arrow_300dpi.png);background-size:25px 19px}
+}
+
+#content.info_main{padding:0;line-height:1.5;letter-spacing:-1px}
+#content.info_main .box_myservice{overflow:hidden;padding-bottom:8px;border-bottom:1px solid #9e9e9e}
+#content.info_main .box_myservice .cellphone{overflow:hidden;position:relative;height:31px;margin:8px 10px 0;padding-right:39px}
+#content.info_main .box_myservice .cellphone .lbl_phone{display:block;position:absolute;top:0;left:0;height:100%;font-size:14px;line-height:31px;color:#484848}
+#content.info_main .box_myservice .wrap_selbox{overflow:hidden;float:right;position:relative;width:154px;height:100%}
+#content.info_main .box_myservice .wrap_selbox .selbox_comm{display:block;width:100%;height:31px;box-sizing:border-box;padding-left:8px;border:1px solid #bbb;border-radius:3px;font-size:14px;line-height:29px;color:#1d1f1e}
+#content.info_main .box_myservice .wrap_selbox .ico_comm{position:absolute;top:13px;right:8px;width:9px;height:5px;background-position:-30px -20px}
+#content.info_main .box_myservice .btn_ok{display:block;position:absolute;top:0;right:0;width:36px;height:31px;box-sizing:border-box;padding-right:1px;border-radius:2px;font-size:14px;line-height:33px;color:#fff;background-color:#919499;text-align:center}
+#content.info_main .box_myservice .single_type{padding-right:0}
+#content.info_main .box_myservice .single_type .btn_ok{display:none}
+
+#content.info_main .box_section{overflow:hidden;padding:0 10px}
+#content.info_main .box_section.relative_box{overflow:visible;position:relative;}
+#content.info_main .box_section .cont_box1{overflow:hidden;margin-top:10px;border:1px solid #b1b5b8;border-radius:5px}
+#content.info_main .box_section .cont_payment{overflow:hidden;margin-top:10px;border:1px solid #b1b5b8;border-bottom:0 none;border-top-left-radius:5px;border-top-right-radius:5px}
+
+#content.info_main .box_section .cont_couponbox{overflow:hidden;margin-top:10px}
+#content.info_main .box_section .cont_couponbox .list_coupon{overflow:hidden}
+#content.info_main .box_section .cont_couponbox .list_coupon li{overflow:hidden;position:relative;float:left;width:50%;height:150px}
+#content.info_main .box_section .cont_couponbox .list_coupon li:before{content:'';position:absolute;top:-13px;left:50%;width:24px;height:24px;margin-left:-12px;border:1px solid #eee;border-radius:13px;background-color:#fff}
+#content.info_main .box_section .cont_couponbox .list_coupon li:after{content:'';position:absolute;bottom:-13px;left:50%;width:24px;height:24px;margin-left:-12px;border:1px solid #eee;border-radius:13px;background-color:#fff}
+#content.info_main .box_section .cont_couponbox .wrap_box{overflow:hidden;height:100%;box-sizing:border-box;padding:24px 0;border:1px solid #eee;background-color:#fafafa;text-align:center}
+#content.info_main .box_section .cont_couponbox .list_coupon li:nth-child(2n-1) .wrap_box{border-right:0 none}
+#content.info_main .box_section .cont_couponbox .list_coupon li:nth-child(2n) .wrap_box{border-left:2px dotted #eee}
+#content.info_main .box_section .cont_couponbox .couponinfo{overflow:hidden}
+#content.info_main .box_section .cont_couponbox .couponinfo dt{overflow:hidden;width:100%;margin-top:3px;font-size:14px;line-height:20px;color:#1e1f1f}
+#content.info_main .box_section .cont_couponbox .couponinfo dd{overflow:hidden;width:100%;margin-top:5px;font-size:12px;line-height:15px;color:#646464}
+#content.info_main .box_section .cont_couponbox .btn_buyit{display:block;overflow:hidden;position:absolute;bottom:25px;left:0;width:100%;height:auto;font-size:13px;line-height:15px;color:#f65401;text-align:center;text-decoration:underline;vertical-align:top}
+#content.info_main .box_section .cont_addinfo{overflow:hidden;margin-top:7px}
+#content.info_main .box_section .cont_addinfo .link_info{display:inline-block;position:relative;margin-left:9px;padding-right:16px;font-size:13px;color:#1e1e1e;vertical-align:top}
+#content.info_main .box_section .cont_addinfo .link_info .ico_comm{position:absolute;top:4px;right:0;width:11px;height:11px;background-position:-10px 0}
+
+/* 충전선물리필 UI 개선 */
+#content.info_main .box_section .cont_addinfo ul{width: 94%;margin: 0 3%;}
+#content.info_main .box_section .cont_addinfo ul li{float:left;width: 30%;}
+#content.info_main .box_section .cont_addinfo ul li:nth-child(2){width: 40%;}
+#content.info_main .box_section .cont_addinfo ul li.singleList{width:100%;}
+#content.info_main .box_section .cont_addinfo ul li.alignL{text-align:left;}
+#content.info_main .box_section .cont_addinfo ul li.alignC{text-align:center;}
+#content.info_main .box_section .cont_addinfo ul li.alignR{text-align:right;}
+#content.info_main .box_section .cont_addinfo ul li a{position:relative;width:100%;font-weight:bold; font-size:13px;float:left;}
+#content.info_main .box_section .cont_addinfo ul li a .ico_comm{display:inline-block;width:11px;height:11px;background-position:-10px 0;margin-left: 5px;}
+/* #content.info_main .box_section .cont_addinfo ul li{float:left;margin-left:3%;}
+#content.info_main .box_section .cont_addinfo ul li.middle{margin-left:6%; margin-right:3%;}
+#content.info_main .box_section .cont_addinfo ul li a{position:relative;font-weight:bold; font-size:13px;float:left;}
+#content.info_main .box_section .cont_addinfo ul li a .ico_comm{width:11px;height:11px;background-position:-10px 0;float: right; margin-top: 5px; margin-left: 5px;} */
+
+#content.info_main .box_section .cont_button{overflow:hidden;position:relative;margin:10px -2px 0}
+#content.info_main .box_section .cont_button .column_type{padding:0 2px}
+#content.info_main .box_section .cont_button .column_type.col2:nth-child(n+3){margin-top:4px}
+#content.info_main .box_section .cont_button .tit_button{display:block;overflow:hidden;width:100%;margin-top:7px;padding-bottom:6px;font-weight:bold;font-size:13px;color:#1e1f1f}
+#content.info_main .box_section .cont_button img{vertical-align:top}
+#content.info_main .box_section .cont_button .link_page{display:block;overflow:hidden;box-sizing:border-box;padding:0 5px 9px;border:1px solid #ededee;border-radius:3px;text-align:center}
+#content.info_main .box_section .cont_button .link_page .tit{display:block;width:100%;margin-top:7px;font-weight:bold;font-size:13px;line-height:20px;color:#1e1f1f}
+#content.info_main .box_section .cont_button .link_page img{display:block;width:100%;margin-top:5px}
+#content.info_main .box_section .cont_button .link_page .txt_info{display:block;overflow:hidden;width:100%;margin-top:7px;font-size:12px;line-height:15px;color:#1e1f1f}
+#content.info_main .box_section .line{overflow:hidden;margin:10px 0;padding:0;width:100%;height:2px;background-color:#3d3435}
+#content.info_main .box_section .wrap_cont{overflow:hidden;position:relative;height:51px;padding-right:118px}
+#content.info_main .box_section .wrap_cont.noused{padding-right:0}
+#content.info_main .box_section .wrap_cont .tit_menu{overflow:hidden;width:100%;height:100%;;background-color:#f3f3f3}
+#content.info_main .box_section .wrap_cont .tit_menu .link_menu{display:inline-block;overflow:hidden;position:relative;height:auto;margin-left:8px;padding-right:12px;font-weight:bold;font-size:15px;color:#000;vertical-align:middle}
+#content.info_main .box_section .wrap_cont .tit_menu .link_menu .ico_comm{display:block;overflow:hidden;position:absolute;top:5px;right:0;width:7px;height:10px;background-position:-80px 0}
+#content.info_main .box_section .wrap_cont .tit_menu:after{content:'';display:inline-block;width:0;height:100%;vertical-align:middle}
+#content.info_main .box_section .wrap_cont .cont_iframe{position:absolute;top:0;right:0;width:118px;height:100%;border-left:1px solid #b1b5b8;line-height:18px}
+#content.info_main .box_section .wrap_cont .addinfo{position:absolute;top:0;right:0;width:118px;height:100%;border-left:1px solid #b1b5b8;line-height:18px;text-align:right}
+#content.info_main .box_section .wrap_cont .addinfo dt{overflow:hidden;margin-top:7px;padding-right:10px;font-size:12px;color:#000}
+#content.info_main .box_section .wrap_cont .addinfo dd{overflow:hidden;margin-top:1px;padding-right:10px;font-weight:bold;font-size:15px;color:#1e1f1f}
+#content.info_main .box_section .wrap_info{overflow:hidden;padding:0 10px 7px;border-top:1px solid #b1b5b8}
+#content.info_main .box_section .wrap_info .txt_info{overflow:hidden;margin-top:8px;padding-left:10px;font-size:12px;line-height:15px;color:#646464;text-indent:-10px}
+
+/* 충전선물리필 UI 개선 */
+#content.info_main .box_section .wrap_header{padding-right:0px;background-color:#f3f3f3;border-bottom: 1px solid #b1b5b8;}
+#content.info_main .box_section .wrap_header a{position:relative;display: block;height: 51px;line-height: 51px;padding:0px 8px;font-weight:bold;font-size:15px;color:#000;}
+#content.info_main .box_section .wrap_header a span{float: right;right: 13px;position: relative;font-weight: normal;font-size: 14px;}
+#content.info_main .box_section .wrap_header a:after {padding-right:0px;content: '';position: absolute;top: 50%;right: 8px;background: url(/img/common/ico_common_sp.png) no-repeat;background-size: 250px 250px; width: 7px;height: 10px;margin-top: -5px;background-position: -8px -59px;}
+#content.info_main .box_section .wrap_content img{display:none;width:100%;opacity:0}
+#content.info_main .box_section .wrap_content img:first-child{display:block;opacity:1}
+#content.info_main .box_section .wrap_alert{position: absolute;top:-12px;left: 110px;display:none;}
+#content.info_main .box_section .wrap_alert .bill_bg_img{width: 114px;}
+#content.info_main .box_section .wrap_alert .bill_close_img{width: 32px;position: absolute;top: -12px;left: 92px;}
+#content.info_main .box_section .cont_button{overflow:hidden;position:relative;margin:10px -2px 0}
+#content.info_main .box_section .cont_button ul li{float:left;width:33.3%;}
+#content.info_main .box_section .cont_button ul li a{display: block;position: relative;height: 48px;line-height: 46px;padding: 0;border: 1px solid #c8c8c8; border-radius: 3px; margin: 0px 3px;}
+#content.info_main .box_section .cont_button ul li a span{line-height: normal;display: inline-block;vertical-align: middle;}
+
+#content.info_main .box_iframe{overflow:hidden;width:100%;height:100%}
+#content.info_main .box_iframe .datainfo{overflow:hidden;line-height:18px;text-align:right}
+#content.info_main .box_iframe .datainfo dt{overflow:hidden;margin-top:7px;padding-right:10px;font-size:12px;color:#000}
+#content.info_main .box_iframe .datainfo dd{overflow:hidden;margin-top:1px;padding-right:10px;font-weight:bold;font-size:15px;color:#1e1f1f}
+#content.info_main .box_iframe .datainfo .btn_check{float:right;position:relative;padding-right:16px;font-size:13px;line-height:21px;color:#f65401}
+#content.info_main .box_iframe .datainfo .btn_check .ico_comm{display:block;position:absolute;top:50%;right:0;width:11px;height:11px;margin-top:-7px;background-position:-50px -20px}
+
+#content.info_main #banner{width:100%;position:relative;padding-bottom:30px}
+#content.info_main #banner img{ border-radius:8px;-moz-border-radius: 8px;-webkit-border-radius:8px;height:82px}
+#content.info_main .arw_l{outline: none;position:absolute;top:0;left:0;width:20px;height:84px}
+#content.info_main .arw_l .ico_comm{width:9px;height:14px;margin-left:5px;background-position:0px -40px}
+#content.info_main .arw_r{outline: none;position:absolute;top:0;right:0;width:20px;height:84px}
+#content.info_main .arw_r .ico_comm{width:9px;height:14px;margin-left:5px;background-position:0px -60px}
+#content.info_main .b_paging{position:absolute;bottom:0;left:50%;width:100%;height:21px;margin-left:-50%;text-align:center}
+#content.info_main #banner ul { height:84px;width:100%;overflow:hidden;min-width:300px}
+#content.info_main #banner ul li{display:none;padding:0 20px;text-align:center;height:82px;background:#fff;overflow:hidden}
+#content.info_main #banner ul li a{display:block;outline: none}
+#content.info_main #banner ul li.c_page{display:block;border:1px solid #c6c5c3;border-radius:8px;-moz-border-radius: 8px;-webkit-border-radius:8px}
+
+#content.info_main .b_paging button,
+#content.info_main .b_paging a{display:inline-block;outline: none;background-image:url(/img/main/icons.png);background-repeat:no-repeat;background-size:155px 172.5px;vertical-align:middle;position:relative}
+#content.info_main .b_paging span{display:inline-block;background-image:url(/img/main/icons.png);background-repeat:no-repeat;background-size:155px 172.5px;vertical-align:top;margin-top:4px;position:relative}
+#content.info_main .b_paging span img{width:9px !important;height:9px !important;position:absolute;left:-1px}
+#content.info_main .b_page{width:9.5px;height:9.5px;background-position:-84px -65px;text-indent:-99999px}
+#content.info_main .b_page.on{background-position:-95px -65px}
+#content.info_main .b_paging .bplay_btn{display:inline-block;width:19px;height:19px;margin-left:4px;outline: none;background-position:-105px -40px;text-indent: -999px;font-size: 0;vertical-align:top}
+#content.info_main .bplay_btn.b_play{background-position:-84px -40px}
+
+#content.info_main #banner.singletype{padding-bottom:0}
+#content.info_main #banner.singletype .arw_l,
+#content.info_main #banner.singletype .arw_r,
+#content.info_main #banner.singletype .b_paging{display:none}
+
+#content.billsearch{padding-bottom:18px}
+
+.box_banner_sub{height:90px;margin:0 -9px;text-align:center;vertical-align:middle;background:url(/img/prevent/bg_box_banner.png) repeat-y 0 0;background-size:100% 100%}
+.box_banner_sub:after{content:'';width:0;height:100%;display:inline-block;vertical-align:middle}
+.box_banner_sub .txt{display:inline-block;line-height:20px;font-weight:bold;font-size:16px;color:#1e1f1f;vertical-align:middle}
+.box_banner_sub .txt .normal{font-weight:normal;font-size:14px;color:#6e6f70}
+
+.new_table_box{position:relative}
+.new_table_box .desc{margin-top:10px;text-align:right;color:#7d7d7d;font-size:12px}
+.new_table_box .basic{width:100%;margin-top:20px;border-top:1px solid #3d3435;font-size:12px}
+.new_table_box .basic.dcin{margin-top:5px}
+.new_table_box .basic thead th{padding:15px 0;text-align:center;color:#1e1f1f;background-color:#f3f3f3;border-right:1px solid #b1b5b8;border-bottom:1px solid #3d3435}
+.new_table_box .basic thead th:first-child{border-right:1px solid #3d3435;border-bottom:1px solid #3d3435}
+.new_table_box .basic thead th:last-child{border-right:none}
+.new_table_box .basic tbody th{padding:12px 0;text-align:center;color:#1e1f1f;border-right:1px solid #3d3435;border-bottom:1px solid #b1b5b8;background-color:#f3f3f3}
+.new_table_box .basic tbody td{padding:12px 0;text-align:center;color:#1e1f1f;border-right:1px solid #b1b5b8;border-bottom:1px solid #b1b5b8}
+.new_table_box .basic tbody td:last-child{border-right:none}
+.new_table_box .basic tbody tr:last-child th,
+.new_table_box .basic tbody tr:last-child td{border-bottom:1px solid #1e1f1f}
+.new_table_box .basic tfoot th,
+.new_table_box .basic tfoot td{padding:12px 0;text-align:center;color:#1e1f1f;border-bottom:1px solid #1e1f1f;border-right:1px solid #b1b5b8;background-color:#f3f3f3}
+.new_table_box .basic tfoot th{border-right:1px solid #3d3435}
+.new_table_box .basic tfoot td:last-child{border-right:0 none}
+
+.radius_g_box{margin-top:15px;padding:15px 10px;border-radius:3px;border:1px solid #d7d7d7}
+.radius_g_box li{position:relative;padding: 0 0 10px 8px}
+.radius_g_box li:after{content:'';display:block;position:absolute;top:7px;left:0;width:4px;height:4px;background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat -40px -20px;background-size:100px 100px}
+.radius_g_box li:last-child{padding-bottom:0}
+.radius_g_box li li{padding:5px 0 0 10px;text-indent:-10px;color:#7d7d7d}
+.radius_g_box li li:first-child{padding:10px 0 0 10px}
+.radius_g_box li li:after{background:none}
+
+.tab_month{position:relative;overflow:hidden;margin:10px -10px 0}
+.tab_month li{width:100%}
+.tab_month li a{position:absolute;top:0;display:block;width:33%;height:35px;text-align:center;background-color:#919499;line-height:35px}
+.tab_month li a .txt{display:block;width:100%;font-size:14px;font-weight:bold;color:#fff;border-left:1px solid #b2b4b8}
+.tab_month li a:first-chlid .txt{border-left:none}
+.tab_month li a .ico_comm{display:none}
+.tab_month li a.on{background-color:#5f6368}
+.tab_month li a.on .ico_comm{display:block;position:absolute;bottom:0;left:50%;width:10px;height:7px;margin-left:-5px;background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat -70px 0;background-size:100px 100px}
+.tab_month li .new_table_box{display:none;margin-top:44px;padding:0 10px}
+.tab_month li .new_table_box .basic{margin-top:0}
+
+.tab_month.tab_month_title li{width:33%;float:left}
+.tab_month.tab_month_title li a{position:relative;width:100%}
+.tab_month.tab_month_title li a.on .ico_comm{display:block;position:absolute;bottom:0;left:50%;width:10px;height:7px;margin-left:-5px;background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat -70px 0;background-size:100px 100px}
+.tab_month.tab_month_content li .new_table_box{display:none;margin-top:0px;padding:0 10px}
+.tab_month.tab_month_content li .new_table_box .basic{margin-top:0}
+
+/* 월별 사용량 앱 접근성 포커싱 수정 */
+.desc_box .grey_b{margin-top:5px;padding:10px;background-color:#f9f9f9}
+.desc_box .grey_b li{position:relative;padding: 0 0 10px 8px;font-size:12px}
+.desc_box .grey_b li:after{content:'';display:block;position:absolute;top:7px;left:0;width:4px;height:4px;background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat -40px -20px;background-size:100px 100px}
+.desc_box .grey_b li:last-child{padding-bottom:0}
+.desc_box .grey_b li li{padding:5px 0 0 0}
+.desc_box .grey_b li li:first-child{padding:10px 0 0 0}
+.desc_box .grey_b li li:after{background:none}
+.desc_box .desc_txt{margin-top:10px}
+.desc_box .desc_txt li{padding:0 0 10px 14px;text-indent:-14px;color:#7d7d7d;font-size:12px}
+.desc_box .desc_txt li:last-child{padding:0 0 0 14px}
+
+.amount_lay{position:relative;margin-top:10px}
+.amount_lay .unit{position:absolute;top:0;right:10px;color:#7d7d7d;font-size:12px}
+.amount_lay .amount{overflow:hidden;margin-left:10px}
+.amount_lay .amount li{float:left;padding-right:15px;color:#7d7d7d}
+.amount_lay .amount .call_all span{display:inline-block;width:10px;height:10px;margin:2px 5px 0 0;background:#e5e5e5;vertical-align:top}
+.amount_lay .amount .call_compare span{display:inline-block;width:10px;height:10px;margin:2px 5px 0 0;background:#f65401;vertical-align:top}
+
+.scont_button{overflow:hidden;position:relative;margin:10px -2px 0}
+.scont_button .column_type{padding:0 2px}
+.scont_button .column_type.col2:nth-child(n+3){margin-top:4px}
+.scont_button .tit_button{display:block;overflow:hidden;width:100%;margin-top:7px;padding-bottom:6px;font-weight:bold;font-size:13px;color:#1e1f1f}
+.scont_button img{vertical-align:top}
+.scont_button .link_page{display:block;overflow:hidden;box-sizing:border-box;padding:0 5px 9px;border:1px solid #ededee;border-radius:3px;text-align:center}
+.scont_button .link_page .tit{display:block;width:100%;margin-top:7px;font-weight:bold;font-size:13px;line-height:20px;color:#1e1f1f}
+.scont_button .link_page img{display:block;width:100%;margin-top:5px}
+.scont_button .link_page .txt_info{display:block;overflow:hidden;width:100%;margin-top:7px;font-size:12px;line-height:15px;color:#1e1f1f}
+
+.chargeInquiry form .my_line_number{border-bottom:none}
+.chargeInquiry form + .contbox {padding-top:0 !important}
+.chargeInquiry .myNumInfo{text-align:center}
+.chargeInquiry .myNumInfo .uiTab{margin-bottom:-1px}
+.chargeInquiry .myNumInfo .chargeBox{text-align:right;border:1px solid #bbb;border-bottom:none;background:url(/img/new_charge/bg_charge.png) no-repeat 27px 15px;background-size:39px 42px}
+.chargeInquiry .myNumInfo .chargeBox table tr:first-child th,.chargeInquiry .myNumInfo .chargeBox table tr:first-child td{border-top:none}
+.chargeInquiry .myNumInfo .chargeBox table th{padding-left:15px;font-weight:normal;text-align:left;background:#fff}
+.chargeInquiry .myNumInfo .chargeBox table th,.chargeInquiry .myNumInfo .chargeBox table td{font-size:13px;color:#1e1f1f;border-left:none;border-top-color:#e4e4e4}
+.chargeInquiry .myNumInfo .chargeBox table td{padding-right:10px;text-align:right}
+.chargeInquiry .myNumInfo .chargeBox table td strong{font-weight:bold;font-size:14px}
+.chargeInquiry .myNumInfo .chargeBox table td .ico_sp{display:inline-block;position:relative;margin-top:5px;padding:0 15px 0 0;color:#f65401;text-decoration:underline}
+.chargeInquiry .myNumInfo .chargeBox table td .ico_sp:after{content:'';display:block;position:absolute;top:50%;right:0;width:11px;height:11px;margin-top:-5.5px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px 0}
+.chargeInquiry .myNumInfo .useCharge{display:block;margin:20px 20px 0 0;font-size:18px;color:#f65401;letter-spacing:-0.05em}
+.chargeInquiry .myNumInfo .useCharge em{font-weight:bold;font-size:28px;color:#f65401;line-height:28px;vertical-align:-3px}
+.chargeInquiry .myNumInfo .useTerm{display:block;padding:0 20px 10px 0;font-size:13px;color:#646464;border-bottom:1px solid #bbb}
+.chargeInquiry .myNumInfo .useArea{overflow:hidden;padding:2px 20px;border-bottom:1px solid #e4e4e4}
+.chargeInquiry .myNumInfo .useArea label{float:left;margin-top:5px;font-size:15px;font-weight:bold;color:#303030}
+.chargeInquiry .myNumInfo .useArea .selWrap{float:right;display:block;width:75%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.chargeInquiry .myNumInfo .useArea .selWrap:after{content:'';right:0;width:10px;height:7px;margin-top:-3.5px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:0 -32.5px}
+.chargeInquiry .myNumInfo .useArea .selWrap .selbox{font-weight:bold;color:#303030;text-align:right;border:none;direction:rtl}
+.chargeInquiry .myNumInfo .useArea .selWrap .selbox option{text-align:right;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;direction:ltr}
+.chargeInquiry .myNumInfo .useList{overflow:hidden;padding:10px 20px}
+.chargeInquiry .myNumInfo .useList li{overflow:hidden;display:table;position:relative;width:100%;margin-top:5px}
+.chargeInquiry .myNumInfo .useList li:first-child{margin-top:0}
+.chargeInquiry .myNumInfo .useList li span{display:inline-block;font-weight:bold;font-size:15px}
+.chargeInquiry .myNumInfo .useList li em{font-weight:bold;font-size:15px;color:#f65401}
+.chargeInquiry .myNumInfo .useList li .chargeNm{display:table-cell;font-size:14px;color:#686b6b;text-align:left;letter-spacing:-1px}
+.chargeInquiry .myNumInfo .useList li .totalAcc{display:table-cell;color:#f65401;text-align:right}
+.chargeInquiry .myNumInfo .useList li.bdlst{margin-top:10px;padding-top:9px;border-top:1px solid #bbb}
+.chargeInquiry .myNumInfo .btnbox{display:table;width:100%;margin:0;border:1px solid #f75402;box-sizing:border-box;-webkit-box-sizing:border-box}
+.chargeInquiry .myNumInfo .btnbox a{height:38px;padding:0;line-height:38px} /* 2016-12-29 사용요금 화면깨짐 수정 */
+.chargeInquiry .myNumInfo .btnbox a:not(:first-child){border-left:1px solid #d64800}
+.chargeInquiry .myNumInfo .btnbox a span{display:inline-block;position:relative;padding-right:12px;font-weight:bold;font-size:14px;color:#fff}
+.chargeInquiry .myNumInfo .btnbox a span:after{content:'';display:block;position:absolute;top:50%;right:0;width:6.5px;height:10px;margin-top:-5px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:0 -44px}
+.chargeInquiry .myNumInfo .para{margin-top:8px;font-size:13px;color:#787979;text-align:left}
+
+.chargeInquiry .bulTit3{margin-top:30px}
+.chargeInquiry .bulTit3 + .titBox{margin-top:10px}
+.chargeInquiry .titBox{overflow:hidden;margin-top:20px}
+.chargeInquiry .titBox .subTit2{float:left;margin-top:3px;font-weight:bold;font-size:15px}
+.chargeInquiry .titBox .totAcc{float:right;font-size:18px;color:#f65401}
+.chargeInquiry .titBox .totAcc em{font-weight:bold;font-size:18px;color:#f65401}
+.chargeInquiry .titBox .btnMore{float:right;display:block;position:relative;margin-top:8px;padding-right:19px;font-size:12px;color:#7c7d7d}
+.chargeInquiry .titBox .btnMore:after{content:'';display:block;position:absolute;top:50%;right:5px;width:10px;height:6px;margin-top:-3px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -16px}
+.chargeInquiry .titBox .btnMore.on:after{background-position:-15px -22px}
+.chargeInquiry .titBox2 .totAcc,
+.chargeInquiry .titBox2 .totAcc em{color:#5288da}
+.chargeInquiry .star,.chargeInquiry .shrp{font-weight:bold}
+.chargeInquiry .star{color:#85959d}
+.chargeInquiry .shrp{color:#f65401}
+
+.chargeInquiry .amountArea{position:relative;margin-top:1px;border:1px solid #d0d0d0;border-top:2px solid #f65401}
+.chargeInquiry .amountArea .noUnpaid{padding:18px 0;font-size:14px;color:#1e1f1f;text-align:center;background:#f6f6f6}
+.chargeInquiry .amountArea .item{overflow:hidden;border-top:1px solid #eee}
+.chargeInquiry .amountArea .item:first-child{border-top:none}
+.chargeInquiry .amountArea .item .list{overflow:hidden;display:block;padding:0 10px;height:30px;font-size:14px;line-height:30px}
+.chargeInquiry .amountArea .item strong{float:left;color:#1e1f1f}
+.chargeInquiry .amountArea .item em{float:right;color:#1e1f1f}
+.chargeInquiry .amountArea .item ul{padding:5px 10px;border-top:1px solid #eee;background:#f6f6f6}
+.chargeInquiry .amountArea .item ul li{overflow:hidden;font-size:13px;color:#787979;line-height:18px}
+.chargeInquiry .amountArea .item ul li strong,.chargeInquiry .amountArea .item ul li em{color:#787979}
+.chargeInquiry .amountArea .ico_sp{display:inline-block;position:relative;margin-bottom:10px;padding:0 15px 0 10px;color:#f65401;text-decoration:underline}
+.chargeInquiry .amountArea .ico_sp:after{content:'';display:block;position:absolute;top:50%;right:0;width:11px;height:11px;margin-top:-5.5px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px 0}
+.chargeInquiry .discountArea{border:1px solid #d0d0d0;border-top:2px solid #5687d3}
+.chargeInquiry .discountArea .item ul{margin-top:-3px;padding:0 10px 10px;border-top:none;background:#fff}
+.chargeInquiry .discountArea .item .list{padding-top:5px}
+.chargeInquiry .discountArea .item strong{font-weight:bold}
+
+.chargeInquiry .toggleSection{margin-top:25px}
+.chargeInquiry .toggleSection .toggleWrap{margin-top:4px;border:1px solid #d0d0d0;border-top:2px solid #1e1f1f}
+.chargeInquiry .toggleSection .toggleWrap > li{position:relative;font-size:14px;color:#1e1f1f;border-top:1px solid #eee}
+.chargeInquiry .toggleSection .toggleWrap > li:first-child{border-top:none}
+.chargeInquiry .toggleSection .toggleWrap > li > .info{display:block;position:relative;padding:8px 35px 8px 10px;font-weight:bold}
+.chargeInquiry .toggleSection .toggleWrap > li .toggle{display:block;position:absolute;top:50%;right:10px;width:10px;height:6px;margin-top:-3px;color:transparent;font-size:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -16px}
+.chargeInquiry .toggleSection .toggleWrap > li .toggle.on{background-position:-15px -22px}
+.chargeInquiry .toggleSection .toggleWrap > li .area{display:none;margin-top:-5px;padding:0 20px 8px 10px;font-size:13px;color:#787979}
+.chargeInquiry .toggleSection .toggleWrap > li .area.active,.chargeInquiry .toggleSection .toggleWrap > li .area.show{display:block}
+.chargeInquiry .toggleSection .toggleWrap > li .area.point{color:#f65401}
+.chargeInquiry .toggleSection .toggleWrap > li .area.point .ti{font-weight:bold}
+
+/* Floating Banner */
+.remainBnnr{display:none;top:50px;right:15px;width:105px;height:122px}
+.remainBnnr .floatingWrap .todayExp{position:absolute;left:10px;bottom:15px;width:83px;height:22px;background:none}
+.remainBnnr .btnClose{top:0;right:0}
+
+/* 잔여기본통화 */
+.remainBasic .myNumWrap{overflow:hidden}
+.remainBasic .myNumWrap p{font-size:0.875rem;color:#666;text-align:center}
+.remainBasic .myNumWrap .myNumBox{overflow:hidden;position:relative;padding:10px 0}
+.remainBasic .myNumWrap .myNumBox .selWrap{float:left;width:49.2%}
+.remainBasic .myNumWrap .myNumBox .selWrap .selbox{font-size:12px;color:#222;border:1px solid #ccc;letter-spacing:-1px;border-radius:0}
+.remainBasic .myNumWrap .myNumBox .btn{float:right;padding:0 14px;width:49.2%;height:31px;font-size:14px;color:#fff;text-align:center;line-height:31px;background:#434159;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+.remainTbl th,.remainTbl td{padding:6px 8px;font-size:0.875rem;color:#1e1f1f;text-align:center;letter-spacing:-0.05em;border:none;background:none}
+.remainTbl th{font-weight:bold;color:#fff;border-bottom:1px solid #e7e9ea;background:#434159}
+.remainTbl th.res{padding-right:20px;color:#b2b2b2;text-align:right}
+.remainTbl .tit{font-size:1rem}
+.remainTbl .res{font-weight:normal}
+.remainTbl .res .emph{font-weight:bold;font-size:0.9375rem;color:#fff}
+.remainTbl .res em{font-weight:bold;font-size:0.9375rem;color:#eb002d}
+.remainTbl tr *:first-child{text-align:left}
+.remainTbl tbody tr:first-child td{padding-top:0.625rem}
+.remainTbl tbody tr:last-child td{padding-bottom:0.625rem}
+.remainTbl tbody td{line-height:1.375rem}
+.remainTbl tbody td:not(:first-child){padding-left:0;font-family:Arial;text-align:right}
+.remainTbl tbody td em{letter-spacing:-0.07em}
+.remainTbl tbody td em.res{font-size:0.8125rem;color:#eb002d}
+.remainTbl tbody td em.res strong{font-weight:bold;font-size:1.063rem}
+.remainTbl tbody td em.prv{font-size:0.75rem;color:#666}
+.remainTbl tbody td em.prv strong{font-weight:bold;font-size:0.875rem}
+.remainTbl tbody td .btnUsage{float:right;position:relative;height:auto;padding-right:10px;text-decoration:underline}
+.remainTbl tbody td .btnUsage:after{content:"";position:absolute;top:50%;right:0;margin-top:-2px;width:4px;height:4px;border:2px solid #1e1f1f;border-width:2px 2px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+
+.remainBasic .sectionGrid{border-top:none}
+.remainBasic .sectionGridBox{margin-top:20px}
+.remainBasic .sectionGridBox .para{padding:8px 10px;font-size:0.875rem}
+.remainBasic .sectionGridBox dt{display:block;padding:12px 8px 10px;font-weight:bold;font-size:0.875rem;color:#1e1f1f;border-top:1px solid #eee}
+.remainBasic .sectionGridBox dd{display:block;padding:0 10px;font-size:0.875rem}
+.remainBasic .sectionGridBox dd li{padding-top:1px}
+.remainBasic .sectionGridBox dd li:first-child{padding-top:0}
+.remainBasic .sectionGridBox dt + dd{margin-bottom:12px}
+
+.remainBasic .graphWrap{margin:15px 0 5px 15px}
+.remainBasic .graphWrap .graphTxt{float:left;margin-left:15px}
+.remainBasic .graphWrap .graphTxt .productName{display:block;font-weight:bold;font-size:24px;color:#1e1f1f;letter-spacing:-0.07em}
+.remainBasic .graphWrap .graphTxt .residualTerm{display:block;font-weight:bold;font-size:16px;color:#eb002d;letter-spacing:-0.07em}
+
+.remainBasic .uiGrid{margin-top:25px}
+.remainBasic .uiGrid a{font-weight:bold;font-size:0.9375rem}
+.remainBasic .grid li{margin-top:10px;text-align:left}
+.remainBasic .grid li a{display:inline-block;padding-left:5px;font-size:0.875rem}
+
+.remainBasic .morebox{margin-top:5px;font-size:0.8125rem;color:#888;text-align:right}
+.remainBasic .morebox a{display:inline-block;margin-left:10px;font-size:0.875rem;text-decoration:underline}
+.remainBasic .dataShareBox{margin-top:1.25rem;padding:0.9375rem;background:#f5f5f5}
+.remainBasic .dataShareBox .titHead{overflow:hidden;position:relative;padding-bottom:7px;border-bottom:1px solid #ccc}
+.remainBasic .dataShareBox .titHead .tit{float:left;font-weight:bold;font-size:0.9375rem;color:#111}
+.remainBasic .dataShareBox .titHead .tot{float:right;font-size:0.875rem;color:#111}
+.remainBasic .dataShareBox .titHead .tot strong{font-weight:bold;font-size:1.063rem}
+.remainBasic .datalst li{position:relative;display:table;width:100%;padding:8px 2.188rem 8px 0;border-bottom:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box}
+.remainBasic .datalst li:after{content:"";display:table;clear:both;overflow:hidden}
+.remainBasic .datalst li>span{display:table-cell}
+.remainBasic .datalst li .info{width:50%;font-size:0.875rem;color:#333;vertical-align:middle}
+.remainBasic .datalst li .data{font-size:0.875rem;color:#333;text-align:left;vertical-align:middle;letter-spacing:-0.05em;word-break:break-word}
+.remainBasic .datalst li .btnArr{position:absolute;top:50%;right:10px;width:8px;height:8px;margin-top:-6px;color:transparent;border:2px solid #1e1f1f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.remainBasic .dataShareBox .paraType1{margin-top:0.625rem}
+.remainBasic .refillbox{margin-top:20px;padding:15px;border:1px solid #565473;background:#fff}
+.remainBasic .refillbox .txt{font-weight:bold;font-size:16px;color:#1e1f1f;letter-spacing:-0.05em}
+.remainBasic .refillbox .btn1{margin-left:10px}
+.remainBasic .refillbox .btn1 a{padding-right:12px;font-size:15px;color:#eb002d;text-decoration:underline;letter-spacing:-0.05em}
+.remainBasic .refillbox .btn1 a:after{width:7px;height:10px;margin-top:-5px;background-position:-24px -59px}
+.remainBasic .refillbox .btn2{display:block;margin-top:8px}
+.remainBasic .refillbox .btn2 a{font-size:14px;color:#666;text-decoration:underline;letter-spacing:-0.05em}
+
+.remainBasic .checkMsgBox{margin-top:15px;border:1px solid #ccc}
+.remainBasic .checkMsgBox .msg{display:block;padding:12px 10px;font-size:14px;color:#1e1f1f;line-height:18px;letter-spacing:-0.05em}
+.remainBasic .checkMsgBox .msg + .bulList{padding:0 10px 12px}
+.remainBasic .checkMsgBox .msg + .bulList > li{font-weight:bold;color:#1e1f1f}
+.remainBasic .checkMsgBox .msg + .bulList > li li{font-weight:normal;color:#888}
+.remainBasic .checkMsgBox .msgtbtn{padding:15px 20px;background:#f5f5f5}
+.remainBasic .checkMsgBox .msgtbtn .txt{display:block;font-size:14px;color:#666;letter-spacing:-0.05em}
+.remainBasic .checkMsgBox .msgtbtn .icoBtn{margin-top:5px;font-weight:bold;font-size:14px;letter-spacing:-0.05em;text-decoration:underline}
+
+/* 잔여기본통화 2차 개선 2016-12-22 */
+.newRemainBasic .inquiryArea{margin:-10px -10px 0}
+.newRemainBasic .inquiryArea .selbox{height:35px;padding:3px 27px 2px 10px;font-size:14px;color:#fff;border:0;background:#56546e;-webkit-border-radius:0;border-radius:0}
+.newRemainBasic .inquiryArea .selWrap:after{right:12px;width:8px;height:8px;margin-top:-5px;border:2px solid #fff;border-width:2px 2px 0 0;background:none;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.newRemainBasic .inquiryArea .cont{padding:15px 0 12px;text-align:center;background:#f5f5f5}
+.newRemainBasic .inquiryArea .chargeName{disdplay:block;font-size:20px;font-weight:bold;color:#111;letter-spacing:-0.07em}
+.newRemainBasic .inquiryArea .remainTerm{font-size:14px;color:#666}
+.newRemainBasic .inquiryArea .remainTerm .days{color:#e3002b}
+
+/* 지연노출안내 추가 2017-03-07 */
+.newRemainBasic .delayInfoWrap{margin-top:10px;margin-bottom:-10px;padding:16px 0;border:1px solid #ea002c;
+	-webkit-box-shadow:1px 1px 2px #999;
+	box-shadow:1px 1px 2px #999;
+}
+.newRemainBasic .delayInfoWrap strong{display:block;font-weight:bold;font-size:13px;color:#e3002b;text-align:center}
+.newRemainBasic .delayInfoWrap .info{margin-top:12px;font-size:12px;color:#333;text-align:center;line-height:15px}
+
+.newRemainBasic .sectionBoxWrap{position:relative;margin-top:30px}
+.newRemainBasic .sectionBoxWrap .titArea{overflow:hidden;position:relative}
+.newRemainBasic .sectionBoxWrap .titArea h2{float:left;font-weight:bold;font-size:17px;color:#111;letter-spacing:-0.07em}
+.newRemainBasic .sectionBoxWrap .titArea .icoBtn{float:right;margin-top:4px;font-size:14px;color:#666}
+.newRemainBasic .sectionBoxWrap .sectionArea{margin-top:5px;border:1px solid #bbb;border-top:2px solid #1e1f1f}
+.newRemainBasic .sectionBoxWrap.data .sectionArea{border-top-color:#ea002c}
+.newRemainBasic .sectionBoxWrap.voice .sectionArea{border-top-color:#f65d00}
+.newRemainBasic .sectionBoxWrap.msg .sectionArea{border-top-color:#00a49a}
+.newRemainBasic .sectionBoxWrap.etc .sectionArea{border-top-color:#56546e}
+.newRemainBasic .sectionArea > ul > li{overflow:hidden;display:table;width:100%;padding:10px 10px 10px 20px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.newRemainBasic .sectionArea > ul > li:not(:first-child){border-top:1px solid #eee}
+.newRemainBasic .sectionArea .graphWrap{position:relative;display:table-cell;width:44px;height:44px;padding-right:20px}
+.newRemainBasic .sectionArea .contWrap{position:relative;display:table-cell;vertical-align:middle}
+.newRemainBasic .sectionArea .contWrap a{position:relative;display:block}
+.newRemainBasic .sectionArea .contWrap a:after{content:"";position:absolute;top:50%;right:2px;width:10px;height:10px;margin-top:-7px;border:2px solid #777;border-width:2px 2px 0 0;background:none;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.newRemainBasic .sectionArea .contWrap .ctTit{font-weight:bold;font-size:14px;color:#333;letter-spacing:-0.07em}
+.newRemainBasic .sectionArea .contWrap .ctLst{overflow:hidden;display:block;margin-top:3px}
+.newRemainBasic .sectionArea .contWrap .ctLst > span{display:inline-block;position:relative;color:#666}
+.newRemainBasic .sectionArea .contWrap .ctLst > span:not(:first-child){padding-left:10px;margin-left:7px}
+.newRemainBasic .sectionArea .contWrap .ctLst > span:not(:first-child):after{content:'';position:absolute;top:2px;left:0;display:block;width:1px;height:12px;border-left:1px solid #e4e4e4}
+.newRemainBasic .sectionArea .contWrap .volume{font-size:17px;font-weight:bold;vertical-align:-2px;line-height:16px}
+.newRemainBasic .sectionBoxWrap.data .contWrap .rem, .newRemainBasic .sectionBoxWrap.data .contWrap .volume{color:#e3002b}
+.newRemainBasic .sectionBoxWrap.voice .contWrap .rem, .newRemainBasic .sectionBoxWrap.voice .contWrap .volume{color:#d23c00}
+.newRemainBasic .sectionBoxWrap.msg .contWrap .rem, .newRemainBasic .sectionBoxWrap.msg .contWrap .volume{color:#007f77}
+.newRemainBasic .sectionBoxWrap.etc .contWrap .rem, .newRemainBasic .sectionBoxWrap.etc .contWrap .volume{color:#56546e}
+
+.newRemainBasic .sectionBoxWrap .circlePct{width:44px;height:44px}
+.newRemainBasic .sectionBoxWrap .circlePct:after{top:5px;left:5px;width:34px;height:34px;background:#fff}
+.newRemainBasic .sectionBoxWrap .circlePct > span{width:44px;line-height:44px}
+.newRemainBasic .sectionBoxWrap .circlePct > span.limit{color:transparent !important;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px;background-position:0 -206px}
+.newRemainBasic .sectionBoxWrap.data .circlePct > span{color:#e3002b}
+.newRemainBasic .sectionBoxWrap.voice .circlePct > span{color:#d23c00}
+.newRemainBasic .sectionBoxWrap.msg .circlePct > span{color:#007f77}
+.newRemainBasic .sectionBoxWrap.etc .circlePct > span{color:#56546e}
+
+.newRemainBasic .sectionBoxWrap .circlePct .slice{width:44px;height:44px;clip:rect(0, 44px, 44px, 22px)}
+.newRemainBasic .sectionBoxWrap .circlePct.p11 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p12 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p13 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p14 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p15 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p16 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p17 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p18 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p19 .slice,
+.newRemainBasic .sectionBoxWrap .circlePct.p20 .slice {clip:rect(auto, auto, auto, auto)}
+.newRemainBasic .sectionBoxWrap .circlePct .fbar,
+.newRemainBasic .sectionBoxWrap .circlePct.p11 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p12 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p13 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p14 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p15 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p16 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p17 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p18 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p19 .fill,
+.newRemainBasic .sectionBoxWrap .circlePct.p20 .fill {width:34px;height:34px;border:5px solid #eb002d;clip:rect(0px, 22px, 44px, 0px)}
+
+.newRemainBasic .sectionBoxWrap .circlePct .fbar,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p11 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p12 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p13 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p14 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p15 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p16 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p17 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p18 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p19 .fill,
+.newRemainBasic .sectionBoxWrap.data .circlePct.p20 .fill {border-color:#ea002c}
+
+.newRemainBasic .sectionBoxWrap.voice .circlePct .fbar,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p11 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p12 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p13 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p14 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p15 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p16 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p17 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p18 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p19 .fill,
+.newRemainBasic .sectionBoxWrap.voice .circlePct.p20 .fill {border-color:#f65d00}
+
+.newRemainBasic .sectionBoxWrap.msg .circlePct .fbar,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p11 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p12 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p13 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p14 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p15 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p16 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p17 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p18 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p19 .fill,
+.newRemainBasic .sectionBoxWrap.msg .circlePct.p20 .fill {border-color:#00a49a}
+
+.newRemainBasic .sectionBoxWrap.etc .circlePct .fbar,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p11 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p12 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p13 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p14 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p15 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p16 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p17 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p18 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p19 .fill,
+.newRemainBasic .sectionBoxWrap.etc .circlePct.p20 .fill {border-color:#56546e}
+
+.newRemainBasic .sectionBoxWrap.data .circlePct .fbar{border-color:#ea002c}
+.newRemainBasic .sectionBoxWrap.voice .circlePct .fbar{border-color:#f65d00}
+.newRemainBasic .sectionBoxWrap.msg .circlePct .fbar{border-color:#00a49a}
+.newRemainBasic .sectionBoxWrap.etc .circlePct .fbar{border-color:#56546e}
+
+.newRemainBasic .dataShareBox{margin-top:1.25rem;border-top:1px solid #434159;border-bottom:1px solid #ccc}
+.newRemainBasic .dataShareBox .titHead{overflow:hidden;position:relative;padding:12px 8px;border-bottom:1px solid #e4e4e4}
+.newRemainBasic .dataShareBox .titHead .tit{float:left;position:relative;padding-left:20px;font-weight:bold;font-size:0.9375rem;color:#111}
+.newRemainBasic .dataShareBox .titHead .tit:before{content:"";position:absolute;top:50%;left:0;width:14px;height:16px;margin-top:-8px;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-position:-25px -75px;background-size:250px 250px}
+.newRemainBasic .dataShareBox .titHead .tot{float:right;font-size:0.875rem;color:#ea002c;line-height:21px}
+.newRemainBasic .dataShareBox .titHead .tot strong{font-weight:bold;font-size:1.063rem}
+.newRemainBasic .dataShareBox .datalst li{padding:0 8px}
+.newRemainBasic .dataShareBox .datalst li:after{content:"";display:table;clear:both;overflow:hidden}
+.newRemainBasic .dataShareBox .datalst li:not(:first-child) .btnArr{border-top:1px solid #e4e4e4}
+.newRemainBasic .dataShareBox .datalst li .btnArr{position:relative;display:table;width:100%;padding:10px 1.688rem 10px 0;-webkit-box-sizing:border-box;box-sizing:border-box}
+.newRemainBasic .dataShareBox .datalst li .btnArr:after{content:"";position:absolute;top:50%;right:2px;width:8px;height:8px;margin-top:-6px;color:transparent;border:2px solid #777;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.newRemainBasic .dataShareBox .datalst li .info{display:table-cell;width:46%;font-size:1.063rem;color:#333;vertical-align:middle;line-height:18px}
+.newRemainBasic .dataShareBox .datalst li .info .date{display:block;font-size:12px;color:#666}
+.newRemainBasic .dataShareBox .datalst li .data{display:table-cell;font-size:0.875rem;color:#333;text-align:left;vertical-align:middle;letter-spacing:-0.05em;word-break:break-word}
+.newRemainBasic .dataShareBox + .bulList{margin-left:8px}
+.newRemainBasic .dataShareBox + .bulList > li{font-size:12px}
+
+.newRemainBasic .menuBox{margin:30px -10px 0;padding:28px 10px 0;background:url(/img/common/bg_section_split.png) repeat-x;background-size:2px 6px}
+.newRemainBasic .menuBox .titArea{overflow:hidden;position:relative}
+.newRemainBasic .menuBox .titArea h2{float:left;font-weight:bold;font-size:17px;color:#111;letter-spacing:-0.07em}
+.newRemainBasic .menuBox .lstArea{margin-top:5px;padding:0 10px;border-top:2px solid #ccc}
+.newRemainBasic .menuBox .lstArea li{border-bottom:1px solid #f0f0f0}
+.newRemainBasic .menuBox .lstArea li a{display:block;position:relative;width:100%;height:36px;padding:0 5px;font-size:14px;color:#333;line-height:36px;letter-spacing:-0.07em;-webkit-box-sizing:border-box;box-sizing:border-box}
+.newRemainBasic .menuBox .lstArea li a:after{content:"";position:absolute;top:50%;right:7px;width:8px;height:8px;margin-top:-5px;;border:2px solid #8e8f8f;border-width:2px 2px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+
+.newRemainBasic .btnWrap>a,.newRemainBasic .btnWrap>button{width:35%}
+
+.newRemainBasic .toggleSection .toggleWrap{border-color:#b1b5b8;border-top-color:#1e1f1f}
+.newRemainBasic .toggleSection .titBox .subTit2{margin-top:0;font-size:17px;color:#111;letter-spacing:-0.07em}
+.newRemainBasic .toggleWrap .item{padding:10px}
+.newRemainBasic .toggleWrap .item strong{display:block;font-weight:bold;font-size:14px;color:#111}
+.newRemainBasic .toggleWrap .item p{font-size:13px;color:#333}
+.newRemainBasic .toggleWrap .tidtPara,
+.newRemainBasic .toggleWrap .tidtList li{margin-top:5px;padding-left:9px;font-size:13px;text-indent:-9px}
+
+.newRemainBasic .checkMsgBox{margin-top:15px;border:1px solid #ccc}
+.newRemainBasic .checkMsgBox .msg{display:block;padding:12px 10px;font-size:14px;color:#1e1f1f;line-height:18px;letter-spacing:-0.05em}
+.newRemainBasic .checkMsgBox .msg + .bulList{padding:0 10px 12px}
+.newRemainBasic .checkMsgBox .msg + .bulList > li{font-weight:bold;color:#1e1f1f}
+.newRemainBasic .checkMsgBox .msg + .bulList > li li{font-weight:normal;color:#888}
+.newRemainBasic .checkMsgBox .msgtbtn{padding:12px 20px;border-top:1px solid #e4e4e4}
+.newRemainBasic .checkMsgBox .msgtbtn .txt{display:block;font-size:14px;color:#666;letter-spacing:-0.05em}
+.newRemainBasic .checkMsgBox .msgtbtn .icoBtn{margin-top:5px;font-weight:bold;font-size:14px;letter-spacing:-0.05em;text-decoration:underline}
+
+#toastBox{display:none;position:absolute;top:50%;left:50%;width:80%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:100}
+#toastBox p{padding:10px;font-size:14px;color:#fff;text-align:center;background:rgba(0,0,0,.6)}
+/* 잔여기본통화 2차 개선 2016-12-22 */
+
+.calcPop{display:none;position:fixed;top:50%;right:0;left:0;margin:0 45px;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:2000}
+.calcPop.on{display:block}
+.calcPop .head{padding:10px;background:#f5f5f5}
+.calcPop .head h2{font-size:1rem;font-weight:bold;color:#000;text-align:center}
+.calcPop .cont{height:auto;padding:25px 10px;overflow-y:scroll;-webkit-box-sizing:border-box;box-sizing:border-box}
+.calcPop .cont .unitErr{display:none;padding-left:3%;margin-bottom:5px;font-size:12px;text-align:left;letter-spacing:-0.05em}
+.calcPop .cont.on .unitErr,
+.calcPop .cont .unitErr.err1{display:block;color:#888}
+.calcPop .cont .unitErr.err2{color:#eb002d}
+.calcPop .cont.on .inpWrap.bf{border-color:#eb002d}
+.calcPop .unitWrap{overflow:hidden;position:relative;width:100%}
+.calcPop .unitbox{float:left;display:block;width:46%;padding:0 3%;-webkit-box-sizing:border-box;box-sizing:border-box}
+.calcPop .unitbox > div{position:relative;padding-right:20px}
+.calcPop .unitbox > div .unit{position:absolute;top:10px;right:0;font-size:10px;font-weight:bold;color:#000}
+.calcPop .unitbox .inpWrap{-webkit-border-radius:0;border-radius:0}
+.calcPop .unitbox .inpWrap.bf{border-color:#ccc}
+.calcPop .unitbox .inpWrap.at{border:none;border-bottom:1px solid #000}
+.calcPop .unitbox input{color:#000;text-align:right;letter-spacing:-0.05em}
+.calcPop .unitbox input::-webkit-input-placeholder{color:#000}
+.calcPop .unitbox input.inpGB{font-size:14px}
+.calcPop .unitbox input.inpMB{font-weight:bold;font-size:17px}
+.calcPop .unitbox .abbr{display:block;margin-top:10px;font-size:12px;color:#888;text-align:center;letter-spacing:-0.05em}
+.calcPop .eq{float:left;display:block;width:13px;height:7px;margin:12px auto 0;color:transparent;background:url(/img/new_billsearch/ico_billsearch_comm.png) no-repeat;background-size:100px 100px;background-position:0 -80px}
+.calcPop .btnClose{display:block;width:84px;height:30px;margin:20px auto 0;color:#fff;text-align:center;line-height:29px;background:#434159}
+.bgDimm{display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1999}
+
+/* 데이터PLUS T멤버십 */
+.dataPlusTMember .dataBox{border:1px solid #bbb}
+.dataPlusTMember .dataBox .infoArea{overflow:hidden;padding:15px 10px}
+.dataPlusTMember .dataBox .infoArea .phrase{clear:both;display:none;padding-top:10px;font-size:12px;color:#f65401;text-align:center}
+.dataPlusTMember .dataBox .infoArea a{float:left;position:relative;padding:0 17px 0 46px;font-size:17px;color:#1e1f1f;line-height:26px;letter-spacing:-0.05em}
+.dataPlusTMember .dataBox .infoArea a:before{content:'';position:absolute;top:50%;left:0;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px}
+.dataPlusTMember .charging .infoArea a:before{margin-top:-14px;width:36px;height:27px;background-position:0 0}
+.dataPlusTMember .present .infoArea a:before{margin-top:-16px;width:32px;height:32px;background-position:0 -32px}
+.dataPlusTMember .dataBox .infoArea a:after{content:'';position:absolute;top:50%;right:0;width:7px;height:10px;margin-top:-6px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-16px -59px;background-size:250px 250px}
+.dataPlusTMember .dataBox .infoArea a strong{font-weight:bold}
+.dataPlusTMember .dataBox .infoArea .btnRefer{display:block;width:100%;line-height:26px;text-align:center}
+.dataPlusTMember .dataBox .infoArea .btnRefer .ico{position:relative;padding-right:14px;font-size:14px;color:#1e1f1f;}
+.dataPlusTMember .dataBox .infoArea .btnRefer .ico:after{content:'';position:absolute;top:50%;right:0;width:6px;height:9.5px;margin-top:-4px;background:url(/img/common/ico_common_sp.png) no-repeat -84px 0;background-size:250px 250px}
+.dataPlusTMember .dataBox .infoArea .btnRefer .ico strong{font-weight:bold}
+.dataPlusTMember .dataBox .infoArea .btnRefer .ico em{font-weight:bold;color:#f65401}
+.dataPlusTMember .dataBox .dataInfo{float:right;font-size:15px;color:#f65401}
+.dataPlusTMember .dataBox .dataInfo em{font-weight:bold;font-size:24px;line-height:26px}
+.dataPlusTMember .dataBox .dataInfo em.gbyte{line-height:14px}
+.dataPlusTMember .dataBox .dataInfo .mbyte{display:block;font-size:11px;color:#646464;text-align:right;line-height:8px}
+.dataPlusTMember .dataBox .textArea{position:relative;padding:10px;border-top:1px solid #eee;background:#f6f6f6}
+.dataPlusTMember .dataBox .textArea dt{display:block;font-size:13px;font-weight:bold;color:#646464;letter-spacing:-0.05em}
+.dataPlusTMember .dataBox .textArea dd{display:block;margin-top:5px;font-size:12px;color:#787979;letter-spacing:-0.05em}
+.dataPlusTMember .dataBox .textArea .icoBtn{position:absolute;top:10px;right:10px;height:auto;text-decoration:underline}
+
+.dataPlusTMember .presentBox .topArea{overflow:hidden}
+.dataPlusTMember .presentBox .topArea .bulTit3{float:left}
+.dataPlusTMember .presentBox .topArea .icoBtn{float:right;margin-top:22px}
+.dataPlusTMember .presentBox .ex{display:block;margin-top:10px;font-size:12px;color:#7c7d7d}
+.dataPlusTMember .receiving{position:relative;margin-top:8px;padding-right:74px}
+.dataPlusTMember .receiving .inpWrap{height:38px;line-height:37px;-webkit-border-radius:0;border-radius:0}
+.dataPlusTMember .receiving .inpWrap input{padding:0 10px;height:36px;color:#949494}
+.dataPlusTMember .receiving .btnSrch{position:absolute;top:0;right:0;width:73px;height:36px;font-weight:bold;font-size:13px;color:#fff;text-align:center;line-height:35px;border:1px solid #f75402;background:#fc6300}
+.dataPlusTMember .beneficiary{display:block;position:relative;margin-top:8px;padding:0 10px;border:1px solid #666}
+.dataPlusTMember .beneficiary .contact{display:block;width:100%;height:36px;line-height:35px}
+.dataPlusTMember .beneficiary .contact .name{display:inline-block;font-size:13px;color:#1e1f1f;letter-spacing:-0.05em}
+.dataPlusTMember .beneficiary .contact .numb{display:inline-block;position:relative;margin-left:10px;padding-left:11px;font-size:13px;color:#1e1f1f;letter-spacing:-0.05em}
+.dataPlusTMember .beneficiary .contact .numb:after{content:'';position:absolute;top:50%;left:0;margin-top:-5px;width:1px;height:10px;background:#bbb}
+.dataPlusTMember .beneficiary .btnClose{position:absolute;top:50%;right:10px;margin-top:-5px;width:10px;height:10px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:0 -140px;background-size:250px 250px}
+
+.dataPlusTMember .presentBoxMsg{border:1px solid #bbb;background:#f6f6f6}
+.dataPlusTMember .presentBoxMsg .txtMsg{padding:20px 0;font-weight:bold;font-size:16px;color:#1e1f1f;text-align:center}
+.dataPlusTMember .presentBoxMsg .compTxt{padding:25px 10px 25px 150px;font-size:12px;color:#1e1f1f;text-align:left;letter-spacing:-0.07em;background:url(/img/new_billsearch/bg_dataPresent.png) no-repeat 15px 50%;background-size:125px 84px}
+.dataPlusTMember .presentBoxMsg .compTxt strong{display:block;margin-top:8px;font-weight:bold;font-size:16px;line-height:18px}
+.dataPlusTMember .presentBoxMsg .dataquanArea{border-top:1px solid #eee;background:#fff}
+.dataPlusTMember .presentBoxMsg .dataquanArea ul:after{content:"";display:block;clear:both}
+.dataPlusTMember .presentBoxMsg .dataquanArea li{float:left;position:relative;width:50%;padding:12px 0 8px;text-align:center}
+.dataPlusTMember .presentBoxMsg .dataquanArea li:after,
+.dataPlusTMember .presentBoxMsg .dataquanArea li:before{content:"";position:absolute;background-color:#ccc;left:0;top:0}
+.dataPlusTMember .presentBoxMsg .dataquanArea li:before{width:1px;height:100%}
+.dataPlusTMember .presentBoxMsg .dataquanArea li:after{width:100%;height:1px}
+.dataPlusTMember .presentBoxMsg .dataquanArea li:nth-child(1):after,
+.dataPlusTMember .presentBoxMsg .dataquanArea li:nth-child(2):after,
+.dataPlusTMember .presentBoxMsg .dataquanArea li:nth-child(2n-1):before{display:none}
+.dataPlusTMember .presentBoxMsg .dataquanArea li .data{display:block;color:#f65401;letter-spacing:-0.05em}
+.dataPlusTMember .presentBoxMsg .dataquanArea li .data em{font-weight:bold;font-size:24px;line-height:20px}
+.dataPlusTMember .presentBoxMsg .dataquanArea li .quan{display:block;margin-top:3px;font-size:12px;color:#1e1f1f}
+.dataPlusTMember .presentMsgArea{position:relative;margin-top:15px;padding-top:4px;border:1px solid #e4e4e4}
+.dataPlusTMember .presentMsgArea:before{content:'';position:absolute;top:-1px;left:-1px;width:100%;height:5px;background:url(/img/new_billsearch/bg_presentMsg.png) repeat-x;background-size:13px 5px}
+.dataPlusTMember .presentMsgArea .smsLink{position:relative;padding:20px 0;width:100%;font-size:14px;font-weight:bold;color:#010101;text-align:center}
+.dataPlusTMember .presentMsgArea .smsLink .words{display:none;margin-top:5px;font-weight:normal;font-size:12px;color:#7c7d7d}
+.dataPlusTMember .presentMsgArea .smsLink .words.on{display:block}
+.dataPlusTMember .presentMsgArea .smsLink .toggle{display:block;position:absolute;top:50%;right:10px;width:10px;height:6px;margin-top:-3px;color:transparent;font-size:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -16px}
+.dataPlusTMember .presentMsgArea .smsLink .toggle.on{background-position:-15px -22px}
+.dataPlusTMember .presentMsgArea .msgTit{display:block;margin-top:20px;font-weight:bold;font-size:14px;color:#010101;text-align:center;letter-spacing:-0.05em}
+.dataPlusTMember .presentMsgArea .msgTxt{display:block;padding:15px 0;font-size:13px;color:#2c2d2d;text-align:center;letter-spacing:-0.05em}
+.dataPlusTMember .msgWrap{display:none;margin:15px 10px;padding:10px 10px 6px;border:1px solid #bbb;-webkit-border-radius:3px;border-radius:3px}
+.dataPlusTMember .msgWrap textarea{padding:0;height:60px;font-size:13px;color:#2c2d2d;line-height:17px;border:none}
+.dataPlusTMember .msgWrap textarea::-webkit-input-placeholder{color:#2c2d2d}
+.dataPlusTMember .msgWrap .byte{display:block;margin-top:5px;font-size:12px;color:#7c7d7d;text-align:right}
+.dataPlusTMember .presentMsgArea.active .smsLink{padding-bottom:0}
+.dataPlusTMember .presentMsgArea.active .msgWrap{display:block}
+.dataPlusTMember .msgWrap + .btnbox{display:none}
+.dataPlusTMember .msgWrap + .btnbox.on{display:block}
+
+.dataPlusTMember .logWrap{margin-top:10px;border:1px solid #bbb}
+.dataPlusTMember .logWrap .termCheck{overflow:hidden;position:relative;padding:10px 50px 10px 10px;text-align:right}
+.dataPlusTMember .logWrap .termCheck label{font-size:13px;color:#1e1e1e}
+.dataPlusTMember .logWrap .termCheck .selbox{width:85px;margin-left:15px}
+.dataPlusTMember .logWrap .termCheck .dbtn{position:absolute;top:10px;right:10px;padding:0 6px;background:#676767}
+.dataPlusTMember .logWrap table td{position:relative;padding:10px 8px;font-size:13px;color:#1e1f1f;text-align:left;border:none;border-top:1px solid #e4e4e4}
+.dataPlusTMember .logWrap table .stat{font-weight:bold;text-align:center}
+.dataPlusTMember .logWrap table .stat .send{color:#5e9bbe}
+.dataPlusTMember .logWrap table .stat .recv{color:#f3615e}
+.dataPlusTMember .logWrap table .date{color:#7c7d7d;text-align:center}
+.dataPlusTMember .logWrap table .stat:after,
+.dataPlusTMember .logWrap table .date:after{content:'';position:absolute;top:50%;right:0;margin-top:-5px;width:1px;height:10px;background:#bbb}
+.dataPlusTMember .logWrap table .data{font-size:12px;color:#f65401;text-align:right;letter-spacing:-0.05em}
+.dataPlusTMember .logWrap table .data em{font-weight:bold;font-size:15px}
+
+.dataPlusTMember .bulTit3{margin-top:20px}
+.dataPlusTMember .selDataBox{position:relative;margin-top:8px;padding-right:74px}
+.dataPlusTMember .selDataBox .selWrap:after{right:11px;width:10px;height:6px;margin-top:-3px;background:url(/img/common/ico_common_sp.png) no-repeat 0 -33px;background-size:250px 250px}
+.dataPlusTMember .selDataBox .selbox{padding:2px 10px;height:38px;font-size:20px;color:#1e1f1f;border:1px solid #666;-webkit-border-radius:0;border-radius:0}
+.dataPlusTMember .selDataBox .btnSend{position:absolute;top:0;right:0;width:73px;height:36px;font-weight:bold;font-size:13px;color:#fff;text-align:center;line-height:35px;border:1px solid #f75402;background:#fc6300}
+.dataPlusTMember .selDataBox + .paraType1{margin-top:8px;font-weight:bold;font-size:12px;color:#fc6500;line-height:16px}
+.dataPlusTMember .area{padding-right:10px !important}
+.dataPlusTMember .area li{margin-top:5px}
+.dataPlusTMember .bnnrSection{margin:20px -10px 0}
+.dataPlusTMember .bnnrSection img{width:100%;vertical-align:top}
+.dataPlusTMember .toggleSection .titBox .subTit2{margin-top:0}
+.dataPlusTMember .disableBox{padding:40px 0;text-align:center}
+.dataPlusTMember .disableBox strong{display:block;font-weight:bold;font-size:16px;color:#1e1f1f}
+.dataPlusTMember .disableBox span{display:block;margin-top:10px;font-size:13px;color:#7c7d7d}
+.dataPlusTMember .btnlongBox{height:36px;text-align:center;line-height:35px;border:1px solid #f75402;
+    background-image:-webkit-linear-gradient(bottom, #fc6500 50%, #fc5800 100%);
+    background-image:linear-gradient(to bottom, #fc6500 50%, #fc5800 100%);
+}
+.dataPlusTMember .btnlongBox a{font-weight:bold;font-size:13px;color:#fff}
+.dataPlusTMember .btnlongBox a:after{background-position:0 -44px}
+
+.dataPlusTMember.disable .dataBox .infoArea .phrase{display:block;margin-bottom:-5px}
+.dataPlusTMember.disable .presentBox .topArea .icoBtn{pointer-events:none;tab-index:-1;opacity:0.7}
+.dataPlusTMember.disable .selDataBox .selWrap:after{opacity:0.7}
+.dataPlusTMember.disable .selDataBox .selbox{color:#979797;border-color:#bbb;background:#f6f6f6;pointer-events:none;tab-index:-1} /* disable속성 수정 2016-08-23 */
+.dataPlusTMember.disable .selDataBox .btnSend, .dataPlusTMember.disable .receiving .btnSrch{border-color:#85888c;background:#92959a;pointer-events:none;tab-index:-1}
+.dataPlusTMember.disable .selDataBox + .paraType1{color:#7c7d7d}
+.dataPlusTMember.disable .receiving .inpWrap{background:#f6f6f6}
+.dataPlusTMember.disable .receiving .inpWrap input{color:#979797;border-color:#bbb;background:#f6f6f6;pointer-events:none;tab-index:-1}
+
+/* 데이터 선물 UI 2차 개선 2017-01-13 */
+.dataPresent .two_dept_menu{border-bottom-color:#e3002b}
+.two_dept_menu .menu_list{height:53px;margin:0} /* 2017-01-24 충전선물리필 접근성 수정 */
+.menu_roll_list .prv_btn, .menu_roll_list .next_btn{display:block}
+.dataPresent .two_dept_menu .menu_list li{width:33.33333333%}
+.dataPresent .two_dept_menu .menu_list li a{height:35px;padding-top:18px;font-size:15px;color:#8e8e8e;vertical-align:middle;line-height:16px}
+.dataPresent .two_dept_menu .menu_list li.two_line a{height:43px;padding-top:10px}
+.dataPresent .two_dept_menu .menu_list li.on a{font-weight:bold;color:#e3002b}
+.dataPresent .two_dept_menu .menu_list li.on a::after{background-color:#e3002b}
+.dataPresent .two_dept_menu .menu_list li.disabled_list_d a{display:none}
+.dataPresent .menu_roll_list .prv_btn, .dataPresent .menu_roll_list .next_btn{display:block}
+
+.dataPresent .dataBox{border:1px solid #bbb}
+.dataPresent .dataBox .infoArea{overflow:hidden;position:relative;padding:15px 10px;border-bottom:1px solid #eee}
+.dataPresent .dataBox .infoArea>a{float:left;position:relative;padding:0 17px 0 46px;font-size:17px;color:#1e1f1f;line-height:26px;letter-spacing:-0.05em}
+.dataPresent .dataBox .infoArea>a:before{content:'';position:absolute;top:50%;left:0;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px}
+.dataPresent .present .infoArea>a:before{margin-top:-16px;width:32px;height:32px;background-position:0 -32px}
+/* .dataPresent .dataBox .infoArea>a:after{content:'';position:absolute;top:50%;right:0;width:7px;height:10px;margin-top:-6px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-16px -59px;background-size:250px 250px} */
+.dataPresent .dataBox .infoArea>a:after{display:none}
+.dataPresent .dataBox .infoArea>a strong{font-weight:bold}
+.dataPresent .dataBox .infoArea .btnInq{display:block;position:absolute;top:50%;right:10px;height:30px;margin-top:-15px;padding:0 20px;font-weight:bold;font-size:13px;color:#fff;text-align:center;line-height:28px;vertical-align:middle;border:1px solid #575757;-webkit-border-radius:3px;border-radius:3px;
+	background-image:-webkit-linear-gradient(bottom, #676767 50%, #595959 100%);
+	background-image:linear-gradient(to bottom, #676767 50%, #595959 100%);
+}
+.dataPresent .dataBox .infoArea .phrase{clear:both;display:none;padding-top:10px;font-size:12px;color:#f65401;text-align:center}
+.dataPresent .dataBox .infoArea .btnRefer{display:block;width:100%;line-height:26px;text-align:center}
+.dataPresent .dataBox .infoArea .btnRefer .ico{position:relative;padding-right:14px;font-size:14px;color:#1e1f1f;}
+.dataPresent .dataBox .infoArea .btnRefer .ico:after{content:'';position:absolute;top:50%;right:0;width:6px;height:9.5px;margin-top:-4px;background:url(/img/common/ico_common_sp.png) no-repeat -84px 0;background-size:250px 250px}
+.dataPresent .dataBox .infoArea .btnRefer .ico strong{font-weight:bold}
+.dataPresent .dataBox .infoArea .btnRefer .ico em{font-weight:bold;color:#f65401}
+.dataPresent .dataBox .dataInfo{float:right;font-size:15px;color:#e3002b}
+.dataPresent .dataBox .dataInfo em{font-weight:bold;font-size:24px;line-height:26px}
+.dataPresent .dataBox .dataInfo em.gbyte{color:#e3002b;line-height:14px}
+.dataPresent .dataBox .dataInfo .mbyte{display:block;font-size:11px;color:#646464;text-align:right;line-height:8px}
+.dataPresent .dataBox .textArea{position:relative;padding:10px;background:#f6f6f6}
+.dataPresent .dataBox .textArea p{color:#333;letter-spacing:-0.07em}
+.dataPresent .dataBox .textArea dt{display:block;font-size:13px;font-weight:bold;color:#333;letter-spacing:-0.05em}
+.dataPresent .dataBox .textArea dd{display:block;margin-top:5px;font-size:12px;color:#333;letter-spacing:-0.05em}
+.dataPresent .dataBox .textArea .icoBtn{position:absolute;top:10px;right:10px;height:auto;text-decoration:underline}
+.dataPresent .dataBox+.botTxt{position:relative;padding-left:10px;margin:5px 0 0 5px;font-size:12px;color:#646464;letter-spacing:-0.07em}
+.dataPresent .dataBox+.botTxt:before{content:'';position:absolute;top:5px;left:0;width:4px;height:4px;background:#bdbdbd;-webkit-border-radius:2px;border-radius:2px}
+.dataPresent .dataBox.pester{margin-top:10px}
+.dataPresent .dataBox.pester .phrase{display:block;padding:0;font-size:14px;color:#111;text-align:center;letter-spacing:-0.07em}
+.dataPresent .dataBox.pester .phrase strong, .dataPresent .dataBox.pester .phrase em{font-weight:bold}
+
+.dataPresent .presentAuto .infoArea .tit{display:block;margin-bottom:6px;font-weight:bold;font-size:16px;color:#1e1f1f}
+.dataPresent .presentAuto .infoArea .fmylstWrap ul{overflow:hidden}
+.dataPresent .presentAuto .infoArea .fmylstWrap li{position:relative;margin-top:5px;padding:6px 5px 6px 10px;font-size:13px;color:#7c7d7d;border:1px solid #666}
+.dataPresent .presentAuto .infoArea .fmylstWrap li .phone{display:inline-block;color:#1e1f1f;line-height:24px}
+.dataPresent .presentAuto .infoArea .fmylstWrap li .volume{display:inline-block;position:relative;margin-top:5px;margin-left:10px;padding-left:11px;font-size:12px;color:#e3002b;vertical-align:top;letter-spacing:-0.05em}
+.dataPresent .presentAuto .infoArea .fmylstWrap li .volume:before{content:"";position:absolute;top:50%;left:0;margin-top:-7px;width:1px;height:10px;background:#bbb}
+.dataPresent .presentAuto .infoArea .fmylstWrap li .volume strong{font-weight:bold;font-size:15px;line-height:15px}
+.dataPresent .presentAuto .infoArea .fmylstWrap .btnbox{position:absolute;top:6px;right:5px;margin:0}
+.dataPresent .presentAuto .infoArea .fmylstWrap .btnbox a{height:25px;padding:0 10px;color:#333;line-height:25px;border:none;background:#ebebed;-webkit-border-radius:0;border-radius:0}
+.dataPresent .presentAuto .infoArea .nolst{border-width:1px 0;border-style:solid;border-color:#eee}
+.dataPresent .presentAuto .infoArea .nolst p{padding:20px 0;font-size:13px;color:#949494;text-align:center}
+/* .dataPresent .presentAuto .textArea{border-top:none} */
+.dataPresent .presentAuto .infoArea+.textArea{border-top:1px solid #eee}
+
+.dataPresent .presentBox .uiGrid{margin-top:10px}
+.dataPresent .presentBox .uiGrid>li .txt{overflow:hidden;display:block;position:relative;padding:0 10px;height:35px;text-align:left;line-height:35px}
+.dataPresent .presentBox .uiGrid>li .txt strong{font-weight:bold;font-size:13px;color:#2c2d2d}
+.dataPresent .presentBox .uiGrid>li .num{position:absolute;top:9px;right:10px;padding:0 10px;font-size:12px;text-align:center;line-height:15px;border:1px solid #fc6500;-webkit-border-radius:50px;border-radius:50px}
+.dataPresent .presentBox .uiGrid>li a{padding:0 10px;height:35px;text-align:left;line-height:35px}
+.dataPresent .presentBox .btnAdrs{display:block}
+.dataPresent .presentBox .btnAdrs:after{content:'';position:absolute;top:50%;right:10px;width:5px;height:5px;margin-top:-3px;border:2px solid #89919c;border-width:0 2px 2px 0;background:none;
+	-webkit-transform:rotate(315deg);
+	transform:rotate(315deg);
+	-webkit-transition:-webkit-transform 0.3s ease;
+	transition:transform 0.3s ease;
+}
+.dataPresent .presentBox .ex{position:relative;display:block;padding-left:10px;margin:5px 0 0 5px;font-size:12px;color:#7c7d7d}
+.dataPresent .presentBox .ex:before{content:'';position:absolute;top:5px;left:0;width:4px;height:4px;background:#bdbdbd;-webkit-border-radius:2px;border-radius:2px}
+.dataPresent .presentBox+.selDataBox{margin-top:20px}
+
+.dataPresent .presentBoxMsg{border:1px solid #bbb;background:#f6f6f6}
+.dataPresent .presentBoxMsg .txtMsg{padding:20px 0;font-weight:bold;font-size:16px;color:#1e1f1f;text-align:center}
+.dataPresent .presentBoxMsg .compTxt{padding:25px 10px 25px 150px;font-size:12px;color:#1e1f1f;text-align:left;letter-spacing:-0.07em;background:url(/img/new_billsearch/bg_dataPresent.png) no-repeat 15px 50%;background-size:125px 84px}
+.dataPresent .presentBoxMsg .compTxt strong{display:block;margin-top:8px;font-weight:bold;font-size:16px;line-height:18px}
+.dataPresent .presentBoxMsg .dataquanArea{border-top:1px solid #eee;background:#fff}
+.dataPresent .presentBoxMsg .dataquanArea ul:after{content:"";display:block;clear:both}
+.dataPresent .presentBoxMsg .dataquanArea li{float:left;position:relative;width:50%;padding:12px 0 8px;text-align:center}
+.dataPresent .presentBoxMsg .dataquanArea li:after,
+.dataPresent .presentBoxMsg .dataquanArea li:before{content:"";position:absolute;background-color:#ccc;left:0;top:0}
+.dataPresent .presentBoxMsg .dataquanArea li:before{width:1px;height:100%}
+.dataPresent .presentBoxMsg .dataquanArea li:after{width:100%;height:1px}
+.dataPresent .presentBoxMsg .dataquanArea li:nth-child(1):after,
+.dataPresent .presentBoxMsg .dataquanArea li:nth-child(2):after,
+.dataPresent .presentBoxMsg .dataquanArea li:nth-child(2n-1):before{display:none}
+.dataPresent .presentBoxMsg .dataquanArea li .teln{display:block;font-weight:bold;font-size:22px;color:#e3002b;line-height:20px;letter-spacing:-0.07em}
+.dataPresent .presentBoxMsg .dataquanArea li .data{display:block;font-size:15px;color:#e3002b;letter-spacing:-0.07em}
+.dataPresent .presentBoxMsg .dataquanArea li .data em{font-weight:bold;font-size:22px;color:#e3002b;line-height:15px}
+.dataPresent .presentBoxMsg .dataquanArea li .quan{display:block;margin-top:3px;font-size:12px;color:#1e1f1f}
+.dataPresent .presentBoxMsg+.btnlongBox{margin-top:-1px}
+
+.dataPresent .presentMsgArea{position:relative;margin-top:30px;padding-top:4px;border:1px solid #e4e4e4}
+.dataPresent .presentMsgArea:before{content:'';position:absolute;top:-1px;left:-1px;width:100%;height:5px;background:url(/img/new_billsearch/bg_presentMsg.png) repeat-x;background-size:13px 5px}
+.dataPresent .presentMsgArea .smsLink{position:relative;padding:20px 0;width:100%;font-size:14px;font-weight:bold;color:#010101;text-align:center}
+.dataPresent .presentMsgArea .smsLink .words{display:none;margin-top:5px;font-weight:normal;font-size:12px;color:#7c7d7d}
+.dataPresent .presentMsgArea .smsLink .words.on{display:block}
+.dataPresent .presentMsgArea .smsLink .toggle{display:block;position:absolute;top:50%;right:10px;width:10px;height:6px;margin-top:-3px;color:transparent;font-size:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -16px}
+.dataPresent .presentMsgArea .smsLink .toggle.on{background-position:-15px -22px}
+.dataPresent .presentMsgArea .msgTit{display:block;margin-top:20px;font-weight:bold;font-size:14px;color:#010101;text-align:center;letter-spacing:-0.05em}
+.dataPresent .presentMsgArea .msgTxt{display:block;padding:15px 0;font-size:13px;color:#2c2d2d;text-align:center;letter-spacing:-0.05em}
+.dataPresent .msgWrap{display:none;margin:15px 10px;padding:10px 10px 6px;border:1px solid #bbb;-webkit-border-radius:3px;border-radius:3px}
+.dataPresent .msgWrap textarea{padding:0;height:60px;font-size:13px;color:#2c2d2d;line-height:17px;border:none}
+.dataPresent .msgWrap textarea::-webkit-input-placeholder{color:#2c2d2d}
+.dataPresent .msgWrap .byte{display:block;margin-top:5px;font-size:12px;color:#7c7d7d;text-align:right}
+.dataPresent .presentMsgArea.active .smsLink{padding-bottom:0}
+.dataPresent .presentMsgArea.active .msgWrap{display:block}
+
+.dataPresent .presentListWrap{margin-top:10px;border:1px solid #bbb}
+.dataPresent .presentListWrap .uiTab{display:-webkit-flex;display:flex}
+.dataPresent .presentListWrap .uiTab > li{height:35px;-webkit-flex:1;flex:1;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}
+.dataPresent .presentListWrap .uiTab > li > a{display:block;position:relative;width:100%;height:35px;font-size:14px;color:#fff;vertical-align:middle;text-align:center;line-height:35px;background:#919499}
+.dataPresent .presentListWrap .uiTab > li.on > a{background:#5f6368}
+.dataPresent .presentListWrap .srchLstBox{overflow:hidden;position:relative;padding:15px 10px;background:#f6f6f6}
+.dataPresent .presentListWrap+.unit{display:block;margin-top:5px;padding-left:5px;font-size:14px;color:#666}
+.dataPresent .srchLstBox h3{position:absolute;left:10px;top:18px;padding-right:14px;font-size:13px;font-weight:bold;color:#1e1f1f;letter-spacing:-0.07em}
+.dataPresent .srchLstBox h3:after{content:"";position:absolute;top:50%;right:0;margin-top:-5px;width:1px;height:10px;vertical-align:middle;background:#bbb}
+.dataPresent .srchLstBox .btnList{overflow:hidden;padding-left:80px;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}
+.dataPresent .srchLstBox .btnList .sBtn{float:left;display:block;margin-left:1.6%;width:23.8%;height:25px;font-size:13px;color:#646464;text-align:center;line-height:25px;background:#f6f6f6;-webkit-box-sizing:border-box;box-sizing:border-box}
+.dataPresent .srchLstBox .btnList .sBtn:first-child{margin-left:0}
+.dataPresent .srchLstBox .btnList .sBtn.select{font-weight:bold;color:#fff;border-color:#f75402;background:#434159}
+.dataPresent .dataSrchLst li{position:relative;padding:10px}
+.dataPresent .dataSrchLst li:not(:first-child){border-top:1px solid #e4e4e4}
+.dataPresent .dataSrchLst li.nolst{padding:20px 0;font-size:13px;color:#1e1f1f;text-align:center}
+.dataPresent .dataSrchLst li .ictxt{display:block;margin-bottom:3px;font-size:13px;color:#007f77;vertical-align:middle;line-height:16px}
+.dataPresent .dataSrchLst li .ictxt.disable{color:#e3002b}
+.dataPresent .dataSrchLst li .ictxt .tag{display:inline-block;height:16px;margin-right:7px;padding:0 5px;font-size:10px;font-weight:bold;color:#fff;text-align:center;line-height:16px;vertical-align:top;-webkit-border-radius:2px;border-radius:2px}
+.dataPresent .dataSrchLst li .ictxt .tag.send{background:#e3002b}
+.dataPresent .dataSrchLst li .ictxt .tag.receive{background:#007f77}
+.dataPresent .dataSrchLst li .date{display:inline-block;min-width:60px;font-size:13px;color:#666;text-align:left}
+.dataPresent .dataSrchLst li .demi{display:inline-block;margin:0 8px;width:1px;height:10px;vertical-align:-1px;background:#bbb}
+.dataPresent .dataSrchLst li .teln{display:inline-block;min-width:80px;font-size:13px;color:#111;text-align:center}
+.dataPresent .dataSrchLst li .volume{position:absolute;right:10px;bottom:10px;font-size:12px;color:#e3002b;line-height:15px}
+.dataPresent .dataSrchLst li .volume strong{font-weight:bold;font-size:15px}
+.dataPresent .pesterLst li .snd{color:#e3002b}
+.dataPresent .pesterLst li .volume{right:63px}
+.dataPresent .pesterLst li .sBtn{position:absolute;bottom:10px;right:10px;width:41px;height:18px;font-size:12px;color:#161616;text-align:center;line-height:19px;border:1px solid #757575;-webkit-border-radius:3px;border-radius:3px}
+.dataPresent .pesterLst .pesterSend li .volume{right:10px}
+
+.dataPresent .receiving{position:relative;margin-top:8px;padding-right:106px}
+.dataPresent .receiving .inpWrap{padding:0;height:38px;line-height:37px;border-color:#666;-webkit-border-radius:0;border-radius:0}
+.dataPresent .receiving .inpWrap input{padding:0 10px;height:36px;color:#949494}
+.dataPresent .receiving .btnSrch{position:absolute;top:0;right:0;width:100px;height:36px;font-weight:bold;font-size:13px;color:#fff;text-align:center;line-height:35px;border:1px solid #f75402;background:#fc6300}
+
+.dataPresent .topArea{overflow:hidden;position:relative}
+.dataPresent .topArea .icoBtn{position:absolute;top:22px;right:5px;height:17px}
+.dataPresent .titArea{position:relative}
+.dataPresent .titArea:after{content:"";display:table;clear:both}
+.dataPresent .titBtnArea{position:absolute;top:0;right:0}
+.dataPresent .titBtnArea a{display:inline-block;height:25px;padding:0 10px;font-size:12px;color:#fff;text-align:center;line-height:25px;background:#757380}
+.dataPresent .titArea .btnAdrs{position:absolute;top:0;right:0;width:53px;height:25px;text-align:center;line-height:25px}
+.dataPresent .titArea .dataSel{position:absolute;top:-2px;right:0;width:75px;height:30px}
+.dataPresent .bulTit3, .dataPresent .mainTit1{margin-top:20px}
+
+.dataPresent .selDataBox{position:relative;margin-top:8px;padding-right:106px}
+.dataPresent .selDataBox.rqst{padding-right:106px}
+.dataPresent .selDataBox .selWrap:after{right:11px;width:10px;height:6px;margin-top:-3px;background:url(/img/common/ico_common_sp.png) no-repeat 0 -33px;background-size:250px 250px}
+.dataPresent .selDataBox .selbox{padding:2px 10px;height:38px;font-size:20px;color:#1e1f1f;border:1px solid #666;-webkit-border-radius:0;border-radius:0}
+.dataPresent .selDataBox .btnSend{position:absolute;top:0;right:0;width:100px;height:36px;font-weight:bold;font-size:13px;color:#fff;text-align:center;line-height:35px;border:1px solid #f75402;background:#fc6300}
+.dataPresent .selDataBox.rqst .btnSend{width:100px}
+.dataPresent .selDataBox+.paraType1{margin-top:8px;font-weight:bold;font-size:12px;color:#fc6500;line-height:16px}
+
+.dataPresent .selWrapBox, .dataPresent .inpWrapBox{position:relative;margin-top:6px}
+.dataPresent .selWrapBox .selWrap:after{right:11px;width:10px;height:6px;margin-top:-3px;background:url(/img/common/ico_common_sp.png) no-repeat 0 -33px;background-size:250px 250px}
+.dataPresent .selWrapBox .selbox{padding:2px 10px;height:38px;font-size:13px;color:#666;border:1px solid #666;-webkit-border-radius:0;border-radius:0}
+
+.dataPresent .inpWrap{height:38px;padding:0 10px;border-color:#666;-webkit-border-radius:0;border-radius:0}
+.dataPresent .inpWrap input{height:36px;font-size:13px;color:#666;line-height:36px}
+::-webkit-input-placeholder{color:#666}
+
+.dataPresent .prsList{margin:5px 0 0 5px}
+.dataPresent .prsList>li{font-size:12px;color:#646464}
+.dataPresent .prsList>li:before{width:4px;height:4px;background:#bdbdbd;-webkit-border-radius:2px;border-radius:2px}
+.dataPresent .prsList>li em{font-weight:bold;color:#f65401}
+.dataPresent .prsList>li strong{font-weight:bold}
+
+.dataPresent .bnnrSection, .dataPresent .linkSection{margin:30px -10px 0}
+.dataPresent .bnnrSection img{width:100%;vertical-align:top}
+.dataPresent .linkSection{padding:0 10px;background:#f5f5f5}
+.dataPresent .linkSection ul{overflow:hidden;width:100%}
+.dataPresent .linkSection li{position:relative;float:left;display:table;width:50%;text-align:center}
+.dataPresent .linkSection li:first-child:before{content:"";position:absolute;top:0;right:0;width:1px;height:100%;background-color:#e4e4e4}
+.dataPresent .linkSection li a{display:table-cell;padding:20px 0;font-size:15px;color:#333;text-align:center;vertical-align:middle}
+.dataPresent .linkSection li a .ico{position:relative;display:inline-block;padding-left:50px;text-align:left}
+.dataPresent .linkSection li a .ico:after{content:"";position:absolute;top:50%;left:0;width:40px;height:43px;margin-top:-22px;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px}
+.dataPresent .linkSection li.item01 .ico:after{background-position:-45px 0}
+.dataPresent .linkSection li.item02 .ico:after{background-position:-45px -45px}
+.dataPresent .linkSection li a strong{display:block;font-weight:bold;color:#111}
+
+.dataPresent .disableBox{text-align:center;border:1px solid #d0d0d0}
+.dataPresent .disableBox .txt{display:block;padding:40px 0;font-weight:bold;font-size:16px;color:#1e1f1f}
+/* .dataPresent .disableBox .phrase{display:block;padding:40px 0;font-size:16px;color:#1e1f1f;text-align:center;letter-spacing:-0.07em}
+.dataPresent .disableBox .phrase strong, .dataPresent .disableBox .phrase em{font-weight:bold} */
+.dataPresent .disableBox .txt2{font-size:13px;color:#646464}
+.dataPresent .btnlongBox{height:36px;text-align:center;line-height:35px;border:1px solid #e3002b;background:#e3002b}
+.dataPresent .btnlongBox a{font-weight:bold;font-size:14px;color:#fff}
+.dataPresent .btnlongBox a:after{background-position:0 -44px}
+.dataPresent .btnlongBox.black{border-color:#575757;
+	background-image:-webkit-linear-gradient(bottom, #676767 50%, #595959 100%);
+	background-image:linear-gradient(to bottom, #676767 50%, #595959 100%);
+}
+.dataPresent .btnlongBox.black a{color:#fff}
+.dataPresent .btnlongBox.black a:after{background-position:0 -44px}
+.dataPresent .btnlongBox.white{border-color:#757575;background:#fff}
+.dataPresent .btnlongBox.white a{color:#1e1f1f}
+.dataPresent .btnlongBox.white a:after{background-position:0 -59px}
+.dataPresent .botTxt{margin-top:5px}
+.dataPresent .toggleWrap>li>.info{padding-right:25px}
+.dataPresent .toggleWrap>li>.info.on .toggle{background-position:-15px -22px}
+.dataPresent .toggleSection .titBox .subTit2{margin-top:0;font-size:17px;color:#111;letter-spacing:-0.07em}
+
+.alertPopup{display:none;position:fixed;top:0;left:0;display:table;width:100%;height:100%;padding:0 30px;text-align:center;background:rgba(0,0,0,.6);-webkit-box-sizing:border-box;box-sizing:border-box;z-index:2000}
+.alertPopup .inner{display:table-cell;text-align:center;vertical-align:middle}
+.alertPopup .head{position:relative;padding:15px;border:1px solid #35343c;border-bottom:none;background:#514f65;-webkit-border-radius:0;border-radius:0}
+.alertPopup .head h1{width:90%;font-size:16px;color:#fff;text-align:left;line-height:1.4}
+.alertPopup .cont{height:auto;padding:10px 15px 15px;border:1px solid #35343c;border-top:none;overflow-y:scroll;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;-webkit-border-radius:0;border-radius:0}
+.alertPopup .cont .para{font-weight:bold;font-size:20px;color:#1e1f1f;letter-spacing:-0.05em}
+.alertPopup .cont .thumb{display:block;margin-top:14px}
+.alertPopup .cont img{width:100%;vertical-align:top}
+.alertPopup .btnClose{position:absolute;top:50%;right:15px;width:15px;height:15px;margin-top:-8px;color:transparent;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px;background-position:0 -105px}
+/* 데이터 선물 UI 2차 개선 2017-01-13 */
+
+/* Alert Popup */
+.psntxt{font-size:12px;color:#7c7d7d}
+.psntxt strong{font-weight:bold;font-size:16px;color:#1e1f1f}
+
+/* poc ui 적용 : 2016-08-10 */
+#content.billsearch.pocUI .box_section .wrap_cont{height:61px;}
+#content.billsearch.pocUI .box_section .wrap_cont .tit_menu{background:#ffffff;}
+#content.billsearch.pocUI .box_section .wrap_cont .cont_iframe{border-left:0px;}
+#content.billsearch.pocUI .box_section .wrap_cont .tit_menu .link_menu{font-size:17px;}/*2016-09-05 font-size 16 -> 17수정 */
+#content.billsearch.pocUI .box_section .wrap_cont .tit_menu .link_menu .ico_comm{display:block;overflow:hidden;position:absolute;top:5px;right:0;width:6.5px;height:11px;background:url('/img/new_billsearch/titi_arrow.png') no-repeat;background-size:100%;}
+#content.billsearch.pocUI .box_section .wrap_info .txt_info{color:#888888;font-size:14px;}/*2016-09-05 font-size 12 -> 14수정 */
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo{border-left:0}
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo dt{overflow:hidden;margin-top:10px;padding-right:10px;font-size:13px;color:#111111}/*2016-09-05 font-size 11 -> 13수정 */
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo dd{overflow:visible;margin-top:2px;padding-right:10px;font-weight:bold;font-size:21px;color:#111111}
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo dd .unit{font-size:12px;display: inline-block;margin-left: 4px;}
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo dd button{height: auto;float: right;position: relative;padding-right: 16px;line-height: 21px;color: #e3002d !important;font-weight:bold}
+#content.billsearch.pocUI .box_section .wrap_cont .addinfo dd button .ico_comm{display: block;overflow: hidden;position: absolute;top: 3px;right: 0;background: url(/img/new_billsearch/arrow_red.png) no-repeat;width: 14px;height: 14px;background-size: 100%;}
+#content.billsearch.pocUI .box_section .wrap_action ul {width:100%;overflow:hidden;}
+#content.billsearch.pocUI .box_section .wrap_action ul li{float:left;width:33.3%;height:50px;line-height:49px;font-size:14px;box-sizing:border-box;border-top:1px solid #b1b5b8;border-right: 1px solid #b1b5b8;text-align:center;color:#333333;}
+#content.billsearch.pocUI .box_section .wrap_action ul li:last-child{border-right:0px;}
+#content.billsearch.pocUI .box_section .wrap_action ul li a{display:block;font-size:16px;}/*2016-09-05 font-size 14 -> 16수정 */
+#content.billsearch.pocUI .box_section .cont_addinfo{overflow:hidden;margin-top:5px}
+#content.billsearch.pocUI .box_section .cont_addinfo .link_info{color:#666666;font-size:15px;}/*2016-09-05 font-size 13 -> 15수정 */
+#content.billsearch.pocUI .box_section .cont_box1 {border-radius:0px;border: 1px solid #b1b5b8;border-top: 2px solid #3d3435;}
+#content.billsearch.pocUI .box_section .cont_box2 {border-radius:0px;margin-top: 15px;border: 1px solid #b1b5b8;border-top: 2px solid #3d3435;}
+#content.billsearch.pocUI .box_section .cont {border-top:0px}
+#content.billsearch.pocUI .box_section .title {background-color:#ffffff;}
+#content.billsearch.pocUI .box_section .serviceinfo{padding: 10px 10px;}
+#content.billsearch.pocUI .box_section .serviceinfo dt {padding-top:0px;font-size:15px;}
+#content.billsearch.pocUI .box_section .serviceinfo .inner_link .ico_comm {background-position:0 0}
+#content.billsearch.pocUI .box_section .list_button li {float:left;box-sizing:border-box;border-left:0px;}
+#content.billsearch.pocUI .box_section .list_button.type1 li{height: 55px;padding: 5px 10px 10px 10px;}
+#content.billsearch.pocUI .box_section .list_button.col2 li:nth-child(2n-1){padding-right: 5px;}
+#content.billsearch.pocUI .box_section .list_button.col2 li:nth-child(2n){padding-left: 5px;}
+#content.billsearch.pocUI .box_section .list_button.type1 .inner {font-size: 16px;}
+#content.billsearch.pocUI .box_section .list_button .inner{display: inline-block;font-weight: bold;vertical-align: middle;color: #ffffff;}
+#content.billsearch.pocUI .box_section .list_button a{display: block;height: 40px;}
+#content.billsearch.pocUI .box_section .list_button a.bgdark{background:#56546e}
+#content.billsearch.pocUI .box_section .list_button a.bgred{background:#e3002b}
+#content.billsearch.pocUI .box_section .billinginfo .link_addinfo .ico_comm {position: absolute;top: 3px;right: 0;width: 11px;height: 11px;background: url(/img/new_charge/arrow_link.png) no-repeat;background-size: 100%;}
+#content.billsearch.pocUI .box_section .billinginfo .inner_link .ico_comm {background-position:0px 0}
+#content.billsearch.pocUI .box_section .cont_button {margin:20px 0px 25px 0px;}
+#content.billsearch.pocUI .box_section .cont_button .column_type{padding:0px;}
+#content.billsearch.pocUI .box_section .cont_button .column_type .button_type1{border-radius:0px;border-right:0px;display: block;height: 57.5px;line-height: 57.5px;}
+#content.billsearch.pocUI .box_section .cont_button .column_type:last-child .button_type1{border-right:1px solid #c8c8c8;}
+#content.billsearch.pocUI .box_section .cont_button .column_type .button_type1 .inner{font-size:13px;color:#1e1f1f;}
+#content.billsearch.pocUI .box_section.wrap_coupon{padding:5px 25px 10px 25px;background:#f5f5f5;overflow: visible;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item{position: relative;width:100%;margin:15px 0px;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item img{width:100%;vertical-align: top;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item.offer_area > img{display:none;opacity:0}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item.offer_area > img#loading_img{display:block;opacity:1}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item .offering_popup{position: absolute;top: -15%;margin: 0 10%;display:none;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_item .offering_popup a{width: 10%;height: 40%;display: block;position: absolute;top: 0;right: 0;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_links{overflow:hidden;position:absolute;width:100%;height:22.5%;bottom:0px;padding: 0px;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_links li{float:left;width:33.3%;height:100%;margin: 0px;box-sizing:border-box;text-align:center;padding-right:10px;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_links li a{font-size:13px;color:#ffffff;position:relative;}
+#content.billsearch.pocUI .box_section.wrap_coupon .coupon_links li a:after{content:'';position: absolute;top: 1px;right: -18px;width:14px;height:14px;background:url('/img/new_billsearch/icon_arrow.png') no-repeat;background-size:100%;}
+.fc_red {color: #e3002d !important;}
+.fc_underline{text-decoration: underline;}
+.bd_bottom{border-bottom:1px solid #c8c8c8 !important;}
+.pd_b20{padding-bottom:20px !important;}
+/* poc ui 적용 : 2016-08-10 */
+
+/* 2016-08-11 배너 신규 UI */
+#content.billsearch.pocUI #banner_type {width:100%;position:relative;padding-bottom:24px;border-bottom: 1px solid #ececec;margin-top: 15px;}
+#content.billsearch.pocUI #banner_type .ico_comm{background:url(/img/new_main/ico_main_comm.png) no-repeat 0 0;background-size:100px 100px}
+#content.billsearch.pocUI #banner_type img{width:100%; display:block;}
+
+#content.billsearch.pocUI #banner_type .b_arw {position:absolute;top:30px;z-index:50;display:block;width:30px;height:23px;text-indent:-999px;font-size:0;background:url(../../img/common/icon_banner.png) no-repeat;background-size:57px 61px}
+#content.billsearch.pocUI #banner_type .arw_l {left:0;background-position:0 0}
+#content.billsearch.pocUI #banner_type .arw_r {right:0;background-position:-27px 0}
+#content.billsearch.pocUI #banner_type .b_paging {position:absolute;bottom:-2px;left:50%;width:100%;height:24px;line-height:1.8;margin-left:-50%;text-align:center;background:#ececec}
+
+#content.billsearch.pocUI #banner_type ul{overflow:hidden;min-width:300px;width:100%;min-height:72.5px;}
+#content.billsearch.pocUI #banner_type ul li{overflow:hidden;display:none;text-align:center;background:#fff}
+#content.billsearch.pocUI #banner_type ul li a {display:block}
+#content.billsearch.pocUI #banner_type ul li.c_page {display:block}
+
+#content.billsearch.pocUI #banner_type .arw_l{outline: none;position:absolute;top: auto;bottom:0;left:10px;width:20px;height:24px}
+#content.billsearch.pocUI #banner_type .arw_l .ico_comm{width:20px;height:11px;background-position:0 0}
+#content.billsearch.pocUI #banner_type .arw_l .ico_comm.ov{width:20px;height:11px;background-position:-40px 0}
+#content.billsearch.pocUI #banner_type .arw_r{outline: none;position:absolute;top: auto;bottom:0;right:10px;width:20px;height:24px}
+#content.billsearch.pocUI #banner_type .arw_r .ico_comm{width:20px;height:11px;background-position:-20px 0}
+#content.billsearch.pocUI #banner_type .arw_r .ico_comm.ov{width:20px;height:11px;background-position:-60px 0}
+#content.billsearch.pocUI #banner_type .b_paging{position:absolute;bottom:0;left:50%;width:100%;height:24px;margin-left:-50%;text-align:center;background-color:#fff}
+#content.billsearch.pocUI #banner_type .b_paging button,
+#content.billsearch.pocUI #banner_type .b_paging a{display:inline-block;outline: none;background-image:url(/img/new_main/ico_main_comm.png);background-repeat:no-repeat;background-size:100px 100px;vertical-align:middle;position:relative}
+#content.billsearch.pocUI #banner_type .b_paging span{display:inline-block;background-image:url(/img/new_main/ico_main_comm.png);background-repeat:no-repeat;background-size:100px 100px;vertical-align:top;margin-top:7px;position:relative}
+#content.billsearch.pocUI #banner_type .b_paging span img{width:9px !important;height:9px !important;position:absolute;left:-1px}
+#content.billsearch.pocUI #banner_type .b_page{width:9px;height:9px;margin-left:4px;background-position:0 -20px;text-indent:-99999px}
+#content.billsearch.pocUI #banner_type .b_page.on{background-position:-10px -20px}
+#content.billsearch.pocUI #banner_type .b_paging .bplay_btn{display:inline-block;width:9px;height:11px;margin:6px 0 0 4px;outline: none;background-position:-20px -20px;text-indent: -999px;font-size: 0;vertical-align:top}
+#content.billsearch.pocUI #banner_type .bplay_btn.b_play{background-position:-30px -20px}
+#content.billsearch.pocUI #banner_type.singletype{padding-bottom:0}
+#content.billsearch.pocUI #banner_type.singletype .arw_l,
+#content.billsearch.pocUI #banner_type.singletype .arw_r,
+#content.billsearch.pocUI #banner_type.singletype .b_paging{display:none}
+/* 2016-08-11 배너 신규 UI */
+
+/* 선물리필하기 UI개선 - 받은 조르기 레이어팝업 */
+.pesterPop{display:none;position:fixed;top:0;right:0;bottom:0;left:0;padding:0 15px;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:2000}
+.pesterPop.on{display:block}
+.pesterPop .inner{position:relative;border:1px solid #35343c;background:#fff}
+.pesterPop .head{padding:15px;background:#514f65}
+.pesterPop .head h1{font-size:16px;color:#fff}
+.pesterPop .cont{height:auto;padding:10px 15px 15px;overflow-y:scroll;-webkit-box-sizing:border-box;box-sizing:border-box}
+.pesterPop .cont .txt{font-weight:bold;font-size:16px;color:#333}
+.pesterPop .cont .checkWrap{margin-top:10px;padding-top:12px;border-top:1px solid #e4e4e4}
+.pesterPop .cont .checkWrap>li{width:100%;margin-top:10px}
+.pesterPop .cont .checkWrap>li:first-child{margin-top:0}
+
+.pesterPop .inpBox{overflow:hidden;display:block;position:relative;min-height:21px}
+.pesterPop .inpBox input[type="checkbox"],
+.pesterPop .inpBox input[type="radio"]{position:absolute;top:0;left:0;margin:0;opacity:0;z-index:10} 
+.pesterPop .inpBox input[type="checkbox"] + label,
+.pesterPop .inpBox input[type="radio"] + label{position:static;display:inline-block;min-height:21px;margin:2px 0 0;padding:0 0 0 25px;font-size:14px;color:#1e1f1f;letter-spacing:-0.05em;word-break:break-all;background:#fff}
+.pesterPop .inpBox label:before{content:'';position:absolute;top:0;left:0;margin-right:5px;vertical-align:middle;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px}
+
+.pesterPop .inpBox input[type="checkbox"]{position:absolute;top:0;left:0;width:20px;height:20px;margin:0;vertical-align:middle;border:0;opacity:0}
+.pesterPop .inpBox input[type="checkbox"] + label:before{width:20px;height:20px;background-position:-230px -45px}
+.pesterPop .inpBox input[type="checkbox"]:checked + label:before{background-position:-230px -65px}
+.pesterPop .inpBox input[type="checkbox"]:disabled + label:before{background-position:-210px -45px}
+
+.pesterPop .inpBox input[type="radio"]{position:absolute;top:0;left:0;width:21px;height:21px;margin:0;vertical-align:middle;border:0;opacity:0}
+.pesterPop .inpBox input[type="radio"] + label:before{width:21px;height:21px;background-position:-229px -90px}
+.pesterPop .inpBox input[type="radio"]:checked + label:before{background-position:-229px -111px}
+.pesterPop .inpBox input[type="radio"]:disabled + label:before{background-position:-208px -90px}
+
+.pesterPop .date{position:absolute;top:2px;right:0;font-size:13px;color:#666}
+
+.pesterPop .btnClose{position:absolute;top:15px;right:20px;width:2px;height:20px;color:transparent;background:#b9b9c1;-webkit-transform:rotate(45deg)}
+.pesterPop .btnClose:after{content:"";position:absolute;left:-9px;top:9px;width:20px;height:2px;background:#b9b9c1}
+.bgDimm{display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1999}
+
+/* 사용/청구/미납 - 사용요금 레이어팝업 */
+.billUsePop{display:none;position:fixed;top:0;right:0;bottom:0;left:0;margin:0 15px;border:1px solid #35343c;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:2000}
+.billUsePop.on{display:block}
+.billUsePop .head{position:relative;padding:15px;background:#514f65}
+.billUsePop .head h1{font-size:16px;color:#fff}
+.billUsePop .cont{height:auto;padding:10px 15px 15px;overflow-y:scroll;-webkit-box-sizing:border-box;box-sizing:border-box}
+.billUsePop .cont p{letter-spacing:-0.07em;word-break:break-all}
+.billUsePop .cont .para01{font-size:12px;color:#666}
+.billUsePop .cont .para02{margin-top:12px;padding-top:11px;font-size:14px;color:#111;border-top:1px solid #e4e4e4}
+.billUsePop .cont .para02 .emph1{font-weight:bold;font-size:16px;color:#e3002b}
+.billUsePop .cont .para02 .emph2{font-size:12px}
+.billUsePop .cont .para03{margin-top:15px;font-size:14px;color:#111}
+.billUsePop .cont .para03 .emph3{font-weight:bold;font-size:16px;color:#e3002b}
+.billUsePop .btnClose{display:block;position:absolute;top:50%;right:15px;width:15px;height:15px;margin-top:-8px;color:transparent;background:url(/img/new_billsearch/sp_billsearch.png) no-repeat;background-size:250px 250px;background-position:0 -105px}
+.billUsePop .btnBillChange{width:100%;height:35px;font-size:14px;line-height:34px;background:#e3002b;-webkit-border-radius:0;border-radius:0}
+.billUsePop .btnBillChange.btnBlillChangeClose{background: #ebebec;color: #333;}
+.billUsePop .btnExpire{display:block;margin-top:20px;text-align:center;}
+.billUsePop .btnExpire .monthExp{position:relative;/* display:block; */padding-left:30px;font-size:13px;color:#111;line-height:24px}
+.billUsePop .btnExpire .monthExp:after{content:"";position:absolute;top:0;left:0;width:24px;height:24px;background:url(/img/new_charge/ico_charge_comm.png) no-repeat;background-size:100px 100px;background-position:0 -76px}

@@ -1,0 +1,627 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>모바일 T world</title>
+<SCRIPT language="javascript">
+<!--
+document.domain = "tworld.co.kr";
+
+function changeAction(){
+	if(document.frm_used.sort[0].checked==true){
+		document.frm_used.view.value="1";
+	}else{
+		document.frm_used.view.value="2";
+	}
+
+    send1(document.frm_used.term.value);
+}
+
+function send1(flag){
+    document.frm_used.term.value = flag;
+	document.frm_used.action="iFrame_card_used_list.jsp";
+	frm_used.submit();
+}
+
+//-->
+</SCRIPT>
+<link href="http://m.tworld.co.kr/inc/css/point_member.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://m.tworld.co.kr/inc/js/common.js"></script>
+</head>
+ 
+<body>
+<div id="sub_wrap">
+<!--컨텐츠 -->
+
+  <div class="st_title">
+    <p>멤버십 카드 사용내역 조회</p>
+  </div>
+ 
+ 
+ <div class="inq_subtitle">멤버십 카드 사용이력 조회</div>
+ <div class="in_table3" style="padding-botto,:0">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="">
+<form name="frm_used" method="post" >
+<input type="hidden" name="view" value="1">
+<input type="hidden" name="term" value="3">
+	<tr>
+		<th>조회순서</th>
+		<td><input type="radio" value="1" name="sort" style="margin-bottom:-2px;" checked onclick="javascript:changeAction();"> 제휴사순 <input type="radio" value="2" name="sort" style="margin-bottom:-2px; margin-left:10px;"  onclick="javascript:changeAction();"> 사용일자순</td>
+	</tr>
+	<tr>
+		<th>조회<br />
+		  기준일</th>
+        <td>
+        <div class="date_line">
+			<a href="javascript:send1('7')"><p style="background-image:none; padding-right:0"><span class="mm2">일주일</span></p></a>
+			<a href="javascript:send1('1')"><p><span class="mm1">1개월</span></p></a>
+			<a href="javascript:send1('3')"><p><span class="tree_m_red">3개월</span></p></a>
+        </div>
+		</td>
+	</tr>
+	<tr>
+		<th>조회기간</th>         
+		<td>
+			2011년 03월 30일 ~ 2011년 6월 30일
+		</td>
+	</tr>
+	</form>
+ 			
+	<tr>
+		<th>사용한<br />
+		  할인한도</th>
+		<td class="right money_r"><span class="red2">79,112</span></td>
+	</tr>
+
+		
+	<tr>
+		<th>잔여<br />
+		  할인한도</th>
+		<td class="right money_r"><span class="red2">20,888</span></td>
+	</tr>
+  </table>
+  </div>
+ 
+<!-- 2011-06-30 수정 -->
+ <div class="inq_subtitle_s">조회기간 멤버십 사용이력</div>
+<!-- //2011-06-30 수정 -->
+
+ <div class="inquiry_table1" style="padding-bottom:20px">
+  <table>
+	<col width="35%"><col width="65%">
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>OK 캐쉬백</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/06/03</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">포인트 적립</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">204</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">204</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>OK 캐쉬백</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/05/04</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">포인트 적립</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">195</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">195</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>OK 캐쉬백</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/06</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">포인트 적립</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">189</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">189</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>TTL시네마더블할인</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/23</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">메가박스 해운대지점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right">영화할인</td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">2,000</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">2,000</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>도미노피자</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/05/01</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당수내점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">23,500</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">7,050</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>도미노피자</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/03</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당수내점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">23,000</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">6,900</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>영화관</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/09</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">씨너스 분당</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right">예매-VIP무료</td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">9,000</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">9,000</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>투썸플레이스</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/09</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당서현점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">3,800</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">380</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/06/30</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">정자광장점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">1,450</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">170</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/06/07</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당파라곤점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">1,300</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">160</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/06/06</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">이문１호점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">2,400</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">290</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/06/05</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">광명역사2호점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">5,000</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">600</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/05/19</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">정자광장점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">17,500</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">2,100</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/05/06</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당파라곤점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">3,300</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">400</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/20</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">정자광장점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">6,050</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">730</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/04/06</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당파라곤점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">2,900</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">350</td>
+    </tr>
+
+	
+		
+		<tr>
+		  <td class="tlt_1 center"><strong>제휴사</strong></td>
+		  <td class="tlt_1 center"><strong>훼미리마트</strong></td>
+		</tr>
+		<tr>
+		  <td class="padding_3">사용일자</td>
+		  <td class="right padding_3">2011/03/31</td>
+		</tr>
+
+
+    <tr>
+      <td>가맹점</td>
+      <td class="right">분당오리점</td>
+    </tr>
+	<tr>
+      <td>서비스명</td>
+      <td class="right"></td>
+    </tr>
+	<tr>
+      <td>이용금액</td>
+      <td class="right">1,700</td>
+    </tr>
+	<tr>
+      <td>차감할인한도</td>
+      <td class="right">200</td>
+    </tr>
+
+	
+
+  </table>
+</div>
+ 
+	<p class="btn2_style" style="padding-bottom:10px"><a href="http://m.tworld.co.kr/jsp/center/menu/cm8_menu_guide_sub_15.jsp" target="_parent"><img src="http://m.tworld.co.kr/img/common/btn02.jpg" alt="메뉴안내" /></a></p>
+ 
+</div>
+</body>
+</html>
+<script type="text/javascript">
+window.onload = function() {
+ parent.document.all.ifr_body.height = document.body.scrollHeight+10
+}
+</script>
+
+

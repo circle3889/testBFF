@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* milkfactory - factory zero */
+/* http://milkfactory.co.kr/zero/ */
+/* writer : 조희근(neople@milkfactory.co.kr), 성백준(100june@milkfactory.co.kr) */
+
+/* Tworld - 고객센터 */
+
+/* 자주찾는질문 타이틀 */
+.titwrap {display:inline-block;width:100%;border-bottom:1px solid #a0a0a1;padding-bottom:5px;margin-bottom:-4px;}
+.titwrap h4 {float:left;color:#e03b16;font-size:16px;margin-top:6px;}
+.titwrap select {float:right;margin-right:8px;font-size:12px;}
+/* 검색 폼 */
+#search_input {margin-top:-2px;padding:10px 8px 8px 8px;height:35px;}
+#search_input .searchinputwrap{display:table;width:100%;height:32px;}
+#search_input .searchinput {width:100%;display:table-cell;}
+#search_input .btnwrap {border-top:0;width:34px;display:table-cell;padding:1px 0 0 5px;}
+#search_input .searchinputblock {margin-top:-1px;display:inline-block;width:100%;border:1px solid #737272;border-radius:.3em 0 0 .3em;background:url('/img/common/searchbg.png') repeat-x;vertical-align:middle;}
+#search_input .sinput {float:left;width:85%;height:28px;margin:0 -50px 0 10px;border:none;background:transparent;-webkit-appearance:none;vertical-align:middle;}
+#search_input .btnxwrap {display:none;float:right;vertical-align:middle;}
+#search_input .btnx {width:26px;height:24px;background:url('/img/common/btn.png') no-repeat -150px -1px;-webkit-background-size:250px 100px}
+#search_input .btn {margin:1px 0 0 -5px;width:32px;height:32px;background:url('/img/common/btn.png') no-repeat -100px -50px;vertical-align:middle;-webkit-background-size:250px 100px}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){#search_input .btn{background-image:url('/img/common/btnm.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){#search_input .btnx{background-image:url('/img/common/btnm.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){#search_input .btn{background-image:url('/img/common/btnL.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){#search_input .btnx{background-image:url('/img/common/btnL.png')}}
+/* 자주찾는질문 - LIST - 공지사항 폼에서 약간 수정 */
+.tb_notice {border-top:1px solid #a0a0a1;}
+.tb_notice li ul li p.tit {margin:0;padding:0;width:100%;padding-left:15px;background:url('/img/common/bul_cr.png') no-repeat 0 2px;font-size:1em;color:#1e1f1f}
+.tb_notice li ul li p.sub {margin:0;padding:0;width:100%;padding-left:13px;background:url('/img/common/bul_bi.png') no-repeat 3px 7px;font-size:1em;color:#1e1f1f}
+.tb_notice li ul li p.sub span {color:#787676}
+.tb_notice li ul li a {display:inline;background:none;}
+.tb_notice li:nth-child(even) ul li a {display:inline;background:none;}
+/* 지점/대리점 검색 */
+.inputwrap {display:inline-block;width:100%;height:30px;margin:10px 0 -4px;}
+.inputwrap h5 {float:left;font-size:16px;margin:6px 0 0 12px;}
+.inputwrap .box {float:right;width:80%;height:30px;margin-right:8px;}
+.inputwrap .box2 {float:right;width:60%;height:30px;margin-right:8px;}
+.inputwrap .box2 #search_input {padding:0;height:30px;}
+/* tworld.css > grntitwrap, grntit 변경 */
+.grntitwrap {margin-top:10px;}
+.grntit h5 em {color:#787676;}
+/* 검색결과 LIST */
+.cslist li {border-bottom:1px solid #e0e0e0;background:#fbfbfc url('/img/common/searcharr.png') no-repeat right center;}
+.cslist li:nth-child(even) {background-color:#FFF;}
+.cslist li:last-child {}
+.cslist li dl {display:inline-block;width:100%}
+.cslist li dt {font-size:1em;padding-bottom:7px;}
+.cslist li dd {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+.cslist a {padding:12px 40px 15px 12px;}
+/* 지점안내 - 상세 */
+.tb_csinfo {display:table;width:100%;border-top:1px solid #b2b2b2;margin-bottom:15px;}
+.tb_csinfo li {display:table-row;width:100%;margin:0 0 -4px 0;border-bottom:1px solid #e5e5e5;letter-spacing:-1px;background:#fbfbfc}
+.tb_csinfo li:nth-child(even) {background-color:#fff;}
+.tb_csinfo li h5 {display:table-cell;padding:13px 5px 13px 12px;font-size:14px;line-height:16px;vertical-align:middle;width:32%;height:100%;border-bottom:1px solid #e5e5e5;}
+.tb_csinfo li p {display:table-cell;color:#787676;padding:13px 10px;font-size:14px;line-height:16px;vertical-align:middle;border-bottom:1px solid #e5e5e5;}
+.tb_csinfo .wrap1 {display:inline-block;width:100%;height:100%;border-bottom:1px solid #e5e5e5;}
+.tb_csinfo .wrap1t1 {float:left;padding:11px 0 0 10px;color:#787676;}
+.tb_csinfo .wrap1t2 {float:right;padding:6px 0 0 0;}
+/* 지점안내 - 업무시간 */
+.csinfo_time {border-top:1px solid #d3d3d3;}
+.csinfo_time dt {height:35px;line-height:35px;border-top:1px solid #FFF;border-bottom:1px solid #d3d3d3;background-color:#f6f6f6;}
+.csinfo_time dt h5 {padding-left:12px;font-size:1em;}
+.csinfo_time dd {padding:10px 12px;border-bottom:1px solid #d3d3d3;}
+.csinfo_time dd span {color:#787676;font-size:12px;}

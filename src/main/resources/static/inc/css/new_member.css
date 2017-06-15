@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.only_back_btn h1 {padding:13px 40px 0 !important;}
+
+/* 약관동의 */
+.term_box {padding:9px 10px 0; border:1px solid #d7d9db; background-color:#f8f8f9; line-height:17px; color:#787676; letter-spacing:-1px;}
+.term_box .radio_left {margin-top:10px; padding:2px 0 0; border-top:1px solid #cbcacd;}
+.term_box .radio_left .check_radio {position:relative; margin-bottom:-3px;}
+.term_view_btn {padding:0 11px;}
+.term_view_btn .text_title {margin-top:8px; font-size:13px;}
+.term_view_btn .term_btn_area {margin-top:9px; padding:10px 0; border-bottom:1px solid #cecdd0; text-align:center;}/* 2015-07-13 수정 */
+
+.jumin_input {display:inline-block; width:100%;}
+.jumin_input .jumin_first {float:left; width:53%;}
+.jumin_input .jumin_first .dash_area {position:relative; padding-right:12px;}
+.jumin_input .jumin_first .dash_area .text_dash {position:absolute; top:7px; right:5px; color:#212121;}
+.jumin_input .jumin_last {float:left; width:47%;}
+.trem_check_list {margin-right:-3px; padding:4px 0 5px;}
+.trem_check_list li label {font-size:13px;}
+.trem_check_box {display:none; padding:4px 7px; border:1px solid #adacb0; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; background-color:#fafafa; color:#787676; font-size:12px;}
+.trem_check_view {display:block;}
+
+.id_check_btn {position:relative; padding-right:75px;}
+.id_check_btn .btn_area {position:absolute; top:0; right:0;}
+
+.security_letter {padding:3px 0 3px; border:1px solid #d2c8c5; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; background-color:#ece8e6; font-size:20px; line-height:28px; color:#ec4909; text-align:center; text-shadow:0 1px 0 #fff;}
+.font_star {font-size:13px; color:#787676; letter-spacing:-1px;}
+.security_input_box {margin-top:10px; padding:10px 0; border-top:1px solid #bebfbb; border-bottom:1px solid #bebfbb;}
+
+.id_check_layer_text {font-size:13px; line-height:17px; text-align:center; color:#1e1f1f; letter-spacing:-1px;}
+
+.member_ok {padding-bottom:8px; background:url(/images/member/bg_member_ok.png) no-repeat 50% 0; text-align:center;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5) {.member_ok {background-image:url(/images/member/bg_member_ok_480.png); background-size:294px 278px;}}
+@media screen and (-webkit-min-device-pixel-ratio:2) {.member_ok {background-image:url(/images/member/bg_member_ok_300dpi.png); background-size:294px 278px;}}
+.member_ok .member_ok_title {padding-top:20px; font-size:16px; color:#333; letter-spacing:-1px; text-shadow:0 1px 0 #fff;}
+.member_ok .member_ok_text {padding-top:174px; font-size:13px; color:#333; letter-spacing:-1px; text-shadow:0 1px 0 #fff;}
+
+.raido_wrap li {margin-bottom:-3px;}
+.raido_wrap li label {padding:7px 0 6px 23px;}
+
+.check_btn {position:relative; height:29px; padding-right:75px; text-align:left;}
+.check_btn .check {position:relative;}
+.check_btn .check label {padding:7px 0 6px 23px; font-size:13px;}
+.check_btn .btn {position:absolute; top:1px; right:0;}
+
+
+/* 2015-07-13 추가 약관동의 */ 
+.term_area{height:154px;overflow:hidden;border:1px solid #d7d9db;padding:0 10px 10px 5px;}
+.term_area2{height:82px;overflow:hidden;border:1px solid #d7d9db;padding:0 10px 10px 5px;}
+.term_box2{padding:5px;background-color:#f8f8f9;}/* 2015-08-26 추가 */.link_point{color:#f57f25;text-decoration:underline;}.cu_pr_con h2{margin-bottom:10px;font-size:12px;color:#0f0f0f;}.cu_pr_con ol{margin-bottom:15px;}.cu_pr_con ol li{margin-bottom:5px;padding-left:13px;text-indent:-13px;}

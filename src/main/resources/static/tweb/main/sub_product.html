@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+    <title> &lt; 요금제/T Apps/부가서비스 |모바일 T world</title>
+    <link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css">
+    <link rel="stylesheet" type="text/css" href="/inc/css/new_product2.css">
+    <link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css">
+    <!-- 2016-08-01 추가_01 [s] -->
+    <link rel="stylesheet" type="text/css" href="/inc/css/new_supplementary.css">
+    <!-- 2016-08-01 추가_01 [e] -->
+    <!-- 2016-08-19 추가_01 [s] -->
+	<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.swipe.css">
+	<!-- 2016-08-19 추가_01 [e] -->
+    <script src="/inc/js/jquery-1.7.2.min.js"></script><!-- 20150629 수정 -->
+    <script src="/inc/js/recommend/xtvid.js"></script>
+    <script src="/inc/js/t_ui.js"></script>
+    <script src="/inc/js/common.js"></script>
+    <!-- 2016-08-19 추가_02 [s] -->
+	<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+	<!-- 2016-08-19 추가_02 [e] -->
+	<!-- 2016-09-09 추가_01 [s] -->
+	<script type="text/javascript" src="/inc/js/mtworld.footer.js"></script>
+	<!-- 2016-09-09 추가_01 [e] -->
+</head>
+
+<body>
+	<header>
+		<div class="my_menu">
+    		<div id="header">
+        		<div class="header_cont">
+					<div class="h1_wrap"><h1><span id="title"></span></h1></div>
+					<button onClick="javascript:goAppBack();" class="head_back_page" id="backBtn">뒤로가기</button> 
+					<p class="search_allmenu">
+               			<button class="head_search" onClick="javascript:fnSearch();">검색</button>
+                		<button class="head_allmenu" onClick="javascript:fnMenuAll();">전체메뉴보기</button> 
+            		</p>
+        		</div>
+    		</div>
+		</div>
+	</header>
+
+	<section>
+		<!-- tm_content -->
+		<!-- 2016-08-01 수정_01 [s] -->
+		<div id="tm_content" class="mainSection">
+		<!-- 2016-08-01 수정_01 [e] -->
+			
+			<!-- START - MultiNumber SelectBox -->
+			<div id="mini_myT" class="mini_myT">
+         		<dl class="my_line_number line_number_border">
+                	<dt>나의 회선번호</dt>
+                	<dd class="" ></dd>
+            	</dl>
+			</div>
+			<!-- END - MultiNumber SelectBox -->
+
+			<div id = "single1" class="asso_member" style="display:none;"></div>
+			<script id="single_normal1" type="text/x-handlebars-template">
+				{{#unless (_contains 'AYRDZ' grade)}}
+					{{_hide "submain_charge"}}
+					{{_hide "mini_myT"}}
+            		<p>고객님은 <em>SK텔레콤 서비스 회선</em>을<br> 등록하신 후 이용하실 수 있습니다</p>
+            		<button type="button" class="btn btn_default" onClick="javascript:goURL('/normal.do?serviceId=SDUMMY0002&viewId=V_MEMB1002&menuId=1,1,4');">서비스 회선 등록</button>
+					{{_show "asso_member"}}
+				{{/unless}}
+			</script>
+
+			<!-- 2016-08-01 수정_02 [s] -->
+			<div class="submain_charge chargeBox">
+            	<div class="using_charge">
+            		<strong><em id = "single2"></em>님의 사용중인 요금제</strong>
+	                <script id="single_normal2" type="text/x-handlebars-template">{{userNm}}</script>
+            	</div>
+
+            	<!-- 2016-07-11 수정_01 [s] -->
+            	<h2 id="single3" class="title_charge">&nbsp;</h2><!-- 20150609 a테그 추가 -->
+            	<!-- 2016-07-11 수정_01 [e] -->
+            	<script id="single_normal3" type="text/x-handlebars-template">
+					<a href="javascript:goURL('/normal.do?serviceId=S_PROD2001&viewId=V_PROD2001&prod_id={{prodId}}&statCtg={{statCtg}}')">{{prodNm}}</a>
+				</script>
+
+            	<!-- 2016-07-11 수정_02 [s] -->
+            	<div id="single4" class="data" style="display:none;">&nbsp;</div>
+            	<!-- 2016-07-11 수정_02 [e] -->
+            	<script id="single_normal4" type="text/x-handlebars-template">
+					{{#if benfDtlImg}}
+                		<img src="{{benfDtlImg}}" alt="{{benfImgAltCtt}}">
+						{{_show "single4"}}
+					{{/if}}
+				</script>	  
+				
+            	<div id="single5" class="btn_area"></div>
+            	<!-- 2016-10-31 GA추가_04 [s] -->
+            	<script id="single_normal5" type="text/x-handlebars-template">
+					{{#ifCond (_equals prodId 'NA00005292') '||' (_equals prodId 'NA00005293')}}
+						<button type="button" class="btn_submain btnSignature" ga:ca="MTA_plan" ga:ac="사용중인요금제" ga:la="T 시그니처 혜택보기" onClick="goURL('/bpcpservlet.do?bpcpServiceId=0000065079&svcMgmtNum={{svcMgmtNum}}')">T 시그니처<br>혜택보기</button>
+					{{/ifCond}}
+	               	<button ga:ca="MTA_plan" ga:ac="사용중인요금제" ga:la="사용중인 상품" type="button" class="btn_submain" onClick="goURL('/normal.do?serviceId=S_BILL0001&viewId=V_CENT0014&domainVer=m2&menupid=1')">사용중인 상품</button>
+				</script>
+        	</div>
+        	
+        	<!-- 20150609 a테그로 수정-->
+        	<div class="uiGridWrap">
+            	<ul class="uiGrid col2">
+            		<!-- 2016-10-31 GA추가_05 [s] -->
+                	<li><a href="javascript:goURL('/normal.do?serviceId=S_PROD9001&viewId=V_PROD1001&domainVer=m2');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="기본 요금제"><span class="service1"></span>기본 요금제</a></li>
+                	<!-- 2016-10-31 GA추가_06 [s] -->
+                	<li><a href="javascript:goURL('/normal.do?serviceId=S_ADD_0017&viewId=V_CENT0004&cate=3&domainVer=m2');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="부가서비스"><span class="service2"></span>부가서비스</a></li>
+                	<!-- 2016-10-31 GA추가_07 [s] -->
+                	<li><a href="javascript:goURL('/wire.do?serviceId=SDUMMY0001&viewId=V_WIRE4011&domainVer=m2&bizType=biz1');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="결합상품"><span class="service5"></span>결합상품</a></li>
+                	<!-- 2016-10-31 GA추가_08 [s] -->
+                	<li><a href="javascript:goURL('/normal.do?serviceId=S_PROD1002&viewId=V_ROAM0002&domainVer=m2&paramCtg1=1&paramCtg2=F0100&paramCtg3=F0101&paramCtg4=3,3,5');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="T로밍"><span class="service3"></span>T로밍</a></li>
+                	<!-- 2016-10-31 GA추가_09 [s] -->
+                	<li><a href="javascript:goURL('/normal.do?serviceId=S_PHON0073&viewId=V_SERV0000&domainVer=m2&menuId=2,1');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="T Apps"><span class="service6"></span>T Apps</a></li>
+                	<li><a href="javascript:goURL('/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2');" ga:ca="MTA_plan" ga:ac="업무메뉴" ga:la="내게 맞는 요금제"><span class="service4"></span>내게 맞는 요금제</a></li>
+            	</ul>
+        	</div>
+        	<!-- 2016-08-01 수정_02 [e] -->
+        
+			<!-- 2016-08-23 추가_0 [s] -->
+			<div class="grayBar"></div>
+			<!-- 2016-08-23 추가_0 [e] -->
+
+			<!-- 2016-08-23 추가_05 [s] -->
+			<div id="swiper_banner" class="swiper-container sub_main">
+		        <div id="swiper_banners" class="swiper-wrapper"></div>
+		        <div class="swiper-guide-wrapper">
+	        		<!-- 2016-11-11 수정_01 [s] -->
+			        <button class="swiper-button-prev"><span class="ico_comm">이전 배너보기</span></button>
+	        		<div class="swiper-pagination"><ul></ul><button class="bplay_btn ">배너이미지 일시정지</button></div>
+	        		<button class="swiper-button-next"><span class="ico_comm">다음 배너보기</span></button>
+	        		<!-- 2016-11-11 수정_01 [e] -->
+		        </div>
+		    </div>
+		    <!-- 2016-08-23 추가_05 [e] -->
+		    
+		    <!-- 20170217 dsc 배너 추가 START-->
+			<div id="single7" class="dsc_banner" style="display:none;"></div> 
+			<script id="single_normal7" type="text/x-handlebars-template"> 
+				{{#ifCond this.dscDaesang '=='  "Y"}}
+ 				<!-- 2017-02-17 추가_01 [s] -->  
+		    	<div class="dsc_curation_banner">
+					<a href="/normal.do?serviceId=S_BILL0106&viewId=V_CENT1036&domainVer=m2&PMAIN=Y&up_sell_yn=Y">	
+  					{{#ifCond this.dscCusType '=='  "TA002"}}
+						<img src="/img/banner/img_supplementary_dsc01.png" alt="데이터 리필은 귀찮고, 요금 폭탄은 두렵고. 고객님을 위한 요금제를 추천해 드립니다."  onclick="event.stopPropagation();ga('send', 'event', 'MTA_plan', 'DSC배너' ,'DSC01'); runDscXtvid('C');" >
+                    {{else ifCond this.dscCusType '=='  "TA003"}}                    
+						<img src="/img/banner/img_supplementary_dsc02.png" alt="가족/친구에게 데이터 조르기 미안한데. 고객님을 위한 요금제를 추천해 드립니다." onclick="event.stopPropagation();ga('send', 'event', 'MTA_plan', 'DSC배너' ,'DSC01'); runDscXtvid('C');">
+                    {{else ifCond this.dscCusType '=='  "TA004"}}                    
+						<img src="/img/banner/img_supplementary_dsc03.png" alt="왜 자꾸 핸드폰 요금이 더 나오는 거야? 고객님을 위한 요금제를 추천해 드립니다." onclick="event.stopPropagation();ga('send', 'event', 'MTA_plan', 'DSC배너' ,'DSC01'); runDscXtvid('C');">
+                    {{else ifCond this.dscCusType '=='  "TA005"}}                    
+						<img src="/img/banner/img_supplementary_dsc04.png" alt="속도제한 때문에 정말 답답하시죠? 고객님을 위한 요금제를 추천해 드립니다." onclick="event.stopPropagation();ga('send', 'event', 'MTA_plan', 'DSC배너' ,'DSC01'); runDscXtvid('C');">
+                    {{else }}                    
+						<img src="/img/banner/img_supplementary_dsc05.png" alt="정말로 나에게 딱맞는 요금제는 뭘까? 고객님을 위한 요금제를 추천해 드립니다." onclick="event.stopPropagation();ga('send', 'event', 'MTA_plan', 'DSC배너' ,'DSC01'); runDscXtvid('C');">
+                    {{/ifCond}}	
+                     </a>	
+	    		</div>
+	    		<!-- 2017-02-17 추가_01 [e] -->
+					{{_show "single7"}}
+				{{/ifCond}}		    
+			</script>
+			<!-- 20170217 dsc 배너 추가 END  -->		    
+		    
+		    <!-- 2016-08-23 추가_0 [s] -->
+		    <div class="grayBar"></div>
+		    <!-- 2016-08-23 추가_0 [e] -->
+
+			<!-- 2016-08-01 수정_03 [s] -->
+        	<div class="srchBox">
+                <form name="frm" method="post" action="/jsp/search/search.jsp">
+            	<fieldset>
+                	<legend>상품검색</legend>
+                	<div class="srchArea">
+						<label for="search_goods">상품검색</label>
+						<span class="inpBox">
+                			<input type="hidden" name="domainVer" value="m2"/>
+                			<input type="text" id="search_goods" name="query" class="inpSrch" placeholder="검색어를 입력해주세요">
+                			<button type="button" class="btnSrch" onClick="goSearch();">찾기</button>
+						</span>
+					</div>
+            	</fieldset>
+                </form>
+        	</div>
+        	<!-- 2016-08-01 수정_03 [e] -->
+        
+        	<!-- 2016-08-01 수정_04 [s] -->
+        	<div class="tabWrap">
+				<ul class="tabList" id="tabCtl">
+					<!-- 2016-10-31 GA추가_10 [s] -->
+                	<li id="tab_menu_s1" class="active"><a href="javascript:" ga:ca="MTA_plan" ga:ac="중단탭" ga:la="주요 기본요금제" title="현재 탭">주요 기본요금제</a></li>
+                	<!-- 2016-10-31 GA추가_11 [s] -->
+                	<li id="tab_menu_s2"><a href="javascript:" ga:ca="MTA_plan" ga:ac="중단탭" ga:la="주요 부가서비스">주요 부가서비스</a></li>
+            	</ul>
+            	
+            	<div class="tabConWrap">
+            		
+            		<!-- 기본 요금제 -->
+            		<div class="tabCon active">
+            			<h2 class="hide">주요 기본요금제</h2>
+              			<ul id="charge_list" class="charge_list2"></ul>
+                		<div class="border_top"></div>                
+                		<!-- 20150617 수정 -->
+                		<div class="info_charge">
+                    		<em>월정액</em><span>(부가세 포함)</span>
+                		</div>
+                		<!-- //20150617 수정 -->  
+                
+                		<div class="charge_more">
+                			<!-- 2016-10-31 GA추가_12 [s] -->
+                    		<a href="/normal.do?serviceId=S_PROD9001&viewId=V_PROD1001&domainVer=m2&PMAIN=bottom" ga:ca="MTA_plan" ga:ac="주요 기본요금제>더보기" ga:la="더보기">주요 기본요금제 더보기<span></span></a>
+                		</div>
+            		</div>
+            		<!-- //기본 요금제 -->
+            
+            		<!-- 부가서비스/할인프로그램 -->
+            		<div class="tabCon">
+						<!-- 2016-01-19 수정[s] -->
+						<h2 class="hide">주요 부가서비스</h2>
+						<!-- 2016-01-19 수정[e] -->
+               	 		<ul id="charge_list2" class="charge_list2"></ul>
+						<div class="border_top"></div>
+            			<div class="info_charge">
+            				<em>이용요금</em><span>(부가세 포함)</span>
+						</div>
+                
+            			<div class="charge_more">
+            				<!-- 2016-10-31 GA추가_13 [s] -->
+            				<a href="/normal.do?serviceId=S_ADD_0017&viewId=V_CENT0004&cate=3&domainVer=m2&PMAIN=bottom" ga:ca="MTA_plan" ga:ac="주요 부가서비스>더보기" ga:la="더보기">주요 부가서비스 더보기<span></span></a><!-- 20150622 수정 -->
+            			</div>
+					</div>
+        			<!-- //부가서비스/할인프로그램 -->
+				</div>	
+			</div>
+			<!-- 2016-08-01 수정_04 [e] -->
+			
+		</div>
+		<!-- //tm_content -->
+	</section>
+	
+	<!-- oksusu 팝업 -->
+	<div id="bnnrLayer_sm" class="bnnrLayer">
+		<div class="bnnrWrap">
+			<div class="bnnrBox">
+				<div class="inner">
+					<div id="single6" class="lyCont"></div>
+						<script id="single_normal6" type="text/x-handlebars-template">
+							<img src="{{_getOksusuImgPath userSex}}" alt="">
+							<a href="javascript:clickOksusu('{{_getOksusuCd 'C' userSex userAge}}','http://oksusu.com/?src=Tworld');" target="_blank" title="새창 열기" class="gourl">지금 혜택보러 가기</a>
+						</script>	 	
+						<!-- 2016-03-23 수정_01 [s] -->
+						<!-- 2016-03-23 수정_01 [e] -->
+					<div class="lyBottom">
+						<span class="checkWrap"><input type="checkbox" id="chkExpire" name=""><label for="chkExpire">오늘 하루 보지 않기</label></span>
+						<button type="button" class="lyClose">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+	<script type="text/javascript" src="/inc/js/tweb/util/handlebars_string.min.js"></script>
+	<script type="text/javascript" src="/inc/js/tweb/util/handlebars_ui.min.js"></script>
+	<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+	<script type="text/javascript">
+		// 2016-10-31 GA추가_01 [s]
+	    setCategory = "MTA_plan";	
+	
+		//tweb 환경설정
+		var tweb_env = {
+			logView : "N"
+		};
+
+		//tweb 환경설정
+ 		var tweb_backend = {
+  			single1 : {
+				loading : "no" 
+			},
+			single2 : {
+				loading : "<div class='tSpinnerA' style='float:left;'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div><div class='bounce4'></div></div>"  
+			},
+			single3 : {
+				loading : "no" 
+			},
+			single4 : {
+				loading : "no" 
+			},			
+			single5 : {
+				loading : "no" 
+			},
+			single6 : {
+				loading : "no" 
+			}, 
+			single7 : {
+				loading : "no" 
+			}    			   
+		};
+	
+		//공통 변수
+		var osType = '';
+		var xtvic = '';
+		var svcMgmtNum = '';
+		var dscDaesang = '';   //dsc배너 노출 대상여부 
+		var dscCusType = '';  //dsc 고객구분  
+	
+		//tweb 바인딩 이후 스크립트
+		var onAfterBinding = {
+			init: function(data){
+			
+				osType = data.RESULT.OS_TYPE;
+				xtvid = data.xtvid;
+				svcMgmtNum = data.svcMgmtNum;
+				dscDaesang = data.dscDaesang;  
+				dscCusType = data.dscCusType;
+
+				MiniMyT.init("P", location.pathname);
+				//LayerPopup.show("bnnrLayer_sm", data.isOksusuPop, data.userSex, data.userAge); //oksusu 레이어 팝업
+				LayerPopup.show("bnnrLayer_sm", false, data.userSex, data.userAge); //oksusu 레이어 팝업(레이어팝업 비활성화 강제로 false세팅 2016-01-05 적용)
+				
+			   //dsc curation 배너 대상자이면 해당 영역 숨기기위해 Banners.getBannerData를 호출하지 않음	
+				if($(".dsc_curation_banner a").length < 1) {		
+					Banners.getBannerData('sub', "/json/prod_submain_banner.json", "MTA_plan", "배너");					     
+				} else {
+					 runDscXtvid('D');  //dsc 배너노출 통계코드 전송
+				}
+			}
+		}
+		
+		//업무 스크립트
+	  	
+		//주요기본요금제 리스트 
+		$.post("/json/prod_recommend.json",function(data){
+			
+	  	 	var charge_list = '';
+	  	 	// 2016-10-31 GA추가_02 [s]
+	  	 	$.each(data, function (index, value) {
+				charge_list += "<li><a title='상세보기' ga:ca='MTA_plan' ga:ac='주요 기본요금제>목록' ga:la='" + value.r_name + "' href=javascript:runXtvid('"
+									+ value.r_link 
+									+ "'," 
+									+ index 
+									+ ",'PROD') role='text'><div class= 'chg_title'><span class='name' ga:ca='MTA_plan' ga:ac='주요 기본요금제>목록' ga:la='" + value.r_name + "'>"
+									+ value.r_name 
+									+ "</span><span class='hiddenTxt'>부가세 포함 이용요금</span> "
+									+ value.r_amt 
+									+"</div>";
+		
+				if(value.r_path != "") charge_list += "<div class='chg_detail'><img src='"+ value.r_path +"' ga:ca='MTA_plan' ga:ac='주요 기본요금제>목록' ga:la='" + value.r_name + "' alt='"+ value.r_img +"'/></div>";
+				charge_list += "</a></li>";
+			});
+			
+			$('#charge_list').append(charge_list);		
+		}, "json");
+	
+		//주요 부가서비스 리스트
+		$.post("/json/add_recommend.json",function(data){ 
+
+			var charge_list2 = '';
+			// 2016-10-31 GA추가_03 [s]
+			$.each(data, function (index, value) {
+				charge_list2 += "<li><a title='상세보기' ga:ca='MTA_plan' ga:ac='주요 부가서비스>목록' ga:la='" + value.r_name + "' href=javascript:runXtvid('"
+									+ value.r_link 
+									+ "'," 
+									+ index 
+									+ ",'ADD') role='text'><div class= 'chg_title'><span class='name' ga:ca='MTA_plan' ga:ac='주요 부가서비스>목록' ga:la='" + value.r_name + "'>"
+									+ value.r_name 
+									+ "</span><span class='hiddenTxt'>부가세 포함 이용요금</span> "
+									+ value.r_amt 
+									+"</div>";
+
+				if(value.r_path != "") charge_list2 += "<div class='chg_detail'><img src='"+ value.r_path +"' ga:ca='MTA_plan' ga:ac='주요 부가서비스>목록' ga:la='" + value.r_name + "' alt='"+ value.r_img +"'/></div>";
+				charge_list2 += "</a></li>";
+			});
+			
+			$('#charge_list2').append(charge_list2);		
+		}, "json");
+		 
+ 		//배너 링크
+ 		function goBanner(link, bill, brwsType, staticCd){
+			if( "Y" == bill ){
+				if(confirm("3G/LTE망 사용 시 데이터 요금이 발생됩니다.")){				
+					callCSScript(xtvid, svcMgmtNum, staticCd , '', '');
+					if("A" == osType) {   // OS 체크
+						if("OUT"== brwsType) toapp.webbrowserouter(link);
+						else location.href = "http://" + link;
+	 				}else if("I" == osType) {
+	 					if("OUT"== brwsType) location.href = "toapp:webbrowserouter:" + link;
+	 					else location.href = "http://" + link;
+	 				}
+	 			}
+ 			}else{
+ 				callCSScript(xtvid, svcMgmtNum, staticCd , '', '');
+				if("A" == osType) {   // OS 체크
+					if("OUT"== brwsType) toapp.webbrowserouter(link);
+					else location.href = "http://" + link;
+	 			}else if("I" == osType) {
+	 				if("OUT"== brwsType) location.href = "toapp:webbrowserouter:" + link;
+	 				else location.href = "http://" + link;
+	 			}
+ 			}
+		}	
+		
+		// 자동 실행 시작
+		function startAutoPlay(){
+			
+			if(this.banner_time!=0)
+				clearInterval(this.banner_time);
+				
+			this.banner_time = setInterval(function(){
+				 $('#banner_type .arw_r').trigger('click');
+			},3000);
+		}
+
+		//자동실행 멈춤.
+		function stopAutoPlay(){
+			if(this.banner_time!=0)
+				clearInterval(this.banner_time);
+				
+			this.banner_time = 0;
+		}
+		
+		function goURL(url) {
+	    	url += "&PMAIN=Y";
+        	location.href=url;
+    	}	
+	
+		$("#tab_menu_s1").click(function () {
+			$("#tab_menu_s2").removeClass("on");
+			$("#tab_menu_s1").addClass("on");
+		}); 
+	
+		$("#tab_menu_s2").click(function () {
+			$("#tab_menu_s1").removeClass("on");
+			$("#tab_menu_s2").addClass("on"); 
+		}); 
+
+    	//검색
+    	function goSearch() {
+    		var dlkr_label = $('div.srchBox form fieldset div.srchArea span.inpBox input#search_goods').val();
+			/* 2017-02-20 추가_01 [s] */
+			event.stopPropagation();
+			/* 2017-02-20 추가_01 [e] */    		
+    		ga('send', 'event', 'MTA_plan', '상품검색', dlkr_label);
+    		
+        	document.frm.submit();
+    	}
+    	
+    	//통계스크립트
+		function runXtvid(url, idx, cat) {
+			
+			var code;
+			
+			if(cat == "PROD") {
+				if(idx == 0) code = "PMAIN_1";
+				if(idx == 1) code = "PMAIN_2";
+				if(idx == 2) code = "PMAIN_3";
+			} else if(cat == "ADD") {
+				if(idx == 0) code = "PMAIN_4";
+				if(idx == 1) code = "PMAIN_5";
+				if(idx == 2) code = "PMAIN_6";
+        	}
+        	
+        	callCSScript(xtvid, svcMgmtNum, code, '', '');
+        	url += "&PMAIN=Y";
+        	location.href=url; 
+    	}
+    	
+    	/*oksusu 레이어 관련 START */
+    	
+    	//Device Type
+    	var MobileUA = ( function () {
+			var ua = navigator.userAgent.toLowerCase();
+			var mua = {
+				IOS: /ipod|iphone|ipad/.test(ua),                                				//iOS
+				IPHONE: /iphone/.test(ua),                                        				//iPhone
+				IPAD: /ipad/.test(ua),                                            					//iPad
+				ANDROID: /android/.test(ua),                                    				//Android Device
+				WINDOWS: /windows/.test(ua),                                   			//Windows Device
+				TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua), //Touch Device
+				MOBILE: /mobile/.test(ua),                                        				//Mobile Device (iPad)
+				ANDROID_TABLET: false,                                            			//Android Tablet
+				WINDOWS_TABLET: false,                                          				//Windows Tablet
+				TABLET: false,                                                    					//Tablet (iPad, Android, Windows)
+				SMART_PHONE: false                                                				//Smart Phone (iPhone, Android)
+			};
+
+			mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+			mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+			mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+			mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+
+			return mua;
+		}());
+		
+		LayerPopup = {
+			target : ".bnnrLayer",
+			show : function(targetLayer, popYn, sex, age){
+				
+				var closeOksusuTime = undefined;
+				var oksusuCd = getOksusuCd('D', sex, age);
+				
+				var today = new Date();
+				var totalTime = (today.getSeconds()+ today.getMinutes()*60 + today.getHours()*60*60)*1000;
+				
+				if(MobileUA.ANDROID){
+					closeOksusuTime = toapp.checkConfirmDate("com.skt.prod.oksusupop", totalTime);
+				} else if(MobileUA.IOS){
+					if ( document.cookie.indexOf("oksusupop=done") < 0 ) {
+						closeOksusuTime = "Y";
+	    			}
+				}
+				
+				if(popYn && closeOksusuTime == "Y"){
+					$(LayerPopup.target).show(150, function(){
+						$("html, body").css("overflow", "hidden");
+						callCSScript(xtvid, svcMgmtNum, oksusuCd, '', ''); //통계코드
+					});
+					$(LayerPopup.target).find(".lyBottom .lyClose").unbind('click').bind('click', function(){
+						LayerPopup.hide();
+					});
+				}
+			},
+			hide : function(){
+				if($("#chkExpire")[0].checked){
+					if(MobileUA.ANDROID){
+						location.href = "toapp.settingpackageconfirmdate:com.skt.prod.oksusupop"; //하루동안 기준 시각.
+					} else if(MobileUA.IOS){
+						setCookie( "oksusupop", "done" , 1 );
+					}
+				}
+				$(LayerPopup.target).hide(150, function(){
+					$("html, body").css("overflow", "auto");
+				});
+			},
+			setCookie : function( name, value, expiredays ) {
+				var todayDate = new Date();   
+			    todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);  
+			    if ( todayDate > new Date() ) {  
+			    	expiredays = expiredays - 1;  
+			    }  
+		    	todayDate.setDate( todayDate.getDate() + expiredays );   
+		 	   	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+			}
+		}
+		
+	    function setCookie(name, value, expiredays) {
+    	    var todayDate = new Date();
+        	todayDate = new Date(todayDate.getFullYear(), todayDate.getMonth(), todayDate.getDate() + expiredays);
+        	document.cookie = name + "=" + value + "; path=/; expires=" + todayDate.toString() + ";";
+    	}
+    	
+		//주요 기본요금제/ 부가서비스 리스트
+		funcMainTabs = function(){
+			var $tabList = $(".tabList > li a"),
+				$tabCont = $(".tabConWrap .tabCon");
+			
+			$tabList.bind("click", function(e){
+				$tabList.removeAttr("title");					
+				var $idx = $(this).closest("li").index();
+				
+				$(this).closest("li").addClass("active").siblings().removeClass("active");
+				$(this).attr("title", "현재 탭");
+				$tabCont.removeClass("active").eq($idx).addClass("active");
+				e.preventDefault();
+			});
+		}
+		
+		$(function(){
+			
+			//title은 menu.jsp 에서 하드코딩함
+			Menu.init("", "요금제/TApps/부가서비스", "", "", "", "", "", "");
+
+			//히스토리백으로 돌아왔을때 화면이 중간에서 멈추는것 때문에
+        	//setTimeout(function(){$(this).scrollTop(0);}, 50); 
+        	funcMainTabs();
+        
+			//Banners.getBannerData('sub', "/json/prod_submain_banner.json");
+
+	    });
+	
+		//image path
+		function getOksusuImgPath(sex){
+		
+			var today = new Date();
+			var day = today.getDay();
+    		var path = "/img/popup/pop_oksusu_";
+			
+			//1. OS 분기
+			if (osType == 'I')	path = path+"ios_";
+			
+			//2. 성별 분기
+			if (sex == 'E')	sex = 'F';
+			path = path + sex + 'A';
+			
+			//3. 연령 분기 제외
+			
+			//4. 요일 분기 
+			switch(day){
+				case 0: 	path = path + '05'; break;
+				case 1: 	path = path + '01'; break;
+				case 2: 	path = path + '01'; break;
+				case 3: 	path = path + '03'; break;
+				case 4: 	path = path + '03'; break;
+				case 5: 	path = path + '05'; break;
+				case 6: 	path = path + '05'; break;
+				default : path = path + '01'; 
+			}
+			
+			//5. 확장자
+			path = path+'.png';
+			
+			return path;
+		}
+		
+		function getOksusuCd(action, sex, age) {
+			var oksusuCd = 'bill_oksusu_';
+			
+			//1. OS 분기 & html event 분기
+			if (osType == 'I'){ 
+				if (action =='D'){	//display
+					oksusuCd = oksusuCd+ 'ios_';
+				}else{				//click ('C')
+					oksusuCd = oksusuCd+ 'iosb_'; 
+				}
+			}else {
+				if (action =='D'){	//display
+					oksusuCd = oksusuCd+'rf_';
+				}
+			}
+			
+			//2. 성별 분기
+			if (sex == 'M')	oksusuCd = oksusuCd +sex;
+			else	oksusuCd = oksusuCd +'W';
+			
+			//3. 연령 분기 
+			if (age<= 29)	oksusuCd = oksusuCd +'12';
+			else if (age<= 49)	oksusuCd = oksusuCd +'34';
+			else	oksusuCd = oksusuCd +'56';
+			
+			return oksusuCd;
+		}
+		
+    	//image path (handlebar에서 호출)
+    	Handlebars.registerHelper('_getOksusuImgPath', function(sex) {
+    		var path = getOksusuImgPath(sex);
+    		return path;
+		});
+		
+		//xtvid code(handlebar에서 호출)
+    	Handlebars.registerHelper('_getOksusuCd', function(action, sex, age) {
+    		var oksusuCd = getOksusuCd(action, sex, age);
+			return oksusuCd;
+		});
+		
+		//oksusu 이동
+    	function clickOksusu(oksusuCd, url) {
+        	callCSScript(xtvid, svcMgmtNum, oksusuCd, '', '');
+        	location.href=url; 
+    	}
+		/*oksusu 레이어 관련 END */
+		
+		/*dsc 고객유형별 통계코드 전송 */
+		function runDscXtvid(action) {
+			var dscStaticCd = 'pro_';
+			
+			//1. OS 분기
+			if (osType == 'I'){ 
+				dscStaticCd = dscStaticCd+ 'ios_'; 	
+			}else {
+				dscStaticCd = dscStaticCd+ 'and_'; 
+			}
+			
+			//2.고객유형 분기
+			if (dscCusType =='TA002'){	             //리필하기 사용자
+				dscStaticCd = dscStaticCd+ 'refill_';
+			}else if (dscCusType =='TA003') {	//선물받기	사용자		
+				dscStaticCd = dscStaticCd+ 'gift_'; 
+			}else if (dscCusType =='TA004') {	// 간헐적 종량 발생자 			
+				dscStaticCd = dscStaticCd+ 'inter_'; 
+			}else if (dscCusType =='TA005') {	//안심옵션 가입자			
+				dscStaticCd = dscStaticCd+ 'opt_'; 
+			}else if (dscCusType =='TA006') {   //기타 
+				dscStaticCd = dscStaticCd+ 'etc_'; 
+			}
+			
+			//3.html event 분기
+			if (action =='D'){	//display
+				dscStaticCd = dscStaticCd+ 'bv';
+			} else {            //click ('C')
+				dscStaticCd = dscStaticCd+ 'bc';
+			}
+			
+			//alert('dscStaticCd:::'+dscStaticCd);
+			
+			callCSScript(xtvid, svcMgmtNum, dscStaticCd, '', ''); //dsc 배너노출 통계코드 전송				
+
+		}		
+    	
+	</script>
+</body>
+</html>

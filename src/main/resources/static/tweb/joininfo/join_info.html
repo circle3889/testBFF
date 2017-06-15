@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no">
+<title>my 이동전화 &lt; my T | T world</title>
+<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/new_myt.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.swipe.css">
+</head>
+<body class="bg_white">
+
+<div class="my_menu">
+    <div id="header">
+        <div class="header_cont">
+			<div class="h1_wrap"><h1><span id="title"></span></h1></div>
+				<button onClick="javascript:goAppBack();" class="head_back_page" id="backBtn">뒤로가기</button> 
+			<p class="search_allmenu">
+                <button class="head_search" onClick="javascript:fnSearch();">검색</button>
+                <button class="head_allmenu" onClick="javascript:fnMenuAll();">전체메뉴보기</button> 
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<section>
+	<div id="content" class="info_main myt pocui">
+		<div class="box_tab">
+			<ul class="tab_info col2">
+				<!-- 2016-10-31 GA추가_02 [s] -->
+				<li class="on"><a href="/tweb/joininfo/join_info.html" ga:ca="MTA_myt" ga:ac="상단탭" ga:la="my 이동전화" class="btn_tab" title="현재페이지">my 이동전화</a></li>
+				<!-- 2016-10-31 GA추가_03 [s] -->
+				<li><a href="/wire.do?viewId=V_WIRE0004&serviceId=S_WIRE7047&&domainVer=m2&SMAIN=Y" ga:ca="MTA_myt" ga:ac="상단탭" ga:la="my 인터넷/전화/TV" class="btn_tab">my 인터넷/전화/TV</a></li>
+			</ul>
+		</div>
+		
+		<!-- mini myT -->
+		<div class="mini_myT">
+         	<dl class="my_line_number line_number_border">
+                <dt>나의 회선번호</dt>
+                <dd class="" ></dd>
+            </dl>
+		</div>
+		<span class="ico_comm arrow"></span>
+	
+		<div class="box_section padT5">		
+			<div class="cont_box1">
+				<div class="title">
+					<strong class="tit_section">가입정보</strong>
+					<!-- 2016-10-31 GA추가_04 [s] -->
+					<a href="/normal.do?serviceId=S_PHON0003&viewId=V_CENT0365&menuId=1,1,2&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>가입정보" ga:la="더보기" class="btn_more">더보기<span class="ico_comm"></span></a>
+				</div>
+				<div class="cont">
+					<ul class="list_cont">
+						<li>
+							<dl class="detailinfo">
+								<dt><span class="inner_txt">고객명</span></dt>
+								<dd id = "singlea1"></dd>
+								<script id="singlea_normal1" type="text/x-handlebars-template">
+									{{custNm}}
+								</script>
+							</dl>
+						</li>
+						<li>
+							<dl class="detailinfo">
+								<dt><span class="inner_txt">최종개통유형</span></dt>
+								<dd id = "singlea2"></dd>
+								<script id="singlea_normal2" type="text/x-handlebars-template">
+							       {{lastOpenType}}
+								</script>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cont_addinfo">
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_05 [s] -->
+					<a href="/normal.do?serviceId=S_PHON0003&viewId=V_CENT0036&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>가입정보" ga:la="납부/청구 정보 확인" class="link_info"><strong class="fw_b">납부/청구 정보</strong> 확인<span class="ico_comm"></span></a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_06 [s] -->
+					<a href="/normal.do?serviceId=S_PHON0070&viewId=V_CENT1068&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>가입정보" ga:la="단말기 할부정보 확인" class="link_info"><strong class="fw_b">단말기 할부정보</strong> 확인<span class="ico_comm"></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="box_section myt-tdirect" style="display:none;">
+			<div class="back_line"></div>
+			<div class="title_wrap">
+				<h1 class="tit">요즘 많이 찾은 단말기</h1>
+				<div class="control">
+					<!-- 2016-10-31 GA추가_07 [s] -->
+				    <button class="btn-prev end" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="페이지이동"><span ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="페이지이동" class="ico_comm">다음 배너보기</span></button>
+	        		<div class="pagination">1/1</div>
+	        		<!-- 2016-10-31 GA추가_08 [s] -->
+	        		<button class="btn-next" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="페이지이동"><span ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="페이지이동" class="ico_comm">이전 배너보기</span></button>
+        		</div>
+			</div>
+			<div class="td_items">
+				<ul class="tdirect_lst" id="singleb1"></ul>
+				<script type="text/x-handlebars-template" id="singleb_block1"></script>
+				<script type="text/x-handlebars-template" id="singleb_auth1"></script>
+				<script type="text/x-handlebars-template" id="singleb_default"></script>
+				<!-- 2016-12-19 GA추가_08 [s] -->
+				<script type="text/x-handlebars-template" id="singleb_normal1" >
+				{{#each phoneList}}
+					{{#ifCond @key '=='  "0"}}
+						<li class="item" style="display: list-item; left: 0%;">
+					{{else ifCond  @key '=='  "1"}}
+						<li class="item" style="display: list-item; left: 50%;">
+					{{else }}
+						<li class="item" style="display: none; left: 100%;">
+					{{/ifCond}}
+							<div class="item_inner">
+								<a href="javascript:goImage('{{this.productGrpUrl}}');" class="name_link" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="{{this.modelNickName}}">
+									<span class="name_txt" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="{{this.modelNickName}}">{{this.modelNickName}}</span>
+								</a>
+								<a href="javascript:goImage('{{this.productGrpUrl}}');" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="{{this.modelNickName}}" class="img_link">
+									<img class="item_img" src="{{this.detailImg}}" ga:ca="MTA_myt" ga:ac="my이동전화>요즘많이찾은단말기" ga:la="{{this.modelNickName}}" alt="{{this.modelNickName}}">
+								</a>
+							</div>							
+							<span class="eval_link"></span>
+						</li>
+					{{/each}}
+
+					{{#ifCond listLength '==' "1" }}
+						<li class="item others" style="display: none; left: 100%;">
+							<div class="item_inner">
+						  		<span>다른 휴대폰<br>전화상담</span><br>
+						  		<a href="/normal.do?serviceId=SDUMMY0001&viewId=V_CENT4007" title="새창 열기">신청하기</a>
+						  	</div>
+						</li>
+					{{/ifCond}}
+					</script>				
+			</div>
+			<div class="back_line"></div>
+		</div>
+		<div class="box_section">
+			<div class="cont_box1">
+				<div class="title">
+					<strong class="tit_section">사용중인 상품</strong>
+				</div>
+				<div class="cont">
+					<ul class="list_cont">
+							<li class="doubleRow">
+								<dl class="detailinfo">
+									<dt>
+										<!-- 2016-10-31 GA추가_09 [s] -->
+										<a href="/normal.do?serviceId=S_BILL0001&viewId=V_CENT0014&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>사용중인 상품" ga:la="요금제&부가서비스" class="inner_link">요금제 &amp;<br>부가서비스<span class="ico_comm"></span></a>
+									</dt>
+								<dd id = "singlea3"></dd>
+								<script id="singlea_normal3" type="text/x-handlebars-template">
+									{{feeProdNm}} <br>{{freeAddService}}
+								</script>
+							</dl>
+						</li>
+						<li>
+							<dl class="detailinfo">
+								<dt>
+										<!-- 2016-10-31 GA추가_10 [s] -->
+										<a href="/normal.do?serviceId=S_ROAM0003&viewId=V_ROAM0000&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>사용중인 상품" ga:la="로밍 서비스" class="inner_link">로밍 서비스<span class="ico_comm"></span></a>
+									</dt>
+								<dd id = "singlea4"></dd>
+								<script id="singlea_normal4" type="text/x-handlebars-template">
+									{{roamingAddService}}
+								</script>	
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cont_addinfo">
+				<div class="column_type">
+					<!-- 2016-10-31 GA추가_11 [s] -->
+					<a href="/normal.do?serviceId=S_BILL0111&viewId=V_CENT1146&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>사용중인 상품" ga:la="나의사용자패턴정보확인" class="link_info"><strong class="fw_b" ga:ca="MTA_myt" ga:ac="my이동전화>사용중인 상품" ga:la="나의사용자패턴정보확인">나의 사용패턴 정보</strong> 확인<span class="ico_comm"></span></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_section">
+			<div class="cont_box1 mg_t5">
+				<div class="title">
+					<strong class="tit_section">혜택정보</strong>
+				</div>
+				<div class="cont">
+					<ul class="list_cont">
+						<li class="doubleRow">
+							<dl class="detailinfo">
+								<dt>
+									<!-- 2016-10-31 GA추가_12 [s] -->
+									<a href="/normal.do?serviceId=S_MYTW0083&viewId=V_CENT0090&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="할인혜택" class="inner_link singleLine">할인혜택<span ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="할인혜택" class="ico_comm"></span></a>
+								</dt>
+								<dd id = "singlea5"></dd>
+								<script id="singlea_normal5" type="text/x-handlebars-template">
+									{{benefitMsg}}
+								</script>
+							</dl>
+						</li>
+						<li>
+							<dl class="detailinfo">
+								<!-- 2016-10-31 GA추가_13 [s] -->
+								<dt><a href="/normal.do?serviceId=S_PROD9004&viewId=V_PROD2010&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="부가혜택" class="inner_link">부가혜택<span ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="부가혜택" class="ico_comm"></span></a></dt>
+								<dd id = "singlea6"></dd>
+								<!-- 2016-10-31 GA추가_14 [s] -->
+								<script id="singlea_normal6" type="text/x-handlebars-template">
+									<a href="/normal.do?serviceId=S_PROD9004&viewId=V_PROD2010&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" class="txt_uline fc_red">{{{dataRefillCoupon}}}</a>
+								</script>	
+							</dl>
+						</li>
+						<li>
+							<dl class="detailinfo">
+								<!-- 2016-10-31 GA추가_15 [s] -->
+								<dt><a href="/normal.do?serviceId=S_MBRS0071&viewId=V_MBRS4011&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="멤버십 혜택" class="inner_link">멤버십 혜택<span ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" ga:la="멤버십 혜택" class="ico_comm"></span></a></dt>
+								<dd id = "singlea7"></dd>
+								<!-- 2016-10-31 GA추가_16 [s] -->
+								<script id="singlea_normal7" type="text/x-handlebars-template">
+									<a href="/normal.do?serviceId=S_MBRS0071&viewId=V_MBRS4011&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>혜택정보" class="txt_uline fc_red">{{{membershipBenifit}}}</a>
+								</script>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>						
+			<div class="cont_addinfo">
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_17 [s] -->
+					<a href="/normal.do?serviceId=S_MYTW0031&viewId=V_CENT0019&flag=PL&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="요금할인정보" class="link_info"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="요금할인정보" class="fw_b">요금할인 정보</strong> 확인<span ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="요금할인정보" class="ico_comm"></span></a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_18 [s] -->
+					<a href="/normal.do?serviceId=S_MYTW0031&viewId=V_CENT0020&flag=PH&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="휴대폰할인정보" class="link_info"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="휴대폰할인정보" class="fw_b">휴대폰할인 정보</strong> 확인<span ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="휴대폰할인정보" class="ico_comm"></span></a>
+				</div>
+			</div>
+			<div class="cont_button">
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_19 [s] -->
+					<a href="/normal.do?serviceId=S_MYTW0033&viewId=V_CENT0027&domainVer=m2&PMAIN=1" class="button_type3" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="일시정지 신청/해제">
+						<span class="inner" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="일시정지 신청/해제"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="일시정지 신청/해제" class="fw_b">일시정지 신청/해제</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_20 [s] -->
+					<a href="/normal.do?serviceId=S_PHON0072&viewId=V_CENT0136&domainVer=m2&PMAIN=1" class="button_type3 borderLnone" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="번호변경안내">
+						<span class="inner" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="번호변경안내"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="번호변경안내" class="fw_b">번호변경 안내</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_21 [s] -->
+					<a href="/normal.do?serviceId=SDUMMY0002&viewId=V_MEMB0002&from=WEB" class="button_type3 borderTnone" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="회원정보 설정">
+						<span class="inner" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="회원정보 설정"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="회원정보 설정" class="fw_b">회원정보 설정</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_22 [s] -->
+					<a href="/normal.do?viewId=V_MEMB1029&serviceId=SDUMMY0001&domainVer=m2&PMAIN=1" class="button_type3 borderTnone borderLnone" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="공인인증등록/변경">
+						<span class="inner" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="공인인증등록/변경"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="공인인증등록/변경" class="fw_b">공인인증 등록/변경</strong><br></span>
+					</a>
+				</div>		
+			</div>
+			<div class="cont_addinfo">
+				<div class="column_type">
+					<!-- 2016-10-31 GA추가_23 [s] -->
+					<a href="/normal.do?serviceId=SDUMMY0002&viewId=V_MEMB1002&domainVer=m2&PMAIN=1" ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="다회선 설정 및 대표회선 등록/변경하기" class="link_info"><strong ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="다회선 설정 및 대표회선 등록/변경하기" class="fw_b">다회선 설정 및 대표회선</strong> 등록/변경하기<span ga:ca="MTA_myt" ga:ac="my이동전화>업무메뉴" ga:la="다회선 설정 및 대표회선 등록/변경하기" class="ico_comm"></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_banner">배너</div>
+</section>
+<!-- //CONTENT -->
+<!-- //tm_content -->
+	
+</body>
+</html>
+<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/util/handlebars_string.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript" src="/inc/js/new_common.js"></script>
+<script type="text/javascript" src="/inc/js/new_tworld.js"></script>
+<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+<script>
+	/* 2017-02-20 수정_01 [s] */
+	ga('create', 'UA-44615111-6', 'auto');
+	/* 2017-02-20 수정_01 [e] */
+</script>
+
+<script type="text/javascript">
+
+	var svcMgmtNum = "";
+	var listLength = "";
+	var osType = "";
+	
+	var onAfterBinding = {
+		init : function(data){
+			svcMgmtNum    = data.svcMgmtNum;
+			osType        = data.RESULT.OS_TYPE;
+			listLength    = data.listLength;
+			tpushPhoneYN    = data.TpushPhoneYN;
+			
+			if (tpushPhoneYN == "Y" && listLength > 0)
+			{
+				tdirectOper();
+			}
+		}
+	}
+	
+	getXTVIDCookie = function() {
+	    var aCookie = document.cookie.split("; ");
+	    for (var i=0; i < aCookie.length; i++)  {
+	        var cPos = aCookie[i].indexOf( "=" );
+	        var cName = aCookie[i].substring( 0, cPos );
+	        if ( cName == "XTVID" ) {
+	            return unescape( aCookie[i].substring( cPos + 1 ) );
+	        }
+	    }
+	    return "";
+	}
+	
+	var getXID = getXTVIDCookie();
+	
+	function goImage(link){
+	
+		callCSScript(getXID, this.svcMgmtNum, 'MYTTWD', '', '');
+		var mLink = link.replace("http://", "m.");
+		mLink = mLink + "&XAREA=talarm&fSite_cd=1010";
+		
+		if( osType == 'A' ){  // OS 체크
+			toapp.webbrowserouter(mLink);
+ 		}else if( osType == 'I' ){ 
+ 			location.href = "toapp:webbrowserouter:" + mLink;
+ 		}else{
+ 			location.href = mLink;
+ 		}
+ 		
+	}
+	
+	
+	//tweb backend별 설정
+	var tweb_backend = {
+		singlea : {
+			onAfterBinding : "no"
+		}	 
+		, singleb : {
+			timeout : 0,
+			error: "singleb", 
+			block: "singleb",
+			notAllow: "singleb"
+		}	 
+		, singleb1 : {
+			loading : "no"
+		} 
+	};
+	
+	// os 구분 
+	var MobileUA = ( function () {
+		var ua = navigator.userAgent.toLowerCase();
+		var mua = {
+			IOS: /ipod|iphone|ipad/.test(ua),                                //iOS
+			IPHONE: /iphone/.test(ua),                                        //iPhone
+			IPAD: /ipad/.test(ua),                                            //iPad
+			ANDROID: /android/.test(ua),                                    //Android Device
+			WINDOWS: /windows/.test(ua),                                    //Windows Device
+			TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua),    //Touch Device
+			MOBILE: /mobile/.test(ua),                                        //Mobile Device (iPad)
+			ANDROID_TABLET: false,                                            //Android Tablet
+			WINDOWS_TABLET: false,                                            //Windows Tablet
+			TABLET: false,                                                    //Tablet (iPad, Android, Windows)
+			SMART_PHONE: false                                                //Smart Phone (iPhone, Android)
+		};
+		
+		mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+		mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+		mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+		mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+		return mua;
+	
+	}());
+	
+	function tdirectOper(){
+		$(".myt-tdirect").slideDown();
+		addTdSlideControlEvent();
+	} 
+	
+	
+		var tdCurrentIdx = 0;
+		var tdMoveSpeed = 300;
+		var leftMoveStart = false;
+		var rightMoveStart = false;
+	    function addTdSlideControlEvent(){
+	    	setTdPagenationValue();
+	    	$($(".tdirect_lst li")[0]).show().css("left", "0%");
+	    	$($(".tdirect_lst li")[1]).show().css("left", "50%");
+	    	$(".myt-tdirect .btn-prev").click(function(e){
+				if(!$(this).hasClass('end') && !leftMoveStart){
+					leftMoveStart = true;
+					slideMoveLeft();
+				}
+			});
+			
+			$(".myt-tdirect .btn-next").click(function(e){
+				if(!$(this).hasClass('end') && !rightMoveStart){
+					rightMoveStart = true;
+					slideMoveRight();
+				}
+			});
+	    }
+	    
+	    function setTdPagenationValue(){
+	    	var totCount = $(".tdirect_lst .item:not(.others)").length;
+	    	if(totCount < 3){
+	    		$(".myt-tdirect .control").hide();
+	    	} 
+	    	if(totCount > 2) {
+	    		$(".tdirect_lst .others").hide();
+	    	}
+	    	$(".myt-tdirect .control .pagination").html((tdCurrentIdx + 1 ) + "/" + (totCount-1));
+	    }
+	    
+	    function slideMoveRight(dir){
+	    	var liLen = $(".tdirect_lst .item:not(.others)").length;
+	    	var cidxL = tdCurrentIdx;
+	    	var cidxR = tdCurrentIdx + 1;
+	    	var nidxL = tdCurrentIdx + 2;
+	    	$($(".tdirect_lst li")[cidxL]).animate({
+	    		"left" : "-50%"
+	    	}, tdMoveSpeed, function(){
+	    		$(this).hide();
+	    		tdCurrentIdx = cidxR;
+	    		$(".myt-tdirect .btn-prev").removeClass("end");
+	    		if(nidxL + 1 >= liLen) $(".myt-tdirect .btn-next").addClass("end");
+	    		setTdPagenationValue();
+	    		rightMoveStart = false;
+	    	});
+    		$($(".tdirect_lst li")[cidxR]).animate({
+	    		"left" : "0%"
+	    	}, tdMoveSpeed);
+	    	$($(".tdirect_lst li")[nidxL]).show().css("left", "100%").animate({
+	    		"left" : "50%"
+	    	}, tdMoveSpeed);
+	    }
+	    
+	    function slideMoveLeft(dir){
+	    	var liLen = $(".tdirect_lst .item:not(.others)").length;
+	    	var cidxL = tdCurrentIdx;
+	    	var cidxR = tdCurrentIdx + 1;
+	    	var pidxL = tdCurrentIdx - 1;
+	    	$($(".tdirect_lst li")[cidxL]).animate({
+	    		"left" : "50%"
+	    	}, tdMoveSpeed, function(){
+	    		tdCurrentIdx = pidxL;
+	    		$(".myt-tdirect .btn-next").removeClass("end");
+	    		if(pidxL == 0) $(".myt-tdirect .btn-prev").addClass("end");
+	    		setTdPagenationValue();
+	    		leftMoveStart = false;
+	    	});
+    		$($(".tdirect_lst li")[cidxR]).animate({
+	    		"left" : "100%"
+	    	}, tdMoveSpeed, function(){
+	    		$(this).hide();
+	    	});
+	    	$($(".tdirect_lst li")[pidxL]).show().css("left", "-50%").animate({
+	    		"left" : "0%"
+	    	}, tdMoveSpeed);
+	    }
+	
+	$( function(){
+		MiniMyT.init("R", location.pathname);
+		Menu.init("", "myT", "", "", "", "", "", "");
+		Banner.init("01");
+	});
+	
+	
+</script>

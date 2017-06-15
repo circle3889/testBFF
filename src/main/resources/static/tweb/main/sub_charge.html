@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no">
+<title>my 이동전화 &lt; my T | T world</title>
+<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/new_product.css">
+<link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css" />
+</head>
+<body class="bg_white">
+
+<div class="my_menu">
+    <div id="header">
+        <div class="header_cont">
+			<div class="h1_wrap"><h1><span id="title">요금조회/납부</span></h1></div>
+				<button class="head_back_page" id="backBtn">뒤로가기</button> 
+			<p class="search_allmenu">
+                <button class="head_search">검색</button>
+                <button class="head_allmenu">전체메뉴보기</button> 
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<section>
+	<div id="content" class="info_main in_charge">
+		<!-- mini myT -->
+		<div class="mini_myT">
+         	<dl class="my_line_number line_number_border">
+                <dt>나의 회선번호</dt>
+                <dd class="" ></dd>
+            </dl>
+		</div>
+		<span class="ico_comm arrow"></span>
+				
+		<div class="box_section mg_t5">
+			<div class="cont_box1">
+				<div class="title">
+				
+					<div class="serviceinfo">
+						<!-- 2016-10-31 GA추가_02 [s] -->
+						<span class="serviceTitle"><a href="javascript:goURL('/normal.do?serviceId=S_BILL0001&viewId=V_CENT0014');" ga:ca="MTA_rate" ga:ac="사용중인 요금제" ga:la="사용중인 요금제" class="inner_link">사용중인 요금제<span class="ico_comm"></span></a></span>
+						<dd class="fc_red fc_underline" id = "single1"></dd>
+						<script id="single_normal1" type="text/x-handlebars-template">
+							<a href="javascript:goURL('/normal.do?serviceId=S_PROD2001&viewId=V_PROD2001&prod_id={{prodId}}&statCtg={{statCtg}}')" ga:ca="MTA_rate" ga:ac="사용중인 요금제"><span class="serviceName fc_red fc_underline">{{pricePlanNm}}</span></a>							
+						</script>
+					</div>
+				</div>
+				
+				<div class="cont">
+					<ul class="list_button col2 type1">
+						<!-- 2016-10-31 GA추가_03 [s] -->
+						<li><a href="javascript:goURL('/normal.do?serviceId=S_BILL0025&viewId=V_CENT0119');" ga:ca="MTA_rate" ga:ac="사용중인 요금제" ga:la="실시간 요금조회" class="bgred"><span ga:ca="MTA_rate" ga:ac="사용중인 요금제" ga:la="실시간 요금조회" class="inner">실시간 요금조회</span></a></li>
+						<!-- 2016-10-31 GA추가_04 [s] -->
+						<li><a href="javascript:goURL('/normal.do?serviceId=S_BILL0070&viewId=V_CENT0261');" ga:ca="MTA_rate" ga:ac="사용중인 요금제" ga:la="잔여기본 통화" class="bgdark"><span ga:ca="MTA_rate" ga:ac="사용중인 요금제" ga:la="잔여기본 통화" class="inner">잔여기본 통화</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box_section mg_t5">
+			<div class="cont_box2">
+				<dl class="billinginfo"  style="min-height:87px;">
+					<!-- 2016-10-31 GA추가_05 [s] -->
+					<dt><a href="javascript:goURL('/normal.do?serviceId=S_BILL0059&viewId=V_CENT0238');" ga:ca="MTA_rate" ga:ac="청구요금" ga:la="청구요금" class="inner_link">청구요금<span ga:ca="MTA_rate" ga:ac="청구요금" ga:la="청구요금" class="ico_comm"></span></a></dt>
+					<dd id="single2">
+						<span class="date"></span>
+						<strong class="price">-<span class="unit">원</span></strong>
+						<!-- 2016-12-19 GA추가_01 [s] -->
+						<a href="javascript:goURL('/normal.do?serviceId=S_BILL0111&viewId=V_CENT1146');" ga:ca="MTA_rate" ga:ac="청구요금" ga:la="나의 사용패턴 확인" class="link_addinfo">나의 사용패턴 확인<span class="ico_comm"></span></a>
+					</dd>
+						<!-- 2016-10-31 GA추가_06 [s] -->
+						<script id="single_normal2" type="text/x-handlebars-template">
+							<span class="date">{{invDt}}</span>
+							<strong class="{{_isNgme "txt_alert" "price fc_red"}}">{{invAmt}}{{{_isAmt}}}</strong>
+							<a href="javascript:goURL('/normal.do?serviceId=S_BILL0111&viewId=V_CENT1146');" ga:ca="MTA_rate" ga:ac="청구요금" ga:la="나의 사용패턴 확인" class="link_addinfo">나의 사용패턴 확인<span ga:ca="MTA_rate" ga:ac="청구요금" ga:la="나의 사용패턴 확인" class="ico_comm"></span></a>
+						</script>
+							
+				</dl>
+				<dl class="billinginfo">
+					<dt><span class="inner_txt">납부방법</span></dt>
+					<dd>
+						<strong class="txt_info" id="single3">&nbsp;</strong>
+						<script id="single_normal3" type="text/x-handlebars-template">
+							{{payMthdNm}}
+						</script>
+					</dd>
+				</dl>
+				<dl class="billinginfo">
+					<dt><span class="inner_txt">청구서</span></dt>
+					<dd>
+						<strong class="txt_info" id="single4">&nbsp;</strong>
+						<script id="single_normal4" type="text/x-handlebars-template">
+							{{billIsueTypNM}}
+						</script>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="box_section mg_t5">
+			<div class="cont_button">
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?serviceId=SDUMMY0001&domainVer=m2&viewId=V_CENT1110');" class="button_type1 ta_c">
+						<!-- 2016-10-31 GA추가_07 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="청구요금" ga:la="자동납부신청/변경" class="inner"><strong ga:ca="MTA_rate" ga:ac="청구요금" ga:la="자동납부신청/변경" class="fw_b">자동납부신청/변경</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_BILL0030&serviceId=S_BILL0066');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="청구요금" ga:la="청구서 변경/재발행">
+						<!-- 2016-10-31 GA추가_08 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="청구요금" ga:la="청구서 변경/재발행" class="inner"><strong ga:ca="MTA_rate" ga:ac="청구요금" ga:la="청구서 변경/재발행" class="fw_b">청구서 변경/재발행</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?serviceId=S_BILL0048&viewId=V_CENT0197');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="사용/청구/미납요금">
+						<!-- 2016-10-31 GA추가_09 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="사용/청구/미납요금" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="사용/청구/미납요금" class="fw_b">사용/청구/미납요금</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_CENT0711&serviceId=S_PAYM9081');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 선결제">
+						<!-- 2016-10-31 GA추가_10 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 선결제" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 선결제" class="fw_b">콘텐츠이용료/<br>소액결제 선결제</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_CENT4000&serviceId=S_PAYM9056&disPayMthdCd=bank&menuId=3,2,1');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="즉시납부">
+						<!-- 2016-10-31 GA추가_11 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="즉시납부" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="즉시납부" class="fw_b">즉시납부</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_MYTW1005&serviceId=S_MYTW0079');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="포인트 납부예약/납부신청">
+						<!-- 2016-10-31 GA추가_12 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="포인트 납부예약/납부신청" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="포인트 납부예약/납부신청" class="fw_b">포인트 납부예약/<br>납부신청</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_CENT0013&serviceId=S_PAYM0002');" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="납부내역" class="button_type1 ta_c" >
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="납부내역" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="납부내역" class="fw_b">납부내역</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?serviceId=S_BILL1204&viewId=V_CENT0657');" class="button_type1 ta_c" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 내역">
+						<!-- 2016-10-31 GA추가_13 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 내역" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="콘텐츠이용료/소액결제 내역" class="fw_b">콘텐츠이용료/<br>소액결제 내역</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_BILL0014&serviceId=S_BILL1177');" ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="세금계산서 재발행" class="button_type1 ta_c bd_bottom">
+						<!-- 2016-10-31 GA추가_14 [s] -->
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="세금계산서 재발행" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="세금계산서 재발행" class="fw_b">세금계산서 재발행</strong></span>
+					</a>
+				</div>
+				<div class="column_type col2">
+					<a href="javascript:goURL('/normal.do?viewId=V_CENT0758&serviceId=S_MYTW0088');" class="button_type1 ta_c bd_bottom">
+						<span ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="기부금/후원금 납부내역" class="inner"><strong ga:ca="MTA_rate" ga:ac="업무메뉴" ga:la="기부금/후원금 납부내역" class="fw_b">기부금/후원금<br>납부내역</strong></span>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="box_section">
+			<div class="cont_box1 noneMobile">
+				<div class="title">
+					<strong class="tit_section">인터넷/전화/TV</strong>
+					<!-- 2016-10-31 GA추가_15 [s] -->
+					<a href="javascript:goURL('/wire.do?viewId=V_WIRE6001&serviceId=SDUMMY0001');" ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="더보기" class="btn_more">더보기<span ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="더보기" class="ico_comm"></span></a>
+				</div>
+				<div class="cont">
+					<ul class="list_button col2 type2">
+						<!-- 2016-10-31 GA추가_16 [s] -->
+						<li><a href="javascript:goURL('/wire.do?viewId=V_WIRE6174&serviceId=S_WIRE6032');" ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="사용/청구요금"><span ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="사용/청구요금" class="inner">사용/청구요금</span></a></li>
+						<!-- 2016-10-31 GA추가_17 [s] -->
+						<li><a href="javascript:goURL('/wire.do?viewId=V_WIRE6216&serviceId=S_WIRE6018&disPayMthdCd=bank');" ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="즉시납부"><span ga:ca="MTA_rate" ga:ac="인터넷/전화/TV" ga:la="즉시납부" class="inner">즉시납부</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="bottom_banner">배너</div>
+	</div>
+</section>
+<!-- //CONTENT -->
+
+</body>
+</html>
+<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript" src="/inc/js/new_common.js"></script>
+<script type="text/javascript" src="/inc/js/new_tworld.js"></script>
+<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+<script type="text/javascript">
+	// 2016-10-31 GA추가_01 [s]
+	setCategory = "MTA_rate";
+	
+	function goURL(url) {		
+		var url = url;
+		var pMain = '&domainVer=m2&PMAIN=2';	
+		location.href=url + pMain;
+	}
+	
+
+	//사용자 정의 함수
+	Handlebars.registerHelper('_isNgme', function(a, b) {
+		if (this.isNGMExceptionError=="Y") {
+	    	return a;
+	  	} else {
+	  		return b;
+	  	}
+	});
+	
+	Handlebars.registerHelper('_isAmt', function(options) {
+		var ngmE = '';
+		var amt = '<span class="unit">원</span>';
+		if (this.isNGMExceptionError=="Y") 
+		{
+	    	return ngmE;
+	  	} else 
+	  	{
+	  		return amt;
+	  	}
+	});
+	
+	//tweb 바인딩 이후 스크립트
+	var onAfterBinding = {
+		init: function(data){
+			MiniMyT.init("R", location.pathname);
+		}
+	}
+	
+	$(function(){
+		Menu.init("", "요금조회/납부", "", "", "", "", "", "");
+		Banner.init("03");
+	});
+	
+</script>
+

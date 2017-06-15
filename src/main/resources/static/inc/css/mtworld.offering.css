@@ -1,0 +1,95 @@
+.offering{position:relative;min-height:auto;height:auto;}
+.offering img{position: relative;width: 100%;}
+.offering a{/* background:rgba(255, 0, 0, 0.1); */text-indent: -99999px;width: 48%;height: 9%;position: absolute;left: 50%;margin-left: -23%;}
+.offering.oneRow a{width: 60%;margin-left:-30%}
+.offering.twoRow a{height: 8%;}
+.offering.threeRow a{height: 6%;}
+.offering.fourRow a{height: 4%;}
+
+/* tpay */
+.tpayInfo a.btnUrl00{top: 70%;height: 18%;}
+
+/* tlife */
+.tlifeInfo a.btnUrl00{top: 74%;}
+
+/* tlife + cake */
+.tlifeCakeInfo a.btnUrl00{top: 42.5%;}
+.tlifeCakeInfo a.btnUrl01{top: 82%;}
+
+/* tlife + oksusu */
+.tlifeOksusuInfo a.btnUrl00{top: 42.5%;}
+.tlifeOksusuInfo a.btnUrl01{top: 80%;}
+
+/* tpay + tlife */
+.tpayTlifeInfo a.btnUrl00{top:42.5% !important;}
+.tpayTlifeInfo a.btnUrl01{top:83% !important;}
+
+/* tpay + oksusu */
+.tpayOksusuInfo a.btnUrl00{top:42.5% !important;}
+.tpayOksusuInfo a.btnUrl01{top:80.5% !important;}
+
+/* tpay + cake */
+.tpayCakeInfo a.btnUrl00{top:42.5% !important;}
+.tpayCakeInfo a.btnUrl01{top:83% !important;}
+
+/* tpay + tphone */
+.tpayTphoneInfo a.btnUrl00{top:42.5% !important;}
+.tpayTphoneInfo a.btnUrl01{top:83% !important;}
+
+/* tlife + oksusu + cake */
+.tlifeOksusuCakeInfo a.btnUrl00{top:29.5% !important;}
+.tlifeOksusuCakeInfo a.btnUrl01{top:55.5% !important;}
+.tlifeOksusuCakeInfo a.btnUrl02{top:85% !important;}
+
+/* tpay + tlife + oksusu */
+.tpayTlifeOksusuInfo a.btnUrl00{top:29.5% !important;}
+.tpayTlifeOksusuInfo a.btnUrl01{top:57.5% !important;}
+.tpayTlifeOksusuInfo a.btnUrl02{top:83.5% !important;}
+
+/* tpay + tphone + oksusu */
+.tpayTphoneOksusuInfo a.btnUrl00{top:29.5% !important;}
+.tpayTphoneOksusuInfo a.btnUrl01{top:57.5% !important;}
+.tpayTphoneOksusuInfo a.btnUrl02{top:83.5% !important;}
+
+/* tpay + tlife + cake */
+.tpayTlifeCakeInfo a.btnUrl00{top:29.5% !important;}
+.tpayTlifeCakeInfo a.btnUrl01{top:57.5% !important;}
+.tpayTlifeCakeInfo a.btnUrl02{top:85% !important;}
+
+/* tpay + tphone + cake */
+.tpayTphoneCakeInfo a.btnUrl00{top:29.5% !important;}
+.tpayTphoneCakeInfo a.btnUrl01{top:57.5% !important;}
+.tpayTphoneCakeInfo a.btnUrl02{top:85% !important;}
+
+/* tpay + oksusu + cake */
+.tpayOksusuCakeInfo a.btnUrl00{top:29.5% !important;}
+.tpayOksusuCakeInfo a.btnUrl01{top:55.5% !important}
+.tpayOksusuCakeInfo a.btnUrl02{top:85% !important;}
+
+/* tpay + tlife + oksusu + cake */
+.tpayTlifeOksusCakeuInfo a.btnUrl00{top:23% !important;}
+.tpayTlifeOksusCakeuInfo a.btnUrl01{top:44.5% !important;}
+.tpayTlifeOksusCakeuInfo a.btnUrl02{top:64.7% !important;}
+.tpayTlifeOksusCakeuInfo a.btnUrl03{top:87.5% !important;}
+
+/* tphone */
+.tphoneInfo a.btnUrl00{top: 70%;height: 18%;}
+
+/* tphone + cake */
+.tphoneCakeInfo a.btnUrl00{top: 42.5%;}
+.tphoneCakeInfo a.btnUrl01{top: 82%;}
+
+/* tphone + oksusu */
+.tphoneOksusuInfo a.btnUrl00{top: 42.5%;}
+.tphoneOksusuInfo a.btnUrl01{top: 80%;}
+
+/* tphone + oksusu + cake */
+.tphoneOksusuCakeInfo a.btnUrl00{top:29.5% !important;}
+.tphoneOksusuCakeInfo a.btnUrl01{top:55.5% !important;}
+.tphoneOksusuCakeInfo a.btnUrl02{top:85% !important;}
+
+/* tpay + tphone + oksusu + cake */
+.tpayTphoneOksusCakeuInfo a.btnUrl00{top:23% !important;}
+.tpayTphoneOksusCakeuInfo a.btnUrl01{top:44.5% !important;}
+.tpayTphoneOksusCakeuInfo a.btnUrl02{top:64.7% !important;}
+.tpayTphoneOksusCakeuInfo a.btnUrl03{top:87.5% !important;}

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* Layout */
+.noscroll{overflow:hidden}
+.overlay{position:fixed;overflow-y:scroll;overflow-x:hidden;top:45px !important;right:0;bottom:0;left:0;margin-bottom:45px}
+[aria-hidden="true"]{display:none}
+[aria-hidden="false"]{display:block}
+
+.select_type1{position:relative}
+.select_type1:after{content:"";position:absolute;top:50%;right:8px;width:0;height:0;margin-top:-3px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #343434}
+.select_type1 select{background:none !important}
+
+.tabBox{overflow:hidden;position:relative;height:54px;margin-top:-10px}
+.tabBox:after{content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:1px;background-color:#f16900}
+.tabBox ul{overflow:hidden}
+.tabBox ul li{float:left;position:relative}
+.tabBox ul li a{display:block;overflow:hidden;width:100%;height:54px;font-size:13px;line-height:54px;color:#646464;text-align:center;letter-spacing:-0.05em}
+.tabBox ul li.on a{color:#f65401}
+.tabBox ul li.on:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:4px;background-color:#f65401}
+.tabBox ul.col2 li{width:50%}
+.tabBox ul.col3 li{width:33.333333%}
+
+.errorBox{padding:65px 0;text-align:center}
+.errorBox>strong{display:block;padding:0 10px;font-weight:bold;font-size:16px;color:#1e1f1f} /* 2017-01-05 청구서 변경/재발행 UI개선 */
+.errorBox .txt{display:block;margin-top:12px;font-size:13px;color:#7c7d7d}
+
+.toggleSection .toggleWrap>li>.info a{color:#007f77}
+
+/* 청구서 변경/재발행 UI개선 */
+.billChange .bulPara{margin-top:22px}
+.billChange .selType{display:block;position:relative;width:100%;margin-top:10px}
+.billChange .selType:after{content:"";position:absolute;top:50%;right:10px;width:8px;height:8px;margin-top:-6px;border:2px solid #fff;border-width:0 1px 1px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.billChange .selType .selbox{padding:5px 15px 5px 10px;height:38px;font-weight:bold;font-size:16px;color:#fff;border:1px solid #f75402;background:#fc5f00;-webkit-border-radius:0;border-radius:0}
+.billChange .depthSection .paraType{margin-top:5px}
+.billChange .depthSection .icoBtn{margin-top:3px}
+.billChange .bnnrSection{margin:25px -10px 0}
+.billChange .bnnrSection img{width:100%;vertical-align:top}
+.billChange .toggleSection .toggleWrap>li>.info a{text-decoration:underline}
+.billChange .btnbox a.lbtn{width:100%;height:auto;font-size:14px} /* 2016-11-01 청구서 변경재발행 UI개선 */
+.billChange .btnbox a.lbtna{width:auto}
+.billChange .btnbox a.lbtn .arr{display:block;padding:10px 40px 8px 15px;line-height:18px}
+.billChange .btnbox a.lbtn .arr:after{right:15px;margin-top:-6px}
+.billChange .btnbox a.lbtn strong{font-size:16px}
+.billChange .billBanner img{width:100%;vertical-align:top}
+
+.billBox{padding:0 10px 15px;text-align:center;border:1px solid #bbb}
+.billBox strong{display:block;margin-bottom:15px;font-weight:bold;font-size:13px;color:#1e1f1f;text-align:center;line-height:35px;border-bottom:1px solid #eee}
+.billBox .type{font-weight:bold;font-size:16px;color:#111;vertical-align:middle}
+.billBox .sbtn{margin-left:5px;height:25px;font-size:12px;color:#333;line-height:25px;background:#ebebec;-webkit-border-radius:0;border-radius:0}
+.billBox .sbtn .ico{display:inline-block;position:relative;padding-right:12px;font-weight:bold}
+.billBox .sbtn .ico:after{content:"";position:absolute;top:50%;right:2px;width:8px;height:8px;margin-top:-5px;border:1px solid #999;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.billList{margin-top:8px}
+.billList li:after, .billList li:before{background-color:#eee}
+.billList li a{padding:15px 0 10px;height:auto}
+.billList li a .ico{display:block;position:relative;width:25px;height:25px;margin:0 auto 13px;background:url(/img/new_charge/ico_charge_bill_sp.png) no-repeat 0 -25px;background-size:125px 250px}
+/* .billList li.on a{color:#8f8f8f;background:#f6f6f6} */
+.billList li.smart a .ico{background-position:-25px -25px}
+.billList li.sms a .ico{background-position:-50px -25px}
+.billList li.email a .ico{background-position:-75px -25px}
+.billList li.smartemail a .ico{background-position:0 -50px;width:62.5px}
+.billList li.smartsms a .ico{background-position:0 -75px;width:62.5px}
+.billList li.smsemail a .ico{background-position:0 -100px;width:62.5px}
+.billList li.etc a .ico{background-position:-100px -25px}
+.billList li.on a .ico:after{content:"";position:absolute;top:-5px;left:50%;width:36px;height:17px;margin-left:5px;background:url(/img/new_charge/ico_charge_bill_sp.png) no-repeat 0 -130px;background-size:125px 250px}
+.billList li.smartemail a .ico:after,
+.billList li.smartsms a .ico:after,
+.billList li.smsemail a .ico:after{margin-left:20px}
+/* 
+.billList li.on a .ico{background-position:0 0}
+.billList li.smart.on a .ico{background-position:-25px 0}
+.billList li.sms.on a .ico{background-position:-50px 0}
+.billList li.email.on a .ico{background-position:-75px 0}
+.billList li.smartemail.on a .ico{background-position:-62.5px -50px}
+.billList li.smartsms.on a .ico{background-position:-62.5px -75px}
+.billList li.smsemail.on a .ico{background-position:-62.5px -100px}
+.billList li.etc.on a .ico{background-position:-100px 0}
+ */
+.billList li a .txt{display:block;font-weight:bold;font-size:12px;line-height:13px}
+
+.billAgreeWrap{margin-top:0.625rem;border:1px solid #bbb}
+.billAgreeWrap .billAgreeLst{overflow:hidden}
+.billAgreeLst>li{padding:0.75rem 0.625rem;position:relative}
+.billAgreeLst>li:not(:first-child){border-top:1px solid #e4e4e4}
+/* .billAgreeLst>li h3{display:block;margin-bottom:15px;font-weight:bold;font-size:0.875rem;color:#1e1f1f} */
+.billAgreeLst>li .w100:not(:first-child), .billAgreeLst>li .col2:nth-child(n+3), .billAgreeLst>li .paraType1{margin-top:0.625rem}
+.billAgreeLst>li .intervalList{margin-top:0.5rem}
+.billAgreeLst>li .intervalList li{color:#646464}
+.billAgreeLst>li .intervalList li span{font-weight:bold}
+.billAgreeLst .emailWrap{overflow:hidden;width:100%}
+.billAgreeLst .emailWrap .inpWrap{float:left;width:52%}
+.billAgreeLst .emailWrap .selWrap{float:left;width:41%;margin-left:0.5rem}
+.billAgreeLst .selbox{color:#1e1f1f}
+
+.reissueList>li:not(:first-child){border-top:1px solid #e4e4e4}
+.reissueList>li{padding:0.9375rem 0.625rem}
+.reissueList>li h2{font-weight:bold;font-size:0.875rem;color:#1e1f1f}
+.reissueList>li h2+.checkWrap{margin-top:15px}
+.reissueList>li .billTypeTit{display:block;margin-top:0.625rem;font-weight:bold;font-size:0.875rem;color:#e3002b} /* 2017-01-05 2차 개선 */
+.reissueList>li .checkWrap li:not(:first-child){margin-top:0.625rem}
+.reissueList>li .selWrap{margin-top:0.625rem}
+
+/* 청구서 미리보기 레이어팝업 */
+.billPopup .billTit{display:block;font-weight:bold;font-size:1rem;color:#000;text-align:center}
+.billPopup .thumbType{margin-top:0.625rem}
+.billPopup .thumbType img{width:100%;}
+.billPopup .thumb{display:block;width:100%;border:1px solid #bcbcbc;-webkit-box-sizing:border-box;box-sizing:border-box}
+.billPopup .thumb img{width:100%;vertical-align:top}
+
+/* 청구서 변경/재발행 UI 2차 개선 2016-12-23 */
+.newBillChange{padding-top:0 !important}
+.newBillChange .bnnrSection{margin:25px -10px 0}
+.newBillChange .bnnrSection img{width:100%;vertical-align:top}
+.newBillChange .bulPara{margin-top:20px}
+.newBillChange .menuBox{margin-top:20px}
+.newBillChange .menuBox .titArea{overflow:hidden;position:relative}
+.newBillChange .menuBox .titArea h2{float:left;font-weight:bold;font-size:17px;color:#111;letter-spacing:-0.07em}
+.newBillChange .menuBox .lstArea{margin-top:5px;padding:0 10px;border-top:1px solid #ccc}
+.newBillChange .menuBox .lstArea li{border-bottom:1px solid #f0f0f0}
+.newBillChange .menuBox .lstArea li a{display:block;position:relative;width:100%;height:36px;padding:0 5px;font-size:14px;color:#333;line-height:36px;letter-spacing:-0.07em;-webkit-box-sizing:border-box;box-sizing:border-box}
+.newBillChange .menuBox .lstArea li a:after{content:"";position:absolute;top:50%;right:7px;width:8px;height:8px;margin-top:-5px;;border:1px solid #8e8f8f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.newBillChange .mainTit1{font-weight:bold;font-size:16px;color:#111}
+.newBillChange .selSection{margin-top:10px}
+.newBillChange .selSection .selType{display:block;position:relative;width:100%}
+.newBillChange .selSection .selType:after{content:"";position:absolute;top:50%;right:10px;width:8px;height:8px;margin-top:-6px;border:1px solid #fff;border-width:0 1px 1px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.newBillChange .selSection .selType .selbox{padding:5px 30px 5px 10px;height:35px;font-weight:bold;font-size:14px;color:#fff;border:none;background:#757380;-webkit-border-radius:0;border-radius:0}
+
+.newBillChange .billAgreeWrap{margin-top:0;border:1px solid #cecece;border-width:0 1px 1px}
+.newBillChange .billAgreeLst>li:not(:first-child){border-top:1px solid #eee}
+.newBillChange .billAgreeLst>li .mainTit2{display:block;margin-bottom:8px;font-weight:bold;font-size:14px;color:#111;letter-spacing:-0.07em}
+.newBillChange .billAgreeLst>li .icoBtn{color:#d23c00}
+.newBillChange .billBanner img{width:100%;vertical-align:top}
+
+.newBillChange .btnbox .ext{display:block;margin-bottom:5px;font-size:14px;color:#333}
+.newBillChange .btnbox .ext .emp{color:#e3002b}
+.newBillChange .btnbox a{width:100%;height:35px;padding:0;font-size:14px;line-height:35px;background:#e3002b;-webkit-border-radius:0;border-radius:0}
+.newBillChange .btnbox a strong{font-weight:bold}
+.newBillChange .btnbox .btnTypeD{width:auto;height:30px;padding:0 20px;font-size:13px;color:#1e1f1f;line-height:29px;border:1px solid #bebdbd;-webkit-border-radius:3px;border-radius:3px;
+	background-image:-webkit-linear-gradient(bottom, #fcfcfc 50%, #e4e4e4 100%);
+	background-image:linear-gradient(to bottom, #fcfcfc 50%, #e4e4e4 100%);
+}
+.newBillChange .toggleSection .toggleWrap>li>.info{font-weight:normal}

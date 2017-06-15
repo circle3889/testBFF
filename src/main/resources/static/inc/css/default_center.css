@@ -1,0 +1,266 @@
+/* CSS Document */
+
+@import url("common.css");
+
+
+
+.st_title {background-image:url(/img/common/subtitl_icon.gif); background-position:10px 10px; background-repeat:no-repeat; padding:10px 0 5px 20px; color:#000; font-weight:bold; font-size:14px; line-height:18px; text-align:left;}
+
+/* title */
+
+.top_title{overflow:hidden;}
+
+.top_title img{float:left; padding:8px 6px 0 10px;}
+
+.top_title p{float:left; color:#000000; font-size:14px; font-weight:bold; padding-top:9px;}
+
+
+
+
+
+/* 미납센터 미납요금있는경우 조회 */
+
+.defult_c_p1{padding:9px 10px 10px 10px;}
+
+.default_table{padding:10px 10px 15px 10px;}
+
+.default_table table{border:3px solid #f7984f; table-layout: fixed;}
+
+.default_table table th{color:#666666; font-weight:bold; padding:11px 0 9px 18px; text-align:left; background:#f7f7f7; border-right:1px solid #e2e2e2;}
+
+.default_table table td{text-align:right; padding:11px 18px 9px 0;}
+
+.default_table table td strong{color:#fa6d01; font-weight:bold; font-size:14px;}
+
+.defult_c_p2{font-size:14px; color:#000000; font-weight:bold; padding:16px 0 0 10px;}
+
+.defult_c_p2 img{vertical-align:middle; margin-right:5px;}
+
+.bullet_p{padding:8px 0 11px 15px;}
+
+.bullet_p p{background:url(/img/common/icon.jpg) no-repeat left 3px; padding-left:10px; padding-bottom:6px; padding-right:10px;}
+
+
+
+/* 미납센터 미납요금있는경우 조회 2 */
+
+.money_r_1{color:#fa6d01; font-size:18px;}
+
+.bullet2_p{padding:8px 8px 11px 8px;}
+
+.bullet2_p p{background:url(/img/common/icon.jpg) no-repeat left 3px; padding-left:10px; padding-bottom:6px;}
+
+.defult_c_p3{color:#888888; padding:0 0 96px 10px; }
+
+
+
+
+
+.join_infor_table1{padding:0 10px 15px 10px;}
+
+.join_infor_table1 table {width:100%; border-bottom:3px solid #f58026; border-left:3px solid #f58026; border-right:3px solid #f58026; border-top:3px solid #f58026; border-collapse:collapse;}
+
+.join_infor_table1 th {background-image:url(/img/common/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:20px; border-bottom:1px solid #c6c6c6; width:30px; font-weight:normal; padding:5px 0px 5px 15px; text-align:left;}
+
+.join_infor_table1 .th1 {background-image:url(/img/common/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:20px; border-bottom:1px solid #c6c6c6; width:30px; font-weight:normal; padding:5px 15px 5px 0px; text-align:left;}
+
+
+.join_infor_table1 .th2 {background-image:url(/img/common/table_bg02.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:20px; border-bottom:1px solid #c6c6c6;  border-top:1px solid #c6c6c6; width:30px; font-weight:normal; padding:5px 0px 5px 15px; text-align:left;}
+
+.join_infor_table1 .th3 {background-image:url(/img/common/table_bg02.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:20px; border-bottom:1px solid #c6c6c6;  border-top:1px solid #c6c6c6; width:30px; font-weight:normal; padding:5px 15px 5px 15px; text-align:left;}
+
+
+.join_infor_table1 th .left{ border-left:0;}
+
+.join_infor_table1 td {padding:5px 0 5px 15px; color:#808080;border-bottom:1px solid #e2e2e2; width:30px;}
+
+
+
+.join_infor_table1 .right { text-align:right; padding:5px 15px 5px 0; border-left:1px solid #e1e1e1;}
+
+.join_infor_table1 .tlt_1 { background-color:#f7f7f7; border-bottom:1px solid #e1e1e1; border-top:1px solid #e1e1e1; color:#414141;}
+
+.join_infor_table1 .tlt_2 { background-color:#f7f7f7; text-align:right; padding-right: 15px; height:30px;font-weight:bold;border-top:1px solid #e1e1e1;}
+.join_infor_table1 .tlt_3 { background-color:#f7f7f7; text-align:left; padding-left: 15px; height:27px;font-weight:bold; border-bottom:1px solid #c6c6c6; line-height:27px; font-size:14px; color:#000000;}
+
+
+.join_infor_table1 .money_r_1{ background-color:#f7f7f7;padding-right:15px; color:#f58026; font-size:14px; text-align:right; line-height:30px; border-bottom:1px solid #c6c6c6;font-weight:bold;}
+
+
+
+
+
+
+
+.submenu { padding:0; margin:0; border-top:1px solid #d5d5d5;}
+
+.submenu li{background-image:url(/img/common/submenu_bg.gif); background-position:0 bottom; background-repeat:repeat-x; padding:7px 0;  letter-spacing:-1px; float:left;}
+
+
+
+
+
+
+
+/* 전화상담예약 div */
+
+.phone_advice_div{float:left;}
+
+.phone_advice_div p{float:left; padding:0 3px 0 3px;}
+
+.phone_advice_div .phone_advice_div_p1{padding-top:11px;}
+
+
+
+
+
+/* 요금납부방법안내 신용카드결제 */
+
+.sinyong_card_1{padding:18px 0 0 10px;}
+
+.sinyong_card_p1{color:#e85901; font-size:14px; font-weight:bold; padding-bottom:7px;}
+
+.sinyong_card_p2{padding:0 8px 7px 0; color:#666;}
+
+.sinyong_card_p4{color:#e85901; font-size:14px; font-weight:bold; padding:17px 0 7px 10px;}
+
+
+
+
+
+/* 요금납부방법안내 입금전용계좌안내 */
+
+.deposit_account{padding:0 0 5px 13px;}
+
+.deposit_account p{background-image: url(/img/common/icon.jpg);background-position:0 3px; background-repeat: no-repeat; padding:0; text-align:left; padding-left:10px; line-height:18px; color:#666666;}
+
+
+
+
+
+.union_table{padding:0 0 10px 0 ; line-height:16px;}
+
+.union_table table {width:100%; border-bottom:1px solid #c6c6c6; border-top:1px solid #c6c6c6; border-collapse:collapse;}
+
+.union_table td .left{ border-left:0;}
+
+.union_table td {padding:8px 8px 8px 8px; color:#666; border-bottom:1px solid #c6c6c6; border-left:1px solid #c6c6c6; background-color:#fdfdfd;
+
+height:40px; background-image:url(/img/common/table_bg.jpg); background-position:0 bottom; background-repeat:repeat-x;}
+
+.union_table .date {color:#3e3e3e;}
+
+.union_table li { background-image: url(/img/common/icon.jpg);background-position:8px 10px; background-repeat: no-repeat; padding:5px 18px; line-height:18px;text-align:left;  }
+
+
+
+
+
+.join_infor_ul li{background-image: url(/img/common/icon.jpg);background-position:8px 3px; background-repeat: no-repeat; padding:0 18px 5px 18px; text-align:left; color:#888;}
+
+.join_infor_ul_red li{background-image: url(/images/subicon_red.jpg);background-position:8px 10px; background-repeat: no-repeat; padding:5px 18px 5px 18px; text-align:left; color:#f12d39; }
+
+
+
+
+
+
+
+
+
+.join_infor_table{padding:0 8px 15px 8px;}
+
+.join_infor_table table{border-bottom:3px solid #f7984f;border-top:3px solid #f7984f;border-left:3px solid #f7984f;border-right:3px solid #f7984f; border-collapse:collapse; table-layout: fixed;}
+
+.join_infor_table td{border-bottom:1px solid #e2e2e2; line-height:16px; text-align:left; padding:5px 0 5px 10px; color:#666666; }
+
+.join_infor_table th{border-bottom:1px solid #e2e2e2; width:50%; border-right:1px solid #e2e2e2; padding:9px 0 6px 10px;  background-color:#f4f4f4; font-weight: normal; color:#666666; text-align:left; font-weight:bold; }
+
+.join_infor_table .th_cen_align{text-align:center; padding:5px 10px;}
+
+.join_infor_table td.right{text-align:right; padding-right:15px;}
+
+
+
+.join_infor_table .default{font-size:17px;color:#FA6D01; font-weight:bold;}
+
+.join_infor_table .default{font-size:13px; font-weight:bold;}
+
+
+
+
+
+
+
+.inquiry_table1 {padding:0 8px 10px 8px ;}
+
+.inquiry_table1 table {width:100%; border-bottom:3px solid #f58026; border-left:3px solid #f58026; border-right:3px solid #f58026; border-top:3px solid #f58026; border-collapse:collapse;}
+
+.inquiry_table1 th { background-image:url(/img/common/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:27px; border-bottom:1px solid #c6c6c6; width:50%; font-weight:normal; padding-top:3px;}
+
+.inquiry_table1 th .left{ border-left:0;}
+
+.inquiry_table1 td {padding:0 15px; color:#808080; line-height:18px;}
+
+.inquiry_table1 td .bullet{background-image: url(/img/common/icon.jpg);background-position:15px 7px; background-repeat: no-repeat; padding:5px 18px 5px 25px; text-align:left;}
+
+.inquiry_table1 .btm_td{border-bottom:1px solid #dedede; border-left:1px solid #dedede;}
+
+.inquiry_table1 .center{text-align:center; padding-left:0; border-left:1px solid #e1e1e1;}
+
+.inquiry_table1 .right { text-align:right; padding:0 15px 3px 0; border-left:1px solid #e1e1e1;}
+
+.inquiry_table1 .tlt_1 { background-color:#f7f7f7; border-bottom:1px solid #e1e1e1; border-top:1px solid #e1e1e1; color:#414141; padding-top:2px}
+
+.inquiry_table1 .tlt_2 { background-color:#f7f7f7; text-align:right; padding-right: 15px; height:30px;font-weight:bold;border-top:1px solid #e1e1e1;padding-top:3px}
+
+.money_o {color:#fa6d01; font-size:18px; line-height:30px;}
+
+.money_r {color:#e50925; font-size:18px; line-height:30px;}
+
+.inquiry_table1 ul {padding-top:10px;}
+
+.inquiry_table1 li { background-image: url(/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding:0 15px 5px 8px; line-height:18px;text-align:left; color:#888; }
+
+.inquiry_table1 .red {color:#ea002b; text-align:right; padding-right:15px;}
+
+.inquiry_table1 .organ {color:#f36d43; padding-top:3px;}
+
+.inquiry_table1  .padding_3 {padding-top:4px;}
+
+.inquiry_table1  .padding_3_bottom {padding-bottom:1px;}
+
+.inquiry_table1  .padding_padding {padding-top:4px ;padding-bottom:1px;}
+
+.inquiry_table1 .dot li { background-image: url(/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding:0 15px 3px 8px; line-height:16px;text-align:left; color:#888; }
+
+.inquiry_table1 .dot ul {padding:4px 0 0 0;}
+
+.inquiry_table3 {padding:0 8px 20px 8px ;}
+
+.inquiry_table3 table {width:100%; border-bottom:3px solid #f58026; border-left:3px solid #f58026; border-right:3px solid #f58026; border-top:3px solid #f58026; border-collapse:collapse;}
+
+.inquiry_table3 th { background-image:url(/images/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 0; background-repeat:repeat-x; line-height:32px; border-bottom:1px solid #c6c6c6; width:50%; padding-top:3px;}
+
+.inquiry_table3 th .left{ border-left:0;}
+
+.inquiry_table3 td {padding:5px 10px;}
+
+.inquiry_table3 .tt1 { text-align:center;}
+
+.inquiry_table3 .tt1 table {border:0; width:100%; text-align:left; }
+
+.inquiry_table3 .tt1 td { padding:0; margin:0;}
+
+.inquiry_table3 .tt1 .t_table table {border:0; width:100%; }
+
+.inquiry_table3 a {color:#666;}
+
+
+
+.sinyong_card_p3 {background-image:url(/img/common/li_icon01.gif); background-position:10px 2px; background-repeat:no-repeat; padding-left:25px; color:#888; line-height:18px;}
+
+
+
+.join_infor_p{background-image: url(/img/common/icon.jpg);background-position:2px 8px; background-repeat: no-repeat; padding:5px 0 5px 10px; text-align:left;}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+Notice: I feel so dirty doing this, but its the only way to make it cross browser.
+-->
+<html>
+<head>
+<script type="text/javascript">
+document.domain = "tworld.co.kr";
+	var GB = parent.GB_CURRENT;
+	document.writeln("<script type=\"text/javascript\" src=\"AJS.js\"><\/script>");
+	if(GB.use_fx) {
+		document.writeln("<script type=\"text/javascript\" src=\"AJS_fx.js\"><\/script>");
+	}
+</script>
+<script type="text/javascript">
+function setupOuterGB() {
+    frame.style.visibility = 'visible';
+    GB.setFrameSize();
+    GB.setWindowPosition();
+}
+
+function loaded() {
+    AJS.removeElement(loading);
+
+    GB.overlay.innerHTML += "&nbsp;"; //Safari bugfix
+    
+    if(gb_type == "image") {
+        if(img_holder.width != 0 && img_holder.height != 0) {
+            var width = img_holder.width;
+            var height = img_holder.height;
+
+            GB.width = width;
+            GB.height = height;
+
+            setupOuterGB();
+
+            if(GB.use_fx) {
+                AJS.setOpacity(frame, 0);
+                AJS.fx.fadeIn(frame);
+            }
+        }
+    }
+    else {
+        GB.width = frame.offsetWidth;
+        GB.height = frame.offsetHeight;
+        setupOuterGB();
+    }
+}
+
+</script>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+	  background-color: transparent;
+    }
+
+    #GB_frame {
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    #loading {
+      position: absolute;
+      top: 0;
+      width: 100%;
+	  height: 100px;
+	  background-color: white;
+      padding-top: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div id="loading">
+	<img src="indicator.gif">
+</div>
+<script type="text/javascript">
+var loading = AJS.$('loading');
+var gb_type = GB.type;
+var gb_url = GB.url;
+
+//Start loading in the iframe
+if(gb_type == "page") {
+  document.write("<iframe id=\"GB_frame\" src=\"" + gb_url + "\" frameborder=\"0\" allowTransparency=\"true\"></iframe>");
+}
+else {
+  var img_holder = new Image();
+  img_holder.src = gb_url;
+  document.write('<img id="GB_frame" src="' + gb_url + '">');
+}
+var frame = AJS.$('GB_frame');
+
+
+loaded();
+/*
+	이벤트 추가와 관련된 문제(추정)로 방식변경
+if(GB.show_loading) {
+    AJS.AEV(window, 'load', function(e) {
+        loaded();
+    });
+}
+else {
+    loaded();
+} */
+</script>
+</body>
+</html>

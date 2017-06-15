@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no">
+<title>T 로밍 | T world</title>
+<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/new_troaming.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.swipe.css">
+<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.submain.css">
+<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/inc/js/new_common.js"></script>
+<script type="text/javascript" src="/inc/js/new_tworld.js"></script>
+<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+	// 2016-10-31 GA추가_01 [s]
+	setCategory = "MTA_roaming";
+	
+// os 구분 
+var MobileUA = ( function () {
+	var ua = navigator.userAgent.toLowerCase();
+	var mua = {
+		IOS: /ipod|iphone|ipad/.test(ua),										//iOS
+		IPHONE: /iphone/.test(ua),												//iPhone
+		IPAD: /ipad/.test(ua),													//iPad
+		ANDROID: /android/.test(ua),											//Android Device
+		WINDOWS: /windows/.test(ua),										//Windows Device
+		TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua),	//Touch Device
+		MOBILE: /mobile/.test(ua),												//Mobile Device (iPad )
+		ANDROID_TABLET: false,												//Android Tablet
+		WINDOWS_TABLET: false,												//Windows Tablet
+		TABLET: false,															//Tablet (iPad, Android, Windows)
+		SMART_PHONE: false													//Smart Phone (iPhone, Android)
+	};
+	mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+	mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+	mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+	mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+
+	return mua;
+}());
+function golink1(link, billyn, inout){
+	if( "Y" == billyn ){
+		if(confirm("3G/LTE망 사용 시 데이터 요금이 발생됩니다.")){
+			if (MobileUA.IOS){   // OS 체크
+				if(inout == "OUT") { location.href = "toapp:webbrowserouter:" + link; }
+				else { alert('로그인 후 이용 가능합니다.'); }
+			}else{
+				if(inout == "OUT") { toapp.webbrowserouter(link); }
+				else { alert('로그인 후 이용 가능합니다.'); }
+			}
+		}
+	}else{
+		if (MobileUA.IOS) {   // OS 체크
+			if(inout == "OUT") { location.href = "toapp:webbrowserouter:" + link; }
+			else { alert('로그인 후 이용 가능합니다.'); }
+		}else{
+			if(inout == "OUT") { toapp.webbrowserouter(link); }
+			else { alert('로그인 후 이용 가능합니다.'); }
+		}
+	}
+ }	
+</script>
+
+	<script>
+    function goSubmit() {
+    	var dlkr_label = $('div#content div.sectionBox form div.boxSection div.cont.openCont ol li div.inpWrap input#roam_countryname').val();
+    	ga('send', 'event', 'MTA_roaming', '국가별 로밍 요금조회', dlkr_label + '_검색하기');
+    	
+        var f = document.form;
+        if(checkValue()) {
+        
+            f.serviceId.value = "S_ROAM0001";
+	        f.viewId.value = "V_ROAM0036";
+            f.action = "/normal.do?serviceId=S_ROAM0001&viewId=V_ROAM0036&domainVer=m2";
+            f.submit();
+        }
+    }
+    
+    function checkValue() {
+        var f = document.form;
+        if(f.roam_cp2.value=='' || f.roam_cp3.value=='') {
+            alert("번호를 입력해 주세요!");
+            return false;
+        } else if (! isNumber(f.roam_cp2.value) || ! isNumber(f.roam_cp3.value)) {
+            alert("번호는 숫자만 가능합니다!");
+            return false;
+        } else if($('#roam_countrycd').val()=='') {
+            alert('로밍국가를 선택해주세요.');
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    function isNumber( val ) {
+	    re = /^\d+$/;
+	
+	    if ( re.test( val ) ) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+
+    function goOpeningDay(prod_id) {
+    //goOpeningDay
+    //alert('prod_id=' + prod_id)
+        var f  = document.form;
+        var prod_id_val  = prod_id;
+        f.serviceId.value = "S_BILL1134";
+        f.viewId.value = "V_CENT0124";
+        var action_val  = "http://m2.tworld.co.kr/normal.do?serviceId=S_BILL1134&viewId=V_CENT0124&prod_id="+prod_id+"&domainVer=m2&fromVal=MyRoam";
+        f.action = action_val;
+        f.submit();
+    }
+
+    
+    function goSearch() {
+    //http://m2.tworld.co.kr/normal.do?serviceId=S_BILL1134&viewId=V_CENT0124&prod_id=NA00004088&svc_mgmt_num=7002947435&domainVer=m2
+        var f  = document.form;
+        f.serviceId.value = "SDUMMY0002";
+        f.viewId.value = "V_ROAM0035";
+        f.action = "/normal.do?serviceId=SDUMMY0002&viewId=V_ROAM0035&domainVer=m2";
+        f.submit();
+    }
+    
+    //SUB List 이동
+    function fnGoSubList(prod_cd, sup_ctg_cd, ctg_cd, prod_id)
+    {   
+        if (prod_id != ""){
+            if(prod_id == 'NA00002356')     //T끼리 전교생 할인
+                location.href = "/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0424";
+            else if(prod_id == 'NA00002040')        //T끼리온가족
+                location.href = "/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0093";
+            else
+                goProductDetailUI(prod_id);
+        } else {
+            var vParam = '&paramCtg1='+prod_cd+'&paramCtg2='+sup_ctg_cd+'&paramCtg3='+ctg_cd;
+            location.href = "/normal.do?serviceId=S_PROD9002&viewId=V_PROD1002"+vParam;
+        }
+    }
+    
+    // 상품 원장 이동 2008.08.29
+    function goProductDetailUI(prodId) {
+        if('NA00003051,NA00003055,NA00003057,NA00003058,NA00003059,NA00003060,NA00003062,NA00003064,NA00003066,NA00003068'.indexOf(prodId) > -1)  prodId = 'TW00000065';
+        if('NA00003071,NA00003072,NA00003073,NA00003074,NA00003075,NA00003076,NA00003077,NA00003078,NA00003079,NA00003080'.indexOf(prodId) > -1)  prodId = 'TW00000066';
+        if('NA00003082,NA00003084,NA00003086,NA00003087,NA00003089,NA00003090,NA00003091,NA00003092,NA00003093,NA00003094'.indexOf(prodId) > -1)  prodId = 'TW00000067';  
+        
+        var vUrl = 'http://m2.tworld.co.kr';
+        var servlet = '/normal.do?serviceId=S_PROD2001&viewId=V_PROD2001&svc_mgmt_num='+$('#svc_mgmt_num').val();
+        var vMenu = '&cate=1&domainVer=m2&PMAIN=5';
+        var vParam = '&prod_id='+prodId;
+
+        location.href = vUrl + servlet + vParam + vMenu;
+    }
+	</script>	
+	
+</head>
+
+<body class="bg_white">
+<div class="my_menu">
+    <div id="header">
+        <div class="header_cont">
+			<div class="h1_wrap"><h1><span id="title"></span></h1></div>
+				<button onClick="javascript:goAppBack();" class="head_back_page" id="backBtn">뒤로가기</button> 
+			<p class="search_allmenu">
+                <button class="head_search" onClick="javascript:fnSearch();">검색</button>
+                <button class="head_allmenu" onClick="javascript:fnMenuAll();">전체메뉴보기</button> 
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<section>
+	<div id="content" class="info_main troaming">
+   		<!-- mini myT -->
+		<div class="mini_myT">
+         	<dl class="my_line_number line_number_border">
+                <dt>나의 회선번호</dt>
+                <dd class="" ></dd>
+            </dl>
+		</div>
+		<span class="ico_comm arrow"></span>
+
+		
+		<div class="sectionBox">
+			<div class="boxSection">
+				<div class="head">
+					<h2 class="tit">로밍 이용현황</h2>
+					<!-- 2016-10-31 GA추가_02 [s] -->
+					<a id="moreBtn" href="/normal.do?serviceId=S_ROAM0003&viewId=V_ROAM0000&PMAIN=5&domainVer=m2" ga:ca="MTA_roaming" ga:ac="로밍 이용현황" ga:la="더보기" class="icoBtn icoBtnE" style="display: none;">더보기</a>
+				</div>
+				<div id="single1" class="cont"></div>
+				<script id="single_normal1" type="text/x-handlebars-template">
+					{{#if proj1IndTF}}
+						{{#ifCond useFeeListCnt '>' 0}}
+						<p class="inuseTxt">이용 중인 로밍 서비스가 <strong>{{useFeeListCnt}}건</strong> 있습니다.</p>
+						<ul class="bulList bulTypeI">
+							{{#useFeeList}}
+							<li><a href="javascript:goProductDetailUI('{{prodId}}')" ga:ca="MTA_roaming" ga:ac="로밍 이용현황">{{{prodNm}}}</a></li>
+							{{/useFeeList}}
+						</ul>
+						{{/ifCond}}
+						{{#ifCond useFeeListCnt '<=' 0}}
+							<p class="inuseTxt">이용중인 로밍 상품이 없습니다.</p>
+						{{/ifCond}}
+					{{else}}
+						<p class="inuseTxt">{{strRuserUkErMsg}}</p>
+					{{/if}}
+				</script>
+				
+			</div>
+			
+			
+<form name="form" method="post">
+<input type="hidden" id="svc_mgmt_num"name="svc_mgmt_num" value="">
+<input type="hidden" id="roam_countrycd" name="roam_countrycd" value="">
+<input type="hidden" name="serviceId" value="" >
+<input type="hidden" name="viewId" value="">           
+<input type="hidden" name="domainVer" value="m2">
+<input type="hidden" name="PMAIN" value="5">
+			<div class="boxSection" id="toggleCont">
+				<div class="head">
+					<h2 class="tit">국가별 로밍 요금조회</h2>
+					<!-- 2017-01-06 수정_01 [s] -->
+					<a href="#none" class="icoBtn btnToggle" id="btn_show" ga:ca="MTA_roaming" ga:ac="로밍 이용현황" ga:la="조회하기">조회하기<span>열기</span></a>
+					<a href="#none" class="icoBtn btnToggle active" id="btn_close" ga:ca="MTA_roaming" ga:ac="로밍 이용현황" ga:la="조회하기">조회하기<span>닫기</span></a>
+					<!-- 2017-01-06 수정_01 [e] -->
+				</div>
+				<div class="cont showCont" id="showCont">
+					<p class="txtInfo">로밍 대상 이동전화번호와 국가 검색을 통해<br><strong class="bold">방문 국가 로밍 요금 확인하기</strong></p>
+				</div>
+				<div class="cont openCont" id="openCont">
+					<ol class="roamingStep">
+						<li class="step01">
+							<span class="stepTit"><strong>Step1.</strong> 로밍 대상 이동전화번호</span>
+							<span class="inpboxArea">
+								<span class="selWrap">
+									<select class="selbox" name="roam_cp1" title="전화번호 통신사 선택">
+										<option>010</option>
+										<option>011</option>
+										<option>016</option>
+										<option>017</option>
+										<option>018</option>
+										<option>019</option>
+									</select>
+								</span>
+								<span class="demi">-</span>
+								<span class="inpWrap"><input id="roam_cp2" name="roam_cp2" type="tel" maxlength="4" title="전화번호 중간자리 입력"></span>
+								<span class="demi">-</span>
+								<span class="inpWrap"><input id="roam_cp3" name="roam_cp3" type="tel" maxlength="4" title="전화번호 마지막자리 입력"></span>
+							</span>
+						</li>
+						<li class="step02">
+							<span class="stepTit"><strong>Step2.</strong> 로밍 국가 검색</span>
+							<div class="inpWrap" onclick="javascript:goSearch();">
+								<input type="text" placeholder="검색어를 입력해주세요" id="roam_countryname" name="roam_countryname" readonly>
+							</div>
+							<p class="paraType1">※ 로밍 국가 검색 페이지로 이동합니다.</p>
+						</li>
+					</ol>
+					<div class="btnbox">
+						<a href="javascript:goSubmit();" class="btnRst">검색하기</a>
+					</div>
+				</div>
+			</div>
+</form>
+			<div class="couponSection">
+				<div class="couponInfo">
+					<strong class="tit">T 로밍 쿠폰</strong>
+					<span class="txt">로밍 이용 요금을 차감하는<br>쿠폰형 로밍 서비스</span>
+					<!-- 2016-10-31 GA추가_05 [s] -->
+					<a href="/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0110&prodGbn=troamingcoupon&tabGbn=1&domainVer=m2&PMAIN=5" ga:ca="MTA_roaming" ga:ac="T로밍 쿠폰" ga:la="구매/선물하기" class="icoBtn icoBtnG">구매/선물하기</a>
+				</div>
+			</div>
+			<ul class="uiGrid col2">
+				<!-- 2016-10-31 GA추가_06 [s] -->
+				<li class="w100"><a href="/normal.do?serviceId=S_PROD1002&viewId=V_ROAM0002&domainVer=m2&paramCtg1=1&paramCtg2=F0100&paramCtg3=F0101&paramCtg4=3,3,5&PMAIN=5" ga:ca="MTA_roaming" ga:ac="로밍메뉴">로밍 요금제/부가서비스</a></li>
+				<!-- 2016-10-31 GA추가_07 [s] -->
+				<li><a href="/dev/troaming_menu03_20150703.html?domainVer=m2&PMAIN=5" ga:ca="MTA_roaming" ga:ac="로밍메뉴">공항로밍센터</a></li>
+				<!-- 2016-10-31 GA추가_08 [s] -->
+				<li><a href="/normal.do?serviceId=SDUMMY0002&viewId=V_ROAM0001&domainVer=m2&PMAIN=5" ga:ca="MTA_roaming" ga:ac="로밍메뉴">로밍안내</a></li>
+			</ul>
+		</div>
+	
+		
+		<div class="roamingCustomerInfo">
+			<div class="head">
+				<h2 class="tit">로밍전문 고객센터 안내</h2>
+			</div>
+			<div class="cont">
+				<ul class="grid col2">
+					<li>
+						<div class="home">
+							<span class="cell">
+								<strong class="country">국내</strong>
+								<span class="number">02-6343-9000</span>
+							</span>
+						</div>
+						<!-- 2016-10-31 GA추가_09 [s] -->
+						<a href="javascript:alert('불러오는 중입니다.');" class="btnCall" id="tel1"><span class="ico" ga:ca="MTA_roaming" ga:ac="고객센터안내" ga:la="국내전화연결"><span ga:ca="MTA_roaming" ga:ac="고객센터안내" ga:la="국내전화연결">전화연결</span> (무료)</span></a>
+					</li>
+					<li>
+						<div class="abroad">
+							<span class="cell">
+								<strong class="country">해외 <span class="brkt">(통화불량 및 분실상담)</span></strong>
+								<span class="number">+82-02-6343-9000</span>
+							</span>
+						</div>
+						<!-- 2016-10-31 GA추가_10 [s] -->
+						<a href="javascript:alert('불러오는 중입니다.');" class="btnCall" id="tel2"><span class="ico" ga:ca="MTA_roaming" ga:ac="고객센터안내" ga:la="해외전화연결"><span ga:ca="MTA_roaming" ga:ac="고객센터안내" ga:la="해외전화연결">전화연결</span> (무료)</span></a>
+					</li>
+				</ul>
+				<p class="paraType1">※ SKT 로밍 폰 이용 시 해외에서 무료 통화 가능합니다.</p>
+				<p class="paraType1">※ 로밍오토다이얼 서비스 이용 시, 국내처럼 02-6343-9000로 통화 가능합니다.</p>
+			</div>
+		</div>
+		
+		
+		<div class="bottom_banner">배너</div>
+	</div>
+</section>
+<!-- //CONTENT -->
+<script type="text/javascript">
+$(document).ready(function() {
+
+	var getParamData = getParam();
+	
+    var roam_countrycd = '';
+    
+	if("undefined" !== typeof(getParamData.roam_countrycd)){
+		roam_countrycd=getParamData.roam_countrycd;
+	}
+	
+});
+</script>
+</body>
+</html>
+
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/util/handlebars_string.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript">
+	/* 2017-01-06 수정_01 [s] */
+	funcToggle = function(){
+		/* 2017-02-02 추가_01 [s] */
+		var $target = $("#toggleCont"),
+			$button = $(".btnToggle"),
+			$show = $("#showCont"),
+			$open = $("#openCont");
+		
+		var pData = getParam();
+		
+		if("undefined" === typeof(pData.roam_countrycd)){
+			$target.find(".cont").hide().eq(0).show();
+			$("#btn_show").css('display', 'block');
+			$("#btn_close").hide();
+		}else {
+			$target.find(".cont").hide().eq(1).show();
+			$("#btn_close").css('display', 'block');
+			$("#btn_show").hide();				
+		}
+		
+		/* 2017-02-02 추가_01 [e] */
+		$("#btn_show").click(function(){
+			$("#showCont").slideUp(150, function(){
+				$("#openCont").slideDown(150);	
+			});
+			$("#btn_close").css('display', 'block');
+			$("#btn_show").hide();
+		});
+		$("#btn_close").click(function(){
+			$("#openCont").slideUp(150, function(){
+				$("#showCont").slideDown(150);					
+			});
+			$("#btn_show").css('display', 'block');
+			$("#btn_close").hide();
+		});
+	};
+	/* 2017-01-06 수정_01 [e] */
+	$(document).ready(funcToggle);
+</script>
+<script type="text/javascript">
+	jQuery( function(){
+		Menu.init("", "T%20로밍", "", "", "", "", "N", "");
+		Banner.init("06");
+		var paramData = getParam();
+		if("undefined" != typeof(paramData.roam_countrycd)){
+			$('#roam_countrycd').val(paramData.roam_countrycd);
+			$('#roam_cp2').val(paramData.roam_cp2);
+			$('#roam_cp3').val(paramData.roam_cp3);
+			$('#roam_countryname').val(decodeURI(paramData.roam_countryname_enc.replace(/%25/g,'%')));
+		    setTimeout(function(){
+    			$("#toggleCont").find(".btnRst").focus(); 
+   			}, 2000); 
+		} else {
+		   $('#title').focus();
+		}
+	});
+	
+	//get 방식 파라메터 가져오기
+	var getParam = function(){
+		var parameterMap = {};
+		var parameters = window.location.search.substr(1);
+		var splitParameters = parameters.split("&");
+		for(var i=0; i<splitParameters.length; i++){
+			var parameter = splitParameters[i];
+			var splitParameter = parameter.split("=");
+			parameterMap[splitParameter[0]] = splitParameter[1];
+		}
+		return parameterMap;		
+	}
+	
+	//핸들바 바인딩 완료 후에 실행
+	var onAfterBinding = {
+		init : function(data){
+
+			MiniMyT.init("R1", location.pathname);
+		
+			if("undefined" !== typeof(data.svcMgmtNum)) $('#svc_mgmt_num').val(data.svcMgmtNum);
+			
+			if("undefined" !== typeof(data.RESULT.OS_TYPE)){
+				$('#tel1').prop("href","javascript:telConfirm('02-6343-9000', '"+data.RESULT.OS_TYPE+"');");
+				$('#tel2').prop("href","javascript:telConfirm('82-02-6343-9000', '"+data.RESULT.OS_TYPE+"');");
+			}
+			
+			if("undefined" !== typeof(data.proj1IndTF) && data.proj1IndTF && Number(data.useFeeListCnt) > 0) $('#moreBtn').css("display","");
+		}
+	}	
+</script>

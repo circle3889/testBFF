@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* Layout */
+#content.mainSection{padding-top:0}
+
+.mainSection .box_myservice{overflow:hidden;background:#f5f5f5}
+.mainSection .box_myservice .txt_service{overflow:hidden;margin:0 10px;font-size:12px;line-height:20px;color:#646464;text-indent:5px}
+.mainSection .box_myservice .txt_service strong{font-weibht:bold;color:#1e1e1e}
+.mainSection .box_myservice .cellphone{overflow:hidden;position:relative;height:31px;margin:10px}
+.mainSection .box_myservice .cellphone .lbl_phone{display:block;position:absolute;top:0;left:0;height:100%;font-size:14px;line-height:31px;color:#484848}
+.mainSection .box_myservice .cellphone .wrap_selbox{width:154px;background:#fff}
+.mainSection .box_myservice .wrap_selbox{overflow:hidden;float:right;position:relative;height:100%}
+.mainSection .box_myservice .wrap_selbox .selbox_comm{display:block;width:100%;height:31px;box-sizing:border-box;padding-left:8px;border:1px solid #bbb;border-radius:3px;font-size:14px;line-height:29px;color:#1d1f1e}
+.mainSection .box_myservice .wrap_selbox .ico_comm{position:absolute;top:12px;right:8px;width:12px;height:7px;background:#fff url(/img/new_myt/search_arrow.png) no-repeat;background-size:12px 7px}
+.mainSection .box_myservice .btn_ok{display:none;position:absolute;top:0;right:0;width:36px;height:31px;padding-right:1px;font-size:14px;line-height:33px;color:#fff;text-align:center;background-color:#919499;box-sizing:border-box;border-radius:2px}
+.mainSection .box_myservice .servicelist{overflow:hidden;position:relative;height:31px;margin:10px 10px 0;padding-right:39px}
+.mainSection .box_myservice .servicelist .wrap_selbox{width:100%}
+.mainSection .box_myservice .single_type{padding-right:0}
+.mainSection .box_myservice .single_type .btn_ok{display:none}
+
+.boxSection{margin-top:15px;border:1px solid #cecece;border-top:2px solid #333}
+.boxSection .head{overflow:hidden;padding:0 10px 0 15px}
+.boxSection .head .tit{float:left;font-weight:bold;font-size:17px;color:#111;line-height:40px;letter-spacing:-0.05em}/*2016-09-05 font-size 16 -> 17 수정 */
+.boxSection .head .icoBtn{float:right;margin-top:12px}
+.boxSection .head .btnToggle{padding-right:15px;font-size:13px;}/*2016-09-05 font-size 12 -> 13 수정 */
+.boxSection .head .btnToggle:after{width:10px;height:6px;margin-top:-3px;background-position:-50px -25px}
+.boxSection .head .btnToggle.active:after{background-position:-60px -25px}
+.boxSection .cont{border-top:1px solid #cecece;padding:12px 10px 20px 15px}
+
+.bnnrSection{}
+.bnnrSection img{width:100%;vertical-align:top}
+
+.uiGrid li a{height:40px;font-weight:bold;font-size:16px;color:#111;line-height:39px}/*2016-09-05 font-size 15 -> 16 수정 */
+
+.tabWrap{border-top:1px solid #e2e4e6}
+.tabList{overflow:hidden;width:100%;border-bottom:1px solid #ea002c}
+.tabList > li{float:left;width:50%}
+.tabList > li a{display:block;position:relative;width:100%;height:46px;font-size:14px;color:#666;text-align:center;line-height:45px}
+.tabList > li a:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px}
+.tabList > li.active a{font-weight:bold;color:#111}
+.tabList > li.active a:after{background:#ea002c}
+.tabConWrap .tabCon{display:none}
+.tabConWrap .tabCon.active{display:block}
+
+/* Submain T-roaming */
+.troaming input,.troaming select,.troaming textarea{font-size:13px;color:#333}
+.troaming .boxSection .cont .inuseTxt{font-size:15px;color:#666;letter-spacing:-0.05em}/*2016-09-05 font-size 13 -> 15 수정 */
+.troaming .boxSection .cont .inuseTxt strong{font-weight:bold}
+.troaming .boxSection .cont .bulList{margin-top:10px}
+.troaming .boxSection .cont .bulList li a{text-decoration:underline;font-size:14px;}/*2016-09-05 font-size 12 -> 14 수정 */
+.troaming .uiGrid li:nth-child(2):before{left:100%}
+.troaming .uiGrid li:nth-child(2):after{display:block}
+
+.troaming .couponSection{padding:26px 0 25px;background:url(/img/new_troaming/bg_coupon.png) 100% 15px no-repeat;background-size:197px 110px}
+.troaming .couponSection .couponInfo{padding:0 135px 0 15px}
+.troaming .couponSection .couponInfo .tit{font-weight:bold;font-size:17px;color:#111;letter-spacing:-0.05em}/*2016-09-05 font-size 16 -> 17 수정 */
+.troaming .couponSection .couponInfo .txt{displaY:block;margin-top:5px;font-size:14px;color:#666;line-height:15px}/*2016-09-05 font-size 12 -> 14 수정 */
+.troaming .couponSection .couponInfo .icoBtnG{display:inline-block;margin-top:8px;font-size:15px;}/*2016-09-05 font-size 13 -> 15 수정 */
+
+.roamingCustomerInfo{margin-top:23px;padding-top:6px;background:#f5f5f5 url(/img/common/bg_section_split.png) repeat-x;background-size:2px 6px}
+.roamingCustomerInfo .head{margin-top:15px;padding:0 10px}
+.roamingCustomerInfo .head .tit{font-weight:bold;font-size:17px;color:#111;text-align:center;letter-spacing:-0.05em}/*2016-09-05 font-size 14 -> 17 수정 */
+.roamingCustomerInfo .cont{margin-top:10px;padding:0 10px 25px;/* background:url(/img/common/bg_section_split.png) repeat-x 0 bottom;background-size:2px 6px */}/*2016-09-08 디자이너 수정요청 */ 
+.roamingCustomerInfo .cont .grid li div{display:table;width:100%;height:78px;border:1px solid #d8d9dd;border-bottom:none;background:#fff}
+.roamingCustomerInfo .cont .grid li div .cell{display:table-cell;padding:0 10px;vertical-align:middle}
+.roamingCustomerInfo .cont .grid li div .cell .country{display:block;font-weight:bold;font-size:15px;color:#111}/*2016-09-05 font-size 13 -> 15 수정 */
+.roamingCustomerInfo .cont .grid li div .cell .country .brkt{display:block;font-weight:normal;font-size:12px;line-height:11px}/*2016-09-05 font-size 10 -> 12 수정 */
+.roamingCustomerInfo .cont .grid li div .cell .number{display:block;margin-top:6px;font-weight:bold;font-size:14px;color:#e3002d}/*2016-09-05 font-size 15 -> 14 수정 */
+.roamingCustomerInfo .cont .grid li .btnCall{display:block;height:29px;font-size:13px;color:#fff;text-align:center;line-height:28px;background:#434159;letter-spacing:-0.05em}/*2016-09-05 font-size 11 -> 13 수정 */
+.roamingCustomerInfo .cont .grid li .btnCall .ico{position:relative;padding-right:10px}
+.roamingCustomerInfo .cont .grid li .btnCall .ico:after{content:'';position:absolute;top:50%;right:0;width:7px;height:10px;margin-top:-5px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:0 -44px;background-size:250px 250px}
+.roamingCustomerInfo .cont .grid li .btnCall .ico span{font-weight:bold;}
+.roamingCustomerInfo .cont .paraType1{font-size:14px;}/*2016-09-05 font-size 12 -> 14 수정 */
+
+.roamingStep li{margin-top:20px}
+.roamingStep li:first-child{margin-top:0}
+.roamingStep li .stepTit{display:block;font-size:15px;color:#666}/*2016-09-05 font-size 13 -> 15 수정 */
+.roamingStep li .stepTit strong{display:inline-block;margin-right:10px;font-weight:bold;color:#111}
+.roamingStep li > .inpboxArea,.roamingStep li > .inpWrap{display:block;margin-top:5px}
+.roamingStep li .selWrap:after{right:5px;width:12px;height:7px;margin-top:-4px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-72px -25px;background-size:250px 250px}
+.roamingStep li .selbox, .roamingStep li .inpWrap{height:35px;-webkit-border-radius:0;border-radius:0}
+.roamingStep li .selbox{height:35px;line-height:34px}
+.roamingStep li .inpWrap input{height:33px;line-height:32px}
+.roamingStep li.step02 .inpWrap{position:relative;padding-right:35px}
+.roamingStep li.step02 .inpWrap:after{content:'';position:absolute;top:0;right:0;width:33px;height:33px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-1px -151px;background-size:250px 250px}
+
+#toggleCont .showCont{padding:14px 0 20px;background:#f7f7f7}
+#toggleCont .openCont{padding:24px 10px 20px;display:none;}
+#toggleCont .openCont .btnRst{padding:0 45px;height:35px;font-weight:normal;font-size:16px;color:#111;line-height:34px;background:#ebebec;letter-spacing:-0.07em}/*2016-09-05 font-size 14 -> 16 수정 */
+#toggleCont .cont .txtInfo{font-size:15px;color:#111;text-align:center}/*2016-09-05 font-size 13 -> 15 수정 */
+#toggleCont #btn_close{display:none;}
+#toggleCont.boxSection .head .btnToggle span{color: transparent;font-size: 1px;}
+
+
+.troaming .swiper-container.sub_main{margin-top:0px;}

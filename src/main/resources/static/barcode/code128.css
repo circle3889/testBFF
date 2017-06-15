@@ -1,0 +1,42 @@
+.barcodeTest {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FLOAT: left; HEIGHT: 0.8in; CLEAR: both; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.right {
+	FLOAT: right
+}
+.barcodeTest + * {
+	CLEAR: both
+}
+.barcodeTest DIV {
+	FLOAT: left; HEIGHT: 0.6in
+}
+.barcodeTest .bar1 {
+	BORDER-LEFT: black 1px solid
+}
+.barcodeTest .bar2 {
+	BORDER-LEFT: black 2px solid
+}
+.barcodeTest .bar3 {
+	BORDER-LEFT: black 3px solid
+}
+.barcodeTest .bar4 {
+	BORDER-LEFT: black 4px solid
+}
+.barcodeTest .space0 {
+	MARGIN-RIGHT: 0px
+}
+.barcodeTest .space1 {
+	MARGIN-RIGHT: 1px
+}
+.barcodeTest .space2 {
+	MARGIN-RIGHT: 2px
+}
+.barcodeTest .space3 {
+	MARGIN-RIGHT: 3px
+}
+.barcodeTest .space4 {
+	MARGIN-RIGHT: 4px
+}
+.barcodeTest LABEL {
+	TEXT-ALIGN: center; DISPLAY: block; FONT: 0.15in/100% helvetica; CLEAR: both; color:black;
+}

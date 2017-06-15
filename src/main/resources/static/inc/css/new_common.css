@@ -1,0 +1,482 @@
+@charset "utf-8";
+/* Common Style */
+.clearfix:before,.clearfix:after{content:'';display:table;clear:both}
+
+/* Layout */
+#content.uiFlex{overflow:hidden;width:100%;height:100%;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+    -webkit-justify-content:center;
+    justify-content:center
+}
+
+/* Layer Popup */
+.layerPopup{display:none;display:table;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:9999}
+.layerPopup .layerWrap{display:table-cell;padding:20px;text-align:center;vertical-align:middle}
+.layerPopup .layerBox{position:relative;border:1px solid #b1b4b8;background:#fff;-webkit-border-radius:3px;border-radius:3px}
+.layerPopup .layerCont img{width:100%;vertical-align:top}
+.layerPopup .layerClose{position:absolute;top:-6px;right:-6px;width:30px;height:30px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:0 -107px;background-size:250px 250px}
+
+/* 멤버십카드 신청 */
+.membershipCard .irwa{display:block;position:absolute;height:100%;opacity:0;z-index:-1}
+.membershipCard .para1{top:16%;left:33%;wid;width:55%;height:18%;font-size:20px;text-align:left}
+.membershipCard .tit1{top:44%;left:25%;width:50%;height:8%;font-size:24px}
+.membershipCard .list{overflow:hidden;top:54.5%;left:4.28%;width:91.38%;height:25.88%}
+.membershipCard .list li{display:block;float:left;width:50%;height:12.6%;padding:4.7% 0 9%;font-size:22px}
+.membershipCard .url1{display:block;position:absolute;top:84.5%;left:21%;width:58%;height:9.5%;font-size:30px;color:transparent;text-align:center}
+
+/* 설문조사 - 레이어팝업 */
+.lyPopup{display:none;display:table;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:9999}
+.lyPopup .inner{display:block;padding:10% 10px 10px;height:100%;vertical-align:middle;overflow-y:scroll;z-index:10000}
+.lyPopup .head{position:relative;padding:13px 15px;border:1px solid #b1b4b8;border-bottom:1px solid #dadada;background:#fff;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0}
+.lyPopup .head .htit{font-size:15px;color:#555}
+.lyPopup .cont{position:relative;border:1px solid #b1b4b8;border-top:none;background:#fff;-webkit-border-radius:0 0 3px 3px;border-radius:0 0 3px 3px}
+.lyPopup .surveyRstBox{padding:0 15px 15px}
+.lyPopup img{width:100%;vertical-align:top}
+.lyPopup .btnClose{overflow:hidden;display:block;position:absolute;top:15px;right:15px;width:15px;height:15px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -33px}
+
+/* 설문조사 - 얼럿팝업 */
+.alertPopup{display:none;position:fixed;top:0;left:0;display:table;width:100%;height:100%;padding:0 35px;text-align:center;background:rgba(0,0,0,.6);-webkit-box-sizing:border-box;box-sizing:border-box;z-index:2000}
+.alertPopup .inner{display:table-cell;text-align:center;vertical-align:middle}
+.alertPopup .cont{position:relative;padding:20px;border:1px solid #b1b4b8;background:#fff;-webkit-border-radius:3px;border-radius:3px}
+.alertPopup .cont .para{font-weight:bold;font-size:20px;color:#1e1f1f;letter-spacing:-0.05em}
+.alertPopup .cont .thumb{display:block;margin-top:14px}
+.alertPopup .cont img{width:100%;vertical-align:top}
+.alertPopup .btnClose{position:absolute;top:-6px;right:-6px;width:30px;height:30px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:0 -107px;background-size:250px 250px}
+
+.surveyPopup02 .graphWrap li:nth-child(1) .bar{background:#f26a27}
+.surveyPopup02 .graphWrap li:nth-child(2) .bar{background:#b76fb5}
+.surveyPopup02 .graphWrap li:nth-child(3) .bar{background:#eb6b69}
+.surveyPopup02 .graphWrap li:nth-child(4) .bar{background:#5e9bbe}
+.surveyPopup03 .noti{margin-top:20px;font-size:13px;color:#1e1f1f;text-align:center;line-height:18px;letter-spacing:-0.05em}
+.surveyPopup03 .noti strong{font-weight:bold}
+.surveyPopup03 .noti strong span{color:#f65401}
+
+/* 설문조사 */
+.surveyWrap{padding-top:0 !important}
+.surveyWrap .row{margin-left:auto;margin-right:auto;padding:0 10px}
+.surveyWrap .row .para{display:block;padding-top:138px;font-size:14px;color:#1e1f1f;text-align:center;line-height:28px;background:url(/img/common/bg_caution.png) no-repeat 50% 0;background-size:108.5px 108.5px;letter-spacing:-0.05em}
+.surveyWrap .row .para strong{display:block;font-weight:bold;font-size:21px;color:#f65401}
+
+.surveyBox{padding-bottom:5px;background-color:#ececec;box-sizing:border-box;-webkit-box-sizing:border-box}
+.surveyBox .inner{padding:0 0 15px;background-color:#fff} /* 2016-06-02 2차 개선 (이후 상동) */
+.surveyBox .headArea{overflow:hidden;padding:10px 10px 5px;border-bottom:1px solid #ededee;background:#f6f6f6}
+.surveyBox .headArea .qtit{overflow:hidden;display:block;margin-bottom:3px;font-size:16px;color:#000;line-height:18px;letter-spacing:-0.07em;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+/* 2016-06-30 필수 설문 조사 표시 [s] */
+.surveyBox .headArea .qtit.required span {color: red;}
+.surveyBox .headArea .qtit.required span:before {content: "*";padding-right: 5px;vertical-align: middle;}
+/* 2016-06-30 필수 설문 조사 표시 [e] */
+.surveyBox .headArea .date{float:left;display:inline-block;color:#949494}
+.surveyBox .headArea .hint{float:right;display:inline-block;padding:0 5px;height:15px;font-size:12px;font-weight:bold;color:#fff;line-height:15px;border:1px solid #85888c;background-color:#8f9297;border-radius:3px;-webkit-border-radius:3px}
+.surveyBox .contArea{overflow:hidden;padding:10px;border-bottom:1px solid #ededee}
+.surveyBox .contArea iframe{width:100%;margin-bottom:5px;vertical-align:top}
+.surveyBox .contArea video{width:100%;margin-bottom:5px;vertical-align:middle}
+.surveyBox .contArea .checkWrap li{width:100%;padding:0 5px;box-sizing:border-box;-webkit-box-sizing:border-box}
+.surveyBox .contArea .checkWrap li.col2{width:50%}
+.surveyBox .contArea .checkWrap li.col4{width:25%}
+.surveyBox .contArea .checkWrap.imgAdmin li.fst{width:59.6%}
+.surveyBox .contArea .checkWrap.imgAdmin li{width:40.4%;padding:0}
+.surveyBox .contArea .checkWrap.imgAdmin li.fst input + label{width:56%}
+.surveyBox .contArea .checkWrap.imgAdmin .btnMore{margin-left:0}
+.surveyBox .contArea .checkWrap input[type="checkbox"],
+.surveyBox .contArea .checkWrap input[type="radio"]{width:30px}
+.surveyBox .contArea .checkWrap input + label{word-break:break-word}
+.surveyBox .contArea .checkWrap .inpEtc{display:inline-block;width:75%;height:30px;padding:0 5px;margin:-5px 0 0 5px;line-height:29px;vertical-align:middle;border:1px solid #bbb;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:2px;border-radius:2px;-webkit-appearance:none}
+.surveyBox .contArea .thumbAdm{display:block;margin-top:3px}
+.surveyBox .contArea .thumbAdm img{width:100%;vertical-align:top}
+/* .surveyBox .contArea .checkWrap input + label{overflow:hidden;width:100%;height:30px;margin-top:0;padding:5px 0 5px 25px;font-size:14px;color:#1e1f1f;white-space:nowrap;text-overflow:ellipsis;background-position:0 5px;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:20px} */
+.surveyBox .contArea .btnMore{display:block;margin:5px 0 0 5px;font-size:12px;color:#f65401;text-align:left;text-decoration:underline}
+.surveyBox .contArea .roundbox{margin-top:20px;padding:10px}
+.surveyBox .contArea .roundbox .desc{font-size:13px;color:#1e1f1f;line-height:17px}
+.surveyBox .contArea .roundbox .desc strong{font-weight:bold;color:#f65401}
+.surveyBox .contArea .roundbox .btnBullet02{display:block;position:relative;font-size:13px;color:#f65401;text-decoration:underline;letter-spacing:-0.05em}
+.surveyBox .contArea .roundbox .btnBullet02:after{content:'';display:block;position:absolute;right:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px}
+.surveyBox .contArea .roundbox .btnTypeB{color:#f65401;background:#fff}
+.surveyBox .textArea textarea[name=surveyCont]{height:133px;padding:2px 3px;font-size:14px;vertical-align:top;border:1px solid #bbb;letter-spacing:-0.05em;-webkit-border-radius:3px;border-radius:3px}
+.surveyBox .textArea .byte{display:block;margin-top:3px;font-size:13px;color:#646464;text-align:right;letter-spacing:-0.05em}
+.surveyBox .btnbox > * ~ *{margin-left:2px}
+
+.surveyBox.pollType01 ul{margin-top:-5px}
+.surveyBox.pollType01 ul li{position:relative;margin-top:5px}
+.surveyBox.pollType01 .check{position:relative;display:block;vertical-align:top}
+/* .surveyBox.pollType01 .check input + label{height:auto} */
+.surveyBox.pollType01 .thumb{display:block;width:100%;margin-bottom:5px}
+.surveyBox.pollType01 .thumb img{width:100%;vertical-align:top}
+
+.surveyBox.pollType02 ul{margin-top:-10px}
+.surveyBox.pollType02 ul li{position:relative;margin-top:10px}
+.surveyBox.pollType02 .answer{overflow:hidden;display:-webkit-box;position:absolute;right:5px;bottom:0;left:5px;padding:5px;vertical-align:middle;text-overflow:ellipsis;z-index:50;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.surveyBox.pollType02 .answer input{display:block;position:absolute;top:50%;left:5px;width:20px !important;height:20px;margin-top:-10px;border:none;-webkit-appearance:none;opacity:1;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-179px -20px}
+.surveyBox.pollType02 .answer input:checked{background-position:-179px 0}
+.surveyBox.pollType02 .answer input + label{display:block;width:100%;height:auto;font-size:13px;color:#fff;line-height:14px;letter-spacing:-0.05em;background:none}
+.surveyBox.pollType02 .thumb{overflow:hidden;position:relative;display:block;width:100%;height:100%;z-index:10}
+.surveyBox.pollType02 .thumb img{width:100%;vertical-align:top}
+.surveyBox.pollType02 .mask{position:absolute;display:block;left:0;bottom:0;width:100%;height:100%;background:url(/img/bg/bg_grid_poll.png) repeat-x 0 100%;background-size:1px 55px}
+.surveyBox.pollType02 ul li .bdr{display:none;position:absolute;top:0;right:0;bottom:0;left:0;margin:0 5px;border:2px solid #f65401;z-index:20}
+.surveyBox.pollType02 ul li.on .bdr{display:block}
+
+.surveyBox.pollAdmin .checkWrap li.col2{width:40.4%;padding:0}
+.surveyBox.pollAdmin .checkWrap li:first-child{width:59.6%}
+.surveyBox.pollAdmin .checkWrap li:first-child input + label{width:70%}
+.surveyBox.pollAdmin .checkWrap .btnMore{margin-left:0}
+
+/* 테이블화 시키기 (완료되면 주석 삭제) [s] */
+.svyTbl th, .surveyWrap .svyTbl td{padding:6px 5px;font-size:14px;color:#1e1f1f;text-align:left;vertical-align:top;border:0}
+.svyTbl img{width:100%;vertical-align:top}
+.svyTbl .inpBox{overflow:hidden;display:block;position:relative;min-height:21px}
+.svyTbl .inpBox input[type="checkbox"],
+.svyTbl .inpBox input[type="radio"]{position:absolute;top:0;left:0;margin:0;opacity:0;z-index:10} 
+.svyTbl .inpBox input[type="checkbox"] + label,
+.svyTbl .inpBox input[type="radio"] + label{position:static;display:inline-block;min-height:21px;margin:2px 0 0;padding:0 0 0 25px;font-size:14px;color:#1e1f1f;letter-spacing:-0.05em;word-break:break-all;background:#fff}
+.svyTbl .inpBox label:before{content:'';position:absolute;top:0;left:0;margin-right:5px;vertical-align:middle;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px}
+
+.svyTbl .inpBox input[type="checkbox"]{position:absolute;top:0;left:0;width:20px;height:20px;margin:0;vertical-align:middle;border:0;opacity:0}
+.svyTbl .inpBox input[type="checkbox"] + label:before{width:20px;height:20px;background-position:-230px -45px}
+.svyTbl .inpBox input[type="checkbox"]:checked + label:before{background-position:-230px -65px}
+.svyTbl .inpBox input[type="checkbox"]:disabled + label:before{background-position:-210px -45px}
+
+.svyTbl .inpBox input[type="radio"]{position:absolute;top:0;left:0;width:21px;height:21px;margin:0;vertical-align:middle;border:0;opacity:0}
+.svyTbl .inpBox input[type="radio"] + label:before{width:21px;height:21px;background-position:-229px -90px}
+.svyTbl .inpBox input[type="radio"]:checked + label:before{background-position:-229px -111px}
+.svyTbl .inpBox input[type="radio"]:disabled + label:before{background-position:-208px -90px}
+
+.svyTbl iframe{width:100%;margin:0;vertical-align:top}
+.svyTbl video{width:100%;margin:0;vertical-align:middle}
+.svyTbl .checkWrap li{width:100%;min-height:30px;margin-top:3px;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box}
+.svyTbl .checkWrap li.col2{width:50%;padding-right:10px}
+.svyTbl .checkWrap li.col4{width:25%}
+.svyTbl .checkWrap.imgAdmin li.fst{width:59.6%}
+.svyTbl .checkWrap.imgAdmin li{width:40.4%;padding:0}
+.svyTbl .checkWrap.imgAdmin li.fst input + label{width:56%}
+.svyTbl .checkWrap.imgAdmin .btnMore{margin-left:0}
+.svyTbl .checkWrap input[type="checkbox"],
+.svyTbl .checkWrap input[type="radio"]{width:30px}
+.svyTbl .checkWrap .inpEtc{display:inline-block;width:75%;height:30px;padding:0 5px;margin:-5px 0 0 5px;line-height:29px;vertical-align:middle;border:1px solid #bbb;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:2px;border-radius:2px;-webkit-appearance:none}
+.svyTbl .thumbAdm{display:block;margin-top:3px}
+.svyTbl .thumbAdm img{width:100%;vertical-align:top}
+.svyTbl .checkWrap input + label{overflow:hidden;width:100%;height:auto;margin-top:0;padding:5px 0 5px 25px;font-size:14px;color:#1e1f1f;vertical-align:top;background-position:0 5px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.svyTbl .btnMore{display:block;margin:5px 0 0 0;font-size:12px;color:#f65401;text-align:left;text-decoration:underline}
+
+.svyTbl .answer input{display:block;position:absolute;top:50%;left:5px;width:20px !important;height:20px;margin-top:-10px;border:none;-webkit-appearance:none;opacity:1;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-179px -20px}
+.svyTbl .answer input:checked{background-position:-179px 0}
+.svyTbl .answer input + label{display:block;width:100%;height:auto;font-size:13px;color:#fff;line-height:14px;letter-spacing:-0.05em;background:none;}
+.svyTbl .thumb{overflow:hidden;position:relative;display:block;width:100%;height:100%;z-index:10}
+.svyTbl .thumb img{width:100%;vertical-align:top}
+.svyTbl .mask{position:absolute;display:block;left:0;bottom:0;width:100%;height:100%;background:url(/img/bg/bg_grid_poll.png) repeat-x 0 100%;background-size:1px 55px;}
+.svyTbl ul li .bdr{display:none;position:absolute;top:0;right:0;bottom:0;left:0;margin:0 5px;border:2px solid #f65401;z-index:20}
+.svyTbl ul li.on .bdr{display:block}
+
+.surveyWrap .quizTypeC .contArea .svyTbl ul{margin-top:-5px}
+.surveyWrap .quizTypeC .contArea .svyTbl ul li{position:relative;margin-top:5px}
+.surveyWrap .quizTypeC .contArea .svyTbl .check{position:relative;display:block;vertical-align:top}
+/* .surveyWrap .quizTypeC .contArea .svyTbl .check input + label{height:auto} */
+.surveyWrap .quizTypeC .contArea .svyTbl .thumb{display:block;width:100%;margin-bottom:5px}
+.surveyWrap .quizTypeC .contArea .svyTbl .thumb img{width:100%;vertical-align:top}
+
+.surveyWrap .pollTypeD .contArea .svyTbl .pollBox{position:relative}
+.surveyWrap .pollTypeD .contArea .svyTbl .answer{overflow:hidden;display:-webkit-box;position:absolute;right:0;bottom:3px;left:0;padding:5px;vertical-align:middle;text-overflow:ellipsis;z-index:50;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.surveyWrap .pollTypeD .contArea .svyTbl .answer input{display:block;position:absolute;top:50%;left:5px;width:20px !important;height:20px;margin-top:-10px;border:none;-webkit-appearance:none;opacity:1;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-179px -20px}
+.surveyWrap .pollTypeD .contArea .svyTbl .answer input:checked{background-position:-179px 0}
+.surveyWrap .pollTypeD .contArea .svyTbl .answer input + label{display:block;width:100%;min-height:20px;height:auto;margin:0;padding:5px 0 0 25px;font-size:13px;color:#fff;line-height:14px;letter-spacing:-0.05em;background:none;-webkit-box-sizing:border-box;box-sizing:border-box}
+.surveyWrap .pollTypeD .contArea .svyTbl .thumb{overflow:hidden;position:relative;display:block;width:100%;height:100%;z-index:10}
+.surveyWrap .pollTypeD .contArea .svyTbl .thumb img{width:100%;vertical-align:top}
+.surveyWrap .pollTypeD .contArea .svyTbl .mask{position:absolute;display:block;left:0;bottom:0;width:100%;height:100%;background:url(/img/bg/bg_grid_poll.png) repeat-x 0 100%;background-size:1px 55px}
+.surveyWrap .pollTypeD .contArea .svyTbl .bdr{display:none;position:absolute;top:0;right:0;bottom:0;left:0;border:2px solid #f65401;z-index:20}
+.surveyWrap .pollTypeD .contArea .svyTbl .on .bdr{display:block}
+.surveyWrap .pollTypeD .contArea .svyTbl .btnMore{margin:-5px 0 0}
+
+.surveyDetail .headArea{padding:10px 0 5px;background:#fff}
+.surveyDetail .contArea{padding:10px 0}
+.surveyDetail .surveyBox .inner{padding:0 10px 15px}
+.surveyDetail .svyTbl td{padding:0 5px;border-top:none}
+.surveyDetail .svyTbl textarea[name=surveyCont]{height:133px;padding:2px 3px;font-size:14px;vertical-align:top;border:1px solid #bbb;letter-spacing:-0.05em;-webkit-border-radius:3px;border-radius:3px}
+.surveyDetail .svyTbl .byte{display:block;margin-top:3px;font-size:13px;color:#646464;text-align:right;letter-spacing:-0.05em}
+/* 테이블화 시키기 (완료되면 주석 삭제) [e] */
+
+.surveyBox.nodata .inner{padding:25px 10px 25px 87px;background:#fff url(/img/common/bg_noSurvey.png) no-repeat 20px 50%;background-size:54.5px 54.5px}
+.surveyBox.nodata .txt{font-size:14px;color:#000;line-height:18px;letter-spacing:-0.05em}
+
+.surveyRstBox{padding:0 10px 20px}
+.surveyRstBox .headArea{overflow:hidden;padding:10px 0 5px;border-bottom:1px solid #ededee}
+.surveyRstBox .headArea .qtit{display:block;margin-bottom:3px;font-size:16px;color:#000;letter-spacing:-0.07em}
+.surveyRstBox .headArea .date{float:left;display:inline-block;color:#949494}
+.surveyRstBox .roundbox{margin-top:20px;padding:10px}
+.surveyRstBox .roundbox .desc{font-size:13px;color:#1e1f1f;line-height:17px}
+.surveyRstBox .roundbox .desc strong{font-weight:bold;color:#f65401}
+.surveyRstBox .roundbox .btnBullet02{display:block;position:relative;font-size:13px;color:#f65401;text-decoration:underline;letter-spacing:-0.05em}
+.surveyRstBox .roundbox .btnBullet02:after{content:'';display:block;position:absolute;right:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px}
+.surveyRstBox .roundbox .btnTypeB{color:#f65401;background:#fff}
+.surveyRstBox.pollType .graphWrap li:nth-child(1) .bar{background:#f26a27}
+.surveyRstBox.pollType .graphWrap li:nth-child(2) .bar{background:#b76fb5}
+.surveyRstBox.pollType .graphWrap li:nth-child(3) .bar{background:#eb6b69}
+.surveyRstBox.pollType .graphWrap li:nth-child(4) .bar{background:#5e9bbe}
+.surveyRstBox.firstDay .noti{margin-top:20px;font-size:13px;color:#1e1f1f;text-align:center;line-height:18px;letter-spacing:-0.05em}
+.surveyRstBox.firstDay .noti strong{font-weight:bold}
+.surveyRstBox.firstDay .noti strong span{color:#f65401}
+
+.surveyDetail{padding-top:0 !important}
+.surveyDetail .titArea{padding:10px;background:#f6f6f6}
+.surveyDetail .titArea .tit{font-weight:bold;font-size:16px;color:#000;letter-spacing:-0.05em}
+.surveyDetail .titArea .link{display:block;margin-top:3px;font-size:12px;color:#f65401;text-decoration:underline}
+.surveyDetail .progressBox{padding:10px;border-bottom:1px solid #ededee;background:#fff}
+.surveyDetail .progressBar{display:block;position:relative;width:100%;height:17px;background:#efefef;-webkit-box-sizing:border-box;box-sizing:border-box}
+.surveyDetail .progressBar .bg{display:inline-block;height:100%;background:url(/img/bg/bg_progressBar.png) repeat 0 0;background-size:7px 7px; /* 2016-06-20 설문 2차 개선 */
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+.surveyDetail .progressBar .progress{position:absolute;top:1px;right:10px;font-size:11px;color:#1e1f1f;letter-spacing:-0.05em}
+.surveyDetail .surveyBox{padding:0;background:#fff}
+ 
+.graphWrap li{margin-top:10px}
+.graphWrap li h3{display:block;width:72%;font-size:13px;color:#1e1f1f;word-break:break-word;letter-spacing:-0.05em}
+.graphWrap li .graphArea{width:100%;margin-top:3px}
+.graphWrap li .graphArea:before,
+.graphWrap li .graphArea:after{content:'';display:table;clear:both}
+.graphWrap li .graphArea .box{float:left;width:72%;height:8px;vertical-align:top;background-color:#eee}
+.graphWrap li .graphArea .bar{display:inline-block;height:100%;vertical-align:top;background:#bababa}
+.graphWrap li .graphArea .per{float:right;width:26%;margin-top:-4px;text-align:right;vertical-align:top;letter-spacing:-0.05em}
+.graphWrap li.answer em{display:inline-block;height:15px;padding:0 8px;margin-right:5px;font-size:11px;color:#ec1b43;line-height:15px;border:1px solid #ec1b43;-webkit-border-radius:50px;border-radius:50px}
+.graphWrap li.answer .graphArea .box .bar{background:#fc6500}
+
+.quizPollWrap{padding:15px 10px 0}
+.quizPollWrap .qtit{margin-bottom:5px;font-size:16px;font-weight:bold;color:#000;letter-spacing:-0.07em}
+.quizPollList{overflow:hidden;width:100%;margin:5px 0 0}
+.quizPollList li{float:left;position:relative;width:49.15%;margin:1.66% 0 0 1.66%;box-sizing:border-box;-webkit-box-sizing:border-box}
+.quizPollList li:nth-child(odd){margin-left:0}
+.quizPollList li > div{padding:12px 10px;text-align:center;border:1px solid #dbdbdb;background-color:#f5f5f5;box-sizing:border-box;-webkit-box-sizing:border-box}
+.quizPollList li .qst{overflow:hidden;display:-webkit-box;min-height:48px;line-height:16px;text-overflow:ellipsis;word-wrap:break-word;letter-spacing:-0.05em;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.quizPollList li .sbtnTypeF{margin-top:8px;padding:0 15px;height:24px;font-size:12px;line-height:24px;color:#7c7d7d;border:1px solid #bfbfbf;background-color:#fff;border-radius:50px;-webkit-border-radius:50px}
+
+/* 20160429 설문조사 이용 안내에 노출 처리 */
+/* .info_main .box_section .cont_box3{background:white !important} */
+/* .info_main .surveyWrap{position:relative; min-height:210px} */
+/* .info_main .surveyWrap{position:relative}
+.info_main .surveyBox{position:absolute;top:0; left:0;display:none; width:100%;  opacity:0; background-color:#fff; padding-bottom:0px}
+.info_main .surveyBox .survey_banner{display:block}
+.info_main .surveyBox .survey_banner img{width:100%; margin-top:5px; display:block}
+.info_main .surveyBox:first-child{display:block; opacity:1}
+.info_main .surveyWrap .swiper-slide{display:block; opacity:1}
+.info_main .surveyBox-guide-wrapper{overflow:hidden;width:100%;position:relative;padding:7px 10px;border-bottom:1px solid #ededed;background-color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}
+.info_main .surveyBox-guide-wrapper .tit{float:left;font-size:16px;font-weight:bold;color:#000;letter-spacing:-0.07em}
+.info_main .surveyBox-guide-wrapper .control{float:right;position:relative;width:22%;margin-top:2px}
+
+.info_main .surveyBox-guide-wrapper button{position:absolute;top:0;padding:5px;z-index:100}
+.info_main .surveyBox-guide-wrapper .ico_comm{background:url(/img/common/ico_common_sp.png) no-repeat 0 0;background-size:250px 250px;width:6.5px;height:10px}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-prev{left:0}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-prev .ico_comm{background-position:-30px -15px}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-prev.ov .ico_comm{background-position:-30px 0}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-next{right:0}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-next .ico_comm{background-position:-42px -15px}
+.info_main .surveyBox-guide-wrapper .surveyBox-button-next.ov .ico_comm{background-position:-42px 0}
+
+.info_main .surveyBox-pagination{width:100%;height:20px;font-size:16px;color:#646464;text-align:center;line-height:20px}
+.info_main .surveyBox-pagination ul{display:none;clear:left;float:left;margin:0;padding:0;position:relative;left:50%;text-align:center}
+.info_main .surveyBox-pagination ul li{width:10px;height:10px;box-sizing:border-box;border:1px solid #949494;border-radius:5px;float:left;margin-left:2px;position:relative;right:50%}
+.info_main .surveyBox-pagination ul li:first-child{margin-left:0}
+.info_main .surveyBox-pagination ul li.active{border-color:#ff0000;background-color:#ff0000}
+.info_main .surveyBox-pagination .bplay_btn {background-image:url(/img/new_main/ico_main_comm.png);background-repeat:no-repeat;background-size:100px 100px;display:inline-block;width:9px;height:11px;outline:none;background-position:-20px -20px;text-indent:-999px;font-size:0;vertical-align:top;margin-left:20px;position:relative;z-index:100;margin-top:5px}
+.info_main .surveyBox-pagination .bplay_btn.b_play{background-position:-30px -20px} */
+
+/* 오퍼 이벤트 안내페이지 */
+.oksusuInfo,
+.tpayInfo,
+.oksusuTpayInfo,
+.tripInfo,
+.cakeInfo,
+.cakeOksusuInfo,
+.cakeTpayInfo,
+.cakeOksusuTpayInfo{position:relative;width:100%;min-height:464px}
+.oksusuInfo img,
+.tpayInfo img,
+.oksusuTpayInfo img,
+.tripInfo img,
+.cakeInfo img,
+.cakeOksusuInfo img,
+.cakeTpayInfo img,
+.cakeOksusuTpayInfo img{width:100%;vertical-align:top}
+.oksusuInfo p,
+.oksusuInfo .btnUrl,
+.tpayInfo  p,
+.tpayInfo .btnUrl01,
+.tpayInfo .btnUrl02,
+.oksusuTpayInfo p,
+.oksusuTpayInfo .btnUrl01,
+.oksusuTpayInfo .btnUrl02,
+.tripInfo p,
+.tripInfo .btnUrl,
+.cakeInfo a,
+.cakeOksusuInfo a,
+.cakeTpayInfo a,
+.cakeOksusuTpayInfo a{display:block;position:absolute;text-align:center;line-height:100%}
+.oksusuTpayInfo .info{display:block;position:absolute;top:0;width:100%;height:100%}
+/* T life 오퍼링 추가 2016-07-25 */
+.offering p,
+.offering a,
+.offering .btnUrl01,
+.offering .btnUrl02,
+.offering .btnUrl03,
+.offering img{display:block;position:absolute;text-align:center;line-height:100%}
+.offering img{width:100%;vertical-align:top}
+    
+    /* oksusu */
+    .oksusuInfo.mon .para01{top:42%;left:14.06%;width:72.81%;height:13.42%;font-size:28px}
+    .oksusuInfo.mon .para02{top:58.19%;left:16.28%;width:67.38%;height:6.88%;font-size:14px}
+    .oksusuInfo.mon .para03{top:65.19%;left:16.28%;width:67.38%;height:4.88%;font-size:14px}
+    .oksusuInfo.mon .btnUrl{top:72.5%;left:20%;width:60.22%;height:7.88%;font-size:30px}
+    
+    .oksusuInfo.wed .para01{top:42%;left:14.06%;width:72.81%;height:13.42%;font-size:28px}
+    .oksusuInfo.wed .para02{top:58.19%;left:16.28%;width:67.38%;height:6.88%;font-size:14px}
+    .oksusuInfo.wed .para03{top:65.5%;left:16.28%;width:67.38%;height:4.88%;font-size:14px}    
+    .oksusuInfo.wed .btnUrl{top:72.5%;left:20%;width:60.22%;height:7.88%;font-size:30px}
+    
+    .oksusuInfo.fri .para01{top:41%;left:14.06%;width:72.81%;height:21.42%;font-size:28px}
+    .oksusuInfo.fri .para02{top:64.19%;left:24.28%;width:50.38%;height:5.88%;font-size:14px}
+    .oksusuInfo.fri .btnUrl{top:72.5%;left:20%;width:60.22%;height:7.88%;font-size:30px}
+    
+    /* T페이 */
+    .tpayInfo.mt .para01{top:38.5%;left:13.75%;width:72.50%;height:19%;font-size:25px}
+    .tpayInfo.mt .para02{top:63%;left:19.66%;width:61%;height:9.89%;font-size:21px}
+    .tpayInfo.mt .btnUrl01{top:74.2%;left:19.63%;width:61.22%;height:8.5%;font-size:25px}
+    
+    .tpayInfo.wt .para01{top:38.5%;left:13.75%;width:72.50%;height:19%;font-size:25px}
+    .tpayInfo.wt .para02{top:63%;left:19.66%;width:61%;height:9.89%;font-size:21px}
+    .tpayInfo.wt .btnUrl01{top:74.2%;left:19.63%;width:61.22%;height:8.5%;font-size:25px}
+    
+    .tpayInfo.fs .para01{top:38.5%;left:13.75%;width:72.50%;height:19%;font-size:25px}
+    .tpayInfo.fs .para02{top:63%;left:19.66%;width:61%;height:9.89%;font-size:21px}
+    .tpayInfo.fs .btnUrl01{top:74.2%;left:19.63%;width:61.22%;height:8.5%;font-size:25px}
+    
+    /* oksusu/T페이 */
+	.oksusuTpayInfo.mt .info .para01{top:23%;left:27.03%;width:57.25%;height:12.48%;font-size:26px}
+	.oksusuTpayInfo.mt .info .btnUrl01{top:38%;left:27%;width:49.22%;height:6.5%;font-size:25px}
+	.oksusuTpayInfo.mt .info .para02{top:61.05%;left:27.03%;width:63.25%;height:12.84%;font-size:25px}
+	.oksusuTpayInfo.mt .info .btnUrl02{top:78%;left:27%;width:49.22%;height:6.97%;font-size:25px}
+
+	.oksusuTpayInfo.wt .info .para01{top:20%;left:27.03%;width:58.25%;height:17.48%;font-size:26px}
+	.oksusuTpayInfo.wt .info .btnUrl01{top:38%;left:27%;width:49.22%;height:6.5%;font-size:25px}
+	.oksusuTpayInfo.wt .info .para02{top:61.05%;left:27.03%;width:63.25%;height:12.84%;font-size:25px}
+	.oksusuTpayInfo.wt .info .btnUrl02{top:80%;left:27%;width:49.22%;height:6.97%;font-size:25px}
+
+	.oksusuTpayInfo.fs .info .para01{top:22.31%;left:26.03%;width:55.25%;height:12.48%;font-size:26px}
+	.oksusuTpayInfo.fs .info .btnUrl01{top:37.4%;left:27%;width:49.22%;height:6.97%;font-size:25px}
+	.oksusuTpayInfo.fs .info .para02{top:59.05%;left:26.03%;width:66.25%;height:17.84%;font-size:25px}
+	.oksusuTpayInfo.fs .info .btnUrl02{top:78.5%;left:27%;width:49.22%;height:6.97%;font-size:25px}
+	
+	/* 폼나들이 */
+	.tripInfo.mt .para01{top:19%;left:29%;width:41%;height:4%;font-size:26px}
+	.tripInfo.mt .para02{top:25%;left:16%;width:68.25%;height:13.5%;font-size:25px}
+	.tripInfo.mt .btnUrl{top:72.5%;left:20%;width:60.5%;height:8.5%;font-size:25px}
+
+	.tripInfo.wt .para01{top:19%;left:29%;width:41%;height:4%;font-size:26px}
+	.tripInfo.wt .para02{top:25%;left:16%;width:68.25%;height:13.5%;font-size:25px}
+	.tripInfo.wt .btnUrl{top:72.5%;left:20%;width:60.5%;height:8.5%;font-size:25px}
+
+	.tripInfo.snk.mt .para01{top:22%;left:13%;width:74%;height:20%;font-size:26px}
+	.tripInfo.snk.mt .btnUrl{top:72.5%;left:20%;width:60.5%;height:8.5%;font-size:25px}
+
+	.tripInfo.snk.wt .para01{top:22%;left:13%;width:74%;height:20%;font-size:26px}
+	.tripInfo.snk.wt .btnUrl{top:72.5%;left:20%;width:60.5%;height:8.5%;font-size:25px}
+	
+	.tripInfo.fs .para01{top:19%;left:29%;width:41%;height:4%;font-size:26px}
+	.tripInfo.fs .para02{top:25%;left:16%;width:68.25%;height:13.5%;font-size:25px}
+	.tripInfo.fs .btnUrl{top:72.5%;left:20%;width:60.5%;height:8.5%;font-size:25px}
+	
+	/* cake 오퍼링 */
+	/* cake */
+	.cakeInfo.mt .btnUrl01{top:74.5%;left:20%;width:60%;height:8.5%}
+	.cakeInfo.wt .btnUrl01{top:74.5%;left:20%;width:60%;height:8.5%}
+	.cakeInfo.fs .btnUrl01{top:74.5%;left:20%;width:60%;height:8.5%}
+	
+	/* cake + oksusu */
+	.cakeOksusuInfo.mt .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeOksusuInfo.mt .btnUrl02{top:76%;left:26.5%;width:49%;height:7.5%}
+	.cakeOksusuInfo.wt .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeOksusuInfo.wt .btnUrl02{top:76%;left:26.5%;width:49%;height:7.5%}
+	.cakeOksusuInfo.fs .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeOksusuInfo.fs .btnUrl02{top:76%;left:26.5%;width:49%;height:7.5%}
+	
+	/* cake + tpay */
+	.cakeTpayInfo.mt .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeTpayInfo.mt .btnUrl02{top:78.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeTpayInfo.wt .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeTpayInfo.wt .btnUrl02{top:79.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeTpayInfo.fs .btnUrl01{top:39.5%;left:26.5%;width:49%;height:7.5%}
+	.cakeTpayInfo.fs .btnUrl02{top:78.5%;left:26.5%;width:49%;height:7.5%}
+	
+	/* cake + oksusu + tpay */
+	.cakeOksusuTpayInfo.mt .btnUrl01{top:29%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.mt .btnUrl02{top:57.5%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.mt .btnUrl03{top:84%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.wt .btnUrl01{top:29%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.wt .btnUrl02{top:58.5%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.wt .btnUrl03{top:84%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.fs .btnUrl01{top:29%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.fs .btnUrl02{top:57.5%;left:26.5%;width:49%;height:5.5%}
+	.cakeOksusuTpayInfo.fs .btnUrl03{top:84%;left:26.5%;width:49%;height:5.5%}
+
+/* 칭찬합니다 */ /* 2017-02-06 이용안내 접근성 수정 */
+.praise .contbox{overflow:hidden;padding:0}
+.praise .praiseBox{position:relative;padding:20px 10px 20px 85px;background:#f5f6f7}
+.praise .praiseBox:before{content:'';display:table;position:absolute;top:50%;left:10px;width:63px;height:63px;margin-top:-32px;background:url(/img/common/bg_praise.png) no-repeat;background-size:62.5px 62.5px}
+.praise .praiseBox p{font-size:13px;text-align:left;line-height:16px}
+.praise .praiseBox .btnLayer{display:inline-block;padding-right:14px;margin-top:3px;font-size:13px;color:#f65401;text-decoration:underline}
+.praise .praiseBox .btnLayer:after{content:'';position:absolute;top:2px;right:0;width:11px;height:11px;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-15px 0;background-size:250px 250px}
+.praise .myWriting:before{content:'';display:table;position:absolute;top:50%;left:10px;width:63px;height:63px;margin-top:-32px;background:url(/img/common/bg_writing.png) no-repeat;background-size:62.5px 62.5px}
+.praise .myWriting{padding:20px 15px 20px 85px}
+
+.praise .inner{padding:10px}
+.praise .tblTool{display:block;margin-bottom:5px}
+.praise .tblTool .checkWrap{overflow:visible;float:left;display:block;margin-top:2px}
+.praise .tblTool .checkWrap label{padding-left:25px;font-size:13px;color:#1e1f1f;line-height:22px}
+.praise .tblTool .checkWrap input{top:2px;width:20px;height:20px;border:0;border-radius:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-230px -20px;background-size:250px 250px;opacity:1;-webkit-appearance:none}
+.praise .tblTool .checkWrap input:checked{background-position:-230px 0}
+.praise .tblTool .chkBox{float:left;margin-top:3px}
+.praise .tblTool .sbtnTypeC{float:right;padding:0 15px;height:24px;font-size:12px;color:#fff;text-align:center;line-height:23px;border:1px solid #575757;-webkit-border-radius:3px;border-radius:3px;-webkit-box-sizing:border-box;box-sizing:border-box;
+	background-image:-webkit-linear-gradient(bottom, #676767 50%, #595959 100%);
+	background-image:linear-gradient(to bottom, #676767 50%, #595959 100%);
+}
+.praise table.tal th{padding-left:10px;font-size:13px;text-align:left}
+.praise table select{color:#1e1f1f;letter-spacing:-0.05em}
+.praise table .starReq{position:static;margin-left:1px}
+.praise table .checkWrap{display:block}
+.praise table .checkWrap input[type=checkbox],
+.praise table .checkWrap input[type=radio]{position:static;width:20px;height:20px;vertical-align:top;border:0;border-radius:0;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;opacity:1;-webkit-appearance:none}
+.praise table .checkWrap input[type=checkbox]{background-position:-230px -20px}
+.praise table .checkWrap input[type=checkbox]:checked{background-position:-230px 0}
+.praise table .checkWrap input[type=radio]{background-position:-205px -20px}
+.praise table .checkWrap input[type=radio]:checked{background-position:-205px 0}
+.praise table .title a{overflow:hidden;display:-webkit-box;min-height:18px;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word; word-break:break-word;}
+.praise table .title a.mobile{padding-left:20px}
+.praise table .ico_mb{position:absolute;top:0;left:0;width:12px;height:18px;margin-top:0;font-size:5px;color:transparent;text-align:center;vertical-align:middle;text-indent:100%;background:url(/img/common/ico_common_sp.png) no-repeat;background-position:-35px -33px;background-size:250px 250px}
+.praise table.tblType3 th{text-align:left}
+.praise table.tblType3 th, .praise table.tblType3 td{padding-left:10px;padding-right:10px}
+.praise .detailBoard{margin-top:5px;border-top:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7}
+.praise .detailBoard .titbox{padding:8px 10px}
+.praise .detailBoard .txtbox{padding:10px;font-size:13px;color:#1e1f1f;border-top:1px solid #eee;white-space: pre-wrap;word-break:break-word;}
+.praise .detailBoard h2{font-weight:bold;font-size:13px;color:#1e1f1f;letter-spacing:-0.05em; word-break:break-word;}
+.praise .of{overflow:hidden;margin-top:5px}
+.praise .of .essn{float:left;color:#f65401}
+.praise .of .essn em{color:#f65401}
+.praise .of .type{float:right;color:#646464}
+.praise .infoSection .goUrl{color:#f65401;text-decoration:underline}
+.praise .roundbox{margin:25px 10px 30px;padding:43px 10px;border-color:#d7d7d7}
+.praise .roundbox .nodata{font-size:13px;color:#646464;text-align:center;line-height:20px}
+.praise .roundbox .nodata strong{display:block;font-weight:bold;font-size:15px;color:#1e1f1f}
+.praise .btnbox.clearfix .btnTypeD{float:left;display:inline}
+.praise .btnbox.clearfix .group{float:right;display:inline}
+
+.praisePop{display:none;position:fixed;top:0;right:0;bottom:0;left:0;margin:0 10px;border:1px solid #b1b4b8;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:3px;border-radius:3px;z-index:2000}
+.praisePop.on{display:block}
+.praisePop .head{padding:15px;border-bottom:1px solid #dadada}
+.praisePop .head h2{font-size:15px;color:#555}
+.praisePop .cont{height:auto;padding:10px 15px 15px;overflow-y:scroll;-webkit-box-sizing:border-box;box-sizing:border-box}
+.praisePop .cont .motto{display:block;padding-bottom:15px;font-weight:bold;font-size:13px;color:#000;text-align:center}
+.praisePop .cont .list{padding-top:12px;border-top:1px solid #eee}
+.praisePop .cont .list > li{margin-top:8px;padding-left:10px;font-size:13px;color:#1e1f1f;text-indent:-10px}
+.praisePop .cont .list > li:first-child{margin-top:0}
+.praisePop .cont .list > li ul{margin-top:5px;text-indent:0}
+.praisePop .btnClose{position:absolute;top:15px;right:15px;width:15px;height:15px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-15px -33px}
+.bgDimm{display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1999}

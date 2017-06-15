@@ -1,0 +1,424 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>모바일 T world</title>
+<script language="JavaScript">
+function telSelect(obj, selSvcMgmtNum){
+	//alert(obj.id);
+	//var tmp=document.getElementById("tel").innerHTML;
+	document.getElementById("tel").innerHTML=obj.innerHTML;
+	document.form1.selChildSvcMgmtNum.value = selSvcMgmtNum;
+	//obj.innerHTML=tmp;
+	//MM_showHideLayers('s_list','','hide');
+}
+function childSvcMgmtNumSelect() {
+	document.form1.selChildSvcMgmtNum.value = document.form1.selectSvcMgmtNum[document.form1.selectSvcMgmtNum.selectedIndex].value;
+	request_freebill();
+}
+</script>
+<script language="javascript">
+
+var isRequestInquiry = false; // 조회요청이 되어있는 상태인지 여부 
+function request_freebill() 
+{
+	var frm = document.form1;
+	// 조회 요청중이 아닐 경우만 요청시도
+	if (!isRequestInquiry)
+	{
+		// 조회 요청상태 변경
+		isRequestInquiry = true; 
+
+	    frm.action = "/normal.do?serviceId=S_BILL0088&viewId=V_CENT1014";
+	    frm.target = "_self";
+	    frm.submit(); 
+	}
+}
+    
+function select_tab(i_sel)
+{
+	var frm = document.form1;
+	
+    if ( i_sel=='0') { // 자녀요금  실시간 요금조회
+    	frm.action = "/normal.do?serviceId=S_BILL0080&viewId=V_CENT1008&svc_mgmt_num=7023670255";
+    }
+    else if ( i_sel=='1') { // 자녀요금 기본 통화조회
+    	frm.action = "/normal.do?serviceId=S_BILL0088&viewId=V_CENT1014&svc_mgmt_num=7023670255";
+    }
+    else if ( i_sel=='2') { // 자녀요금 사용내역 조회
+    	frm.action = "/normal.do?serviceId=S_BILL0084&viewId=V_CENT1010&svc_mgmt_num=7023670255";
+    }
+    
+    frm.target="_self";
+    frm.submit();
+}
+
+
+</script>
+<script type="text/javascript" src="/inc/js/common.js"></script>
+<link href="/inc/css/bill.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="MM_preloadImages('/img/bill/search1_right.jpg')">
+<div id="sub_wrap">
+<div id="s_maintop">
+
+
+
+
+
+
+
+<!--타이틀-->
+<div class="home"><a href="javascript:goLink('/normal.do?viewId=V_BILL0001&serviceId=SDUMMY0001');"><img src="/img/common/pre_btn.jpg" alt="상위" /></a></div>
+
+
+<div class="logout"><strong>SK고객</strong>님</div>
+
+<div class="menu"> 
+	<h1><a href="http://m.tworld.co.kr/"><img src="/img/common/logo.gif" alt="모바일 T world" /></a></h1>   
+</div>
+
+<!--검색-->
+  
+<script type="text/javascript" src="/inc/js/suggest_js.js"></script>
+<script language="Javascript">
+function doSearch()
+{
+	var f = document.search;
+	var	q = f.query;
+	if(check_query_spword(q.value) == -1){
+		f.action="";
+		q.value="";
+		q.focus();
+		return;
+	}
+	if (f.returnURL.value == null || f.returnURL.value == "") 
+		f.returnURL.value = document.URL;
+	f.submit();
+}
+function check_query_spword(search_word){
+	var fm = document.search;
+	 var index, len;
+
+	 while(true) {
+		   index = search_word.indexOf(" ");
+		   // 공백이 없으면 종료합니다.
+		   if (index == -1) break;
+		   // 문자열 길이를 구합니다.
+		   len = search_word.length;
+		   // 공백을 잘라냅니다.
+		   search_word = search_word.substring(0, index) + search_word.substring((index+1),len);
+	  }
+
+	if(search_word == "")
+	{
+		alert("검색어를 입력하시기 바랍니다.");
+		return -1;
+	}
+	/*else if(search_word.length <= 1)
+	{
+		alert("2자 부터 검색가능합니다.");
+		return -1;
+	}*/
+	else
+	{
+		//한글은 2Byte , 영문은 1Byte
+		for (var i = 0; i < search_word.length; i++)
+		{
+			ret = search_word.charCodeAt(i);
+
+			if ((ret > 64 && ret < 91 ) || (ret > 96 && ret < 123 ) || (ret > 47 && ret < 58 ))
+			{
+				//영문값,숫자값 체크
+			}
+			else
+			{
+				if (ret < 0xAC00 || ret > 0xD7A3)
+				{
+					if ( ret == 37 || ret == 34 || ret == 60 || ret == 62 || ret == 38 || ret == 39  || ret == 43 || ret == 45 )  // %, ", < , >, +, -
+					// if ( ret == 37 || ret == 34 || ret == 60 || ret == 62 || ret == 38 || ret == 39  || ret == 43 ) // %, ", < , >, +
+					{
+						alert("해당 특수문자는 입력하실수 없습니다.");
+						return -1;
+					}
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+</script>
+
+   <!--검색-->  
+   <div id="search">
+    <form name="search" action="/jsp/search/search_mt.jsp" method="POST">
+    	<input type="hidden" name="coll" value="TOTAL_MT">
+    	<input type="hidden" name="pageNo" value="1">
+    	<input type="hidden" name="returnURL" value="">
+    	<div class="leftimg"><img src="/img/common/search_left.jpg" alt="" /></div>
+        <div class="center">
+          <input type="text" name="query" id="query" class="search_input" value="" 
+          onChange="javascript:search_promo_off();"
+          onkeypress="if(event.keyCode == 13) {doSearch(); return false;}" 
+          autocomplete="off" />
+        </div>
+        <!-- div class="rightbtn"><a href="javascript:doSearch();"><img src="/img/common/search_btn.jpg" alt=""  /></a></div-->
+        <div class="rightbtn"><img src="/img/common/search_btn.jpg" alt=""  onclick="doSearch()";/></div>
+    <div class="search_link_list" id="ac_body_" onmouseover="set_mouseon_(2);" onmouseout="set_mouseoff_(2);">
+		<ul  id="scrol_" >
+      </ul>    
+    </div>
+        
+        
+        <script language="JavaScript" type="text/JavaScript">
+						function getBrws()
+						{
+							var ua = navigator.userAgent;
+						 	var safari	= ua.indexOf("Safari")!=-1;
+						 	var opera	= ua.indexOf("Opera")!=-1;
+						 	var konqueror = ua.indexOf("Konqueror")!=-1;
+						 	var mozes	 = ((a=navigator.userAgent.split("Gecko/")[1] )
+						 			?a.split(" ")[0]:0) >= 20011128 ;
+						 	
+						 	if(window.opera || safari || mozes || opera)
+						 		return "NI";
+						 	else
+						 		return "IE";						 	
+						}
+							var query_obj = document.getElementById("query");
+							//alert(document.search.query.offsetLeft);
+							if(getBrws() == "IE")
+								setDefaultAutoComplete_ (document.search.query, 30,document.search.query.offsetLeft+383,10);
+							else
+								setDefaultAutoComplete_ (document.search.query, 30,document.search.query.offsetLeft+273,10);
+							
+							document.onmousedown=setTextBox_;
+							document.onkeydown=setTextBox_; 
+							 if ((t_==1||t_==2) && c_==1) {
+								wd_ ();
+								setTimeout ("wi_ ()", wi_int_);
+							}
+							ac_body_id = document.getElementById("ac_body_");
+							ac_body_id.style.display = "none" ;
+							//vat tqObj=document.getElementById("query");
+							//tqObj.setAttribute("autocomplete","off");
+						
+						</script>
+    </form>
+   </div> 
+<!--상단메뉴-->
+
+<div id="topmenu_bg">
+<div class="menu">
+<ul class="topmenu">
+	<li class="width_m1"><a href="javascript:goLink('/normal.do?viewId=V_BILL0001&serviceId=SDUMMY0001')"><img src="/img/common/topmenu1_on.gif" alt="요금조회" /></a></li>  
+	<li class="width_m2"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_MYTW0130')"><img src="/img/common/topmenu2_off.gif" alt="MY 서비스"/></a></li>  
+	<li class="width_m3"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0426')"><img src="/img/common/topmenu3_off.gif" alt="요금제부가서비스" /></a></li>  
+	<li class="width_m4"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_MBRS0001')"><img src="/img/common/topmenu4_off.gif" alt="포인트멤버십" /></a></li>
+</ul>
+</div>
+<div class="topmenu_left"><img src="/img/common/bgl.gif"  /></div>
+<div class="topmenu_center"><img src="/img/common/bgr.gif"  /></div>
+ </div> 
+</div>
+</div>
+<!--컨텐츠 -->
+<form method="post" name="form1" action="/normal.do?serviceId=S_BILL0088&viewId=V_CENT1014">
+<input type=hidden name="selChildSvcMgmtNum" value="1526567801" />
+<input type=hidden name="selChildSvcNum" value="01089552243" />
+<div id="content">
+<h1 class="ser_title">
+  <div class="menu_icon"><img src="/img/bill/i_icon05.png" alt="청구요금 조회" /></div>
+  <div class="title_text">
+    <p>자녀요금조회</p>
+  </div>
+ </h1>
+<!-- 2011-05-27 수정 -->
+<div class="inquiry_table11" style="padding-top:3px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="70px">자녀회선번호</td>
+    <td>
+	<select name="selectSvcMgmtNum" onchange="javascript:childSvcMgmtNumSelect();" id="selectSvcMgmtNum">
+    	<option value="1526567801" selected >010-8955-2243</option>
+        <option value="7022916580"  >010-4195-2245</option>
+     </select>    
+    </td>
+    </tr>
+</table>
+</div>
+
+
+ <!-- 2011-01-10 변경 -->
+<div class="tabmenu1"><a href="javascript:select_tab('0');"><img src="/img/bill/tabmenu01_01.jpg" alt="실시간요금" /></a><a href="javascript:select_tab('1');"><img src="/img/bill/tabmenu01_02on.jpg" alt="" /></a><a href="javascript:select_tab('2');"><img src="/img/bill/tabmenu01_03.jpg" alt="" /></a>
+</div>
+<!-- //2011-01-10 변경 -->
+
+<div class="st_title_bill" style="padding-top:17px;"><span style="font-weight:bold">조회기간 :</span> 2011년 3월 1일~2011년 3월 8일</div>
+
+<!-- 2011-01-07 변경 -->
+ <div class="st_title_txt" style="padding-top:10px;">사용중인 요금제 잔여기본통화 조회</div>
+<!-- //2011-01-07 변경 -->
+<div class="inquiry_table3">
+  <table>
+    <tr>
+      <th><strong>상품명</strong></th>
+      <th scope="col"><strong>메세지 레귤러</strong></th>
+    </tr>
+    <tr>
+      <td colspan="2" class="tt1" style="padding-bottom:12px;">
+			<ul class="inq_g">		
+			<li class="title"><strong>메시지 무료공제               </strong></li>
+            <li class="gbg"><img src="/img/bill/red_g02.gif" alt="" width="100%" height="12" /></li>
+			<li class="left" style="float:left"><span class="red_bold_12">잔여(7,500원)</span></li>
+            <li class="right">사용(0원)</li>
+        	</ul>
+      </td>
+      </tr>
+
+    <tr>
+      <th><strong>상품명</strong></th>
+      <th scope="col"><strong>자녀안심요금제</strong></th>
+    </tr>
+    <tr>
+      <td colspan="2" class="tt1">
+			<ul class="inq_g">		
+			<li class="title"><strong>국내 음성 무료통화 30분       </strong></li>
+            <li class="gbg"><img src="/img/bill/blue_g02.gif" alt="" width="61%" height="12" /></li>
+			<li class="left" style="float:left"><span class="red_bold_12">잔여(00시간18분21초)</span></li>
+           	<li class="right">사용(00시간11분39초)</li>
+	        </ul>
+        </td>
+        </tr>
+    <tr>
+      <td colspan="2" class="tt1">
+			<ul class="inq_g">		
+			<li class="title"><strong>SMS 100건</strong></li>
+            <li class="gbg"><img src="/img/bill/green_g02.jpg" alt="" width="54%" height="12" /></li>
+
+			<li class="left" style="float:left"><span class="red_bold_12">잔여(54건(회))</span></li>
+            <li class="right">사용(46건(회))</li>
+            </ul>
+        </td>
+        </tr>
+	    <tr>
+    	<td colspan="2" class="tt1">		
+			<ul class="inq_g" style="padding-bottom:12px;">		
+			<li class="title"><strong>지정번호 2회선간 음성통화 30분</strong></li>
+            <li class="gbg"><img src="/img/bill/yellow_g02.gif" alt="" width="99%" height="12" /></li>
+			<li class="left" style="float:left"><span class="red_bold_12">잔여(00시간29분48초)</span></li>
+            <li class="right">사용(00시간00분12초)</li>
+            </ul>
+        </td>
+    	</tr>
+  </table>
+</div>
+
+
+<!-- 2011-01-11 변경 -->  
+<div class="st_title_txt">
+<!-- //2011-01-11 변경 -->
+	사용가능 금액
+</div>
+<!-- 2011-01-11 변경 --> 
+<div class="inquiry_table1" style="padding-bottom:0;">
+<!-- //2011-01-11 변경 -->
+  <table>
+    <tr>
+      <td colspan="2" class="tlt_1"><p>통화  가능금액</p></td>
+    </tr>
+	<tr>
+      <td class="padding_3"><p>제공금액(충전금액)</p></td>
+      <td class="right padding_3"><p>7,500원</p></td>
+    </tr>
+    <tr>
+      <td><p>사용금액</p></td>
+      <td class="right"><p>0원</p></td>
+    </tr>
+    <tr>
+      <td><p>사용가능잔액</p></td>
+      <td class="right"><p>7,500원</p></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tlt_1">충전 금액</td>
+    </tr>
+    <tr>
+      <td class="padding_3"><p>제공금액(충전금액)</p></td>
+      <td class="right padding_3">0원</td>
+    </tr>
+    <tr>
+      <td><p>사용금액</p></td>
+      <td class="right">0원</td>
+    </tr>
+    <tr>
+      <td><p>사용가능잔액</p></td>
+      <td class="right">0원</td>
+    </tr>
+     <tr>
+      <td colspan="2" class="tlt_1">선불 충전금액</td>
+      </tr>
+     <tr>
+       <td class="padding_3"><p>제공금액(충전금액)</p></td>
+       <td class="right padding_3">0원</td>
+     </tr>
+     <tr>
+       <td><p>사용금액</p></td>
+       <td class="right">0원</td>
+     </tr>
+     <tr>
+       <td><p>사용가능잔액</p></td>
+      <td class="right">0원</td>
+    </tr>
+	</table>
+</div>
+<!-- 2011-01-07 변경 --> 
+<div class="inquiry_table1">
+	  <ul>
+	    <li>월 중 변경(요금제변경, 정지) 시 지난 달에 남은 기본제공 통화는 이번 달 6~7일 전후 조회 및 사용 가능합니다.</li>
+		 <li>&lt;당월 통화가능금액>은 현재 사용 가능한 잔여 금액을 의미합니다.(기본제공 통화는 별도)</li>
+	  </ul> <p class="btn1_style"><a href="javascript:goMenuInfo('1_5');"><img src="/img/common/btn02.jpg" alt="이용안내" /></a></p>
+	</div>
+<!-- //2011-01-07 변경 -->
+<!-- //2011-05-27 수정 -->
+
+</form>
+</div>
+<!--카피라이트-->
+
+
+<div id="footer">
+  <div class="footer_link">
+    <ul>
+      <a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0257')">
+        <li>고객상담</li>
+        </a>
+        <a href="javascript:goLink('/jsp/center/menu/cm8_menu_guide.jsp')">
+          <li class="center_line">메뉴안내</li></a><a href="javascript:goLink('/jsp/center/menu/cm8_all_menu.jsp')">
+          <li class="center_line">전체메뉴</li></a>           <a href="javascript:goLogout();"><li class="center_line">로그아웃</li></a>          
+    </ul>
+    
+  </div>
+  <div class="copyright">ⓒ 2010 SK TELECOM CO, LTD.</div>
+</div>
+
+
+</body>
+</html>
+
+

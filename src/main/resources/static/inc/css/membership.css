@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* milkfactory - factory zero */
+/* http://milkfactory.co.kr/zero/ */
+/* writer : 조희근(neople@milkfactory.co.kr), 성백준(100june@milkfactory.co.kr) */
+
+/* Tworld - 멤버십 */
+
+/* 멤버십 정보 타이틀 */
+.tit1 {display:inline-block;width:100%;margin:10px 0;}
+.tit1 h4 {float:left;font-size:16px;margin:7px 0 0 12px;padding:0;}
+
+.tb_card {display:table;width:100%;border-top:1px solid #b2b2b2;margin-top:-4px;}
+.tb_card li {display:table-row;width:100%;margin:0 0 -4px 0;border-bottom:1px solid #e5e5e5;letter-spacing:-1px;background:#fbfbfc}
+.tb_card li:nth-child(even) {background-color:#fff;}
+.tb_card li h5 {display:table-cell;padding:13px 0 13px 6px;font-size:14px;line-height:16px;vertical-align:middle;width:30%;height:100%;border-bottom:1px solid #e5e5e5;}
+.tb_card li p {display:table-cell;color:#787676;padding:13px 0;font-size:14px;line-height:16px;vertical-align:middle;border-bottom:1px solid #e5e5e5;}
+.tb_card li p.cardnum {display:table-cell;color:#787676;padding:3px 0 3px 0;font-size:14px;line-height:32px;vertical-align:middle;border-bottom:1px solid #e5e5e5;}
+.tb_card li p.cardnum button {margin:0 3px 0 0;padding:0;}
+
+.tb_card_tit {padding:70px 0 30px 0;text-align:center;}
+.tb_card_input {padding:20px 0;text-align:center;font-size:20px;border-bottom:1px solid #e0e0e0;}
+.tb_card_input input {height:30px;font-size:20px;vertical-align:middle;border:1px solid #2a2a2a;border-radius:.3em;background:url('/img/common/searchbg.png') repeat-x;}
+
+.tb_mbs {width:100%;border-top:1px solid #7a9c49;}
+.tb_mbs th {height:33px;color:#FFF;-webkit-text-shadow:#000 0 1px 1px;-moz-text-shadow:#000 0 1px 1px;text-shadow:#000 0 1px 1px;background-color:#7a9c49;border-left:1px solid #8daa63;border-right:1px solid #587444;border-top:1px solid #a2ba80;border-bottom:1px solid #587444;}
+.tb_mbs th:first-child {background-color:#7a9c49;border-left:0;border-right:1px solid #587444;border-bottom:1px solid #587444;}
+.tb_mbs th:last-child {background-color:#7a9c49;border-left:1px solid #8daa63;border-right:0;border-bottom:1px solid #587444;}
+.tb_mbs tr:nth-child(even) td {background-color:#fbfbfc;}
+.tb_mbs td {padding:12px 0;text-align:center;border-right:1px solid #e1e1e2;border-bottom:1px solid #e1e1e2;}
+.tb_mbs td p {padding:0 5px;}
+.tb_mbs td:last-child {text-align:center;border-right:0;border-bottom:1px solid #e1e1e2;}
+
+.mbs_txt1 {margin:4px 13px;}
+.mbs_txte {margin:4px 13px 15px 13px;}
+
+.mbs_txt2 {width:100%;}
+.mbs_txt2 li {background:url('/img/common/bul_bi.png') no-repeat 10px 7px;padding:0 8px 7px 20px;}
+.mbs_txt2 li a {display:inline;}
+.mbs_txt2 li span {font-size:12px; color:#787676;}
+
+/* 요금제안내 - 1차화면 */
+.tb_cp1 {display:inline-block;width:100%;margin-bottom:5px;border-bottom:1px solid #e5e5e5;}
+.tb_cp1 li {position:relative;border-bottom:1px solid #e5e5e5;}
+.tb_cp1 li a {display:inline-block;width:100%;height:42px;line-height:42px;background:#fbfbfb url('/img/common/tbarr.png') no-repeat right -72px;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li a {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li a {background-image:url('/img/common/tbarrL.png')}}
+.tb_cp1 li a.active {background:#fbfbfb url('/img/common/tbarr.png') no-repeat right 0;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li a.active {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li a.active {background-image:url('/img/common/tbarrL.png')}}
+.tb_cp1 li a.none {background:#fbfbfb url('/img/common/subarr.png') no-repeat right -37px;-webkit-background-size:23px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li a.none {background-image:url('/img/common/subarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li a.none {background-image:url('/img/common/subarrL.png')}}
+.tb_cp1 li:nth-child(even) a {background:#fff url('/img/common/tbarr.png') no-repeat right -72px;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li:nth-child(even) a {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li:nth-child(even) a {background-image:url('/img/common/tbarrL.png')}}
+.tb_cp1 li:nth-child(even) a.active {background:#fff url('/img/common/tbarr.png') no-repeat right 0;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li:nth-child(even) a.active {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li:nth-child(even) a.active {background-image:url('/img/common/tbarrL.png')}}
+.tb_cp1 li:nth-child(even) a.none {background:#fff url('/img/common/subarr.png') no-repeat right -37px;-webkit-background-size:23px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_cp1 li:nth-child(even) a.none {background-image:url('/img/common/subarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_cp1 li:nth-child(even) a.none {background-image:url('/img/common/subarrL.png')}}
+.tb_cp1 li:last-child {border-bottom:none;}
+.tb_cp1 li h5 {font-size:1em;vertical-align:middle;padding:0 15px 0 13px;}

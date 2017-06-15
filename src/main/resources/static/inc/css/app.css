@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+#content_app_main {background:#fff}
+.app_main_area {margin-bottom:10px;background:#fff}
+.app_main_area.all{background:none}
+.icon_area_01 {padding:20px 0 0px 0px;border-top-left-radius:5px;border-top-right-radius:5px;background:#edf7f7}
+.icon_area_01 h2 {margin-left:12px}
+.icon_area_02 {padding:0px 0 0px 0px;clear:both}
+.app_list {margin:25px 0 0 0}
+.app_list:after {display:block;clear:both;content:""}
+.app_list li {float:left;width:24.5%;min-height:80px;margin:0 0 15px 0;text-align:center;vertical-align:top}
+.app_list li p {position:relative;width:44px;text-align:center;margin:0 auto}
+.app_list li a {display:block;text-align:center}
+.app_list li strong {position:absolute;top:0px;width:44px;height:44px;z-index:500;background:url(/img/app/icon_new.png) no-repeat;background-size:44px 44px}
+.app_list li strong img {}
+.app_list li img {width:44px}
+.app_list li span {display:block;font-size:12px;clear:both}
+.radio_list {height:38px;border-top:1px solid #d5dada;border-bottom:0px solid #cacaca;background:#fff url(/img/app/bg_radio_list.png) 0 35px repeat-x}
+.radio_list p {position:relative;float:left;width:33%;margin:0 2.5% 0 -2.5%;text-align:center}
+.radio_list p input {margin:0 -5px}
+.app_main_area .btn_more {text-align:center;border-bottom-left-radius:5px;border-bottom-right-radius:5px;background:#f3f3f3 url(/img/app/bg_btn_more.png) repeat-x;clear:both}
+.app_main_area .btn_more a {display:block;padding:13px 0 13px 0;color:#3c3c3c;font-size:13px;font-weight:bold;background:url(/img/app/icon_arrow_down.png) no-repeat 33.5% 15px;background-size:12px 17px}
+.banner_area {width:100%;height:77px;margin:20px 0 20px 0;text-align:center;background:#edf7f7 url(/img/app/bg_banner_area.png) repeat-x;clear:both}
+.banner_area img {width:320px}
+/* 2016-08-09 T Apps 원장 개선 */
+/* .app_detail_area .img_area {float:left;width:50px;margin:20px 0 19px 12px}
+.app_detail_area .img_area img {width:44px} */
+/* 2016-08-09 T Apps 원장 개선 */
+
+.event_banner_list {padding:15px 10px 0 12px;line-height:0;overflow:hidden}
+.event_banner_list li {float:left;width:48%;margin:0 10px 10px 0}
+.event_banner_list li.lst {margin:0 0% 10px 0}
+.event_banner_list li a {display:block}
+.event_banner_list li img {width:100%}
+
+.ml10 {margin-left:10px}
+.mb10 {margin-bottom:10px}
+.ml12 {margin-left:12px}
+
+/* 2016-08-09 T Apps 원장 개선 */
+/*
+.app_detail_area .img_area {float:left;width:50px;margin:20px 0 19px 12px}
+.app_detail_area .img_area img {width:44px} 
+.app_detail_area {padding-bottom:30px;background:#fff}
+.app_detail_area .txt_area {float:left;width:70%;margin:13px 0 10px 10px}
+.app_detail_area .txt_area .txt_01 {color:#2d2d2d;font-size:17px;font-weight:bold}
+.app_detail_area .txt_area .txt_02 {}
+.app_detail_area .txt_area .txt_03 {margin:5px 0 0 0;text-align:right;font-size:10px;color:#777777}
+.like_number {margin:-15px 0 15px 70.5%;width:91px;height:41px;background:url(/img/app/bg_icon_like.png) no-repeat;background-size:91px 41px}
+.like_number.year100 {margin:-53px 0 15px 70.5%}
+.like_number.on {background:url(/img/app/bg_icon_like_on.png) no-repeat;background-size:91px 41px}
+.like_number strong {display:block;margin:15px 0 0 7px;padding:10px 0 0 0;color:#1e1f1f}
+.like_number span {display:block;margin:-17px 0 0 40px;color:#fff;text-align:center}
+.screen_shot_area {height:180px;margin:0px -15px 15px -15px;background:#f0f0ee;line-height:0}
+.screen_shot_area ul {margin:0 auto;padding:15px 0 0 2%;text-align:center}
+.screen_shot_area li {float:left;width:32%;margin:0 1% 0 0}
+.screen_shot_area li:last-child {margin:0}
+.screen_shot_area li img {height:150px}
+.cont_area {margin:50px 0 0 0;padding:20px 15px 5px 15px;background:url(/img/app/bg_radio_list.png) repeat-x;clear:both} */
+/* 2016-08-09 T Apps 원장 개선 */
+
+.app_main_area .btn_more_view {text-align:right;margin:0 12px 20px 0}
+.app_main_area .btn_more_view img {width:63px}
+.app_main_area .img_area_main {margin:5px 0px -3px}
+.app_main_area .img_area_main img {width:100%}
+
+.app_main_area .tapp_list {width:100%;padding-bottom:20px}
+.app_main_area .tapp_list img {width:100%}
+.app_main_area .tapp_list dl {margin:0 25px;border-bottom:1px solid #e8e8e8}
+.app_main_area .tapp_list dt {float:left;width:50px;min-height:90px;margin:0 20px 0px 0px;outline:1px solid #c64}
+.app_main_area .tapp_list dt img {width:100%}
+.app_main_area .tapp_list dd {min-width:80%;min-height:90px;margin:17px 0px 15px 0px;outline:1px solid #c64}
+.app_main_area .tapp_list dd strong {font-size:13px;color:#000000}
+
+.title_area {padding:13px 0 10px 13px;border-top:1px solid #cacaca;border-bottom:2px solid #afafaf;background:#f2f9fa}
+.app_group_area {position:relative}
+.app_group_area .app_area {margin:0px 0 0 0;padding:10px 17px 50px 17px}
+.title_bl_sub {position:relative;padding:7px 0 7px 10px;border-top:1px solid #f2f2f2;border-bottom:1px solid #878787;letter-spacing:-1px;clear:both}
+.title_bl_sub a {position:absolute;right:8px;width:11px;background:url(/img/app/icon_minus.png) no-repeat 0px 5px;background-size:11px 12px}
+.title_bl_sub a.on {background:url(/img/app/icon_plus.png) no-repeat 0 5px;background-size:11px 12px}
+
+.app_more_view_list {margin:15px 10px 0px;padding-bottom:15px}
+.app_more_view_list li {margin:0 0 15px 0;height:90px;border:1px solid #c9c9c9;line-height:0}
+.app_more_view_list li img {display:inline-block;height:90px;margin:0 2px 0 0}
+.app_more_view_list .img_area {float:left}
+.app_more_view_list .txt_area {position:relative;min-width:280px;line-height:130%}
+.app_more_view_list .txt_01 {position:absolute;top:5px;left:143px;font-size:15px;font-weight:bold;color:#8C8C8C}
+.app_more_view_list .txt_02 {position:absolute;top:70px;right:10px;font-size:10px}
+
+/* T Apps 원장 개선 */
+#category_tapp {position:relative;margin:0;padding:10px 17px 50px 17px}
+#category_tapp .slide_wrap .title_bl_sub {position:relative;padding:7px 0 7px 10px;border-top:1px solid #f2f2f2;border-bottom:1px solid #878787;letter-spacing:-1px}
+#category_tapp .slide_wrap .title_bl_sub a {background:url(/img/app/icon_plus.png) no-repeat 0 5px;background-size:11px 12px}
+#category_tapp .slide_wrap.view_cont .title_bl_sub a {position:absolute;right:8px;width:11px;background:url(/img/app/icon_minus.png) no-repeat 0 5px;background-size:11px 12px}
+
+#category_tapp .slide_wrap .slide_cont {visibility:hidden;position:relative;height:0;padding:0 20px}
+#category_tapp .slide_wrap.view_cont .slide_cont {visibility:visible;overflow:hidden;height:115px}
+#category_tapp .slide_wrap button {top:40px}
+#category_tapp .slide_wrap button.arw_l {left:0}
+#category_tapp .slide_wrap button.arw_r {right:0}
+#category_tapp .slide_wrap .swiper-container,
+#category_tapp .slide_wrap .swiper-slide {height:80px}
+#category_tapp .swiper-slide {overflow:hidden;margin:25px 0 0 0;padding:0}
+#category_tapp .swiper-slide a {display:block;min-height:80px;margin:0 0 0px 0;text-align:center;vertical-align:top}
+#category_tapp .swiper-slide a p {position:relative;display:inline-block}
+#category_tapp .swiper-slide a p,
+#category_tapp .swiper-slide a img {width:44px}
+#category_tapp .swiper-slide a span {display:block;font-size:12px}
+#category_tapp .swiper-slide a span.new_app {position:absolute;top:0;left:0;width:44px;height:44px;background:url("/img/app/icon_new.png") no-repeat 0 0;background-size:44px}
+
+.swiper-container {height:85px;padding-bottom:30px}
+
+.b_arw { display:block;width:20px;height:20px; background-image:url(/img/main/icons.png);background-repeat:no-repeat;background-size:155px 172.5px;position:absolute;top:30px;z-index:50;text-indent:-999px;font-size:0}
+.arw_l {left:-9px;background-position:-80px 0px}
+.arw_r {right:-9px;background-position:-107px 0px;}
+.h80 {top:80px;z-index:500}
+
+.floating_area {position:fixed;top:35px;right:-60px;z-index:9999}
+.floating_area p img {width:50%}
+.floating_area .btn_close {position:absolute;top:3px;right:40px}
+.floating_area .check_today {position:relative;left:-15px}
+
+/* 이럴땐 이렇게 하세요 UI개선 */
+.app_list_tab{overflow:hidden;padding:10px;border-top:1px solid #d9dade;background-color:#f5f6f7}
+.app_list_tab li{float:left;width:33.3%;height:35px}
+.app_list_tab .ico_comm {display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+.app_list_tab li a{width:96px;height:35px;margin:0 auto;background-image:url(/img/supplementary/icon_supplementary.png);background-repeat:no-repeat;background-size:250px 250px}
+.app_list_tab li:nth-child(1) a{background-position:0 -112.5px}
+.app_list_tab li:nth-child(1) a.on{background-position:0 -62.5px}
+.app_list_tab li:nth-child(2) a{background-position:0 -212.5px}
+.app_list_tab li:nth-child(2) a.on{background-position:0 -162.5px}
+.app_list_tab li:nth-child(3) a{background-position:-125px -50px}
+.app_list_tab li:nth-child(3) a.on{background-position:-125px 0}
+
+.all_app ul{overflow:hidden}
+.all_app ul li{float:left;width:33.3%;margin-top:20px;text-align:center}
+.all_app ul li a,.all_app ul li span{display:block}
+.all_app ul li img{width:65px}
+.all_app ul li span{overflow:hidden;width:90%;margin:0 auto;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;-moz-text-overflow:ellipsis;font-size:13px;color:#1e1f1f;letter-spacing:-0.5px}
+
+.app_list_tab{overflow:hidden;padding:10px;border-top:1px solid #d9dade;background-color:#f5f6f7}
+.app_list_tab li{float:left;width:33.3%;height:35px}
+.app_list_tab .ico_comm {display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+.app_list_tab li a{width:96px;height:35px;margin:0 auto;background-image:url(/img/supplementary/icon_supplementary.png);background-repeat:no-repeat;background-size:250px 250px}
+.app_list_tab li:nth-child(1) a{background-position:0 -112.5px}
+.app_list_tab li:nth-child(1) a.on{background-position:0 -62.5px}
+.app_list_tab li:nth-child(2) a{background-position:0 -212.5px}
+.app_list_tab li:nth-child(2) a.on{background-position:0 -162.5px}
+.app_list_tab li:nth-child(3) a{background-position:-125px -50px}
+.app_list_tab li:nth-child(3) a.on{background-position:-125px 0}
+
+.all_app ul{overflow:hidden}
+.all_app ul li{float:left;width:33.3%;margin-top:20px;text-align:center}
+.all_app ul li a,.all_app ul li span{display:block}
+.all_app ul li img{width:65px}
+.all_app ul li span{height:17px;line-height:17px;overflow:hidden;width:90%;margin:5px auto 0;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;-moz-text-overflow:ellipsis;font-size:13px;color:#1e1f1f;letter-spacing:-0.5px}
+
+.content_thisapp .month_app{padding:15px 10px 30px;background-color:#f5f6f7;border-top:1px solid #d9dade}
+.content_thisapp .month_app h3{font-size:15px;font-weight:bold;color:#1e1f1f;text-align:center}
+.content_thisapp .month_app .app_list2{margin-top:10px;border-top:1px solid #d6d6d6}
+.content_thisapp .app_list2{overflow:hidden}
+.content_thisapp .app_list2 li{float:left;width:33.3%;margin-top:20px;text-align:center}
+.content_thisapp .app_list2 li a,.content_thisapp .app_list2 li span{display:block}
+.content_thisapp .app_list2 li img{width:65px}
+.content_thisapp .app_list2 li span{height:17px;line-height:17px;margin-top:5px;font-size:13px;color:#1e1f1f;letter-spacing:-0.5px}
+.content_thisapp .app_list2 li .btn{width:85px;margin:8px auto 0}
+.content_thisapp .app_list2 li .btn img{width:100%}
+
+/* 배너 UI 개선 */
+#content.content_thisapp {overflow:hidden;margin-bottom:10px;padding:0;line-height:1.5;letter-spacing:-1px}
+.content_thisapp .ico_comm {background:url(/img/new_main/ico_main_comm.png) no-repeat 0 0;background-size:100px 100px;display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-999em}
+.content_thisapp .fc_orange {color:#f65401}
+.content_thisapp .fw_b {font-weight:bold}
+.content_thisapp .txt_uline {text-decoration:underline}
+.content_thisapp .bd_none {border-top:0 none !important}
+.content_thisapp .box_button {overflow:hidden;padding:10px}
+.content_thisapp .box_button a {display:block;overflow:hidden;height:31px;padding:0 18px 0 30px;border:2px solid #f55500;border-radius:18px;font-size:13px;line-height:36px;white-space:nowrap;text-overflow:ellipsis}
+.content_thisapp .box_button a:before {content:'';display:block;position:absolute;top:7px;left:7px;width:18px;height:18px;background:url(/img/prevent/ico_benefit.png) no-repeat 0 0;background-size:100px 100px}
+.content_thisapp .box_button a:after {content:'';display:block;position:absolute;top:9px;right:9px;width:8px;height:13px;background:url(/img/prevent/ico_benefit.png) no-repeat -20px 0;background-size:100px 100px}
+.content_thisapp .box_button em {font-weight:bold;color:#1e1f1f}
+.content_thisapp .box_banner {overflow:hidden;width:100%}
+
+/* 배너 이미지관련 수정 */
+.content_thisapp #banner {position:relative;width:100%;padding-bottom:24px;background-color:#f5f6f7}
+.content_thisapp #banner img{max-width:100%}
+.content_thisapp .arw_l {outline:none;position:absolute;bottom:0;left:10px;width:20px;height:24px}
+.content_thisapp .arw_l .ico_comm {width:20px;height:11px;background-position:0 0}
+.content_thisapp .arw_l .ico_comm.ov{width:20px;height:11px;background-position:-40px 0}
+.content_thisapp .arw_r {outline:none;position:absolute;bottom:0;right:10px;width:20px;height:24px}
+.content_thisapp .arw_r .ico_comm {width:20px;height:11px;background-position:-20px 0}
+.content_thisapp .arw_r .ico_comm.ov{width:20px;height:11px;background-position:-60px 0}
+.content_thisapp #banner ul {overflow:hidden;width:100%}
+.content_thisapp #banner ul li {overflow:hidden;display:none;text-align:center;background:#fff !important}
+.content_thisapp #banner ul li.c_page,
+.content_thisapp #banner ul li a {display:block}
+.content_thisapp .b_paging {position:absolute;bottom:0;left:50%;width:100%;height:24px;margin-left:-50%;text-align:center;background-color:#fff}
+.content_thisapp .b_paging button,
+.content_thisapp .b_paging a {display:inline-block;outline:none;background-image:url(/img/new_main/ico_main_comm.png);background-repeat:no-repeat;background-size:100px 100px;vertical-align:middle;position:relative}
+.content_thisapp .b_paging span{display:inline-block;background-image:url(/img/new_main/ico_main_comm.png);background-repeat:no-repeat;background-size:100px 100px;vertical-align:top;margin-top:7px;position:relative}
+.content_thisapp .b_paging span img{width:9px !important;height:9px !important;position:absolute;left:-1px}
+.content_thisapp .b_page{width:9px;height:9px;margin-left:4px;background-position:0 -20px;text-indent:-99999px}
+.content_thisapp .b_page.on{background-position:-10px -20px}
+.content_thisapp .b_paging .bplay_btn{display:inline-block;width:9px;height:11px;margin:6px 0 0 4px;outline:none;background-position:-20px -20px;text-indent:-999px;font-size:0;vertical-align:top}
+.content_thisapp .bplay_btn.b_play{background-position:-30px -20px}
+.content_thisapp #banner.singletype {padding-bottom:0}
+.content_thisapp #banner.singletype .arw_l,
+.content_thisapp #banner.singletype .arw_r,
+.content_thisapp #banner.singletype .b_paging {display:none}
+
+.content_thisapp .box_banner_sub{width:100%;height:90px;text-align:center;vertical-align:middle;background:url(/img/prevent/bg_box_banner.png) repeat-y 0 0;background-size:100% 100%}
+.content_thisapp .box_banner_sub:after{content:'';width:0;height:100%;display:inline-block;vertical-align:middle}
+.content_thisapp .box_banner_sub .txt{display:inline-block;line-height:20px;font-weight:bold;font-size:16px;color:#1e1f1f;vertical-align:middle}
+.content_thisapp .box_tab {overflow:hidden;position:relative;height:55px;margin-top:5px;border-bottom:1px solid #d8d9dd}
+.content_thisapp .box_tab:after {content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:1px;background-color:#f16900}
+.content_thisapp .box_tab .tab_info {overflow:hidden}
+.content_thisapp .box_tab .tab_info li {float:left;position:relative}
+.content_thisapp .box_tab .tab_info .btn_tab {display:block;overflow:hidden;width:100%;height:55px;font-weight:bold;font-size:15px;line-height:55px;color:#8e8e8e;text-align:center}
+.content_thisapp .box_tab .tab_info .on .btn_tab {color:#313131}
+.content_thisapp .box_tab .tab_info .on:after {content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:4px;background-color:#f65401}
+.content_thisapp .box_tab .tab_info.col2 li {width:50%}
+.content_thisapp .box_tab .tab_info.col3 li {width:33.33%}
+.content_thisapp .ico_comm {display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+
+.content_thisapp .app_view{padding:0 10px}
+.content_thisapp .app_view h3{margin-top:25px;font-size:15px;font-weight:bold}
+.content_thisapp .app_view h3:before{content:"";vertical-align:top;display:inline-block;width:4px;height:12px;margin:4px 5px 0 0;background:url(/img/prevent/ico_benefit.png) no-repeat 0 -40px;background-size:100px 100px}
+.content_thisapp .app_view .app_view_text{margin-top:5px;padding-left:8px;font-size:12px;letter-spacing:-0.5px}
+.content_thisapp .app_view .btn_add{display:block;width:100%;height:28px;line-height:28px;margin-top:10px;border:1px solid #d6d6d6;border-radius:5px;text-align:center;font-size:12px}
+
+/* T Apps 원장개선 2016-07-01 */
+.tappsContainer{}
+.tappsWrap .titArea,
+.tappsWrap .tappsSection{overflow:hidden;position:relative;width:100%}
+.tappsWrap .titArea img,
+.tappsWrap .tappsSection img,
+.tappsWrap .screenshot img{width:100%;vertical-align:top}
+.tappsWrap .titArea p,
+.tappsWrap .tappsSection p,
+.tappsWrap .tappsSection ul{position:absolute;top:0;color:transparent;z-index:-1}
+.tappsWrap .titArea p{top:42%;left:20%;width:70%;height:50%}
+.tappsWrap .screenshot{overflow:hidden;position:relative}
+.tappsWrap .screenshot .thumb{position:relative;width:100%;text-align:left}
+
+.tappsWrap.cake .btnCake01{position:absolute;top:84.2%;left:23.6%;width:50%;height:9%;font-size:20px;text-align:center}
+
+.tappsWrap.oksusu .oksusu01 ul{width:100%;height:100%}
+.tappsWrap.oksusu .oksusu01 ul li{position:absolute}
+.tappsWrap.oksusu .oksusu01 ul li:nth-child(1){top:9%}
+.tappsWrap.oksusu .oksusu01 ul li:nth-child(2){top:29%}
+.tappsWrap.oksusu .oksusu01 ul li:nth-child(3){top:46%}
+.tappsWrap.oksusu .oksusu01 ul li:nth-child(4){top:63%}
+.tappsWrap.oksusu .oksusu01 ul li:nth-child(5){top:81%}
+.tappsWrap.oksusu .oksusu02 p{top:38%;left:6%;width:88%}
+.tappsWrap.oksusu .oksusu02 p + p{top:68%}
+.tappsWrap.oksusu .oksusu03 ul{width:100%;height:100%}
+.tappsWrap.oksusu .oksusu03 ul li{position:absolute}
+.tappsWrap.oksusu .oksusu03 ul li:nth-child(1){top:20%;left:46%;width:46%}
+.tappsWrap.oksusu .oksusu03 ul li:nth-child(2){top:48%;left:6%;width:48%}
+.tappsWrap.oksusu .oksusu03 ul li:nth-child(3){top:78%;left:46%;width:46%}
+.tappsWrap.oksusu .btnbox .btnTypeG{padding:0 26px;color:#2c2a2b;border:1px solid #f6ba00;
+    background-image:-webkit-linear-gradient(bottom, #fede33 50%, #ffd601 100%);
+    background-image:linear-gradient(to bottom, #fede33 50%, #ffd601 100%);
+}
+
+.tappsWrap.tpay .tpay01 ul{width:100%;height:100%}
+.tappsWrap.tpay .tpay01 ul li{position:absolute;width:50%;font-size:15px}
+.tappsWrap.tpay .tpay01 ul li:nth-child(1){top:15%;left:9%}
+.tappsWrap.tpay .tpay01 ul li:nth-child(2){top:34%;left:42%}
+.tappsWrap.tpay .tpay01 ul li:nth-child(3){top:57%;left:9%}
+.tappsWrap.tpay .tpay01 ul li:nth-child(4){top:80%;left:42%}
+.tappsWrap.tpay .tpay02 dl{overflow:hidden;position:absolute;width:100%;height:17%;color:transparent;z-index:-1}
+.tappsWrap.tpay .tpay02 dl dt{display:block;font-size:14px;text-align:center}
+.tappsWrap.tpay .tpay02 dl dd{float:left;padding-top:9%;font-size:14px;text-align:center}
+.tappsWrap.tpay .tpay02 .franchise01{top:17%}
+.tappsWrap.tpay .tpay02 .franchise01 dd{width:33.33%}
+.tappsWrap.tpay .tpay02 .franchise02{top:44%}
+.tappsWrap.tpay .tpay02 .franchise02 dd{width:25%}
+.tappsWrap.tpay .tpay02 .franchise03{top:71%}
+.tappsWrap.tpay .tpay02 .franchise03 dd{width:25%}
+.tappsWrap.tpay .tpay03 p{top:30%}
+.tappsWrap.tpay .tpay03 p + p{top:60%}
+
+.tappsWrap.smart .smart01 ul{width:100%;height:100%}
+.tappsWrap.smart .smart01 ul li{position:absolute}
+.tappsWrap.smart .smart01 ul li:nth-child(1){top:13%;left:44%;width:46%}
+.tappsWrap.smart .smart01 ul li:nth-child(2){top:38%;left:10%;width:46%}
+.tappsWrap.smart .smart01 ul li:nth-child(3){top:61%;left:44%;width:46%}
+.tappsWrap.smart .smart01 ul li:nth-child(4){top:85%;left:10%;width:46%}
+.tappsWrap.smart .smart02 ul{width:100%;height:100%}
+.tappsWrap.smart .smart02 ul li{position:absolute;width:60%;padding-left:30%}
+.tappsWrap.smart .smart02 ul li h4{font-size:15px}
+.tappsWrap.smart .smart02 ul li p{padding-top:13%;font-size:13px}
+.tappsWrap.smart .smart02 ul li:nth-child(1){top:12%}
+.tappsWrap.smart .smart02 ul li:nth-child(2){top:27%}
+.tappsWrap.smart .smart02 ul li:nth-child(3){top:40%}
+.tappsWrap.smart .smart02 ul li:nth-child(4){top:55%}
+.tappsWrap.smart .smart02 ul li:nth-child(5){top:72%}
+.tappsWrap.smart .smart02 p{top:85%;left:5%;width:90%}
+.tappsWrap.smart .smart03 ul{padding-top:14%}
+.tappsWrap.smart .smart03 ul li h4{font-size:14px}
+.tappsWrap.smart .smart03 ul li span{display:block;font-size:13px}
+
+.tappsWrap .btnbox .oneStore{width:118px;color:transparent}
+.tappsWrap .btnbox .oneStore:after{content:'';display:block;position:absolute;top:50%;left:50%;width:66px;height:11px;margin:-6px 0 0 -33px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 0}
+.tappsWrap .btnbox .googlePlay{width:127px;color:transparent}
+.tappsWrap .btnbox .googlePlay:after{content:'';display:block;position:absolute;top:50%;left:50%;width:75px;height:16px;margin:-8px 0 0 -38px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 -16px}
+.tappsWrap .btnbox .appStore{width:122px;color:transparent}
+.tappsWrap .btnbox .appStore:after{content:'';display:block;position:absolute;top:50%;left:50%;width:70px;height:19px;margin:-10px 0 0 -35px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 -36px}
+.tappsWrap .btnbox.btnGroup .rad{display:none;}
+
+/* 2016-08-09 T Apps 원장 개선 */
+.app_detail_area {padding-bottom:30px;background:#fff}
+.app_detail_area .img_area {float:left;width:50px;margin: 0px 10px;}
+.app_detail_area .img_area img {width:50px} 
+.app_detail_area .txt_area {margin:0px 0px 10px 0px; padding:0px 0px 0px 70px;}
+.app_detail_area .txt_area .txt_01 {color:#2d2d2d;font-size:17px;font-weight:bold}
+.app_detail_area .txt_area .txt_02 {}
+.app_detail_area .txt_area .txt_03 {margin:5px 0 0 0;text-align:right;font-size:10px;color:#777777}
+.app_detail_area .cont_area {margin:0px; padding:0px 15px 5px 15px; background:none;} 
+.app_detail_area .cont_area .screen_shot_area {margin:10px -15px;line-height:0;}
+.app_detail_area .cont_area .screen_shot_area ul {width: 100%;overflow: hidden;background:#f0f0ee;text-align:center;padding: 10px 0px;}
+.app_detail_area .cont_area .screen_shot_area li {float:left;width: 33.3%;padding: 0px 2.5px;box-sizing: border-box;}
+.app_detail_area .cont_area .screen_shot_area li img {width: 100%;}
+.app_detail_area .btnbox .oneStore{width:118px;color:transparent}
+.app_detail_area .btnbox .oneStore:after{content:'';display:block;position:absolute;top:50%;left:50%;width:66px;height:11px;margin:-6px 0 0 -33px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 0}
+.app_detail_area .btnbox .googlePlay{width:127px;color:transparent}
+.app_detail_area .btnbox .googlePlay:after{content:'';display:block;position:absolute;top:50%;left:50%;width:75px;height:16px;margin:-8px 0 0 -38px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 -16px}
+.app_detail_area .btnbox .appStore{width:122px;color:transparent}
+.app_detail_area .btnbox .appStore:after{content:'';display:block;position:absolute;top:50%;left:50%;width:70px;height:19px;margin:-10px 0 0 -35px;background:url(/img/new_tapps/sp_tapps.png) no-repeat;background-size:250px 250px;background-position:0 -36px}
+.app_detail_area .btnbox.btnGroup .rad{display:none;}
+/* 2016-08-09 T Apps 원장 개선 */
+
+/* 2016-11-23 T Apps UI개선 */
+.thisApp{padding-top:0 !important}
+.thisAppWrap{position:relative;padding:0 10px}
+.thisApp .section .headArea{overflow:hidden;position:relative;padding:10px;border-bottom:1px solid #e1e1e1;background:#f7f7f7}
+.thisApp .section .headArea .tit{font-size:1.4em;font-weight:bold;color:#333}
+.thisApp .section .headArea .btnArr{display:block;position:absolute;top:50%;right:10px;height:17px;padding-right:12px;font-size:13px;color:#333;line-height:17px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.thisApp .section .headArea .btnArr:after{content:"";position:absolute;top:50%;right:0;width:8px;height:8px;margin-top:-6px;color:transparent;border:1px solid #1e1f1f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.thisApp .section .headArea .checkWrap{position:absolute;top:50%;right:10px;width:180px;margin-top:-12px}
+.thisApp .section .headArea .checkWrap.col2 li{width:50%}
+.thisApp .section .headArea .checkWrap .inpBox input[type="checkbox"] + label, .checkWrap .inpBox input[type="radio"] + label{background-color:transparent}
+.thisApp .toggleSection{margin:0;padding:0 10px}
+.thisApp .appToggleWrap>li{position:relative;font-size:15px;color:#333;border-bottom:1px solid #e1e1e1}
+.thisApp .appToggleWrap>li.on{border-color:#939393}
+.thisApp .appToggleWrap>li>.info{display:block;position:relative;width:100%;padding:15px 12px;font-weight:bold;text-align:left}
+.thisApp .appToggleWrap>li>.info.active{color:#ea002c}
+.thisApp .appToggleWrap>li>.info.active+.area{display:block}
+.thisApp .appToggleWrap>li .btnToggle{display:block;position:absolute;top:50%;right:10px;width:11px;height:11px;margin-top:-8px;text-align:left;border:1px solid #777;border-width:0 0 1px 1px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transition:-webkit-transform 0.3s ease;transition:transform 0.3s ease;}
+.thisApp .appToggleWrap>li .btnToggle.on{margin-top:-1px;-webkit-transform:rotate(135deg);transform:rotate(135deg)}
+.thisApp .appToggleWrap>li .area{display:none;padding-bottom:15px;border-top:2px solid #939393}
+.thisApp .categoryList li:not(:first-child){border-top:1px dashed #e1e1e1}
+.thisApp .categoryList .num{font-size:14px;color:#333;vertical-align:middle;letter-spacing:-1px}
+.thisApp .categoryList .appbox{position:relative;display:table;width:100%;padding:14px 45px 14px 10px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.thisApp .categoryList .appbox .iconImg{display:table-cell;position:relative;width:48px;height:48px;padding:0 15px 0 0;vertical-align:middle}
+.thisApp .categoryList .appbox .iconImg img{width:100%;vertical-align:top}
+.thisApp .categoryList .appbox dl{display:table-cell;vertical-align:middle}
+.thisApp .categoryList .appbox dl dt{display:block;font-weight:bold;font-size:14px;color:#1e1f1f}
+.thisApp .categoryList .appbox dl dd{overflow:hidden;display:block;margin-top:5px;font-size:12px;color:#666;line-height:16px;letter-spacing:-0.07em;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.thisApp .categoryList .appbox .ico{display:block;position:absolute;top:50%;right:10px;margin-top:-12px;width:24px;height:24px}
+.thisApp .categoryList .appbox .ico > *{display:block;width:24px;height:24px;font-size:5px;color:transparent;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px}
+.thisApp .categoryList .appbox .ico .install{background-position:-226px -140px}
+.thisApp .categoryList .appbox .ico .btnDown{background-position:-226px -164px}
+.thisApp .tblSection{display:table;width:100%;table-layout:fixed}
+.thisApp .tblSection .num{display:table-cell;width:6%;text-align:center}
+.thisApp .tblSection .appbox{display:table-cell;width:94%;vertical-align:middle}
+.thisApp .btnMoreApp{display:block;width:100%;height:35px;font-size:14px;color:#333;text-align:center;line-height:34px;border:1px solid #ccc}
+.thisApp .btnMoreApp .ico{display:inline-block;position:relative;padding-right:20px}
+.thisApp .btnMoreApp .ico:after{content:"";position:absolute;top:50%;right:0;width:12px;height:12px;margin-top:-6px;background:url(/img/common/ico_common_sp.png) no-repeat;background-size:250px 250px;background-position:-37px -107px}
+/* 2016-11-23 T Apps UI개선 */

@@ -1,0 +1,47 @@
+@import url("common.css");
+
+
+.serchi_menu{float:left; text-align:center; padding-top:10px; background-image:url(/img/serchi_hit/serchi_line.jpg); background-position:0 bottom; background-repeat:repeat-x; width:100%;}
+.serchi_menu a{color:#000000}
+
+.serchi_menu1_on{float:left; background:url(/img/serchi_hit/tab_on.jpg) no-repeat left top; height:34px; width:60px; padding-top:15px; color:#f56106;}
+.serchi_menu1_off{float:left; background:url(/img/serchi_hit/tab_off.jpg) no-repeat left top; height:34px; width:60px; padding-top:15px;}
+
+
+
+.serchi_menu2_on{float:left; background:url(/img/serchi_hit/serchi_tab2_on.jpg) no-repeat left top; height:34px; width:81px; padding-top:15px; color:#f56106; font-weight:bold;}
+.serchi_menu2_off{float:left; background:url(/img/serchi_hit/serchi_tab2_off.jpg) no-repeat left top; height:34px; width:81px; padding-top:15px;}
+
+.serchi_menu3_on{float:left; background:url(/img/serchi_hit/serchi_tab3_on.jpg) no-repeat left top; height:34px; width:79px; padding-top:15px; color:#f56106; font-weight:bold;}
+.serchi_menu3_off{float:left; background:url(/img/serchi_hit/serchi_tab3_off.jpg) no-repeat left top; height:34px; width:79px; padding-top:15px;}
+
+.serchi_menu4_on{float:left; background:url(/img/serchi_hit/serchi_tab4_on.jpg) no-repeat left top; height:34px; width:77px; padding-top:15px; color:#f56106; font-weight:bold;}
+.serchi_menu4_off{float:left; background:url(/img/serchi_hit/serchi_tab4_off.jpg) no-repeat left top; height:34px; width:77px; padding-top:15px;}
+
+.serchi_menu5{float:left; width:7px; height:47px;}
+.serchi_menu6{float:left; border-bottom:2px solid #f56106; width:5px; height:47px;}
+
+.serchi_top_new { float:left; background:url(/img/serchi_hit/serchi_hit_bg.jpg) repeat-x 0 bottom; font-size:14px; color:#3d3d3d; font-weight:bold; width:100%;}
+
+.serchi_top_new .serchi_top1 {float:left; font-weight:bold; padding:20px 0 15px 10px;}
+.serchi_top_new .serchi_top2 {float:left; padding:15px 0 15px 10px;}
+
+.serchi_con_new { float:left; background:#f5f5f5; border-bottom:1px solid #c6c6c6; width:100%;}
+.serchi_con_new a {text-decoration:underline;}
+.serchi_con_new p.title_txt{color:#000000; font-size:14px; font-weight:bold; padding:10px 0 10px 10px; text-decoration:underline;}
+.serchi_ul li{background:url(/img/common/bullet_won.jpg) no-repeat 10px 4px; padding:0 8px 6px 23px; color:#808080;}
+.serchi_ul li.li_pd{padding-bottom:19px;}
+.serchi_con_new p.title_txt1{color:#f56307; font-size:14px; font-weight:bold;padding:10px 0 10px 0; text-decoration:underline;}
+.serchi_con_new p.title_txt2{color:#000000; font-weight:bold; padding:0 0 8px 0;}
+
+
+
+.in_no2{padding:0 5px 20px 5px; height:26px; text-align:center; font-size:14px;line-height:26px; }
+.in_no2 p img{vertical-align:top; margin:-2px 5px 0 5px;}
+.in_no2_div {float:left; width:100%; padding-top:6px;}
+.in_no2_s{ padding:0 5px 0px 5px; height:18px; text-align:center; font-size:14px;line-height:18px; }
+.in_no2_s p img{vertical-align:top; margin:-2px 5px 0 5px;}
+
+
+
+.serchi_title {font-size:14px; font-weight: bold; padding:20px 10px 15px 10px;}

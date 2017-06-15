@@ -1,0 +1,349 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>모바일 T world</title>
+<script>
+function f_search(){
+
+	document.payRfndFrm.ctzCorpNum.value = document.payRfndFrm.ctzCorpNum1.value + document.payRfndFrm.ctzCorpNum2.value;
+	var regnoval        = document.payRfndFrm.ctzCorpNum.value;
+	var regnolength     = document.payRfndFrm.ctzCorpNum.value.length;
+	if (regnolength < 13) {
+		alert("주민등록번호는 13자리 숫자만 입력해주세요");
+		document.payRfndFrm.ctzCorpNum1.value = "";
+		document.payRfndFrm.ctzCorpNum2.value = "";
+		document.payRfndFrm.ctzCorpNum1.focus();
+		return;
+	}
+
+	for (i=0; i<regnolength; i++){
+		if ((regnoval.charAt(i) < '0') || (regnoval.charAt(i) > '9')) {
+			alert("주민등록번호를 숫자만 입력하여 주십시오");
+			document.payRfndFrm.ctzCorpNum1.value = "";
+			document.payRfndFrm.ctzCorpNum2.value = "";
+			document.payRfndFrm.ctzCorpNum1.focus();
+			return;
+		}
+	}
+	
+	document.payRfndFrm.displayCheck.value =  "T";
+	document.payRfndFrm.target = '_self';
+	document.payRfndFrm.action = ' /normal.do?serviceId=S_PAYM0005&viewId=V_CENT0050';
+	document.payRfndFrm.submit();
+}
+
+//-----------------------
+// 다음 입력 필드로 이동
+//-----------------------
+function NextFocus(arg, len, nextname) {
+    if(arg.value.length == len) {
+        nextname.focus();
+        return;
+    }
+}
+</script>
+<script type="text/javascript" src="/inc/js/common.js"></script>
+<!-- 2011-06-13 수정 -->
+<link href="/inc/css/bill.css" rel="stylesheet" type="text/css" />
+<!-- //2011-06-13 수정 -->
+</head>
+
+<body>
+<div id="sub_wrap">
+<div id="s_maintop">
+
+
+
+
+
+
+
+
+<!--타이틀-->
+<div class="home"><a href="javascript:goLink('/normal.do?viewId=V_BILL0001&serviceId=SDUMMY0001');"><img src="/img/common/pre_btn.jpg" alt="상위" /></a></div>
+
+
+<div class="logout"><strong>SK고객</strong>님</div>
+
+<div class="menu"> 
+	<h1><a href="http://m.tworld.co.kr/"><img src="/img/common/logo.gif" alt="모바일 T world" /></a></h1>   
+</div>
+
+<!--검색-->
+  
+<script type="text/javascript" src="/inc/js/suggest_js.js"></script>
+<script language="Javascript">
+function doSearch()
+{
+	var f = document.search;
+	var	q = f.query;
+	if(check_query_spword(q.value) == -1){
+		f.action="";
+		q.value="";
+		q.focus();
+		return;
+	}
+	if (f.returnURL.value == null || f.returnURL.value == "") 
+		f.returnURL.value = document.URL;
+	f.submit();
+}
+function check_query_spword(search_word){
+	var fm = document.search;
+	 var index, len;
+
+	 while(true) {
+		   index = search_word.indexOf(" ");
+		   // 공백이 없으면 종료합니다.
+		   if (index == -1) break;
+		   // 문자열 길이를 구합니다.
+		   len = search_word.length;
+		   // 공백을 잘라냅니다.
+		   search_word = search_word.substring(0, index) + search_word.substring((index+1),len);
+	  }
+
+	if(search_word == "")
+	{
+		alert("검색어를 입력하시기 바랍니다.");
+		return -1;
+	}
+	/*else if(search_word.length <= 1)
+	{
+		alert("2자 부터 검색가능합니다.");
+		return -1;
+	}*/
+	else
+	{
+		//한글은 2Byte , 영문은 1Byte
+		for (var i = 0; i < search_word.length; i++)
+		{
+			ret = search_word.charCodeAt(i);
+
+			if ((ret > 64 && ret < 91 ) || (ret > 96 && ret < 123 ) || (ret > 47 && ret < 58 ))
+			{
+				//영문값,숫자값 체크
+			}
+			else
+			{
+				if (ret < 0xAC00 || ret > 0xD7A3)
+				{
+					if ( ret == 37 || ret == 34 || ret == 60 || ret == 62 || ret == 38 || ret == 39  || ret == 43 || ret == 45 )  // %, ", < , >, +, -
+					// if ( ret == 37 || ret == 34 || ret == 60 || ret == 62 || ret == 38 || ret == 39  || ret == 43 ) // %, ", < , >, +
+					{
+						alert("해당 특수문자는 입력하실수 없습니다.");
+						return -1;
+					}
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+</script>
+
+   <!--검색-->  
+   <div id="search">
+    <form name="search" action="/jsp/search/search_mt.jsp" method="POST">
+    	<input type="hidden" name="coll" value="TOTAL_MT">
+    	<input type="hidden" name="pageNo" value="1">
+    	<input type="hidden" name="returnURL" value="">
+    	<div class="leftimg"><img src="/img/common/search_left.jpg" alt="" /></div>
+        <div class="center">
+          <input type="text" name="query" id="query" class="search_input" value="" 
+          onChange="javascript:search_promo_off();"
+          onkeypress="if(event.keyCode == 13) {doSearch(); return false;}" 
+          autocomplete="off" />
+        </div>
+        <!-- div class="rightbtn"><a href="javascript:doSearch();"><img src="/img/common/search_btn.jpg" alt=""  /></a></div-->
+        <div class="rightbtn"><img src="/img/common/search_btn.jpg" alt=""  onclick="doSearch()";/></div>
+    <div class="search_link_list" id="ac_body_" onmouseover="set_mouseon_(2);" onmouseout="set_mouseoff_(2);">
+		<ul  id="scrol_" >
+      </ul>    
+    </div>
+        
+        
+        <script language="JavaScript" type="text/JavaScript">
+						function getBrws()
+						{
+							var ua = navigator.userAgent;
+						 	var safari	= ua.indexOf("Safari")!=-1;
+						 	var opera	= ua.indexOf("Opera")!=-1;
+						 	var konqueror = ua.indexOf("Konqueror")!=-1;
+						 	var mozes	 = ((a=navigator.userAgent.split("Gecko/")[1] )
+						 			?a.split(" ")[0]:0) >= 20011128 ;
+						 	
+						 	if(window.opera || safari || mozes || opera)
+						 		return "NI";
+						 	else
+						 		return "IE";						 	
+						}
+							var query_obj = document.getElementById("query");
+							//alert(document.search.query.offsetLeft);
+							if(getBrws() == "IE")
+								setDefaultAutoComplete_ (document.search.query, 30,document.search.query.offsetLeft+383,10);
+							else
+								setDefaultAutoComplete_ (document.search.query, 30,document.search.query.offsetLeft+273,10);
+							
+							document.onmousedown=setTextBox_;
+							document.onkeydown=setTextBox_; 
+							 if ((t_==1||t_==2) && c_==1) {
+								wd_ ();
+								setTimeout ("wi_ ()", wi_int_);
+							}
+							ac_body_id = document.getElementById("ac_body_");
+							ac_body_id.style.display = "none" ;
+							//vat tqObj=document.getElementById("query");
+							//tqObj.setAttribute("autocomplete","off");
+						
+						</script>
+    </form>
+   </div> 
+
+ <!--상단메뉴-->
+ 
+<div id="topmenu_bg">
+<div class="menu">
+<ul class="topmenu">
+	<li class="width_m1"><a href="javascript:goLink('/normal.do?viewId=V_BILL0001&serviceId=SDUMMY0001')"><img src="/img/common/topmenu1_on.gif" alt="요금조회" /></a></li>  
+	<li class="width_m2"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_MYTW0130')"><img src="/img/common/topmenu2_off.gif" alt="MY 서비스"/></a></li>  
+	<li class="width_m3"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0426')"><img src="/img/common/topmenu3_off.gif" alt="요금제부가서비스" /></a></li>  
+	<li class="width_m4"><a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_MBRS0001')"><img src="/img/common/topmenu4_off.gif" alt="포인트멤버십" /></a></li>
+</ul>
+</div>
+<div class="topmenu_left"><img src="/img/common/bgl.gif"  /></div>
+<div class="topmenu_center"><img src="/img/common/bgr.gif"  /></div>
+ </div> 
+</div>
+
+ 
+<!--컨텐츠 -->
+
+<div id="content">
+<h1 class="ser_title">
+  <div class="menu_icon"><img src="/img/bill/i_icon09.png" alt="청구요금 조회" /></div>
+  <div class="title_text">
+    <p>해지 미환급금 조회</p>
+  </div>
+</h1>
+ <div class="st_title">해지환급금 내역</div>
+ 
+<!-- 2011-06-13 수정 -->
+<div class="inqu_table1">
+  <table>
+    <tr>
+      <td class="tlt_4" style="etter-spacing:-2px">환불급액 합계</td>
+      <td class="right2">600원</span></p></td>
+    </tr>
+
+    <tr>
+       <td class="sub">서비스번호</td>
+      <td class="sub2"><p>이동전화 01012**5*** (홍길동)</p></td>
+    </tr>
+
+    <tr>
+      <td class="tlt_3"> 구분</td>
+      <td class="right"><p>과납                                              </p></td>
+    </tr>
+
+    <tr>
+       <td class="tlt_3">환급금액</td>
+      <td class="right"><p>0원</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">계좌등록일</td>
+      <td class="right"><p>2011-04-19</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">은행</td>
+      <td class="right"><p>신한은행(420027 ********)</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">계좌번호</td>
+      <td class="right"><p>                                                  </p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">처리 결과</td>      
+      <td class="right">송금완료 : 500원</td>
+    </tr>
+
+    <tr>
+       <td class="sub">서비스번호</td>
+      <td class="sub2"><p>B인터넷(정자동)010000(홍길동)</p></td>
+    </tr>
+
+    <tr>
+      <td class="tlt_3"> 구분</td>
+      <td class="right"><p>과납</p></td>
+    </tr>
+
+    <tr>
+       <td class="tlt_3">환급금액</td>
+      <td class="right"><p>100원</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">계좌등록일</td>
+      <td class="right"><p>2011-03-01</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">계좌번호</td>
+      <td class="right"><p>신한은행(420027 ********)</p></td>
+    </tr>
+    <tr>
+       <td class="tlt_3">처리 결과</td>      
+      <td class="right">N</td>
+    </tr>
+  </table>
+  <ul style="padding-top:10px;">
+  <li>해지 미환급금은 가입해지 후 고객님께 돌려드릴 금액으로 당사 고객센터로 신청하시면 자동 환급됩니다.(본인 명의의 계좌로만 신청가능)</li>
+  <li>해지환급금 통합조회 안내 : 통신사업자연합회(KTOA) 홈페이지(www.ktoa-refund.kr)에서 각 사업자별 미환 급액을 한꺼번에 확인하실 수 있습니다.</li>
+  </ul>
+<p class="btn4_style"><a href="javascript:goMenuInfo('1_8');"><img src="/img/common/btn02.jpg" alt="메뉴안내" /></a></p>
+</div>  
+<!-- //2011-06-13 수정 -->
+	 
+</div>
+</div>
+
+
+<div id="footer">
+  <div class="footer_link">
+    <ul>
+      <a href="javascript:goLink('/normal.do?serviceId=SDUMMY0001&viewId=V_CENT0257')">
+        <li>고객상담</li>
+        </a>
+        <a href="javascript:goLink('/jsp/center/menu/cm8_menu_guide.jsp')">
+          <li class="center_line">메뉴안내</li></a><a href="javascript:goLink('/jsp/center/menu/cm8_all_menu.jsp')">
+          <li class="center_line">전체메뉴</li></a>           <a href="javascript:goLogout();"><li class="center_line">로그아웃</li></a>          
+    </ul>
+    
+  </div>
+  <div class="copyright">ⓒ 2010 SK TELECOM CO, LTD.</div>
+</div>
+
+
+</body>
+</html>

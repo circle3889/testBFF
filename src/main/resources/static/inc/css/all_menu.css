@@ -1,0 +1,64 @@
+@import url("common.css");
+
+
+
+
+
+.top_title{overflow:hidden;}
+
+.top_title img{float:left; padding:8px 6px 0 15px;}
+
+.top_title p{float:left; color:#000000; font-size:14px; font-weight:bold; padding-top:9px;}
+
+.allmenu_content{padding:0 7px 0 7px;}
+
+.allmenu_content1{border:3px solid #f7984f;}
+
+.all_con_t{background:#ededed url(/img/gary_bg.gif) repeat-x left top; height:29px; border-top:1px solid #c6c6c6; border-bottom:1px solid #c6c6c6; font-weight:bold;}
+
+.all_con_t p{color:#434343; padding:8px 0 8px 20px;}
+
+.all_con_c{overflow:hidden;}
+
+.all_con_c_1{float:left;}
+
+.all_con_c_1 p{background:url(/img/bullet_won.jpg) no-repeat 20px 5px; padding:0 0 11px 28px;}
+
+.all_con_c_1 p.top_txt{margin-top:14px;}
+
+.all_con_c_2{float:right; width:130px;}
+
+.all_con_c_2 p{background:url(/img/bullet_won.jpg) no-repeat 0 5px; padding:0 0 11px 9px;}
+
+.all_con_c_2 p.top_txt{margin-top:14px;}
+
+.all_con_t_bor_no{border-top:none;}
+
+
+
+
+
+.inquiry_table3 {padding:10px 10px 20px 10px ;}
+
+.inquiry_table3 table {width:100%; border-top:3px solid #ff8c29; border-right:3px solid #ff8c29; border-bottom:3px solid #ff8c29; border-left:3px solid #ff8c29; border-collapse:collapse;}
+
+.inquiry_table3 th { background-image:url(/img/common/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 0; background-repeat:repeat-x; line-height:29px; border-top:1px solid #c6c6c6; border-bottom:1px solid #c6c6c6; width:50%; padding-top:3px; text-align:left; padding-left:15px;}
+
+.inquiry_table3 th .left{ border-left:0;}
+
+.inquiry_table3 td {padding:5px 0 5px 15px; width:100%;}
+
+.inquiry_table3 .tt1 { text-align:center;}
+
+.inquiry_table3 .tt1 table {border:0; width:100%; text-align:left; }
+
+.inquiry_table3 .tt1 td { padding:0; margin:0;}
+
+.inquiry_table3 .tt1 .t_table table {border:0; width:100%; }
+
+.inquiry_table3 li {background-image:url(/img/common/icon.jpg); background-position:0 center; background-repeat: no-repeat; padding:5px 0 5px 8px; color:#666; float:left; width:122px; letter-spacing:-2px}
+
+.inquiry_table3 a {color:#666;}
+
+.error_title_ttl {padding-bottom:10px; border-bottom:1px solid #ccc; font-size:14px; color:#000; font-weight:bold;}
+.padding-10 { padding-top:10px;}

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no">
+<title>멤버십 | T world</title>
+<link rel="stylesheet" type="text/css" href="/inc/css/new_layout.css" />
+<link rel="stylesheet" type="text/css" href="/inc/css/new_membership.css">
+<link rel="stylesheet" type="text/css" href="/inc/css/tworld_spinner.css" />  
+<link rel="stylesheet" type="text/css" href="/inc/css/mtworld.swipe.css">
+
+</head>
+<body class="bg_white">
+	<header>
+		<div class="my_menu">
+    		<div id="header">
+        		<div class="header_cont">
+					<div class="h1_wrap"><h1><span id="title"></span></h1></div>
+					<button onClick="javascript:goAppBack();" class="head_back_page" id="backBtn">뒤로가기</button> 
+					<p class="search_allmenu">
+               			<button class="head_search" onClick="javascript:fnSearch();">검색</button>
+                		<button class="head_allmenu" onClick="javascript:fnMenuAll();">전체메뉴보기</button> 
+            		</p>
+        		</div>
+    		</div>
+		</div>
+	</header>
+<section>
+	<div id="content" class="info_main in_member poc_ui">
+		<div class="mini_myT">
+         	<dl class="my_line_number line_number_border">
+                <dt>나의 회선번호</dt>
+                <dd class="" ></dd>
+            </dl>
+		</div>
+
+	<div class="box_mcard mg_t15">
+				<div class="cont_box">
+					<div class="title">
+						<strong class="tit_cardinfo">모바일 멤버십 카드</strong>
+						<!-- 2016-10-31 GA추가_02 [s] -->
+						<a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0067&viewId=V_MBRS0019')";  class="btn_more" ga:ca="MTA_membership" ga:ac="멤버십 카드" ga:la="더보기">더보기<span class="ico_comm"></span></a>
+					</div>
+					<!-- 2016-07-05 추가_01 [s] --> <!-- 로딩 이미지 [s] -->
+					<div class="cont cardinfo" id="card_loading">
+						<img src="/img/new_member/card_loading.gif"/>
+					</div>
+
+					<!-- 2016-07-05 추가_01 [e] --> <!-- 로딩 이미지 [e] -->
+					<!-- 2016-07-05 추가_02 [s] --> <!-- 타인 명의 카드 발급 시 [s] -->
+					<div class="cont cardinfo otherscard" id="card_otherscard" style="display:none">
+						<strong class="txt">타인 명의로 카드가 발급되었습니다.</strong>
+						<p class="desc">카드 서비스는 본인 명의로 발급된 경우에만 이용할 수 있습니다. 실 사용자의 아이디로 로그인 하시면 이용 가능합니다.</p>
+					</div>
+					<!-- 2016-07-05 추가_02 [e] --> <!-- 타인 명의 카드 발급 시 [e] -->
+					<!-- 2016-07-05 수정_02 [s] -->  <!-- 멤버십 카드 발급회원 [s] -->
+					<div class="cont cardinfo" id="card_info">
+					<!-- 2016-07-05 수정_02 [e] -->
+						<div id="single5" class="wrap_card"> </div>
+						<script id="single_normal5" type="text/x-handlebars-template">
+							{{#ifCond this.membershipTypeCd '=='  "4"}}
+								<img src="/img/new_member/img_card2.png" width="82" height="55" alt="커플 카드">
+							{{else ifCond this.membershipTypeCd '=='  "3"}}
+								<img src="/img/new_member/img_card3.png" width="82" height="55" alt="T플 카드">
+							{{else ifCond this.membershipTypeCd '=='  "8"}}
+								<img src="/img/new_member/img_card4.png" width="82" height="55" alt="TTL 카드">
+							{{else }}
+								<img src="/img/new_member/img_card1.png" width="82" height="55" alt="리더스 카드">
+							{{/ifCond}}
+						</script>
+						<div class="wrap_info">
+							<dl class="detail">
+								<dt>카드종류</dt>
+								<dd id = "single1"></dd>
+								<script id="single_normal1" type="text/x-handlebars-template">
+									{{membershipTypeNm}}
+								</script>
+							</dl>
+							<dl class="detail">
+								<dt>멤버십 등급</dt>
+								<dd id = "single2"></dd>
+								<script id="single_normal2" type="text/x-handlebars-template">
+									{{membershipGrNm}}
+								</script>
+
+							</dl>
+						</div>
+					</div>
+					<!-- 멤버십 카드 발급회원 [e] -->
+					<!-- 2016-07-05 추가_03 [s] --> <!-- 멤버십 카드 비 발급회원 [s] -->
+					<div class="cont cardinfo nocard" id="req_card" style="display:none">
+						<p class="txt_info fw_b">T멤버십 카드를 신청하세요.</p>
+						<!-- 2016-10-31 GA추가_03 [s] -->
+						<a href="javascript:goURL('https://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0075&viewId=V_MBRS0054')"; class="btn_request" ga:ca="MTA_membership" ga:ac="멤버십 카드" ga:la="멤버십카드 신청"><span class="fw_b">멤버십카드</span> 신청</a>
+					</div>
+					<!-- 2016-07-05 추가_03 [e] --> <!-- 멤버십 카드 비 발급회원 [e] -->
+				</div>
+				<div class="cont_addinfo">
+					<div class="column_type">
+						<!-- 2016-10-31 GA추가_04 [s] -->
+						<a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0073&viewId=V_MBRS0022')"; ga:ca="MTA_membership" ga:ac="멤버십 카드" ga:la="모바일 멤버십카드 안내" class="link_info"><strong class="fw_b" ga:ca="MTA_membership" ga:ac="멤버십 카드" ga:la="모바일 멤버십카드 안내">모바일 멤버십</strong> 카드안내<span class="ico_comm" ga:ca="MTA_membership" ga:ac="멤버십 카드" ga:la="모바일 멤버십카드 안내"></span></a>
+					</div>
+				</div>
+			</div>
+			<!-- 2016-07-05 수정_01 [s] --> <!-- 신규 가입 유도 -->
+			
+		<div class="box_section mg_t15" id="my_membership_area">
+			<div class="cont_box3">
+				<div class="title">
+					<strong class="tit_section">My 멤버십</strong>
+					<!-- 2016-10-31 GA추가_05 [s] -->
+					<a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0089&viewId=V_MBRS1002')"; class="btn_more" ga:ca="MTA_membership" ga:ac="My 멤버십" ga:la="더보기">더보기<span class="ico_comm" ga:ca="MTA_membership" ga:ac="My 멤버십" ga:la="더보기"></span></a>
+				</div>
+				<div class="cont">
+					<ul class="list_cont">
+						<li>
+							<dl class="detailinfo price">
+								<dt><span class="inner_txt">기 사용 할인한도</span></dt>
+								<dd id = "single3"></dd>
+								<script id="single_normal3" type="text/x-handlebars-template">
+									{{{_membershipUseAmt}}}
+								</script>
+							</dl>
+						</li>
+						<li>
+							<dl class="detailinfo price">
+								<dt><span class="inner_txt">잔여 할인한도</span></dt>
+								<dd id = "single4" class="fc_red"> </dd>
+								<script id="single_normal4" type="text/x-handlebars-template">
+									{{{_membershipRemLimit}}} 
+								</script>
+								
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cont_addinfo">
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_06 [s] -->
+					<a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_MBRS0004&menuId=4,1,2')"; ga:ca="MTA_membership" ga:ac="My 멤버십" ga:la="사용내역 상세보기" class="link_info"><strong class="fw_b" ga:ca="MTA_membership" ga:ac="My 멤버십" ga:la="사용내역 상세보기">사용내역</strong> 상세보기<span class="ico_comm" ga:ca="MTA_membership" ga:ac="My 멤버십" ga:la="사용내역 상세보기"></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="box_section mg_t30">
+			<div class="cont_button">
+				<div class="column_type col2">
+					<a href="javascript:gofranchise();" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="주변 가맹점 찾기" class="link_page">
+						<!-- 2016-10-31 GA추가_07 [s] -->
+						<img src="/img/new_member/ban_search.png" ga:ca="MTA_membership" ga:ac="중단배너" alt="주변 가맹점 찾기" />
+					</a>
+				</div>
+				<div class="column_type col2">
+					<!-- 2016-10-31 GA추가_08 [s] -->
+					<a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?viewId=V_MBRS4000&serviceId=S_MBRS0087');" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="데이터플러스 멤버십" class="link_page">
+						<img src="/img/new_member/ban_dataplus.png" ga:ca="MTA_membership" ga:ac="중단배너" alt="데이터플러스 멤버십">
+					</a>
+				</div>
+			</div>
+			<div class="cont_addinfo">
+				<div>
+					<a href="http://m2.tworld.co.kr/normal.do?serviceId=SDUMMY0001&viewId=V_MAIN0008&menuId=8,4,9&domainVer=m2&PMAIN=4" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="카드 별 멤버십 혜택을 알고 계세요?" class="link_info more_card">
+					<span class="ico_card" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="카드 별 멤버십 혜택을 알고 계세요?"><img src="/img/new_member/memcard_s.png" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="카드 별 멤버십 혜택을 알고 계세요?"></span>카드 별 <strong class="fw_b" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="카드 별 멤버십 혜택을 알고 계세요?">멤버십 혜택</strong>을 알고 계세요?<span class="ico_comm" ga:ca="MTA_membership" ga:ac="중단배너" ga:la="카드 별 멤버십 혜택을 알고 계세요?"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="box_section mg_t30">
+				<ul class="btnlist">
+					<!-- 2016-10-31 GA추가_09 [s] -->
+					<li><a href="javascript:goURL('https://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0075&viewId=V_MBRS0050');" ga:ca="MTA_membership" ga:ac="업무메뉴">멤버십카드 신청</a></li>
+					<!-- 2016-10-31 GA추가_10 [s] -->		
+					<li><a href="javascript:goURL('https://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0079&viewId=V_MBRS0055');" ga:ca="MTA_membership" ga:ac="업무메뉴">카드 재발급/종류변경</a></li>
+					<!-- 2016-10-31 GA추가_11 [s] -->
+					<li><a href="javascript:goURL('https://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0086&viewId=V_MBRS0006');" ga:ca="MTA_membership" ga:ac="업무메뉴">카드 정보수정</a></li>
+					<!-- 2016-10-31 GA추가_12 [s] -->
+					<li><a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0082&viewId=V_MBRS0007');" ga:ca="MTA_membership" ga:ac="업무메뉴">카드 일시정지/해제</a></li>
+					<!-- 2016-10-31 GA추가_13 [s] -->
+					<li><a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MBRS0078&viewId=V_MBRS0008');" ga:ca="MTA_membership" ga:ac="업무메뉴">카드배송/발급이력</a></li>
+					<!-- 2016-10-31 GA추가_14 [s] -->
+					<li><a href="javascript:goURL('http://m2.tworld.co.kr/normal.do?serviceId=S_MYTW0054&viewId=V_MYTW0005&menuId=4,6,1');" ga:ca="MTA_membership" ga:ac="업무메뉴">레인보우 포인트</a></li>
+				</ul>
+		</div>
+	<div class="bottom_banner">배너</div>
+</section>
+</body>
+</html>
+<script type="text/javascript" src="/inc/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/handlebars-v4.0.5.min.js"></script>
+<script type="text/javascript" src="/inc/js/tweb/util/handlebars_string.min.js"></script>
+<script type="text/javascript" charset="euc-kr" src="/inc/js/tweb/common_tweb.min.js"></script>
+<script type="text/javascript" src="/inc/js/new_common.js"></script>
+<script type="text/javascript" src="/inc/js/new_tworld.js"></script>
+<script type="text/javascript" src="/inc/js/mytworld.js"></script>
+<script type="text/javascript" src="/inc/js/mtworld.swipe_banners.js"></script>
+
+<script type="text/javascript">
+	// 2016-10-31 GA추가_01 [s]
+	setCategory = "MTA_membership";
+	
+	// os 구분 
+	var MobileUA = ( function () {
+		var ua = navigator.userAgent.toLowerCase();
+		var mua = {
+			IOS: /ipod|iphone|ipad/.test(ua),                                //iOS
+			IPHONE: /iphone/.test(ua),                                        //iPhone
+			IPAD: /ipad/.test(ua),                                            //iPad
+			ANDROID: /android/.test(ua),                                    //Android Device
+			WINDOWS: /windows/.test(ua),                                    //Windows Device
+			TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua),    //Touch Device
+			MOBILE: /mobile/.test(ua),                                        //Mobile Device (iPad)
+			ANDROID_TABLET: false,                                            //Android Tablet
+			WINDOWS_TABLET: false,                                            //Windows Tablet
+			TABLET: false,                                                    //Tablet (iPad, Android, Windows)
+			SMART_PHONE: false                                                //Smart Phone (iPhone, Android)
+		};
+		
+		mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+		mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+		mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+		mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+		return mua;
+	
+	}());
+	
+	function gofranchise() {
+		document.location.href = "toapp:searchmembership";
+	}
+	
+	function goURL(url) {
+	    url += "&domainVer=m2&PMAIN=4";
+        location.href=url;
+    }	
+    
+    //사용자 정의 함수
+	Handlebars.registerHelper('_membershipUseAmt', function(options) {
+		var useAmt = commify(this.membershipUseAmt);
+		return useAmt + "<span class='unit'>원</span>";
+	});
+	
+	Handlebars.registerHelper('_membershipRemLimit', function(options) {
+		var remAmt = this.membershipRemLimit;
+		var returnAmt= '';
+		if(remAmt >= 1000000) {
+			returnAmt = '무제한';
+		} else {
+			returnAmt = commify(remAmt) + "<span class='unit'>원</span>";
+		} 
+		return returnAmt;
+	});
+	
+	$(function(){
+
+		Menu.init("", "멤버십", "", "", "", "", "", "");
+		Banner.init("05");
+		$('#title').focus();
+	});
+	
+	var membershipCardYn = "";
+	var ciCompare     = "";
+	
+//핸들바 바인딩 완료 후에 실행
+	var onAfterBinding = {
+
+		init : function(data){
+		
+			MiniMyT.init("R", location.pathname);
+			
+			membershipCardYn = data.membershipCardYn;
+			ciCompare     = data.ciCompare;
+			
+			$("#card_loading").animate({"opacity": "0"}, 500).hide();
+			
+				 if (membershipCardYn =='Y' && ciCompare != 'N' ) {  //정상 발급
+					$("#card_info").css("display", "block").animate({
+						"opacity" :  1	
+					}, 500);
+					$("#content.info_main.poc_ui .box_mcard .cont_box .title .btn_more").show();
+					$("#my_membership_area .title .btn_more").show();
+					
+				} else if (ciCompare == 'N' ) {  //타 명의 카드
+					$("#my_membership_area").css("display","none");
+					$("#card_otherscard").css("display", "block").animate({
+						"opacity" :  1	
+					}, 500);
+					//$("#my_membership_area").slideUp("fast");
+				} else {  //신규 발급 유도
+					$("#my_membership_area").css("display","none");
+					$("#req_card").css("display", "block").animate({
+						"opacity" :  1	
+					}, 500);
+					//$("#my_membership_area").slideUp("fast");
+				}
+		}
+	}		 
+</script>
+

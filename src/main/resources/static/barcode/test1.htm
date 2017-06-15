@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+	<HEAD><TITLE>JSB Code128 barcode</TITLE>
+	<LINK rel=stylesheet type=text/css href="code128.css" media=screen>
+	<META name=format-detection content=telephone=no>
+	<SCRIPT type=text/javascript src="base2-jsb-fp.js"></SCRIPT>
+	<SCRIPT type=text/javascript src="code128-base2.js"></SCRIPT>	
+	<SCRIPT type=text/javascript src="get.js"></SCRIPT>
+
+	<SCRIPT>
+	new jsb.Rule(".barcode, .barcode2", base2.Barcode.code128behaviour);
+    </SCRIPT>
+
+<BODY>
+
+<DIV class=barcode>1234567890</DIV><BR>
+<DIV class=barcode>123</DIV><BR>
+<DIV class="barcode code128a">123</DIV><BR>
+<DIV class=barcode>This is a text-barcode</DIV><BR>
+<DIV class=barcode2>Bigger</DIV>
+
+<P>
+<FORM><LABEL>Barcode: <INPUT id=barcode_input name=barcode></LABEL> <A 
+href="http://en.wikipedia.org/wiki/Code_128#Subtypes">Subtype</A>: <SELECT 
+id=barcode_subtype name=type> <OPTION selected value="">(auto detect)</OPTION> 
+  <OPTION value=code128a>Code Set A</OPTION> 
+  <OPTION value=code128b>Code Set 
+  B</OPTION> 
+  <OPTION value=code128c>Code Set C</OPTION></SELECT> <INPUT id=bigger 
+name=bigger value=yes type=checkbox><LABEL for=bigger>Bigger</LABEL> <INPUT value=Generate type=submit> </FORM></P>
+<P>
+<SCRIPT>
+if("12345678") {
+  // cls : barcode2 , barcode
+  // type : code128a , code128b , code128c
+  // class = cls + ' ' + type
+  
+  document.write('<div class="barcode code128a">'+"12345678"+'</div>');
+	
+}			
+</SCRIPT>
+</BODY></HTML>

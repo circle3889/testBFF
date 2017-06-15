@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* milkfactory - factory zero */
+/* http://milkfactory.co.kr/zero/ */
+/* writer : 조희근(neople@milkfactory.co.kr), 성백준(100june@milkfactory.co.kr) */
+
+/* Tworld - TAPP. */
+
+/* LIST */
+.ta_list {display:table;width:100%;}
+.ta_list li a {height:81px;}
+.ta_list li {width:100%;border-bottom:1px solid #e0e0e0;letter-spacing:-1px;background:#fff}
+.ta_list li:nth-child(even) {background-color:#fbfbfc;}
+.ta_list li .sum {display:table-cell;vertical-align:middle;width:70px;height:70px;padding:5px;font-size:1px;line-height:1px;}
+.ta_list li .sum div {width:70px;height:70px;background-image:url('/img/common/sum.png');-webkit-background-size:350px 350px}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.ta_list li .sum div {background-image:url('/img/common/sumM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.ta_list li .sum div {background-image:url('/img/common/sumL.png')}}
+/* T 서비스앱 1~15 */
+.ta_list li .sum div.se1 {background-position:0 0;}
+.ta_list li .sum div.se2 {background-position:-70px 0;}
+.ta_list li .sum div.se3 {background-position:-140px 0;}
+.ta_list li .sum div.se4 {background-position:-210px 0;}
+.ta_list li .sum div.se5 {background-position:-280px 0;}
+.ta_list li .sum div.se6 {background-position:0 -70px;}
+.ta_list li .sum div.se7 {background-position:-70px -70px;}
+.ta_list li .sum div.se8 {background-position:-140px -70px;}
+.ta_list li .sum div.se9 {background-position:-210px -70px;}
+.ta_list li .sum div.se10 {background-position:-280px -70px;}
+.ta_list li .sum div.se11 {background-position:0 -140;}
+.ta_list li .sum div.se12 {background-position:-70 -140px;}
+.ta_list li .sum div.se13 {background-position:-140px -140px;}
+.ta_list li .sum div.se14 {background-position:-210px -140px;}
+.ta_list li .sum div.se15 {background-position:-280px -140px;}
+/* T 패밀리앱 1~10 */
+.ta_list li .sum div.fa1 {background-position:0 -210px;}
+.ta_list li .sum div.fa2 {background-position:-70px -210px;}
+.ta_list li .sum div.fa3 {background-position:-140px -210px;}
+.ta_list li .sum div.fa4 {background-position:-210px -210px;}
+.ta_list li .sum div.fa5 {background-position:-280px -210px;}
+.ta_list li .sum div.fa6 {background-position:0 -280px;}
+.ta_list li .sum div.fa7 {background-position:-70px -280px;}
+.ta_list li .sum div.fa8 {background-position:-140px -280px;}
+.ta_list li .sum div.fa9 {background-position:-210px -280px;}
+.ta_list li .sum div.fa10 {background-position:-280px -280px;}
+.ta_list li .txt {display:table-cell;vertical-align:middle;height:80px;}
+.ta_list li .txt h5 {font-size:1em;margin:0 0 3px 8px;}
+.ta_list li .txt p {font-size:12px;margin-left:8px;color:#787676;}
+
+.ta_info {padding:12px 0 5px 0;}
+.ta_info li {background:url('/img/common/bul_bi.png') no-repeat 13px 6px;padding:0 15px 7px 22px;}
+.ta_info li ul li {background:url('/img/common/bul_bi.png') no-repeat 0 6px;padding:0 15px 3px 8px;}
+.ta_txt {font-size:1em;color:#787676;margin:-8px 12px 8px 12px}

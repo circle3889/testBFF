@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* milkfactory - factory zero */
+/* http://milkfactory.co.kr/zero/ */
+/* writer : 조희근(neople@milkfactory.co.kr), 성백준(100june@milkfactory.co.kr) */
+
+/* Tworld - Roaming */
+
+/* MY 로밍 */
+/* 로밍 이용 현황 */
+.rmmylist {border-top:1px solid #b2b2b2;border-bottom:1px solid #b2b2b2;}
+.rmmylist li {display:inline-block;width:100%;border-bottom:1px solid #e0e0e0;background:#fbfbfc url('/img/common/infoarr.png') no-repeat right center;-webkit-background-size:22px 15px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.rmmylist li {background-image:url('/img/common/infoarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.rmmylist li {background-image:url('/img/common/infoarrL.png')}}
+.rmmylist li:nth-child(even) {background-color:#FFF;}
+.rmmylist li:last-child {border-bottom:0;}
+.rmmylist li a {padding:11px 0 9px;}
+.rmmylist li h5 {font-size:1em;margin:0 0 0 12px;}
+.rmmylist li p {font-size:12px;margin:5px 0 0 12px;color:#787676;}
+
+.rmmylist_set {border-top:1px solid #b2b2b2;border-bottom:1px solid #b2b2b2;}
+.rmmylist_set li {display:inline-block;width:100%;height:43px;margin-bottom:-4px;border-bottom:1px solid #e0e0e0;background:#fbfbfc;}
+.rmmylist_set li:nth-child(even) {background-color:#FFF;}
+.rmmylist_set li:last-child {border-bottom:0;}
+.rmmylist_set li a {}
+.rmmylist_set li h5 {width:70%;float:left;font-size:1em;line-height:43px;margin:0 0 0 12px;}
+.rmmylist_set li h5 input {width:20px;height:20px;line-height:43px;vertical-align:middle;padding-top:3px;}
+.rmmylist_set li p {width:30%;float:right;font-size:12px;line-height:43px;margin:0 0 0 -15px;color:#787676;}
+/* 로밍 이용 현황 없을 경우 */
+.rmmylist_none {padding:30px 0;text-align:center;border-top:1px solid #b2b2b2;border-bottom:1px solid #b2b2b2;}
+/* 국가별 로밍 조회 */
+.rmmycnty {width:100%;margin-top:-10px;}
+.rmmycnty li {border-bottom:1px dotted #6a7279;background:url('/img/common/bul_bi.png') no-repeat 10px 15px;padding:8px 8px 10px 20px;text-align:center;vertical-align:top}
+.rmmycnty li:last-child {border-bottom:none;}
+.rmmycnty li p {text-align:left;margin-bottom:13px}
+.rmmycnty select {width:66px;}
+.rmmycnty input {margin-top:-4px;margin-right:-2px;height:28px;font-size:20px;vertical-align:middle;border:1px solid #737272;border-radius:.2em;background:url('/img/common/searchbg.png') repeat-x;}
+.rmmycnty .btnx {width:26px;height:26px;background:url('/img/common/btn.png') no-repeat -150px 0;-webkit-background-size:250px 100px}
+.rmmycnty .btn {width:32px;height:32px;background:url('/img/common/btn.png') no-repeat -100px -50px;vertical-align:middle;-webkit-background-size:250px 100px}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.rmmycnty .btn{background-image:url('/img/common/btnm.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.rmmycnty .btnx{background-image:url('/img/common/btnm.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.rmmycnty .btn{background-image:url('/img/common/btnL.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.rmmycnty .btnx{background-image:url('/img/common/btnL.png')}}
+/* 검색결과 - MY휴대폰 및 출국할 국가 정보 */
+.tb_rmmyinfo {width:100%;border-top:1px solid #7a9c49;}
+.tb_rmmyinfo th {height:33px;color:#FFF;-webkit-text-shadow:#000 0 1px 1px;-moz-text-shadow:#000 0 1px 1px;text-shadow:#000 0 1px 1px;background-color:#7a9c49;border-left:1px solid #8daa63;border-right:1px solid #587444;border-top:1px solid #a2ba80;border-bottom:1px solid #587444;}
+.tb_rmmyinfo th:first-child {background-color:#7a9c49;border-left:0;border-right:1px solid #587444;border-bottom:1px solid #587444;}
+.tb_rmmyinfo th:last-child {background-color:#7a9c49;border-left:1px solid #8daa63;border-right:0;border-bottom:1px solid #587444;}
+.tb_rmmyinfo tr:nth-child(even) td {background-color:#fbfbfc;}
+.tb_rmmyinfo td {padding:12px 0;text-align:center;border-right:1px solid #e1e1e2;border-bottom:1px solid #e1e1e2;}
+.tb_rmmyinfo td p {padding:0 5px;}
+.tb_rmmyinfo td:last-child {text-align:center;border-right:0;border-bottom:1px solid #e1e1e2;}
+/* 검색결과 - 이용요금 */
+.tb_rm1 {width:100%;border-top:1px solid #7a9c49;}
+.tb_rm1 th {height:33px;color:#FFF;-webkit-text-shadow:#000 0 1px 1px;-moz-text-shadow:#000 0 1px 1px;text-shadow:#000 0 1px 1px;background-color:#7a9c49;border-left:1px solid #8daa63;border-right:1px solid #587444;border-top:1px solid #a2ba80;border-bottom:1px solid #587444;}
+.tb_rm1 th em {color:#1e1f1f;-webkit-text-shadow:#000 0 0 0;-moz-text-shadow:#000 0 0 0;}
+.tb_rm1 th:first-child {background-color:#7a9c49;border-right:1px solid #587444;border-bottom:1px solid #587444;}
+.tb_rm1 th:last-child {background-color:#7a9c49;border-left:1px solid #8daa63;border-bottom:1px solid #587444;}
+.tb_rm1 tr:nth-child(even) td {background-color:#fbfbfc;}
+.tb_rm1 td {padding:12px 0;text-align:center;border-right:1px solid #e1e1e2;border-bottom:1px solid #e1e1e2;}
+.tb_rm1 td p {padding:0 5px;}
+.tb_rm1 td:last-child {text-align:center;border-right:0;border-bottom:1px solid #e1e1e2;}
+
+/* 로밍안내 */
+/* 로밍안내 LIST */
+.rminfolist li {border-bottom:1px solid #e0e0e0;background:#FFF url('/img/common/infoarr.png') no-repeat right center;-webkit-background-size:22px 15px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.rminfolist li {background-image:url('/img/common/infoarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.rminfolist li {background-image:url('/img/common/infoarrL.png')}}
+.rminfolist li:nth-child(even) {background-color:#fbfbfc;}
+.rminfolist li:last-child {border-bottom:0;}
+.rminfolist li h5 {font-size:1em;padding-bottom:3px;}
+.rminfolist li p {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+.rminfolist a {padding:12px 40px 13px 12px;}
+.rminfolistbtn {margin:10px 12px;}
+/* 로밍안내 VIEW */
+.rminfoview {width:100%;padding:4px 0;}
+.rminfoview li {background:url('/img/common/bul_bi.png') no-repeat 10px 7px;padding:0 12px 7px 20px;}
+.rminfoview li.acc {color:#264159;font-size:13px;background:url('/img/common/bul.png') no-repeat 20px .35em;padding:0 12px 7px 30px;margin-top:-5px;}
+.rminfoview li.tit {background-image:none;margin:0 12px 0 33px;padding:0 12px 7px 0;list-style-type:decimal;font-size:14px;color:#000;}
+.rminfoview p.mtit {margin:4px 12px 0 0;padding:0 12px 7px 15px;background:url('/img/common/bul_bi.png') no-repeat 0 .5em;font-size:14px;color:#000;}
+.rminfoview a {display:inline;}
+.rminfoview li ul.extrainfo {margin-bottom:0;}
+.rminfoview li ul.extrainfo li {list-style:none;margin:0 0 -5px 5px;padding-left:11px;color:#264159;background:url('/img/common/bul.png') no-repeat 0 .3em;}
+.rminfoview li ul li {background-image:none;margin:0 0 0 18px;padding:0 0 7px 0;list-style-type:lower-alpha;}
+/* 로밍안내 VIEW - 버튼 */
+.rminfoview_btnwrap {font-size:1px;line-height:1px;margin:0 15px 15px 15px;}
+.rminfoview_btnwrap li {display:inline;}
+.rminfoview_btnwrap button {width:33%;height:33px;font-size:13px;line-height:13px;text-align:center;background-color:#e1e0e0;background:-webkit-gradient(linear, 0 0, 0 100%, from(#eeeeed), to(#d4d2d2));-moz-gradient(linear, 0 0, 0 100%, from(#eeeeed), to(#d4d2d2));}
+.rminfoview_btnwrap .rmbtn0 {border:1px solid #6e6c69;}
+.rminfoview_btnwrap .rmbtnl {border-left:1px solid #6e6c69;border-top:1px solid #6e6c69;border-bottom:1px solid #6e6c69;border-radius:.3em 0 0 .3em;}
+.rminfoview_btnwrap .rmbtnr {border-right:1px solid #6e6c69;border-top:1px solid #6e6c69;border-bottom:1px solid #6e6c69;border-radius:0 .3em .3em 0;}
+
+
+/* 요금제/서비스 */
+/* 로밍요금제, 로밍부가서비스, 로밍APP */
+
+/* 로밍요금제, 로밍부가서비스 LIST */
+.tb_rmplan {display:inline-block;width:100%;margin-bottom:-4px;border-top:1px solid #b2b2b2;border-bottom:1px solid #e5e5e5;}
+.tb_rmplan li {position:relative;border-bottom:1px solid #e5e5e5;}
+.tb_rmplan li a {display:inline-block;width:100%;height:42px;line-height:42px;background:#fbfbfb url('/img/common/tbarr.png') no-repeat right -72px;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li a {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li a {background-image:url('/img/common/tbarrL.png')}}
+.tb_rmplan li a.active {background:#fbfbfb url('/img/common/tbarr.png') no-repeat right 0;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li a.active {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li a.active {background-image:url('/img/common/tbarrL.png')}}
+.tb_rmplan li a.none {background:#fbfbfb url('/img/common/subarr.png') no-repeat right -37px;-webkit-background-size:23px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li a.none {background-image:url('/img/common/subarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li a.none {background-image:url('/img/common/subarrL.png')}}
+.tb_rmplan li:nth-child(even) a {background:#fff url('/img/common/tbarr.png') no-repeat right -72px;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li:nth-child(even) a {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li:nth-child(even) a {background-image:url('/img/common/tbarrL.png')}}
+.tb_rmplan li:nth-child(even) a.active {background:#fff url('/img/common/tbarr.png') no-repeat right 0;-webkit-background-size:29px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li:nth-child(even) a.active {background-image:url('/img/common/tbarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li:nth-child(even) a.active {background-image:url('/img/common/tbarrL.png')}}
+.tb_rmplan li:nth-child(even) a.none {background:#fff url('/img/common/subarr.png') no-repeat right -37px;-webkit-background-size:23px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li:nth-child(even) a.none {background-image:url('/img/common/subarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li:nth-child(even) a.none {background-image:url('/img/common/subarrL.png')}}
+.tb_rmplan li:last-child {border-bottom:none;}
+.tb_rmplan li h5 {font-size:1em;vertical-align:middle;padding:0 15px 0 13px;}
+.tb_rmplan li p {position:absolute;top:0;right:40px;font-size:12px;}
+.tb_rmplan li ul {width:100%;margin:0;
+	background-color:#f3f3f3;
+	background-image:url('/img/common/tb_in_arr_g.png'),url('/img/common/tb_in_t.png'),url('/img/common/tb_in_b.png');
+	background-position:11px top,0 top,0 bottom;
+	background-repeat:no-repeat,repeat-x,repeat-x;
+}
+.tb_rmplan li:nth-child(even) ul {width:100%;margin:0;
+	background-color:#f3f3f3;
+	background-image:url('/img/common/tb_in_arr_w.png'),url('/img/common/tb_in_t.png'),url('/img/common/tb_in_b.png');
+	background-position:11px top,0 top,0 bottom;
+	background-repeat:no-repeat,repeat-x,repeat-x;
+}
+.tb_rmplan li ul li {height:42px;line-height:42px;}
+.tb_rmplan li ul li a.sub {display:inline-block;width:100%;height:42px;line-height:42px;background:url('/img/common/subarr.png') no-repeat right 13px;-webkit-background-size:23px 100px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.tb_rmplan li ul li a.sub {background-image:url('/img/common/subarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.tb_rmplan li ul li a.sub {background-image:url('/img/common/subarrL.png')}}
+.tb_rmplan li ul li h6 {font-size:1em;padding-left:20px;}
+.tb_rmplan li ul li select {position:absolute;z-index:10;right:40px;margin-top:7px;background-color:#FFF;width:88px;line-height:12px;}
+/* 로밍APP LIST */
+.rmapplist {border-top:1px solid #d3d3d3;}
+.rmapplist li {border-bottom:1px solid #e0e0e0;background:#fbfbfc url('/img/common/infoarr.png') no-repeat right center;-webkit-background-size:22px 15px;}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.rmapplist li {background-image:url('/img/common/infoarrM.png')}}
+@media screen and (-webkit-min-device-pixel-ratio:2){.rmapplist li {background-image:url('/img/common/infoarrL.png')}}
+.rmapplist li:nth-child(even) {background-color:#FFF;}
+.rmapplist li:last-child {}
+.rmapplist li dl {display:inline-block;width:100%}
+.rmapplist li dt {font-size:1em;padding-bottom:7px;}
+.rmapplist li dt.fl14 {width:55%;float:left;font-size:1em;padding-bottom:7px;}
+.rmapplist li dt.fr12 {width:44%;float:right;font-size:12px;padding-bottom:7px;text-align:right;}
+.rmapplist li dd {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+.rmapplist a {padding:12px 40px 15px 12px;}
+/* 상세정보 - 타이틀 (좌측제목 + 우측버튼) */
+.rmtit {display:inline-block;width:100%;margin-top:10px;}
+.rmtit h4 {float:left;color:#e03b16;font-size:16px;margin-top:7px;}
+/* 상세정보 - 설명 */
+.rmtxt {clear:both;border-top:1px solid #d3d3d3;}
+.rmtxt dt {height:35px;line-height:35px;border-top:1px solid #FFF;border-bottom:1px solid #d3d3d3;background-color:#f6f6f6;}
+.rmtxt dt h5 {padding-left:12px;font-size:1em;}
+.rmtxt dd {padding:13px 12px 10px 12px;border-bottom:1px solid #d3d3d3;}
+.rmtxt dd a {display:inline;}
+.rmtxt dd p {padding-left:12px;}
+.rmtxt dd p.tit {padding:0 0 7px 0;}
+.rmtxt li {background:url('/img/common/bul_bi.png') no-repeat 0 7px;padding:0 8px 7px 10px;}
+.rmtxt dd.tablewrap {margin:0;padding:0;border-bottom:0;padding-bottom:10px;}.rm_txt {padding:10px 13px 15px 13px;border-top:1px solid #d3d3d3;}
+.rmtxt dd.tablewrap h6 {font-size:1em;float:left;padding:8px 0 8px 12px;}
+.rmtxt dd.inb {display:inline-block;width:100%;margin:0;padding:8px 0 0 0;border-bottom:0;}
+.rmtxt dd.inb div {width:100%;}
+.rmtxt dd.inb div h6 {font-size:1em;float:left;padding:8px 0 8px 12px;}
+.rmtxt dd.inb div button {float:right;}
+.rmtxt dd ul.innertxt {margin:0;padding:0;border:none;}
+.rmtxt dd ul.innertxt li {margin:0;padding:0;background:none;}
+.rmtxt dd ul.innertxt li ul.numberlist {margin:3px 0;}
+.rmtxt dd ul.innertxt li ul.numberlist li {list-style-type:decimal;background:none;margin-left:30px;}
+.rmtxt dd ul.extrainfo {margin-top:0}
+.rmtxt dd ul.extrainfo li {padding-left:6px;background:url('/img/common/bul.png') no-repeat 0 5px;}
+/* 상세정보 - 가입시 유의사항 */
+.rmview {width:100%;padding:4px 0;}
+.rmview li {background:url('/img/common/bul_bi.png') no-repeat 10px 7px;padding:0 12px 7px 20px;}
+.rmview li.acc {color:#264159;font-size:13px;background:url('/img/common/bul.png') no-repeat 20px .35em;padding:0 12px 7px 30px;margin-top:-5px;}
+.rmview li.tit {background-image:none;margin:0 12px 0 33px;padding:0 12px 7px 0;list-style-type:decimal;font-size:14px;color:#000;}
+.rmview p.mtit {margin:4px 12px 0 0;padding:0 12px 7px 15px;background:url('/img/common/bul_bi.png') no-repeat 0 .5em;font-size:14px;color:#000;}
+.rmview a {display:inline;}
+.rmview li ul.extrainfo {margin:5px 0 0 5px;}
+.rmview li ul.extrainfo li {list-style:none;margin:0 0 -5px 5px;padding-left:6px;color:#000000; background:url('/img/common/bul.png') no-repeat 0 5px; font-size:14px;}
+.rmview li ul li {background-image:none;margin:0 0 0 18px;padding:0 0 7px 0;list-style-type:lower-alpha;}
+/* 상세정보 - 가입시 유의사항 - 체크박스 */
+.checkwrap {display:table;padding:15px 0;border-bottom:1px solid #e0e0e0;}
+.checkwrap input {display:table-cell;zoom:1.5;margin-left:12px;vertical-align:top;}
+.checkwrap p {display:table-cell;padding:0 15px 0 5px;vertical-align:top;}
+/* 요금제 설정 - 날짜설정 */
+.rmview .datewrap {padding-left:10px;}
+.rmview .datewrap ul {display:inline-block;margin-bottom:15px;}
+.rmview .datewrap li {list-style:none;float:left;margin:0;padding:0;padding-right:4px;}
+.rmview .datewrap dd {margin-bottom:-5px;}
+.rmview .datewrap p {color:#787676;padding:5px 0 13px;}
+.rmview .datewrap button {width:94px;height:29px;background:url('/img/common/btn_ctl.png') no-repeat center 0;border:1px solid #737272;}
+.rmview .datewrap input {text-align:center;font-size:20px;width:92px;height:33px;border:1px solid #737272;background-color:#f7fafe;background-image:none;border-radius:0;}
+.rmview .datewrap .bt {border-radius:.3em .3em 0 0;border-bottom:0;}
+.rmview .datewrap .bb {border-radius:0 0 .3em .3em;background-position:center -30px;border-top:0;}
+.rmview .datewrap .set1 {width:75px;}
+.rmview .datewrap .set2 {width:73px;}
+/* 요금제 설정 - 국가변경 */
+.rmview .countrywrap {padding-left:10px;}
+.rmview .countrywrap ul {display:inline-block;}
+.rmview .countrywrap li {list-style:none;float:left;margin:0;padding:0;padding-right:4px;}
+.rmview .countrywrap p {color:#787676;vertical-align:middle;}
+.rmview .countrywrap .sbox {padding-top:7px;}
+
+
+/* 로밍센터 */
+/* 공항로밍센터 LIST */
+.rmct_air {border-top:1px solid #e0e0e0;}
+.rmct_air li {padding:12px;border-bottom:1px solid #e0e0e0;}
+.rmct_air li:nth-child(even) {background-color:#FFF;}
+.rmct_air li h5 {font-size:1em;padding-bottom:3px;}
+.rmct_air li p {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+/* 로밍전문고객센터 LIST */
+.rmct_cs {border-top:1px solid #e0e0e0;}
+.rmct_cs li {display:inline-block;width:100%;padding:12px 0;border-bottom:1px solid #e0e0e0;}
+.rmct_cs li:nth-child(even) {background-color:#FFF;}
+.rmct_cs li p {font-size:1em;padding-left:12px;}
+.rmct_cs li button {margin-top:3px;}
+
+/* 추가 */
+.resulttable {border-top:1px solid #b2b2b2}
+.resulttable h5 {padding:15px 0 7px 12px;font-size:16px;}
+.tb_rslt {width:100%;border-top:1px solid #bfbfbf;}
+.tb_rslt th {height:33px;color:#20201f;-webkit-text-shadow:#fff 0 1px 1px;-moz-text-shadow:#fff 0 1px 1px;text-shadow:#fff 0 1px 1px;background-color:#e5e5e5;border-left:1px solid #efefef;border-right:1px solid #bfbfbf;border-top:1px solid #efefef;border-bottom:1px solid #bfbfbf;}
+.tb_rslt th:first-child {background-color:#e5e5e5;border-right:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf;}
+.tb_rslt th:last-child {background-color:#e5e5e5;border-left:1px solid #efefef;border-bottom:1px solid #bfbfbf;}
+.tb_rslt tr:nth-child(even) td {background-color:#fbfbfc;}
+.tb_rslt td {padding:12px 0;text-align:center;border-right:1px solid #e1e1e2;border-bottom:1px solid #e1e1e2;}
+.tb_rslt td p {padding:0 5px;}
+.tb_rslt td:last-child {text-align:center;border-right:0;border-bottom:1px solid #e1e1e2;}
+
+.tb_rslt2 {width:100%; padding:0 10px 10px 10px;}
+.tb_rslt2 th {height:33px;color:#20201f;-webkit-text-shadow:#fff 0 1px 1px;-moz-text-shadow:#fff 0 1px 1px;text-shadow:#fff 0 1px 1px;background-color:#e5e5e5;border:1px solid #bfbfbf;}
+.tb_rslt2 td {padding:12px 10px 12px 10px; 0;text-align:left;border-right:1px solid #bfbfbf; border-left:1px solid #bfbfbf; }
+
+
+.btnrmwrap {text-align:right;padding-right:6px;display:block;}
+.btnrm {margin:8px 1px;padding:0 8px;height:33px;font-size:13px;line-height:13px;text-align:center;border:1px solid #6e6c69;border-radius:.3em;
+	 background-color:#e1e0e0;
+	 background:-webkit-gradient(linear, 0 0, 0 100%, from(#eeeeed), to(#d4d2d2));-moz-gradient(linear, 0 0, 0 100%, from(#eeeeed), to(#d4d2d2));}

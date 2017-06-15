@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* milkfactory - factory zero */
+/* http://milkfactory.co.kr/zero/ */
+/* writer : 조희근(neople@milkfactory.co.kr), 성백준(100june@milkfactory.co.kr) */
+
+/* Tworld - 부가서비스 */
+
+/* 타이틀 + 가입/해지버튼 */
+.tit1 {display:inline-block;width:100%;margin-top:10px;}
+.tit1 h4 {float:left;color:#e03b16;font-size:16px;margin-top:7px;}
+/* 이용서비스 리스트 (첫 li > 배경 fbfbfb) */
+.svlist {border-top:1px solid #d3d3d3;}
+.svlist li {border-bottom:1px solid #e0e0e0;background:#fbfbfc url('/img/common/infoarr.png') no-repeat right center;}
+.svlist li:nth-child(even) {background-color:#FFF;}
+.svlist li:last-child {border-bottom:0;}
+.svlist li dt {font-size:1em;padding-bottom:7px;}
+.svlist li dt.fl14 {width:58%;float:left;font-size:1em;padding-bottom:7px;}
+.svlist li dt.fr12 {width:40%;float:right;font-size:12px;padding-bottom:7px;text-align:right;}
+.svlist li dd {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+.svlist a {padding:12px 40px 15px 12px;}
+/* 추천서비스 리스트 (첫 li > 배경 fff) */
+.svlistr {}
+.svlistr li {border-bottom:1px solid #e0e0e0;background:#FFF url('/img/common/infoarr.png') no-repeat right center;}
+.svlistr li:nth-child(even) {background-color:#fbfbfc;}
+.svlistr li dt {font-size:1em;padding-bottom:7px;}
+.svlistr li dt.fl14 {width:60%;float:left;font-size:1em;padding-bottom:7px;}
+.svlistr li dt.fr12 {width:38%;float:right;font-size:12px;padding-bottom:7px;}
+.svlistr li dd {padding-bottom:2px;font-size:12px;color:#787676;line-height:1.2em;}
+.svlistr a {padding:12px 30px 15px 12px;}
+/* 상품상세 */
+.svtxt {border-top:1px solid #d3d3d3;}
+.svtxt dt {height:35px;line-height:35px;border-top:1px solid #FFF;border-bottom:1px solid #d3d3d3;background-color:#f6f6f6;}
+.svtxt dt h5 {padding-left:12px;font-size:1em;}
+.svtxt dd {padding:13px 12px;border-bottom:1px solid #d3d3d3;}
+.svtxt dd:last-child {display:inline-block;width:100%;padding:13px 0 13px 0;margin-bottom:-4px;}
+.svtxt dd p {padding-left:12px;}
+.svtxt li {background:url('/img/common/bul_bi.png') no-repeat 0 7px;padding:0 8px 7px 10px;}
+.svtxt dd ul.extrainfo {margin:-7px 10px -5px 7px;font-size:12px}
+.svtxt dd ul.extrainfo li {font-size:11px;padding:0 0 0 10px;color:#264159;background:url('/img/common/bul.png') no-repeat 2px .4em;}
+.svtxt dd ul.extrainfo a {display:inline;}
+/* 상품 가입/해지 문구 */
+.tx_info {margin:10px}
+.tx_info li {background:url('/img/common/bul_bi.png') no-repeat 0 7px;padding:0 8px 4px 10px;}

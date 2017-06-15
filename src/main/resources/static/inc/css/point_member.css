@@ -1,0 +1,190 @@
+@import url("common.css");
+
+.top_title{overflow:hidden;}
+.top_title img{float:left; padding:8px 6px 0 8px;}
+.top_title p{float:left; color:#000000; font-size:14px; font-weight:bold; padding-top:9px;}
+
+
+.tabmenu_on_container{ position:relative; height:30px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_c.jpg); float:left; margin-bottom:2px; }
+.tabmenu_off_container{ position:relative; height:30px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_c_off.jpg); float:left; margin-bottom:2px; }
+.tabmenu_on_l{position:absolute; height:30px; width:3px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_l.gif); top:0px; left:-3px;}
+.tabmenu_on_c{position:absolute; height:30px; width:95%; top:0px; line-height:30px; font-weight:bold; text-align:center; color:#FFFFFF; cursor:pointer}
+.tabmenu_on_r{position:absolute; height:30px; width:4px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_r.jpg); top:0px; }
+.tabmenu_off_l{position:absolute; height:30px; width:3px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_l_off.gif); top:0px; left:-3px; }
+.tabmenu_off_c{position:absolute; height:30px; width:95%; top:0px; line-height:30px; font-weight:bold; text-align:center; color:#FFFFFF; cursor:pointer}
+.tabmenu_off_r{position:absolute; height:30px; width:4px; background-image:url(http://m.tworld.co.krhttp://m.tworld.co.kr/img/myservice/tab_r_off.jpg); top:0px ;}
+
+.union_table {padding:0 0 10px 0 ; line-height:16px;}
+.union_table table {width:100%; border-bottom:1px solid #c6c6c6; border-top:1px solid #c6c6c6; border-collapse:collapse;}
+.union_table td .left{ border-left:0;}
+.union_table td {padding:8px 10px; color:#666; border-bottom:1px solid #c6c6c6; border-left:1px solid #c6c6c6; background-color:#fdfdfd;
+background-image:url(http://m.tworld.co.kr/img/common/table_bg.jpg); background-position:0 bottom; background-repeat:repeat-x;}
+.union_table .date {color:#3e3e3e;}
+.union_table li { background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:8px 10px; background-repeat: no-repeat; padding:5px 18px; line-height:18px;text-align:left;  }
+.union_table .ttt li {position:relative; width:100%; float:left; line-height:16px; padding:0; background-image:none;}
+.union_table .ttt .no_won {position:absolute; top:0; left:0;}
+.union_table .ttt .text_won {padding-left:15px; }
+
+.inq_subtitle {font-size:14px; color:#f56106; font-weight:bold ;padding:10px 0 10px 8px; }
+
+.inquiry_table1 {padding:0 8px 10px 8px ;}
+.inquiry_table1 table {width:100%; border-bottom:3px solid #f58026; border-left:3px solid #f58026; border-right:3px solid #f58026; border-top:3px solid #f58026; border-collapse:collapse; table-layout:fixed;}
+.inquiry_table1 th { background-image:url(http://m.tworld.co.kr/img/common/table_bg1.jpg); border-left:1px solid #e2e2e2; background-position:0 bottom; background-repeat:repeat-x; line-height:27px; border-bottom:1px solid #c6c6c6; width:50%; font-weight:normal; padding-top:3px;}
+.inquiry_table1 th .left{ border-left:0;}
+.inquiry_table1 td {padding:3px 15px 0 15px; color:#808080; line-height:18px;}
+.inquiry_table1 td .bullet{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:15px 7px; background-repeat: no-repeat; padding:5px 18px 5px 25px; text-align:left;}
+
+.inquiry_table1 .btm_td{border-bottom:1px solid #dedede; border-left:1px solid #dedede;}
+
+.inquiry_table1 .center{text-align:center; padding-left:0; border-left:1px solid #e1e1e1;}
+.inquiry_table1 .right { text-align:right; padding:0 15px 3px 0; border-left:1px solid #e1e1e1;}
+.inquiry_table1 .tlt_1 { background-color:#f7f7f7; border-bottom:1px solid #e1e1e1; border-top:1px solid #e1e1e1; color:#414141; padding-top:2px}
+.inquiry_table1 .tlt_2 { background-color:#f7f7f7; text-align:right; padding-right: 15px; height:30px;font-weight:bold;border-top:1px solid #e1e1e1;padding-top:3px}
+.money_o {color:#fa6d01; font-size:18px; line-height:30px;}
+.money_r {color:#e50925; font-size:18px; line-height:30px;}
+.inquiry_table1 ul {padding-top:10px;}
+.inquiry_table1 li { background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding:0 15px 5px 8px; line-height:18px;text-align:left; color:#888; }
+.inquiry_table1 .red {color:#ea002b; text-align:right; padding-right:15px;}
+.inquiry_table1 .organ {color:#f36d43; padding-top:3px;}
+.inquiry_table1  .padding_3 {padding-top:4px;}
+.inquiry_table1  .padding_3_bottom {padding-bottom:1px;}
+.inquiry_table1  .padding_padding {padding-top:4px ;padding-bottom:1px;}
+.inquiry_table1 .dot li { background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding:0 15px 3px 8px; line-height:16px;text-align:left; color:#888; }
+.inquiry_table1 .dot ul {padding:4px 0 0 0;}
+.inquiry_table1 .left_title {width:80px;}
+
+
+.join_infor_table{padding:0 8px 15px 8px;}
+.join_infor_table table{border-bottom:3px solid #f7984f;border-top:3px solid #f7984f;border-left:3px solid #f7984f;border-right:3px solid #f7984f; border-collapse:collapse; table-layout: fixed;}
+.join_infor_table td{border-bottom:1px solid #e2e2e2; line-height:16px; text-align:left; padding:5px 0 5px 10px; color:#666666; }
+.join_infor_table th{border-bottom:1px solid #e2e2e2; width:50%; border-right:1px solid #e2e2e2; padding:9px 0 6px 10px;  background-color:#f4f4f4; font-weight: normal; color:#666666; text-align:left; font-weight:bold; }
+.join_infor_table .th_cen_align{text-align:center; padding:5px 10px;}
+.join_infor_table td.right{text-align:right; padding-right:15px;}
+
+
+.allmenu_content{padding:0 7px 0 7px;}
+.allmenu_content1{border:3px solid #f7984f;}
+.all_con_t{background:#ededed url(http://m.tworld.co.kr/img/common/gary_bg.gif) repeat-x left top; height:29px; border-top:1px solid #c6c6c6; border-bottom:1px solid #c6c6c6; font-weight:bold;}
+.all_con_t p{color:#434343; padding:8px 0 8px 20px;}
+.all_con_c{overflow:hidden;}
+.all_con_c_1{float:left;}/* 새로 바뀐거 */
+.all_con_c_1 p{background:url(http://m.tworld.co.kr/img/common/bullet_won.jpg) no-repeat 20px 5px; padding:0 0 11px 28px;}
+.all_con_c_1 p.top_txt{margin-top:14px;}
+.all_con_c_2{float:right; width:130px;}/* 새로 바뀐거 */
+.all_con_c_2 p{background:url(http://m.tworld.co.kr/img/common/bullet_won.jpg) no-repeat 0 5px; padding:0 0 11px 9px;}
+.all_con_c_2 p.top_txt{margin-top:14px;}
+.all_con_t_bor_no{border-top:none;}
+
+
+
+.reisuuan_div{float:left;}
+.reisuuan_div p{float:left; padding:7px 3px 0 3px;}
+.reisuuan_div .reisuuan_p1{padding-top:18px;}
+
+
+.all_con_c1 p{padding:7px 10px;}
+.all_con_c1 input{height:20px; border:1px solid #cfcfcf; text-align:left; color:#3d3d3d;  padding-top:7px; font-size:14px; margin-top:2px; font-weight:bold;width:100%;  }
+.all_con_c1 p img{vertical-align:top;}
+
+
+.in_table3 {padding:0 0 20px 0 ; line-height:16px;}
+.in_table3 table {width:100%; border-bottom:1px solid #c6c6c6; border-top:1px solid #c6c6c6; border-collapse:collapse;}
+.in_table3 th {padding:5px 0 2px 15px; color:#666; border-bottom:1px solid #c6c6c6;font-weight:bold;background-image:url(http://m.tworld.co.kr/img/common/table_bg3.jpg); background-position:0 bottom; background-repeat:repeat-x; width:65px; text-align:left;}
+.in_table3 td {padding:5px 15px 2px 15px; color:#333; border-bottom:1px solid #c6c6c6; border-left:1px solid #e2e2e2; font-weight:bold; height:30px; background-image:url(http://m.tworld.co.kr/img/common/table_bg3.jpg); background-position:0 bottom; background-repeat:repeat-x; text-align:right; letter-spacing:-1px}
+.in_table3 .telephone { font-size:18px;}
+.in_table3 ul {padding:10px 5px 0 5px;}
+.in_table3  li {background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:0 5px; background-repeat: no-repeat; padding:0 0 5px 8px; line-height:18px; text-align:left; color:#888; }
+.in_table3 table td table {border:0; padding:0;}
+.in_table3 table td table td {border:0; padding:0;}
+.in_table3 td.left{text-align:left; padding-left:8px;}
+.in_table3 a {color:#333;}
+
+
+.in_table33 {padding:0; line-height:16px;}
+.in_table33 table {width:100%; border-top:1px solid #c6c6c6; border-collapse:collapse;}
+.in_table33 th {padding:5px 0 2px 15px; color:#666; font-weight:bold;background-image:url(http://m.tworld.co.kr/img/common/table_bg3.jpg); background-position:0 bottom; background-repeat:repeat-x; width:65px; text-align:left;height:30px; }
+.in_table33 td {padding:5px 15px 2px 15px; color:#333; border-left:1px solid #e2e2e2; font-weight:bold; height:30px; background-image:url(http://m.tworld.co.kr/img/common/table_bg3.jpg); background-position:0 bottom; background-repeat:repeat-x; text-align:right; letter-spacing:-1px}
+.in_table33 a {color:#333;}
+.in_table33 table td table {border:0; padding:0;}
+.in_table33 table td table td {border:0; padding:0;}
+.in_table33 td.left{text-align:left; padding-left:8px;}
+.in_table33 a {color:#333;}
+
+
+.join_infor_ul li{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:8px 3px; background-repeat: no-repeat; padding:0 18px 5px 18px; text-align:left; color:#888;}
+.join_infor_u li a {color:#888;}
+.join_infor_ul_red li{background-image: url(http://m.tworld.co.kr/img/common/subicon_red.jpg);background-position:0 5px; background-repeat: no-repeat; padding:0 10px 0 10px; text-align:left; color:#f12d39; }
+
+.join_infor_p_title{background-image: url(http://m.tworld.co.kr/img/common/subicon_red.jpg);background-position:2px 10px; background-repeat: no-repeat; padding:5px 18px 5px 10px; text-align:left; font-size:14px; color:#f56106; font-weight:bold }
+.join_infor_p{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:2px 8px; background-repeat: no-repeat; padding:5px 0 5px 10px; text-align:left;}
+
+
+.join_infor_table_point {padding:0 8px 15px 8px;}
+.join_infor_table_point table{border-bottom:3px solid #f7984f;border-top:3px solid #f7984f;border-left:3px solid #f7984f;border-right:3px solid #f7984f; border-collapse:collapse; table-layout:fixed;}
+.join_infor_table_point td{border-bottom:1px solid #e2e2e2; line-height:18px; text-align:left; padding:8px 10px 5px 10px; color:#666666; }
+.join_infor_table_point th{border-bottom:1px solid #e2e2e2; width:50%; border-right:1px solid #e2e2e2; padding:8px 0 5px 10px;  background-color:#f4f4f4; color:#666666; text-align:left; font-weight:bold; }
+.join_infor_table_point table td p{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding-left:7px; padding-bottom:1px; padding-top:1px;}
+.join_infor_table_point .s_warp table {border:0; padding:0; margin:0;}
+.join_infor_table_point .s_warp td {border:0; padding:0; margin:0;}
+.join_infor_table_point .point_right{text-align:right; font-size:14px; font-weight:bold;}
+
+
+
+.join_infor_table_int {padding:0 8px 15px 8px;}
+.join_infor_table_int table{border-bottom:3px solid #f7984f;border-top:3px solid #f7984f;border-left:3px solid #f7984f;border-right:3px solid #f7984f; border-collapse:collapse;}
+.join_infor_table_int td{border-bottom:1px solid #e2e2e2; line-height:16px; text-align:left; padding:8px 10px 5px 10px; color:#666666; }
+.join_infor_table_int th{border-bottom:1px solid #e2e2e2; width:120px; border-right:1px solid #e2e2e2; padding:8px 0 5px 10px;  background-color:#f4f4f4; color:#666666; text-align:left; font-weight:bold; }
+.join_infor_table_int table td p{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding-left:7px; padding-bottom:1px; padding-top:1px;}
+.join_infor_table_int .s_warp table {border:0; padding:0; margin:0;}
+.join_infor_table_int .s_warp td {border:0; padding:0; margin:0;}
+
+
+.join_infor_ul1 li{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:8px 3px; background-repeat: no-repeat; padding:0 0 0 18px; text-align:left; color:#888;}
+.join_infor_ul2 li{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:8px 3px; background-repeat: no-repeat; padding:0 18px 15px 18px; text-align:left; color:#888;}
+
+.join_infor_table_point .point_right{text-align:right; font-size:14px; font-weight:bold;}
+
+.join_infor_p_title{background-image: url(http://m.tworld.co.kr/img/common/subicon_red.jpg);background-position:2px 10px; background-repeat: no-repeat; padding:5px 18px 5px 10px; text-align:left; font-size:14px; color:#f56106; font-weight:bold }
+.join_infor_p{background-image: url(http://m.tworld.co.kr/img/common/icon.jpg);background-position:2px 8px; background-repeat: no-repeat; padding:5px 0 5px 10px; text-align:left;}
+
+
+.join_infor_table_cen{padding:0 8px 15px 8px;}
+.join_infor_table_cen table{border-bottom:3px solid #f7984f;border-top:3px solid #f7984f;border-left:3px solid #f7984f;border-right:3px solid #f7984f; border-collapse:collapse;}
+.join_infor_table_cen td{border-bottom:1px solid #e2e2e2; line-height:16px; text-align:left; padding:5px 10px 5px 10px; color:#666666; }
+.join_infor_table_cen th{border-bottom:1px solid #e2e2e2; width:100px; border-right:1px solid #e2e2e2; padding:5px 0 5px 10px;  background-color:#f4f4f4; color:#666666; text-align:left; font-weight:bold; }
+.join_infor_table_cen table td p{background-image: url(/comonhttp://m.tworld.co.kr/img/icon.jpg);background-position:0 4px; background-repeat: no-repeat; padding-left:7px; padding-bottom:1px; padding-top:1px;}
+.join_infor_table_cen .s_warp table {border:0; padding:0; margin:0;}
+.join_infor_table_cen .s_warp td {border:0; padding:0; margin:0;}
+.join_infor_table_cen td.right{text-align:right; padding-right:15px;}
+
+
+.no_tel {padding:0 8px 0 8px; }
+
+.title_nobold {font-weight:normal; font-size:12px; color:#666;}
+.inq_subtitle {font-size:14px; color:#f56106; font-weight:bold ;padding:10px 0 5px 8px; }
+.inq_subtitle1 {font-size:14px; color:#f56106; font-weight:bold ;padding:0 0 10px 8px; }
+
+  
+
+.okcashbag_font p{color:#666666; line-height:18px;}
+
+
+
+.input_address {border:1px solid #ccc; height:15px; width:100%; padding:5px 5px; margin:0; font-size:14px; height:15px; font-weight:bold; }
+
+
+.issu_tab2{float:left;}
+.issu_tab2_1{float:left; padding-right:3px;}
+.issu_tab2_2{float:left;}
+
+.okcashbag_text {font-size:14px; color:#000; text-align:center; font-weight:bold; line-height:22px; padding:15px 0; border-bottom:1px solid #c6c6c6;}
+
+
+.inq_table002 {padding:0 8px 20px 8px ;}
+.inq_table002 table {width:100%; border-bottom:3px solid #f58026; border-left:3px solid #f58026; border-right:3px solid #f58026; border-top:3px solid #f58026;   border-collapse:collapse;}
+.inq_table002 th { background-image:url(http://m.tworld.co.kr/img/common/table_bg01.jpg); background-position:0 bottom; background-repeat: repeat-x; line-height:18px; border-bottom:1px solid #c6c6c6; border-top:1px solid #c6c6c6; border-top:1px solid #c6c6c6; padding:9px 0 6px 15px; height:19px;line-height:19px; text-align:left;}
+.inq_table002 td {padding:9px 15px 6px 15px; color:#808080; border-right:1px solid #c6c6c6; }
+.inq_table002 .stt {line-height:20px; padding-left:20px; width:100px;} 
+.input_address {border:1px solid #ccc; height:15px; width:100%; padding:5px 5px; margin:0; font-size:14px; height:15px; font-weight:bold; }
+.input_tel {border:1px solid #ccc; width:50px; padding:0 0 0 5px; margin:0; font-size:14px; height:29px; line-height:29px; font-weight:bold; color:#666;}
+.input_no {border:1px solid #ccc; width:50px; padding:0 0 0 5px; margin:0; font-size:14px; height:29px; line-height:29px; font-weight:bold; color:#666;}

@@ -1,0 +1,56 @@
+.swiper-container{width: 100%;margin: 10px auto;background: white;display:none; border-bottom:1px solid #dbdbdb}
+.swiper-container.sub_main{border-bottom: 1px solid #ececec; margin-top: 25px;} /* 2016-09-08 디자이너 수정 요청 */
+#content.myt .swiper-container.sub_main{margin-top: 0px;} /* 2016-09-08 디자이너 수정 요청 */
+#content.billsearch.pocUI .swiper-container.sub_main{margin-top: 0px;} /* 2016-09-08 디자이너 수정 요청 */
+.swiper-wrapper{overflow: hidden;width: 100%;position: relative;background-color: #fff;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
+
+.swiper-slide {width: 100%;height: auto;position: absolute;top: 0px;}
+.swiper-slide a{display:block;}
+.swiper-slide img{width:100%;height: auto;}
+.swiper-slide-hide{display:none;}
+
+.swiper-guide-wrapper{width:100%;height:24px;position: relative;}
+.swiper-guide-wrapper div{float:left;}
+/* .swiper-button-next{float: right;position: absolute;z-index: 100;outline: none;padding: 7px 0px 7px 0px;right: 5px;}
+.swiper-button-prev{text-align: right;position: absolute;z-index: 100;outline: none;padding: 6px 0px 5px 5px;}
+.swiper-pagination{width:100%;text-align:center;height: 32px;padding: 7px 0px 7px 0px;} */
+.swiper-button-next{float:right;z-index: 100;outline: none;padding: 7px 5px 7px 0px; width:10%}
+.swiper-button-prev{float:left;text-align: right;z-index: 100;outline: none;padding: 6px 0px 5px 5px; width:10%}
+.swiper-pagination{width:80%;text-align:center;height: 24px;}
+.swiper-pagination ul{clear:left;float:left;list-style:none;margin:0;padding:0;position:relative;left:50%;text-align:center;padding-top: 7px;}
+.swiper-pagination ul li{width: 10px;height: 10px;box-sizing: border-box;border: 1px solid #949494;border-radius: 5px;float:left;margin-left:2px;position:relative;right:50%;}
+.swiper-pagination ul li:first-child{margin-left:0px;}
+.swiper-pagination ul li.active{border-color:#ff0000;background-color:#ff0000;}
+.swiper-pagination .bplay_btn {background-image: url(/img/new_main/ico_main_comm.png);background-repeat: no-repeat;background-size: 100px 100px;display: inline-block;width: 9px;height: 11px;outline: none;background-position: -20px -20px;text-indent: -999px;font-size: 0;vertical-align: top;margin-left: 20px;position:relative;z-index:100;margin-top:6px;}
+.swiper-pagination .bplay_btn.b_play{background-position: -30px -20px;}
+
+.swiper-container .ico_comm{background:url(/img/new_main/ico_main_comm.png) no-repeat 0 0;background-size:100px 100px;display: block;overflow: hidden;font-size: 0;line-height: 0;text-indent: -9999px;}
+/* .swiper-container .swiper-button-prev .ico_comm{width:20px;height:11px;background-position:0 0 !important} */
+.swiper-container .swiper-button-prev .ico_comm{width:20px;height:11px;background-position:-40px 0 !important}
+.swiper-container .swiper-button-prev .ico_comm:hover{background-position:-40px 0 !important}
+.swiper-container .swiper-button-prev .ico_comm.ov{width:20px;height:11px;background-position:-40px 0 !important}
+/* .swiper-container .swiper-button-next .ico_comm{width:20px;height:11px;background-position:-20px 0 !important; float:right;} */
+.swiper-container .swiper-button-next .ico_comm{width:20px;height:11px;background-position:-60px 0 !important; float:right;}
+.swiper-container .swiper-button-next .ico_comm:hover{background-position:-60px 0 !important}
+.swiper-container .swiper-button-next .ico_comm.ov{width:20px;height:11px;background-position:-60px 0 !important}
+   
+
+/* 메인 탭 스와이프 향후 적용 예정 */	
+.main_tab_underline{position: absolute;width: 34%;height: 28px;border-bottom: 4px solid #ec1b43;z-index: 100;left: 33%;}
+.main_swiper_container{height: 115px;border-top: 2px solid #d6d6d6;margin-top:30px;position:relative;}
+.main_swiper_container .tab_con{position: absolute;top : 0;left: 0;width: 100%;height: 115px;display:none;}
+.main_swiper_container .tab_con .n_login {width: 100%;height: 100%;line-height: 1.5;color: #000;text-align: center;}
+.main_swiper_container .tab_con .n_login .table_b {padding-top: 20px;padding-left: 10px;padding-right: 10px;}
+.main_swiper_container .tab_con .n_login .table_b .txt {font-weight: bold;}
+.main_swiper_container .tab_con .n_login .table_b .txt strong {color: #ec1b43;}
+.main_swiper_container .tab_con .n_login .table_b .n_btn {margin-top: 15px;}
+.main_swiper_container .tab_con .n_login .table_b .n_btn a {width: 88px;padding: 2px 0 1px;display: inline-block;font-weight: bold;border: 1px solid #000;position:relative;}
+
+
+/* 이용안내 poll swiper */
+
+.swiper-slide .rad{display:inline-block;}
+
+.info_benefit .swiper-container.sub_main{margin-top:10px !important;}
+
+.swiper-container.tapps{height:auto;margin-top:0px !important};
